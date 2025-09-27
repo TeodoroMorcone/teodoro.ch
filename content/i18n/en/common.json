@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Master math with personalized tutoring | Teodoro Morcone Zurich",
+    "description": "Personalized online math tutoring from Zurich for Gymnasium, BMS/HMS/FMS entrance prep and continuous academic support."
+  },
+  "nav": {
+    "tldr": "TL;DR",
+    "services": "Services",
+    "howItWorks": "How it works",
+    "results": "Results",
+    "about": "About",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "howTo": "Mini how-to",
+    "comparison": "Comparison",
+    "glossary": "Glossary",
+    "contact": "Contact",
+    "legal": "Legal"
+  },
+  "cta": {
+    "primary": "Book a free consultation",
+    "secondary": "Explore services",
+    "tertiary": "Launch Zoom consultation",
+    "tertiaryHelper": "Opens Zoom directly. Browser fallback available."
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content",
+    "openNavigation": "Open navigation",
+    "closeNavigation": "Close navigation",
+    "navigationTitle": "Navigation",
+    "homeLink": "Return to home"
+  },
+  "localeSwitcher": {
+    "label": "Choose language"
+  },
+  "themeToggle": {
+    "label": "Appearance",
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System"
+  },
+  "localeNames": {
+    "de": "German",
+    "it": "Italian",
+    "en": "English"
+  },
+  "zoom": {
+    "consultation": "Launch Zoom consultation",
+    "lesson": "Open Zoom lesson",
+    "fallback": "Open in browser",
+    "helper": "If the direct link fails, use the browser fallback.",
+    "passcode": "Passcode required"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "privacy": "Privacy",
+    "cookies": "Cookie settings",
+    "contact": "Get in touch",
+    "address": "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
+    "copyright": "© {{year}} Teodoro Morcone Nachhilfe"
+  }
+}

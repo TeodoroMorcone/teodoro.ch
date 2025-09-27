@@ -1,0 +1,469 @@
+{
+  "hero": {
+    "heading": "Master math with personalized tutoring",
+    "subheading": "Structured online support for Gymnasium entrance and BMS/HMS/FMS exams, plus ongoing academic coaching from Zurich.",
+    "badge": "100% online (Zoom)",
+    "mathSnippet": "\\displaystyle \\vec{F}=m\\cdot\\vec{a}"
+  },
+  "tldr": {
+    "title": "Key takeaways",
+    "items": [
+      {
+        "label": "Who?",
+        "description": "Students targeting Gymnasium admission or BMS/HMS/FMS entrance exams."
+      },
+      {
+        "label": "What?",
+        "description": "Targeted diagnostics, structured study plans, and realistic exam simulations."
+      },
+      {
+        "label": "Where?",
+        "description": "Based in Zurich – sessions run exclusively via Zoom."
+      },
+      {
+        "label": "Pricing",
+        "description": "Single lessons or flexible packages with bespoke offers available."
+      },
+      {
+        "label": "How to start?",
+        "description": "Book a free consultation and receive a response within 24 hours."
+      }
+    ]
+  },
+  "intentClusters": [
+    {
+      "id": "audience",
+      "title": "Audience",
+      "body": "I support students across Switzerland who need focused math coaching to succeed in demanding entrance exams."
+    },
+    {
+      "id": "inclusions",
+      "title": "What’s included",
+      "body": "Foundation building, exam strategies, personalised practice sets, ongoing feedback, and weekly progress tracking."
+    },
+    {
+      "id": "process",
+      "title": "Gymiprüfung & BMS/HMS/FMS",
+      "body": "Work through common task formats, sharpen time management, analyse mistakes, and run full mock exams."
+    },
+    {
+      "id": "pricing",
+      "title": "Pricing approach",
+      "body": "Transparent hourly rates, discounted 5- and 10-lesson bundles, and custom proposals for longer engagements."
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery model",
+      "body": "Live Zoom lessons with shared whiteboard, tailored materials, and homework feedback between sessions."
+    },
+    {
+      "id": "response",
+      "title": "Booking & response",
+      "body": "Flexible online booking with reliable follow-up – inquiries answered within 24 hours."
+    }
+  ],
+  "sections": {
+    "services": {
+      "title": "Services",
+      "description": "Tailored tutoring programmes ranging from long-term foundations to last-minute refreshers.",
+      "items": [
+        {
+          "id": "gymnasium",
+          "name": "Gymnasium prep",
+          "copy": "Focused Gymiprüfung preparation covering algebra, geometry, and applied word problems."
+        },
+        {
+          "id": "bms-hms-fms",
+          "name": "BMS/HMS/FMS exam prep",
+          "copy": "Structured roadmap for vocational middle school entrance exams with practical drill sessions."
+        },
+        {
+          "id": "exam-coaching",
+          "name": "Exam coaching",
+          "copy": "Enter the exam with confidence: timing, stress management, and review routines."
+        },
+        {
+          "id": "ongoing-support",
+          "name": "Ongoing support",
+          "copy": "Continuous maths coaching during the school year – assignments, tests, and skill consolidation."
+        },
+        {
+          "id": "crash-courses",
+          "name": "Crash courses",
+          "copy": "Intensive refreshers close to the exam to close gaps and build confidence."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "How it works",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Diagnose",
+          "description": "Evaluate current performance, define goals, and understand study habits."
+        },
+        {
+          "id": "plan",
+          "title": "Plan",
+          "description": "Create a weekly learning roadmap with curated materials and scheduled sessions."
+        },
+        {
+          "id": "progress",
+          "title": "Progress",
+          "description": "Track results, provide actionable feedback, and adjust strategy if needed."
+        }
+      ],
+      "miniPlan": [
+        {
+          "label": "Kick-off",
+          "detail": "Free consultation + diagnostic review",
+          "badgeVariant": "accent"
+        },
+        {
+          "label": "Training phase",
+          "detail": "Personalised lessons & structured practice",
+          "badgeVariant": "primary"
+        },
+        {
+          "label": "Mock exams",
+          "detail": "Realistic simulations with debrief",
+          "badgeVariant": "secondary"
+        }
+      ]
+    },
+    "results": {
+      "title": "Results & social proof",
+      "description": "Coming soon – real testimonials will be placed here as they become available.",
+      "placeholders": [
+        {
+          "type": "testimonial",
+          "label": "TODO: Add testimonial"
+        },
+        {
+          "type": "logo",
+          "label": "TODO: Add partner/school logo"
+        }
+      ]
+    },
+    "about": {
+      "title": "About the tutor",
+      "body": "I’m Teodoro Morcone, a math tutor in Zurich and founder of Teodoro Morcone Nachhilfe. I specialise in building strong foundations, preparing students for Gymnasium, BMS, HMS, and FMS admissions, and providing continuous support in key secondary math topics. My approach blends step-by-step explanations, progressive practice sets, realistic mock exams, and weekly progress tracking. Lessons are available in German (C1), Italian (C2), and English (C1), delivered exclusively online via Zoom."
+    },
+    "pricing": {
+      "title": "Pricing",
+      "note": {
+        "vat": "Lessons are VAT-exempt (annual revenue < CHF 100,000).",
+        "customPlan": {
+          "label": "Request a custom plan",
+          "href": "#contact"
+        }
+      },
+      "plans": [
+        {
+          "id": "single",
+          "name": "Single session",
+          "price": "CHF 150",
+          "unit": "per 60 minutes",
+          "features": [
+            "Individual lesson with tailored material",
+            "Homework follow-up",
+            "Feedback within 24 hours"
+          ],
+          "cta": "Book a trial"
+        },
+        {
+          "id": "five-pack",
+          "name": "5-pack",
+          "price": "CHF 700",
+          "unit": "5 × 60 minutes",
+          "features": [
+            "Structured learning plan",
+            "Weekly feedback & monitoring",
+            "Optional mock test"
+          ],
+          "cta": "Reserve package",
+          "badge": "Popular"
+        },
+        {
+          "id": "ten-pack",
+          "name": "10-pack",
+          "price": "CHF 1350",
+          "unit": "10 × 60 minutes",
+          "features": [
+            "Full exam preparation programme",
+            "Detailed weekly reports",
+            "Priority scheduling"
+          ],
+          "cta": "Start the programme"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently asked questions",
+      "items": [
+        {
+          "id": "faq-cancellation",
+          "question": "How do reschedules and cancellations work?",
+          "answer": "Sessions can be moved or cancelled free of charge up to 24 hours in advance. Late cancellations are billed as a full session."
+        },
+        {
+          "id": "faq-materials",
+          "question": "What materials do you use?",
+          "answer": "I combine proprietary practice sets, official exam papers, and customised worksheets. Everything is shared digitally."
+        },
+        {
+          "id": "faq-online",
+          "question": "Is tutoring exclusively online?",
+          "answer": "Yes. All lessons run on Zoom with a shared whiteboard, notes, and optional recordings for key solution steps."
+        },
+        {
+          "id": "faq-response",
+          "question": "How quickly do you respond to inquiries?",
+          "answer": "Typically within 24 hours with proposed time slots and follow-up questions."
+        },
+        {
+          "id": "faq-payment",
+          "question": "What are the payment options?",
+          "answer": "Invoice or TWINT within 10 days. Packages are payable in advance."
+        },
+        {
+          "id": "faq-privacy",
+          "question": "How is personal data handled?",
+          "answer": "Data is used solely to organise lessons. Analytics only load after consent, and Zoom recordings happen only with explicit permission."
+        },
+        {
+          "id": "faq-bms",
+          "question": "Do you cover specific BMS/HMS/FMS components?",
+          "answer": "Yes. I’m familiar with the exam formats and run realistic simulations, including reasoning and writing sections."
+        }
+      ]
+    },
+    "howTo": {
+      "title": "Mini how-to: prepare for success",
+      "intro": "A structured plan helps reduce stress and deliver consistent exam performance.",
+      "steps": [
+        {
+          "name": "Assess & set goals",
+          "description": "Review recent tests, define target scores, and pinpoint blockers.",
+          "duration": "1–2 sessions",
+          "materials": [
+            "Recent tests",
+            "School assignments"
+          ],
+          "notes": [
+            "Run a diagnostic test if needed."
+          ]
+        },
+        {
+          "name": "Strengthen foundations",
+          "description": "Systematically revisit key topics with scaffolded practice and focused error correction.",
+          "duration": "4–8 weeks",
+          "materials": [
+            "Theory handouts",
+            "Practice sets with solutions"
+          ],
+          "notes": [
+            "Log weekly checkpoints and progress."
+          ]
+        },
+        {
+          "name": "Simulate & refine",
+          "description": "Conduct full-length mock exams, debrief thoroughly, and refine time management.",
+          "duration": "2–4 weeks",
+          "materials": [
+            "Mock exam PDFs",
+            "Time-planning sheets"
+          ],
+          "notes": [
+            "Build mental strategies and scheduled breaks."
+          ]
+        }
+      ],
+      "disclaimer": "The plan is tailored individually – we’ll tailor details during the initial consult."
+    },
+    "comparison": {
+      "title": "Compare your options",
+      "description": "Choose the setup that fits your learning goals.",
+      "columns": [
+        {
+          "key": "single",
+          "label": "Single"
+        },
+        {
+          "key": "fivePack",
+          "label": "5-pack"
+        },
+        {
+          "key": "tenPack",
+          "label": "10-pack"
+        }
+      ],
+      "rows": [
+        {
+          "metric": "Session length",
+          "values": {
+            "single": "60 minutes",
+            "fivePack": "60 minutes",
+            "tenPack": "60 minutes"
+          }
+        },
+        {
+          "metric": "Planning",
+          "values": {
+            "single": "Focus on immediate goals",
+            "fivePack": "Structured plan + homework",
+            "tenPack": "Complete programme + mock exams"
+          }
+        },
+        {
+          "metric": "Feedback cadence",
+          "values": {
+            "single": "On request",
+            "fivePack": "Weekly",
+            "tenPack": "Weekly + dedicated reviews"
+          }
+        },
+        {
+          "metric": "Price per lesson",
+          "values": {
+            "single": "CHF 150",
+            "fivePack": "CHF 140",
+            "tenPack": "CHF 135"
+          }
+        }
+      ],
+      "footnote": "All prices exclude VAT (service not VAT-registered). Adjustments possible for custom programmes."
+    },
+    "glossary": {
+      "title": "Glossary",
+      "entries": [
+        {
+          "term": "Gymiprüfung",
+          "definition": "Central admission exam for Zurich’s long-track or short-track Gymnasium.",
+          "relatedLinks": [
+            "TODO"
+          ]
+        },
+        {
+          "term": "BMS",
+          "definition": "Berufsmaturitätsschule – combines vocational training with general education.",
+          "relatedLinks": [
+            "TODO"
+          ]
+        },
+        {
+          "term": "Mock exam",
+          "definition": "Full exam simulation under real conditions to build familiarity with format and timing.",
+          "relatedLinks": [
+            "TODO"
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact & booking",
+    "description": "Send a short message with goals, school level, and preferred timeframe. I’ll reply within one business day.",
+    "details": [
+      {
+        "label": "Email",
+        "value": "info@theodors.ch",
+        "href": "mailto:info@theodors.ch"
+      },
+      {
+        "label": "Phone / WhatsApp",
+        "value": "+41 76 244 02 59",
+        "href": "tel:+41762440259"
+      },
+      {
+        "label": "Instagram",
+        "value": "Teo6oro (private)",
+        "href": "https://www.instagram.com/Teo6oro/"
+      }
+    ],
+    "form": {
+      "title": "Contact form",
+      "fields": [
+        {
+          "id": "name",
+          "label": "Name",
+          "placeholder": "First and last name",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "email",
+          "label": "Email",
+          "placeholder": "name@mail.ch",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "phone",
+          "label": "Phone (optional)",
+          "placeholder": "+41 …",
+          "type": "tel",
+          "required": false
+        },
+        {
+          "id": "level",
+          "label": "Grade / goal",
+          "placeholder": "e.g. 2nd Sek, Gymi short-track",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "message",
+          "label": "Message",
+          "placeholder": "Which topics would you like to tackle?",
+          "type": "textarea",
+          "required": true
+        }
+      ],
+      "privacyNote": "By submitting you confirm you’ve read the privacy notice.",
+      "submitLabel": "Send message",
+      "success": "Thank you! I’ll respond within 24 hours.",
+      "error": "Something went wrong. Please try again later.",
+      "validation": {
+        "nameRequired": "Please enter your name.",
+        "nameTooLong": "Name must be 120 characters or fewer.",
+        "emailInvalid": "Enter a valid email address.",
+        "phoneInvalid": "Phone number contains invalid characters.",
+        "levelRequired": "Please provide your grade or goal.",
+        "levelTooLong": "This field must be 160 characters or fewer.",
+        "messageRequired": "Please add a short message.",
+        "messageTooLong": "Message must be 1500 characters or fewer."
+      }
+    },
+    "responseTime": "Reply within 24h (Mon–Fri)",
+    "officeHours": "Session times: Mon–Sat by appointment",
+    "policy": {
+      "cancellationTitle": "Cancellation policy",
+      "cancellationItems": [
+        "Sessions can be cancelled or rescheduled free of charge up to 24 hours in advance.",
+        "Late cancellations or no-shows are billed as a full lesson.",
+        "Payment via invoice or bank transfer within 10 days."
+      ],
+      "minorsTitle": "Working with minors",
+      "minorsItems": [
+        "For learners under 16, guardian consent is required.",
+        "Communication is coordinated with parents/guardians wherever possible.",
+        "Zoom profiles do not use full legal names of minors without permission."
+      ]
+    }
+  },
+  "outboundLinks": [
+    {
+      "name": "TODO – Zurich education department Gymiprüfung",
+      "url": "https://example.com",
+      "description": "Official information on the entrance exam.",
+      "category": "authority"
+    },
+    {
+      "name": "TODO – BMS Zurich",
+      "url": "https://example.com",
+      "description": "Details on vocational baccalaureate programmes.",
+      "category": "authority"
+    }
+  ]
+}

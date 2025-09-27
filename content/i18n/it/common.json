@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Domina la matematica | Ripetizioni Online Teodoro Morcone",
+    "description": "Supporto matematico personalizzato da Zurigo per preparare Gymiprüfung, BMS/HMS/FMS e rafforzare le basi scolastiche."
+  },
+  "nav": {
+    "tldr": "In sintesi",
+    "services": "Servizi",
+    "howItWorks": "Come funziona",
+    "results": "Risultati",
+    "about": "Chi sono",
+    "pricing": "Tariffe",
+    "faq": "FAQ",
+    "howTo": "Mini guida",
+    "comparison": "Confronto",
+    "glossary": "Glossario",
+    "contact": "Contatti",
+    "legal": "Note legali"
+  },
+  "cta": {
+    "primary": "Prenota una consulenza gratuita",
+    "secondary": "Scopri i servizi",
+    "tertiary": "Avvia consulenza Zoom",
+    "tertiaryHelper": "Si apre direttamente in Zoom. Disponibile opzione browser."
+  },
+  "accessibility": {
+    "skipToContent": "Passa al contenuto",
+    "openNavigation": "Apri navigazione",
+    "closeNavigation": "Chiudi navigazione",
+    "navigationTitle": "Navigazione",
+    "homeLink": "Torna alla pagina iniziale"
+  },
+  "localeSwitcher": {
+    "label": "Seleziona lingua"
+  },
+  "themeToggle": {
+    "label": "Aspetto",
+    "light": "Tema chiaro",
+    "dark": "Tema scuro",
+    "system": "Sistema"
+  },
+  "localeNames": {
+    "de": "Tedesco",
+    "it": "Italiano",
+    "en": "Inglese"
+  },
+  "zoom": {
+    "consultation": "Avvia consulenza Zoom",
+    "lesson": "Apri lezione Zoom",
+    "fallback": "Apri nel browser",
+    "helper": "Se il link diretto non funziona, usa l’apertura nel browser.",
+    "passcode": "Richiesto passcode"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "privacy": "Privacy",
+    "cookies": "Impostazioni cookie",
+    "contact": "Contattami",
+    "address": "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
+    "copyright": "© {{year}} Teodoro Morcone Nachhilfe"
+  }
+}

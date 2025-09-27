@@ -1,0 +1,168 @@
+{
+  "impressum": {
+    "title": "Impressum",
+    "sections": [
+      {
+        "heading": "Verantwortlich",
+        "body": [
+          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
+          "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
+          "E-Mail: info@theodors.ch",
+          "Tel./WhatsApp: +41 76 244 02 59",
+          "Web: theodors.ch"
+        ]
+      },
+      {
+        "heading": "Unterricht",
+        "body": [
+          "Der Unterricht findet ausschliesslich online via Zoom statt.",
+          "Zoom-Räume verfügen über Warteraum und Passcode."
+        ]
+      },
+      {
+        "heading": "Umsatzsteuer",
+        "body": [
+          "Umsatz < CHF 100’000/Jahr → nicht MWST-pflichtig."
+        ]
+      },
+      {
+        "heading": "Haftungsausschluss",
+        "body": [
+          "Alle Inhalte wurden sorgfältig geprüft; dennoch wird keine Gewähr für Aktualität, Vollständigkeit und Richtigkeit übernommen.",
+          "Links zu externen Websites liegen ausserhalb unseres Verantwortungsbereichs."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Stand: September 2025",
+    "intro": "Diese Datenschutzerklärung beschreibt, wie personenbezogene Daten im Rahmen der Nachhilfeleistungen verarbeitet werden und welche Rechte betroffene Personen haben.",
+    "sections": [
+      {
+        "id": "controller",
+        "heading": "Verantwortliche Stelle",
+        "body": [
+          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
+          "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
+          "Kontakt: info@theodors.ch, +41 76 244 02 59"
+        ]
+      },
+      {
+        "id": "purposes",
+        "heading": "Zwecke der Datenverarbeitung",
+        "list": [
+          "Beantwortung von Anfragen und Vorbereitung von Unterrichtsverträgen",
+          "Organisation und Durchführung von Nachhilfelektionen (Zoom)",
+          "Sicherstellung des technischen Betriebs der Website",
+          "Optionale Statistik (Google Analytics 4) nur nach erteilter Einwilligung",
+          "Rechnungsstellung und Kommunikation"
+        ]
+      },
+      {
+        "id": "dataCategories",
+        "heading": "Kategorien von Daten",
+        "list": [
+          "Kontaktangaben (Name, E-Mail, Telefonnummer)",
+          "Angaben zur Schulstufe, Zielsetzung und Prüfungsfokus",
+          "Kommunikationsinhalte (Nachrichten, Notizen aus Lektionen)",
+          "Metadaten von Zoom-Sitzungen (Datum, Dauer); standardmässig keine Aufzeichnungen",
+          "Technische Logdaten und Cookie-Präferenzen"
+        ]
+      },
+      {
+        "id": "legalBases",
+        "heading": "Rechtsgrundlagen",
+        "body": [
+          "Vertrag und vorvertragliche Massnahmen (Art. 31 Abs. 2 lit. a revDSG)",
+          "Berechtigtes Interesse an sicherem und funktionsfähigem Betrieb",
+          "Einwilligung für Analysen, Newsletter oder etwaige Aufzeichnungen"
+        ]
+      },
+      {
+        "id": "processors",
+        "heading": "Empfänger & Auftragsverarbeiter",
+        "list": [
+          "Hosting- und E-Mail-Anbieter (mit DPA)",
+          "Zoom Video Communications (keine automatischen Aufzeichnungen)",
+          "Analyse-Dienst (Google, nur bei Zustimmung)",
+          "Optionale Tools für Kontakt-/Terminverwaltung"
+        ]
+      },
+      {
+        "id": "transfers",
+        "heading": "Internationale Datenübermittlungen",
+        "body": [
+          "Erfolgen nur mit angemessenen Garantien (Standardvertragsklauseln oder vergleichbare Schutzmechanismen)."
+        ]
+      },
+      {
+        "id": "retention",
+        "heading": "Speicherdauer",
+        "body": [
+          "Kontaktdaten und Nachrichten werden solange aufbewahrt, wie es für die Zusammenarbeit erforderlich ist.",
+          "Rechnungs- und Buchungsunterlagen gemäss gesetzlichen Aufbewahrungsfristen."
+        ]
+      },
+      {
+        "id": "rights",
+        "heading": "Rechte der betroffenen Personen",
+        "body": [
+          "Betroffene können jederzeit Auskunft, Berichtigung, Löschung, Einschränkung oder Datenübertragbarkeit verlangen sowie Einwilligungen widerrufen."
+        ]
+      },
+      {
+        "id": "minors",
+        "heading": "Umgang mit minderjährigen Lernenden",
+        "body": [
+          "Bei Schüler:innen unter 16 Jahren erfolgt die Kommunikation in Abstimmung mit den Erziehungsberechtigten.",
+          "In Zoom werden keine vollständigen Klarnamen von Minderjährigen verwendet."
+        ]
+      }
+    ],
+    "rights": {
+      "title": "Kontakt für Datenschutzanfragen",
+      "email": "info@theodors.ch",
+      "reference": "FDPIC: https://www.edoeb.admin.ch"
+    },
+    "cookieLink": "Cookie-Einstellungen"
+  },
+  "cancellation": {
+    "title": "Annullierungen & No-shows",
+    "body": [
+      "Absagen bis 24 Stunden vor dem Termin sind kostenlos möglich.",
+      "Bei kurzfristigen Absagen oder Nichterscheinen wird eine Lektion verrechnet.",
+      "Zahlung per Rechnung oder Überweisung innert 10 Tagen."
+    ]
+  },
+  "minors": {
+    "title": "Hinweise zu Minderjährigen",
+    "body": [
+      "Für Lernende unter 16 Jahren ist die Einwilligung der Eltern bzw. Erziehungsberechtigten erforderlich.",
+      "Kommunikation erfolgt bevorzugt über die Erziehungsberechtigten oder gemeinsam.",
+      "Zoom-Aufzeichnungen erfolgen nur nach schriftlicher Zustimmung."
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie-Einstellungen",
+    "description": "Passe deine Präferenzen an. Essenzielle Cookies sind erforderlich, Statistik- und Marketing-Cookies werden nur nach Einwilligung aktiviert.",
+    "categories": [
+      {
+        "id": "essential",
+        "label": "Essenzielle Cookies",
+        "description": "Notwendig für Grundfunktionen wie Formularübermittlung und Sicherheit.",
+        "cookies": ["session", "consent-state"]
+      },
+      {
+        "id": "analytics",
+        "label": "Statistik (GA4)",
+        "description": "Anonyme Analyse mit Google Analytics 4. Wird erst nach Zustimmung geladen.",
+        "cookies": ["_ga*"]
+      }
+    ],
+    "actions": {
+      "save": "Präferenzen speichern",
+      "cancel": "Abbrechen"
+    }
+  }
+}

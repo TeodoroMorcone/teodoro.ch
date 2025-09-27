@@ -1,0 +1,169 @@
+{
+  "impressum": {
+    "title": "Impressum",
+    "sections": [
+      {
+        "heading": "Responsabile",
+        "body": [
+          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
+          "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
+          "E-mail: info@theodors.ch",
+          "Tel./WhatsApp: +41 76 244 02 59",
+          "Web: theodors.ch"
+        ]
+      },
+      {
+        "heading": "Lezioni",
+        "body": [
+          "Le lezioni si svolgono esclusivamente online via Zoom.",
+          "Le stanze Zoom sono protette da sala d’attesa e passcode."
+        ]
+      },
+      {
+        "heading": "IVA",
+        "body": [
+          "Fatturato < CHF 100’000/anno → attività non soggetta a IVA."
+        ]
+      },
+      {
+        "heading": "Disclaimer",
+        "body": [
+          "Tutti i contenuti sono stati verificati con cura, ma non si garantisce completezza, correttezza o aggiornamento.",
+          "I link esterni sono al di fuori della nostra responsabilità."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "title": "Informativa sulla privacy",
+    "lastUpdated": "Aggiornato: settembre 2025",
+    "intro": "Questa informativa descrive come vengono trattati i dati personali nell’ambito delle lezioni di ripetizione e quali diritti spettano agli interessati.",
+    "sections": [
+      {
+        "id": "controller",
+        "heading": "Titolare del trattamento",
+        "body": [
+          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
+          "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
+          "Contatto: info@theodors.ch, +41 76 244 02 59"
+        ]
+      },
+      {
+        "id": "purposes",
+        "heading": "Finalità della raccolta dati",
+        "list": [
+          "Rispondere alle richieste e preparare accordi didattici",
+          "Organizzare e svolgere le lezioni online (Zoom)",
+          "Garantire il funzionamento tecnico del sito web",
+          "Statistiche opzionali (Google Analytics 4) solo previo consenso",
+          "Fatturazione e comunicazioni correlate alle lezioni"
+        ]
+      },
+      {
+        "id": "dataCategories",
+        "heading": "Categorie di dati trattati",
+        "list": [
+          "Dati di contatto (nome, e-mail, numero telefonico)",
+          "Informazioni su classe, obiettivi e focus d’esame",
+          "Contenuti delle comunicazioni e note delle lezioni",
+          "Metadati delle sessioni Zoom (data, durata); nessuna registrazione di default",
+          "Log tecnici e preferenze cookie"
+        ]
+      },
+      {
+        "id": "legalBases",
+        "heading": "Basi giuridiche",
+        "body": [
+          "Esecuzione di contratto o misure precontrattuali",
+          "Legittimo interesse a fornire un servizio sicuro e funzionante",
+          "Consenso per analisi statistiche, newsletter o eventuali registrazioni"
+        ]
+      },
+      {
+        "id": "processors",
+        "heading": "Destinatari / responsabili esterni",
+        "list": [
+          "Provider di hosting ed e-mail (con accordi sul trattamento dati)",
+          "Zoom Video Communications (senza registrazioni automatiche)",
+          "Servizio di analisi (Google, solo previa autorizzazione)",
+          "Eventuali strumenti di gestione contatti/prenotazioni"
+        ]
+      },
+      {
+        "id": "transfers",
+        "heading": "Trasferimenti internazionali",
+        "body": [
+          "Avvengono solo con adeguate garanzie (Standard Contractual Clauses o misure equivalenti)."
+        ]
+      },
+      {
+        "id": "retention",
+        "heading": "Conservazione dei dati",
+        "body": [
+          "I dati vengono conservati per il tempo necessario alla collaborazione.",
+          "Documenti contabili e fiscali secondo le tempistiche di legge."
+        ]
+      },
+      {
+        "id": "rights",
+        "heading": "Diritti degli interessati",
+        "body": [
+          "In qualsiasi momento è possibile richiedere accesso, rettifica, cancellazione, limitazione, portabilità o revoca del consenso."
+        ]
+      },
+      {
+        "id": "minors",
+        "heading": "Studenti minorenni",
+        "body": [
+          "Per studenti sotto i 16 anni è richiesta l’approvazione dei genitori o tutori.",
+          "Le comunicazioni avvengono in coordinamento con i genitori.",
+          "Eventuali registrazioni Zoom avvengono solo con autorizzazione scritta."
+        ]
+      }
+    ],
+    "rights": {
+      "title": "Contatti privacy",
+      "email": "info@theodors.ch",
+      "reference": "IFPDT: https://www.edoeb.admin.ch"
+    },
+    "cookieLink": "Impostazioni cookie"
+  },
+  "cancellation": {
+    "title": "Cancellazioni & assenze",
+    "body": [
+      "Le sessioni possono essere annullate o spostate gratuitamente fino a 24 ore prima.",
+      "Per cancellazioni tardive o assenze senza preavviso viene addebitata la lezione.",
+      "Pagamento tramite fattura o bonifico entro 10 giorni."
+    ]
+  },
+  "minors": {
+    "title": "Indicazioni per minorenni",
+    "body": [
+      "È necessaria l’approvazione dei genitori/tutori per studenti sotto i 16 anni.",
+      "Le comunicazioni avvengono preferibilmente con o insieme ai genitori.",
+      "In Zoom non vengono usati nomi completi dei minorenni senza consenso."
+    ]
+  },
+  "cookieSettings": {
+    "title": "Impostazioni cookie",
+    "description": "Personalizza le preferenze. I cookie essenziali sono obbligatori; statistica e marketing richiedono il tuo consenso.",
+    "categories": [
+      {
+        "id": "essential",
+        "label": "Essenziali",
+        "description": "Necessari per funzioni di base come form e sicurezza.",
+        "cookies": ["session", "consent-state"]
+      },
+      {
+        "id": "analytics",
+        "label": "Statistica (GA4)",
+        "description": "Analisi anonima con Google Analytics 4. Attivata solo dopo consenso.",
+        "cookies": ["_ga*"]
+      }
+    ],
+    "actions": {
+      "save": "Salva preferenze",
+      "cancel": "Annulla"
+    }
+  }
+}

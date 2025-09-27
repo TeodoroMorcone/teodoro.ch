@@ -1,0 +1,62 @@
+{
+  "meta": {
+    "title": "Mathe sicher meistern | Teodoro Morcone Nachhilfe",
+    "description": "Individuelle Online-Mathematik-Nachhilfe aus Zürich mit Fokus auf Gymiprüfung, BMS, HMS und FMS."
+  },
+  "nav": {
+    "tldr": "Überblick",
+    "services": "Leistungen",
+    "howItWorks": "Ablauf",
+    "results": "Ergebnisse",
+    "about": "Über den Tutor",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "howTo": "Mini-How-To",
+    "comparison": "Vergleich",
+    "glossary": "Glossar",
+    "contact": "Kontakt",
+    "legal": "Rechtliches"
+  },
+  "cta": {
+    "primary": "Kostenloses Erstgespräch buchen",
+    "secondary": "Leistungen entdecken",
+    "tertiary": "Zoom-Beratung starten",
+    "tertiaryHelper": "Öffnet Zoom direkt. Browser-Fallback verfügbar."
+  },
+  "accessibility": {
+    "skipToContent": "Zum Inhalt springen",
+    "openNavigation": "Navigation öffnen",
+    "closeNavigation": "Navigation schliessen",
+    "navigationTitle": "Navigation",
+    "homeLink": "Zur Startseite wechseln"
+  },
+  "localeSwitcher": {
+    "label": "Sprache wählen"
+  },
+  "themeToggle": {
+    "label": "Darstellung",
+    "light": "Helles Design",
+    "dark": "Dunkles Design",
+    "system": "System"
+  },
+  "localeNames": {
+    "de": "Deutsch",
+    "it": "Italienisch",
+    "en": "Englisch"
+  },
+  "zoom": {
+    "consultation": "Zoom-Beratung starten",
+    "lesson": "Zoom-Lektion öffnen",
+    "fallback": "Im Browser öffnen",
+    "helper": "Falls der direkte Link nicht funktioniert, bitte den Browser-Fallback verwenden.",
+    "passcode": "Passcode erforderlich"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "cookies": "Cookie-Einstellungen",
+    "contact": "Kontakt aufnehmen",
+    "address": "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
+    "copyright": "© {{year}} Teodoro Morcone Nachhilfe"
+  }
+}

@@ -1,0 +1,469 @@
+{
+  "hero": {
+    "heading": "Domina la matematica con ripetizioni personalizzate",
+    "subheading": "Supporto strutturato online per la Gymiprüfung e gli esami BMS/HMS/FMS, con follow-up continuo direttamente da Zurigo.",
+    "badge": "100% online (Zoom)",
+    "mathSnippet": "\\displaystyle \\vec{F}=m\\cdot\\vec{a}"
+  },
+  "tldr": {
+    "title": "In breve",
+    "items": [
+      {
+        "label": "Per chi?",
+        "description": "Studenti che puntano alla Gymiprüfung o agli esami di accesso BMS/HMS/FMS."
+      },
+      {
+        "label": "Cosa?",
+        "description": "Diagnosi mirata, piani di studio strutturati e simulazioni realistiche."
+      },
+      {
+        "label": "Dove?",
+        "description": "Basato a Zurigo – le lezioni si svolgono esclusivamente online via Zoom."
+      },
+      {
+        "label": "Fascia prezzi",
+        "description": "Lezioni singole o pacchetti con offerte personalizzate su richiesta."
+      },
+      {
+        "label": "Come iniziare?",
+        "description": "Prenota una consulenza gratuita e ricevi un riscontro entro 24 ore."
+      }
+    ]
+  },
+  "intentClusters": [
+    {
+      "id": "audience",
+      "title": "Destinatari",
+      "body": "Accompagno studenti svizzeri che necessitano di un coaching matematico rapido e mirato per superare prove di ammissione impegnative."
+    },
+    {
+      "id": "inclusions",
+      "title": "Cosa è incluso",
+      "body": "Costruzione delle basi, strategie d’esame, serie di esercizi personali, feedback periodici e monitoraggio settimanale."
+    },
+    {
+      "id": "process",
+      "title": "Gymiprüfung & BMS/HMS/FMS",
+      "body": "Esercitazioni sugli schemi ricorrenti, gestione del tempo, analisi degli errori e simulazioni complete delle prove."
+    },
+    {
+      "id": "pricing",
+      "title": "Tariffe",
+      "body": "Tariffe trasparenti a lezione, sconti per pacchetti da 5 o 10 unità e proposte su misura per percorsi più lunghi."
+    },
+    {
+      "id": "delivery",
+      "title": "Modalità di erogazione",
+      "body": "Lezioni live via Zoom con lavagna condivisa, materiali dedicati e feedback sugli esercizi tra una sessione e l’altra."
+    },
+    {
+      "id": "response",
+      "title": "Prenotazione & risposta",
+      "body": "Richieste gestite in modo flessibile online; rispondo entro 24 ore con proposte di data e informazioni preliminari."
+    }
+  ],
+  "sections": {
+    "services": {
+      "title": "Servizi",
+      "description": "Programmi di ripetizione su misura: dalla costruzione delle basi ai refresher intensivi last-minute.",
+      "items": [
+        {
+          "id": "gymnasium",
+          "name": "Preparazione ginnasio",
+          "copy": "Preparazione mirata alla Gymiprüfung con focus su algebra, geometria e problemi contestualizzati."
+        },
+        {
+          "id": "bms-hms-fms",
+          "name": "Preparazione esami BMS/HMS/FMS",
+          "copy": "Percorso strutturato per gli esami di ammissione alle scuole medie superiori professionali con esercizi pratici."
+        },
+        {
+          "id": "exam-coaching",
+          "name": "Exam Coaching",
+          "copy": "Strategie per affrontare la prova con sicurezza: timing, gestione dello stress e tecniche di revisione."
+        },
+        {
+          "id": "ongoing-support",
+          "name": "Supporto continuativo",
+          "copy": "Accompagnamento durante l’anno scolastico: aiuto compiti, preparazione verifiche e consolidamento."
+        },
+        {
+          "id": "crash-courses",
+          "name": "Corsi intensivi",
+          "copy": "Blocchi intensivi prima dell’esame per colmare lacune e consolidare la sicurezza."
+        }
+      ]
+    },
+    "howItWorks": {
+      "title": "Come funziona",
+      "steps": [
+        {
+          "id": "diagnose",
+          "title": "Diagnosi",
+          "description": "Analisi del livello attuale, obiettivi formativi e abitudini di studio."
+        },
+        {
+          "id": "plan",
+          "title": "Pianificazione",
+          "description": "Creazione di un piano chiaro con obiettivi settimanali, materiali mirati e lezioni fissate."
+        },
+        {
+          "id": "progress",
+          "title": "Progressi",
+          "description": "Verifiche regolari, feedback puntuali e adattamenti del programma quando necessario."
+        }
+      ],
+      "miniPlan": [
+        {
+          "label": "Kick-off",
+          "detail": "Consulenza gratuita + analisi iniziale",
+          "badgeVariant": "accent"
+        },
+        {
+          "label": "Fase di training",
+          "detail": "Sessioni personalizzate & esercizi guidati",
+          "badgeVariant": "primary"
+        },
+        {
+          "label": "Mock exam",
+          "detail": "Simulazioni realistiche con revisione dettagliata",
+          "badgeVariant": "secondary"
+        }
+      ]
+    },
+    "results": {
+      "title": "Risultati & Social Proof",
+      "description": "In lavorazione – le testimonianze reali verranno inserite qui non appena disponibili.",
+      "placeholders": [
+        {
+          "type": "testimonial",
+          "label": "TODO: Aggiungere testimonianza"
+        },
+        {
+          "type": "logo",
+          "label": "TODO: Aggiungere scuola/partner"
+        }
+      ]
+    },
+    "about": {
+      "title": "Chi sono",
+      "body": "Sono Teodoro Morcone, tutor di matematica a Zurigo e fondatore di Teodoro Morcone Nachhilfe. Aiuto gli studenti a costruire solide basi, prepararsi alle ammissioni per Gymnasium, BMS, HMS e FMS e mantenere risultati costanti nelle materie scientifiche. Il mio metodo combina spiegazioni passo dopo passo, set di esercizi graduati, simulazioni realistiche e monitoraggio settimanale. Lezioni disponibili in tedesco (C1), italiano (C2) e inglese (C1), esclusivamente online via Zoom."
+    },
+    "pricing": {
+      "title": "Tariffe",
+      "note": {
+        "vat": "Le lezioni sono esenti IVA (fatturato annuo < CHF 100’000).",
+        "customPlan": {
+          "label": "Richiedi un piano personalizzato",
+          "href": "#contact"
+        }
+      },
+      "plans": [
+        {
+          "id": "single",
+          "name": "Lezione singola",
+          "price": "CHF 150",
+          "unit": "per 60 minuti",
+          "features": [
+            "Lezione individuale con materiale dedicato",
+            "Homework & follow-up",
+            "Feedback entro 24 ore"
+          ],
+          "cta": "Prenota una prova"
+        },
+        {
+          "id": "five-pack",
+          "name": "Pacchetto 5 lezioni",
+          "price": "CHF 700",
+          "unit": "5 × 60 minuti",
+          "features": [
+            "Piano di lavoro strutturato",
+            "Feedback e monitoraggio settimanale",
+            "Mock test opzionale"
+          ],
+          "cta": "Riserva il pacchetto",
+          "badge": "Più richiesto"
+        },
+        {
+          "id": "ten-pack",
+          "name": "Pacchetto 10 lezioni",
+          "price": "CHF 1350",
+          "unit": "10 × 60 minuti",
+          "features": [
+            "Preparazione completa all’esame",
+            "Report settimanali dettagliati",
+            "Priorità nelle fasce orarie"
+          ],
+          "cta": "Avvia il programma"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Domande frequenti",
+      "items": [
+        {
+          "id": "faq-cancellation",
+          "question": "Come funziona la cancellazione o lo spostamento delle lezioni?",
+          "answer": "Le sessioni possono essere spostate o annullate gratuitamente fino a 24 ore prima. Le cancellazioni tardive vengono conteggiate come lezione."
+        },
+        {
+          "id": "faq-materials",
+          "question": "Che materiale utilizzi durante il percorso?",
+          "answer": "Utilizzo esercizi proprietari, prove ufficiali e schede personalizzate. Tutti i materiali sono condivisi in formato digitale."
+        },
+        {
+          "id": "faq-online",
+          "question": "Le lezioni sono solo online?",
+          "answer": "Sì. Tutte le sessioni si svolgono su Zoom con lavagna condivisa, note e registrazioni dei passaggi chiave su richiesta."
+        },
+        {
+          "id": "faq-response",
+          "question": "Quanto tempo impieghi a rispondere alle richieste?",
+          "answer": "Generalmente rispondo entro 24 ore con possibili fasce orarie e domande integrative."
+        },
+        {
+          "id": "faq-payment",
+          "question": "Quali sono le modalità di pagamento?",
+          "answer": "Fattura o TWINT entro 10 giorni. I pacchetti vengono saldati anticipatamente."
+        },
+        {
+          "id": "faq-privacy",
+          "question": "Come gestisci i dati personali?",
+          "answer": "Le informazioni raccolte servono solo all’organizzazione delle lezioni. Analytics caricati solo dopo consenso. Registrazioni Zoom solo con autorizzazione."
+        },
+        {
+          "id": "faq-bms",
+          "question": "Prepari anche le parti specifiche per BMS/HMS/FMS?",
+          "answer": "Sì, conosco i format tipici e organizzo simulazioni realistiche, inclusa la parte di comprensione e scrittura."
+        }
+      ]
+    },
+    "howTo": {
+      "title": "Mini guida: come prepararsi al meglio",
+      "intro": "Un approccio strutturato riduce lo stress e aumenta le probabilità di superare la prova.",
+      "steps": [
+        {
+          "name": "Analisi & obiettivi",
+          "description": "Valutare verifiche recenti, definire i punteggi target e identificare gli ostacoli.",
+          "duration": "1–2 sessioni",
+          "materials": [
+            "Verifiche passate",
+            "Compiti scolastici"
+          ],
+          "notes": [
+            "Se necessario si effettua un test diagnostico."
+          ]
+        },
+        {
+          "name": "Consolidare le fondamenta",
+          "description": "Ripasso sistematico degli argomenti rilevanti con esercizi graduati e correzione degli errori ricorrenti.",
+          "duration": "4–8 settimane",
+          "materials": [
+            "Schede teoriche",
+            "Serie di esercizi con soluzioni"
+          ],
+          "notes": [
+            "Monitoraggio settimanale dei progressi."
+          ]
+        },
+        {
+          "name": "Simulazioni & rifinitura",
+          "description": "Mock-exam in tempo reale, analisi dettagliata e ottimizzazione della gestione del tempo.",
+          "duration": "2–4 settimane",
+          "materials": [
+            "Prove simulate",
+            "Template per la gestione del tempo"
+          ],
+          "notes": [
+            "Integrare strategie mentali e pause mirate."
+          ]
+        }
+      ],
+      "disclaimer": "Il percorso viene adattato alle esigenze individuali; discuteremo eventuali modifiche durante la consulenza iniziale."
+    },
+    "comparison": {
+      "title": "Confronto delle opzioni",
+      "description": "Scegli il pacchetto più adatto alle tue esigenze.",
+      "columns": [
+        {
+          "key": "single",
+          "label": "Singola"
+        },
+        {
+          "key": "fivePack",
+          "label": "Pacchetto 5"
+        },
+        {
+          "key": "tenPack",
+          "label": "Pacchetto 10"
+        }
+      ],
+      "rows": [
+        {
+          "metric": "Durata sessione",
+          "values": {
+            "single": "60 minuti",
+            "fivePack": "60 minuti",
+            "tenPack": "60 minuti"
+          }
+        },
+        {
+          "metric": "Pianificazione",
+          "values": {
+            "single": "Focus sugli obiettivi del momento",
+            "fivePack": "Piano strutturato + compiti",
+            "tenPack": "Percorso completo + mock exam"
+          }
+        },
+        {
+          "metric": "Feedback",
+          "values": {
+            "single": "Su richiesta",
+            "fivePack": "Settimanale",
+            "tenPack": "Settimanale + review dedicate"
+          }
+        },
+        {
+          "metric": "Prezzo per lezione",
+          "values": {
+            "single": "CHF 150",
+            "fivePack": "CHF 140",
+            "tenPack": "CHF 135"
+          }
+        }
+      ],
+      "footnote": "Prezzi IVA esclusa (non soggetto a IVA). Possibili adattamenti per esigenze specifiche."
+    },
+    "glossary": {
+      "title": "Glossario",
+      "entries": [
+        {
+          "term": "Gymiprüfung",
+          "definition": "Esame centrale di ammissione al ginnasio (scuola superiore) nel Canton Zurigo.",
+          "relatedLinks": [
+            "TODO"
+          ]
+        },
+        {
+          "term": "BMS",
+          "definition": "Scuola di maturità professionale che combina formazione professionale e contenuti liceali.",
+          "relatedLinks": [
+            "TODO"
+          ]
+        },
+        {
+          "term": "Mock exam",
+          "definition": "Simulazione completa d’esame per abituarsi alle condizioni reali di tempo e formato.",
+          "relatedLinks": [
+            "TODO"
+          ]
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contatti & prenotazioni",
+    "description": "Scrivimi indicando obiettivi, classe e periodo desiderato. Ti risponderò entro un giorno lavorativo.",
+    "details": [
+      {
+        "label": "E-mail",
+        "value": "info@theodors.ch",
+        "href": "mailto:info@theodors.ch"
+      },
+      {
+        "label": "Telefono / WhatsApp",
+        "value": "+41 76 244 02 59",
+        "href": "tel:+41762440259"
+      },
+      {
+        "label": "Instagram",
+        "value": "Teo6oro (profilo privato)",
+        "href": "https://www.instagram.com/Teo6oro/"
+      }
+    ],
+    "form": {
+      "title": "Modulo di contatto",
+      "fields": [
+        {
+          "id": "name",
+          "label": "Nome",
+          "placeholder": "Nome e cognome",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "email",
+          "label": "E-mail",
+          "placeholder": "nome@mail.ch",
+          "type": "email",
+          "required": true
+        },
+        {
+          "id": "phone",
+          "label": "Telefono (opzionale)",
+          "placeholder": "+41 …",
+          "type": "tel",
+          "required": false
+        },
+        {
+          "id": "level",
+          "label": "Classe / obiettivo",
+          "placeholder": "es. 2ª Sek, Gymi lungo",
+          "type": "text",
+          "required": true
+        },
+        {
+          "id": "message",
+          "label": "Messaggio",
+          "placeholder": "Quali temi vuoi affrontare?",
+          "type": "textarea",
+          "required": true
+        }
+      ],
+      "privacyNote": "Inviando il modulo confermi di aver letto l’informativa sulla privacy.",
+      "submitLabel": "Invia messaggio",
+      "success": "Grazie! Ti risponderò entro 24 ore.",
+      "error": "Si è verificato un errore. Riprova più tardi.",
+      "validation": {
+        "nameRequired": "Inserisci il tuo nome.",
+        "nameTooLong": "Il nome può contenere al massimo 120 caratteri.",
+        "emailInvalid": "Inserisci un indirizzo e-mail valido.",
+        "phoneInvalid": "Il numero di telefono contiene caratteri non validi.",
+        "levelRequired": "Indica la classe o l’obiettivo.",
+        "levelTooLong": "L’indicazione può contenere al massimo 160 caratteri.",
+        "messageRequired": "Descrivi brevemente la tua richiesta.",
+        "messageTooLong": "Il messaggio può contenere al massimo 1500 caratteri."
+      }
+    },
+    "responseTime": "Risposta entro 24h (lun–ven)",
+    "officeHours": "Orari di lezione: lun–sab su appuntamento",
+    "policy": {
+      "cancellationTitle": "Politica di cancellazione",
+      "cancellationItems": [
+        "Le lezioni possono essere annullate o spostate gratuitamente fino a 24 ore prima.",
+        "Cancellazioni tardive o assenze non giustificate vengono addebitate come lezione completa.",
+        "Pagamento tramite fattura o bonifico entro 10 giorni."
+      ],
+      "minorsTitle": "Studenti minorenni",
+      "minorsItems": [
+        "Per studenti sotto i 16 anni è richiesta l’autorizzazione dei genitori o tutori.",
+        "La comunicazione avviene preferibilmente insieme ai genitori o con il loro coinvolgimento.",
+        "Nei profili Zoom non vengono utilizzati nomi completi dei minorenni senza consenso."
+      ]
+    }
+  },
+  "outboundLinks": [
+    {
+      "name": "TODO – Direzione dell’educazione Zurigo Gymiprüfung",
+      "url": "https://example.com",
+      "description": "Informazioni ufficiali sull’esame di ammissione.",
+      "category": "authority"
+    },
+    {
+      "name": "TODO – BMS Zurigo",
+      "url": "https://example.com",
+      "description": "Dettagli sulla scuola di maturità professionale.",
+      "category": "authority"
+    }
+  ]
+}

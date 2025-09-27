@@ -1,0 +1,25 @@
+{
+  "banner": {
+    "title": "Cookie e privacy",
+    "body": "Utilizziamo cookie essenziali per il funzionamento del sito. I cookie analitici opzionali (Google Analytics 4) ci aiutano, solo previo consenso, a comprendere in modo anonimo l'utilizzo della piattaforma.",
+    "accept": "Accetta tutto",
+    "reject": "Solo essenziali",
+    "manage": "Impostazioni"
+  },
+  "preferences": {
+    "title": "Impostazioni cookie",
+    "description": "Puoi modificare la tua scelta in qualsiasi momento. I cookie essenziali sono necessari per sicurezza, lingua e salvataggio delle preferenze e restano sempre attivi.",
+    "essentialTitle": "Cookie essenziali",
+    "essentialDescription": "Necessari per funzioni di base come navigazione, sicurezza e memorizzazione delle preferenze cookie.",
+    "analyticsTitle": "Analytics (Google Analytics 4)",
+    "analyticsDescription": "Consente la misurazione anonima dell'utilizzo del sito con anonimizzazione IP. Nessun dato personale viene salvato o combinato con altri servizi Google.",
+    "save": "Salva impostazioni",
+    "cancel": "Annulla"
+  },
+  "notifications": {
+    "saved": "Le impostazioni cookie sono state salvate."
+  },
+  "links": {
+    "privacy": "Informativa privacy"
+  }
+}
