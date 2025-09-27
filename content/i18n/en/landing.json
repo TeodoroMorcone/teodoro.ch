@@ -3,7 +3,11 @@
     "heading": "Master math with personalized tutoring",
     "subheading": "Structured online support for Gymnasium entrance and BMS/HMS/FMS exams, plus ongoing academic coaching from Zurich.",
     "badge": "100% online (Zoom)",
-    "mathSnippet": "\\displaystyle \\vec{F}=m\\cdot\\vec{a}"
+    "illustration": {
+      "src": "/images/avatar.jpeg",
+      "alt": "Teodoro Morcone teaches a student via online whiteboard",
+      "caption": "Online sessions with personalised whiteboard walkthroughs"
+    }
   },
   "tldr": {
     "title": "Key takeaways",

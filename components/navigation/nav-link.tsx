@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {useCallback} from "react";
+import {useCallback, type MouseEvent as ReactMouseEvent} from "react";
 
 import {cn} from "@/lib/utils/cn";
 
@@ -18,15 +18,32 @@ export function NavLink({href, label, targetId, onNavigate}: NavLinkProps) {
   const {activeId} = useActiveSection();
   const isActive = activeId === targetId;
 
-  const handleClick = useCallback(() => {
-    onNavigate?.();
-  }, [onNavigate]);
+  const handleClick = useCallback(
+    (event: ReactMouseEvent<HTMLAnchorElement>) => {
+      if (href.startsWith("#")) {
+        const element = document.getElementById(targetId);
+
+        if (element) {
+          event.preventDefault();
+          const topOffset = 96;
+          const elementTop = element.getBoundingClientRect().top + window.scrollY;
+          const offsetTop = elementTop - topOffset;
+
+          window.scrollTo({top: offsetTop, behavior: "smooth"});
+          window.history.replaceState(null, "", href);
+        }
+      }
+
+      onNavigate?.();
+    },
+    [href, onNavigate, targetId],
+  );
 
   return (
     <li>
       <Link
         href={href}
-        scroll
+        scroll={false}
         onClick={handleClick}
         aria-current={isActive ? "page" : undefined}
         className={cn(

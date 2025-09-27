@@ -3,6 +3,7 @@ export type HeroIllustration = {
   alt: string;
   width?: number;
   height?: number;
+  caption?: string;
 };
 
 export type HeroContent = {

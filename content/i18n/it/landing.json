@@ -3,7 +3,11 @@
     "heading": "Domina la matematica con ripetizioni personalizzate",
     "subheading": "Supporto strutturato online per la Gymiprüfung e gli esami BMS/HMS/FMS, con follow-up continuo direttamente da Zurigo.",
     "badge": "100% online (Zoom)",
-    "mathSnippet": "\\displaystyle \\vec{F}=m\\cdot\\vec{a}"
+    "illustration": {
+      "src": "/images/avatar.jpeg",
+      "alt": "Teodoro Morcone spiega matematica con una lavagna digitale",
+      "caption": "Sessioni Zoom personalizzate con spiegazioni passo passo"
+    }
   },
   "tldr": {
     "title": "In breve",

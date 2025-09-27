@@ -34,6 +34,8 @@ NEXT_PUBLIC_ZOOM_CONSULTATION_FALLBACK=https://zoom.us/j/XXXXXXXXXXX?pwd=XXXXXXX
 NEXT_PUBLIC_ZOOM_LESSON_DEEP_LINK=zoommtg://zoom.us/j/YYYYYYYYYYY?pwd=YYYYYYYY
 NEXT_PUBLIC_ZOOM_LESSON_FALLBACK=https://zoom.us/j/YYYYYYYYYYY?pwd=YYYYYYYY
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+GOOGLE_PLACES_API_KEY=AIzaSyXXXXXX
+GOOGLE_PLACE_ID=ChIJxxxxxxxxxxxxxxxx
 ```
 
 - **Zoom links** must point to waiting-room enabled meetings with passcodes (no raw PMI).

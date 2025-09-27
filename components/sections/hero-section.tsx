@@ -7,7 +7,6 @@ import type {HeroContent} from "@/types/landing";
 
 type HeroSectionProps = {
   hero: HeroContent;
-  mathHtml?: string;
   ctas: {
     primary: {label: string; href: string};
     secondary: {label: string; href: string};
@@ -18,7 +17,7 @@ type HeroSectionProps = {
   };
 };
 
-export function HeroSection({hero, mathHtml, ctas, zoom}: HeroSectionProps) {
+export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
   return (
     <section
       id="hero"
@@ -49,18 +48,17 @@ export function HeroSection({hero, mathHtml, ctas, zoom}: HeroSectionProps) {
       </div>
       <div className="flex flex-col gap-6 rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10">
         <SectionHeading
-          eyebrow={hero.illustration ? "Visual" : "KaTeX"}
+          eyebrow={hero.illustration ? "Momentaufnahme" : "Hero"}
           title=""
           description={
             <p className="text-sm text-secondary dark:text-surface/70">
-              {hero.illustration
-                ? "Session-ready visuals that keep complex ideas accessible at a glance."
-                : "Workshop-ready formulas rendered during live sessions for crystal-clear breakdowns."}
+              {hero.illustration?.caption ??
+                "Ein Blick hinter die Kulissen: so sehen unsere Online-Sessions aus."}
             </p>
           }
         />
         {hero.illustration ? (
-          <figure className="overflow-hidden rounded-2xl">
+          <figure className="overflow-hidden">
             <Image
               src={hero.illustration.src}
               alt={hero.illustration.alt}
@@ -69,14 +67,17 @@ export function HeroSection({hero, mathHtml, ctas, zoom}: HeroSectionProps) {
               className="h-auto w-full object-cover"
               priority
             />
+            {hero.illustration.caption ? (
+              <figcaption className="mt-3 text-xs uppercase tracking-[0.2em] text-secondary/70 dark:text-surface/60">
+                {hero.illustration.caption}
+              </figcaption>
+            ) : null}
           </figure>
-        ) : mathHtml ? (
-          <div
-            className="text-3xl text-primary dark:text-surface"
-            aria-label="Sample math formula"
-            dangerouslySetInnerHTML={{__html: mathHtml}}
-          />
-        ) : null}
+        ) : (
+          <div className="flex h-64 items-center justify-center rounded-2xl border border-dashed border-secondary/40 text-sm text-secondary dark:border-surface/30 dark:text-surface/70">
+            Füge über den Hero-Inhalt ein Bild hinzu, um die Sitzungen zu zeigen.
+          </div>
+        )}
       </div>
     </section>
   );

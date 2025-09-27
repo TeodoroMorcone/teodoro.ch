@@ -3,7 +3,11 @@
     "heading": "Mathe sicher meistern mit persönlicher Nachhilfe",
     "subheading": "Strukturierte Online-Unterstützung für Gymiprüfung, BMS/HMS/FMS Aufnahme und laufende Schulbegleitung – direkt aus Zürich.",
     "badge": "100% online (Zoom)",
-    "mathSnippet": "\\displaystyle \\vec{F}=m\\cdot\\vec{a}"
+    "illustration": {
+      "src": "/images/avatar.jpeg",
+      "alt": "Teodoro Morcone erklärt Mathematik per Online-Whiteboard",
+      "caption": "Individuelle Zoom-Sessions mit persönlichen Whiteboard-Erklärungen"
+    }
   },
   "tldr": {
     "title": "Auf einen Blick",

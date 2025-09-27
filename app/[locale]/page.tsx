@@ -2,7 +2,6 @@ import Script from "next/script";
 import type {Metadata} from "next";
 import {notFound} from "next/navigation";
 import {getTranslations} from "next-intl/server";
-import {renderToString} from "katex";
 
 import {AboutSection} from "@/components/sections/about-section";
 import {ComparisonSection} from "@/components/sections/comparison-section";
@@ -16,6 +15,7 @@ import {PricingSection} from "@/components/sections/pricing-section";
 import {ResultsSection} from "@/components/sections/results-section";
 import {ServicesSection} from "@/components/sections/services-section";
 import {TLDRSection} from "@/components/sections/tldr-section";
+import {getGoogleReviews} from "@/lib/reviews/google";
 import {buildFaqJsonLd, buildHowToJsonLd, buildOrganizationJsonLd, buildServiceJsonLd, buildSpeakableJsonLd} from "@/lib/seo/jsonld";
 import {DEFAULT_LOCALE, LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
 import type {LandingContent} from "@/types/landing";
@@ -105,18 +105,8 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
     detailsKeys: contactDetails && !Array.isArray(contactDetails) && typeof contactDetails === "object" ? Object.keys(contactDetails as Record<string, unknown>) : undefined,
   });
 
-  let heroMathHtml: string | undefined;
-  if (hero.mathSnippet) {
-    try {
-      heroMathHtml = renderToString(hero.mathSnippet, {
-        throwOnError: false,
-        output: "html",
-        trust: false,
-      });
-    } catch {
-      heroMathHtml = hero.mathSnippet;
-    }
-  }
+  const googleReviews = await getGoogleReviews();
+
 
   const heroCtas = {
     primary: {label: tCommon("cta.primary"), href: "#contact"},
@@ -148,7 +138,6 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
               },
               helper: tCommon("cta.tertiaryHelper"),
             }}
-            {...(heroMathHtml ? {mathHtml: heroMathHtml} : {})}
           />
 
           <TLDRSection tldr={tldr} intentClusters={intentClusters} />
@@ -157,7 +146,7 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
 
           <HowItWorksSection howItWorks={howItWorks} />
 
-          <ResultsSection results={results} outboundLinks={outboundLinks} />
+          <ResultsSection results={results} outboundLinks={outboundLinks} reviews={googleReviews} />
 
           <AboutSection about={about} />
 
