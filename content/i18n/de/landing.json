@@ -79,7 +79,7 @@
         {
           "id": "bms-hms-fms",
           "name": "BMS, HMS & FMS Prüfungsvorbereitung",
-          "copy": "Strukturierter Fahrplan für die Aufnahmeprüfungen der beruflichen Mittelschulen mit praxisnahen Übungseinheiten."
+          "copy": "Strukturierter Fahrplan für Aufnahme- und Abschlussprüfungen der beruflichen Mittelschulen mit praxisnahen Übungseinheiten."
         },
         {
           "id": "exam-coaching",
@@ -151,7 +151,7 @@
     },
     "about": {
       "title": "Über den Tutor",
-      "body": "Ich bin Teodoro Morcone, Mathematik-Tutor in Zürich und Inhaber von Teodoro Morcone Nachhilfe. Ich helfe Schüler:innen dabei, ein stabiles Grundlagenverständnis aufzubauen, gezielt für Gymnasium-, BMS-, HMS- und FMS-Aufnahmeprüfungen zu trainieren und im Schulalltag dauerhaft am Ball zu bleiben. Mein Ansatz kombiniert Schritt-für-Schritt-Erklärungen, abgestufte Übungspakete, realistische Mock-Exams und wöchentliches Fortschrittstracking. Unterricht in Deutsch (C1), Italienisch (C2) und Englisch (C1) – ausschliesslich online via Zoom."
+      "body": "Ich bin Teodoro Morcone, Mathematik-Tutor in Zürich und Inhaber von Teodoro Morcone Nachhilfe. Ich helfe Schüler:innen dabei, ein stabiles Grundlagenverständnis aufzubauen, gezielt für Gymnasium-, BMS-, HMS- und FMS-Aufnahmeprüfungen zu trainieren und im Schulalltag dauerhaft am Ball zu bleiben. Mein Ansatz kombiniert Schritt-für-Schritt-Erklärungen, abgestufte Übungspakete, realistische Mock-Exams und wöchentliches Fortschrittstracking. Unterricht in Deutsch, Italienisch und Englisch – ausschliesslich online via Zoom."
     },
     "pricing": {
       "title": "Preismodelle",
@@ -166,7 +166,7 @@
         {
           "id": "single",
           "name": "Einzellektion",
-          "price": "CHF 150",
+          "price": "CHF 60",
           "unit": "pro 60 Minuten",
           "features": [
             "Individuelle Lektion inkl. Material",
@@ -178,8 +178,8 @@
         {
           "id": "five-pack",
           "name": "5er Paket",
-          "price": "CHF 700",
-          "unit": "5 × 60 Minuten",
+          "price": "CHF 275",
+          "unit": "5 × 60 Minuten (CHF 55 pro Lektion)",
           "features": [
             "Strukturierter Lernplan",
             "Zwischenfeedback & Monitoring",
@@ -191,8 +191,8 @@
         {
           "id": "ten-pack",
           "name": "10er Paket",
-          "price": "CHF 1350",
-          "unit": "10 × 60 Minuten",
+          "price": "CHF 500",
+          "unit": "10 × 60 Minuten (CHF 50 pro Lektion)",
           "features": [
             "Komplette Prüfungsvorbereitung",
             "Wöchentliche Fortschrittsberichte",
@@ -330,9 +330,9 @@
         {
           "metric": "Preis pro Lektion",
           "values": {
-            "single": "CHF 150",
-            "fivePack": "CHF 140",
-            "tenPack": "CHF 135"
+            "single": "CHF 60",
+            "fivePack": "CHF 55",
+            "tenPack": "CHF 50"
           }
         }
       ],

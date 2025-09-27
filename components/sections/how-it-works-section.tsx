@@ -19,15 +19,19 @@ export function HowItWorksSection({howItWorks}: HowItWorksSectionProps) {
         {howItWorks.steps.map((step) => (
           <article
             key={step.id}
-            className="rounded-3xl border border-secondary/20 bg-surface px-6 py-6 shadow-sm transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-sidebar dark:border-surface/20 dark:bg-primary/40"
+            className="group rounded-3xl border border-secondary/20 bg-surface px-6 py-6 text-primary shadow-sm transition-transform transition-colors duration-200 ease-soft-sine hover:-translate-y-1 hover:bg-primary hover:text-surface hover:shadow-sidebar dark:border-surface/20 dark:bg-primary/40 dark:text-surface dark:hover:bg-surface dark:hover:text-primary"
           >
             <header className="flex items-center justify-between">
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/70">
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary transition-colors duration-200 group-hover:text-surface dark:text-surface/70 dark:group-hover:text-primary">
                 {step.id.toUpperCase()}
               </span>
             </header>
-            <h3 className="mt-4 text-lg font-semibold text-primary dark:text-surface">{step.title}</h3>
-            <p className="mt-3 text-secondary dark:text-surface/75">{step.description}</p>
+            <h3 className="mt-4 text-lg font-semibold text-primary transition-colors duration-200 group-hover:text-surface dark:text-surface dark:group-hover:text-primary">
+              {step.title}
+            </h3>
+            <p className="mt-3 text-secondary transition-colors duration-200 group-hover:text-surface/80 dark:text-surface/75 dark:group-hover:text-primary/80">
+              {step.description}
+            </p>
           </article>
         ))}
       </div>
