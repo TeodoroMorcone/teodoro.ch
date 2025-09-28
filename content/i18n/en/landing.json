@@ -3,6 +3,7 @@
     "heading": "Master math with personalized tutoring",
     "subheading": "Structured online support for Gymnasium entrance and BMS/HMS/FMS exams, plus ongoing academic coaching from Zurich.",
     "badge": "100% online (Zoom)",
+    "avatarAlt": "Portrait of Teodoro Morcone smiling and ready to tutor online",
     "illustration": {
       "src": "/images/avatar.jpeg",
       "alt": "Teodoro Morcone teaches a student via online whiteboard",
@@ -14,7 +15,7 @@
     "items": [
       {
         "label": "Who?",
-        "description": "Students targeting Gymnasium admission or BMS/HMS/FMS entrance exams."
+        "description": "Students on their way to the entrance or final exams for Gymi, BMS, HMS, and FMS."
       },
       {
         "label": "What?",
@@ -228,7 +229,7 @@
         {
           "id": "faq-payment",
           "question": "What are the payment options?",
-          "answer": "Invoice or TWINT within 10 days. Packages are payable in advance."
+          "answer": "Invoice or Stripe within 10 days. Packages are payable in advance."
         },
         {
           "id": "faq-privacy",

@@ -3,6 +3,7 @@
     "heading": "Domina la matematica con ripetizioni personalizzate",
     "subheading": "Supporto strutturato online per la Gymiprüfung e gli esami BMS/HMS/FMS, con follow-up continuo direttamente da Zurigo.",
     "badge": "100% online (Zoom)",
+    "avatarAlt": "Ritratto di Teodoro Morcone sorridente pronto per una lezione online",
     "illustration": {
       "src": "/images/avatar.jpeg",
       "alt": "Teodoro Morcone spiega matematica con una lavagna digitale",
@@ -14,7 +15,7 @@
     "items": [
       {
         "label": "Per chi?",
-        "description": "Studenti che puntano alla Gymiprüfung o agli esami di accesso BMS/HMS/FMS."
+        "description": "Studentesse e studenti in cammino verso gli esami di ammissione o di diploma per Gymi, BMS, HMS e FMS."
       },
       {
         "label": "Cosa?",
@@ -228,7 +229,7 @@
         {
           "id": "faq-payment",
           "question": "Quali sono le modalità di pagamento?",
-          "answer": "Fattura o TWINT entro 10 giorni. I pacchetti vengono saldati anticipatamente."
+          "answer": "Fattura o pagamento Stripe entro 10 giorni. I pacchetti vengono saldati anticipatamente."
         },
         {
           "id": "faq-privacy",

@@ -3,6 +3,7 @@
     "heading": "Mathe sicher meistern mit persönlicher Nachhilfe",
     "subheading": "Strukturierte Online-Unterstützung für Gymiprüfung, BMS/HMS/FMS Aufnahme und laufende Schulbegleitung – direkt aus Zürich.",
     "badge": "100% online (Zoom)",
+    "avatarAlt": "Porträt von Teodoro Morcone, der online Nachhilfe anbietet",
     "illustration": {
       "src": "/images/avatar.jpeg",
       "alt": "Teodoro Morcone erklärt Mathematik per Online-Whiteboard",
@@ -14,7 +15,7 @@
     "items": [
       {
         "label": "Für wen?",
-        "description": "Schüler:innen auf dem Weg zur Gymi-, BMS-, HMS- oder FMS-Aufnahmeprüfung."
+        "description": "Schüler:innen auf dem Weg zu den Aufnahme- oder Abschlussprüfungen für Gymi, BMS, HMS und FMS."
       },
       {
         "label": "Was?",
@@ -228,7 +229,7 @@
         {
           "id": "faq-payment",
           "question": "Wie erfolgt die Bezahlung?",
-          "answer": "Die Abrechnung erfolgt per Rechnung oder TWINT innerhalb von 10 Tagen. Paketpreise werden im Voraus fällig."
+          "answer": "Die Abrechnung erfolgt per Rechnung oder Stripe-Zahlung innerhalb von 10 Tagen. Paketpreise werden im Voraus fällig."
         },
         {
           "id": "faq-privacy",

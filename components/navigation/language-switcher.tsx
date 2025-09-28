@@ -5,6 +5,12 @@ import {useMemo} from "react";
 
 import {LOCALES, type Locale, LOCALE_LABELS} from "@/lib/i18n/locales";
 
+const LOCALE_FLAGS: Record<Locale, string> = {
+  en: "🇬🇧",
+  de: "🇩🇪",
+  it: "🇮🇹",
+};
+
 type LanguageSwitcherProps = {
   currentLocale: Locale;
   label: string;
@@ -19,7 +25,7 @@ export function LanguageSwitcher({currentLocale, label}: LanguageSwitcherProps) 
     () =>
       LOCALES.map((locale) => ({
         value: locale,
-        label: LOCALE_LABELS[locale],
+        label: `${LOCALE_FLAGS[locale] ?? ""} ${LOCALE_LABELS[locale]}`,
       })),
     [],
   );
