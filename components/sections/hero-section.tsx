@@ -51,7 +51,7 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
       </div>
       <div className="flex flex-col gap-6 rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10">
         <SectionHeading
-          eyebrow={hero.illustration ? "Momentaufnahme" : "Hero"}
+          eyebrow={hero.illustration ? "Portrait" : "Hero"}
           title=""
           description={
             <p className="text-sm text-secondary dark:text-surface/70">
