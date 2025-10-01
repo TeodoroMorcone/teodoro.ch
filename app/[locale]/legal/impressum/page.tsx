@@ -38,10 +38,17 @@ export default async function ImpressumPage({params}: LegalPageProps) {
 
   const t = await getTranslations({locale: localeParam, namespace: "legal.impressum"});
 
+  const intro = t.has("intro") ? t("intro") : null;
   const sections = t.raw("sections") as Array<{
     heading: string;
-    body: string[];
+    entries: Array<{
+      label: string;
+      value: string;
+      type?: "email" | "tel" | "url";
+    }>;
   }>;
+  const notesTitle = t.has("notesTitle") ? t("notesTitle") : null;
+  const notes = t.has("notes") ? (t.raw("notes") as string[]) : [];
 
   const toSlug = (value: string) =>
     value
@@ -50,57 +57,70 @@ export default async function ImpressumPage({params}: LegalPageProps) {
       .trim()
       .replace(/\s+/g, "-");
 
-  const renderLine = (line: string) => {
-    const trimmed = line.trim();
+  const formatHref = (value: string, type?: "email" | "tel" | "url") => {
+    if (!type) return undefined;
 
-    if (trimmed.toLowerCase().startsWith("e-mail") || trimmed.toLowerCase().startsWith("email")) {
-      const email = trimmed.split(":")[1]?.trim() ?? "";
-      return (
-        <a key={line} className="text-primary underline" href={`mailto:${email}`}>
-          {line}
-        </a>
-      );
+    if (type === "email") {
+      return `mailto:${value}`;
     }
 
-    if (trimmed.toLowerCase().startsWith("tel")) {
-      const phone = trimmed.split(":")[1]?.trim().replace(/\s+/g, "") ?? "";
-      return (
-        <a key={line} className="text-primary underline" href={`tel:${phone}`}>
-          {line}
-        </a>
-      );
+    if (type === "tel") {
+      const digitsOnly = value.replace(/\s+|\(|\)|-/g, "");
+      return `tel:${digitsOnly}`;
     }
 
-    if (trimmed.toLowerCase().startsWith("web")) {
-      const url = trimmed.split(":")[1]?.trim() ?? "";
-      return (
-        <a key={line} className="text-primary underline" href={`https://${url}`} rel="noreferrer noopener" target="_blank">
-          {line}
-        </a>
-      );
+    if (type === "url") {
+      const normalized = value.startsWith("http") ? value : `https://${value}`;
+      return normalized;
     }
 
-    return <span key={line}>{line}</span>;
+    return undefined;
   };
 
   return (
     <main className="mx-auto max-w-3xl px-6 py-16">
       <h1 className="text-3xl font-semibold text-primary">{t("title")}</h1>
 
-      <div className="mt-8 space-y-8">
+      {intro ? <p className="mt-4 text-base text-secondary">{intro}</p> : null}
+
+      <div className="mt-10 space-y-10">
         {sections.map((section) => (
-          <section key={section.heading} id={toSlug(section.heading)}>
+          <section key={section.heading} id={toSlug(section.heading)} className="rounded-xl border border-border/60 bg-card/60 p-6 shadow-sm">
             <h2 className="text-xl font-semibold text-primary">{section.heading}</h2>
-            <dl className="mt-3 space-y-3 text-secondary">
-              {section.body.map((line) => (
-                <div key={line} className="flex flex-col">
-                  <span>{renderLine(line)}</span>
-                </div>
-              ))}
+            <dl className="mt-4 space-y-4 text-secondary">
+              {section.entries.map((entry) => {
+                const href = formatHref(entry.value, entry.type);
+
+                return (
+                  <div key={`${section.heading}-${entry.label}`} className="grid gap-1 sm:grid-cols-[12rem_auto] sm:items-start">
+                    <dt className="text-sm font-medium uppercase tracking-wide text-muted-foreground">{entry.label}</dt>
+                    <dd className="text-base font-normal text-secondary">
+                      {href ? (
+                        <a className="text-primary underline underline-offset-2" href={href} rel={entry.type === "url" ? "noreferrer noopener" : undefined} target={entry.type === "url" ? "_blank" : undefined}>
+                          {entry.value}
+                        </a>
+                      ) : (
+                        entry.value
+                      )}
+                    </dd>
+                  </div>
+                );
+              })}
             </dl>
           </section>
         ))}
       </div>
+
+      {notes.length > 0 ? (
+        <aside className="mt-10 rounded-lg border border-primary/20 bg-primary/5 p-5 text-sm text-secondary">
+          {notesTitle ? <h3 className="text-base font-semibold text-primary">{notesTitle}</h3> : null}
+          <ul className="mt-3 list-disc space-y-2 pl-5">
+            {notes.map((note, index) => (
+              <li key={index}>{note}</li>
+            ))}
+          </ul>
+        </aside>
+      ) : null}
     </main>
   );
 }

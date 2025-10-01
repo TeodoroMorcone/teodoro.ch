@@ -3,7 +3,7 @@
 import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
 import {Menu, X} from "lucide-react";
 import Link from "next/link";
-import {useCallback, useState, type ReactNode} from "react";
+import {useCallback, useEffect, useState, type ReactNode} from "react";
 
 import {useConsent} from "@/components/consent/consent-context";
 import {NavLink} from "@/components/navigation/nav-link";
@@ -81,6 +81,53 @@ export function MobileNav({
   const consent = useConsent();
   const [open, setOpen] = useState(false);
 
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "development") {
+      return;
+    }
+
+    if (typeof window === "undefined" || typeof document === "undefined") {
+      return;
+    }
+
+    const logViewportMetrics = () => {
+      const scrollingElement = document.scrollingElement ?? document.documentElement;
+      const mainElement = document.getElementById("main-content");
+      const mainRect = mainElement?.getBoundingClientRect();
+
+      console.log("[MobileNav] viewport metrics", {
+        innerHeight: window.innerHeight,
+        outerHeight: window.outerHeight,
+        visualViewportHeight: window.visualViewport?.height ?? null,
+        visualViewportScale: window.visualViewport?.scale ?? null,
+        clientHeight: document.documentElement?.clientHeight ?? null,
+        clientWidth: document.documentElement?.clientWidth ?? null,
+        bodyClientHeight: document.body?.clientHeight ?? null,
+        bodyScrollHeight: document.body?.scrollHeight ?? null,
+        docScrollHeight: scrollingElement?.scrollHeight ?? null,
+        docOffsetHeight:
+          scrollingElement instanceof HTMLElement ? scrollingElement.offsetHeight : null,
+        maxScrollable: (scrollingElement?.scrollHeight ?? 0) - (window.innerHeight ?? 0),
+        mainRect: mainRect
+          ? {
+              top: Math.round(mainRect.top),
+              bottom: Math.round(mainRect.bottom),
+              height: Math.round(mainRect.height),
+            }
+          : null,
+      });
+    };
+
+    logViewportMetrics();
+    window.addEventListener("resize", logViewportMetrics);
+    window.visualViewport?.addEventListener("resize", logViewportMetrics);
+
+    return () => {
+      window.removeEventListener("resize", logViewportMetrics);
+      window.visualViewport?.removeEventListener("resize", logViewportMetrics);
+    };
+  }, []);
+
   const handleNavigate = useCallback(() => {
     setOpen(false);
   }, []);
@@ -110,7 +157,7 @@ export function MobileNav({
 
   return (
     <header className="sticky top-0 z-40 border-b border-secondary/30 bg-surface/95 text-primary backdrop-blur-md dark:border-surface/20 dark:bg-primary/95 dark:text-surface lg:hidden">
-      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
         <Link href={`/${locale}`} className="flex flex-col text-left" aria-label={labels.home}>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/80">
             Teodoro Morcone
@@ -118,9 +165,9 @@ export function MobileNav({
           <span className="text-lg font-semibold leading-tight">Nachhilfe</span>
         </Link>
 
-        <div className="flex items-center gap-3">
+        <div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center sm:justify-end sm:gap-3">
           <a
-            className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary"
+            className="inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary sm:w-auto"
             href={ctas.primary.href}
           >
             {ctas.primary.label}
@@ -128,12 +175,12 @@ export function MobileNav({
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/40 text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/30 dark:text-surface"
+              className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-secondary/40 text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/30 dark:text-surface sm:self-auto sm:justify-center"
               aria-label={labels.open}
             >
               <Menu aria-hidden="true" className="h-5 w-5" />
             </SheetTrigger>
-            <SheetContent className="w-full max-w-xs">
+            <SheetContent className="flex h-full max-h-screen w-full max-w-xs flex-col overflow-y-auto">
               <div className="flex items-center justify-between">
                 <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/80">
                   {labels.navigation}

@@ -1,37 +1,76 @@
 {
   "impressum": {
     "title": "Legal Notice",
+    "intro": "This legal notice summarises the required contact information and disclosures for the tutoring practice.",
+    "notesTitle": "Key notes",
     "sections": [
       {
-        "heading": "Owner",
-        "body": [
-          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
-          "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
-          "Email: info@theodors.ch",
-          "Phone/WhatsApp: +41 76 244 02 59",
-          "Web: theodors.ch"
+        "heading": "Business details",
+        "entries": [
+          {
+            "label": "Name",
+            "value": "Teodoro Morcone (Teodoro Morcone Nachhilfe)"
+          },
+          {
+            "label": "Registered address",
+            "value": "Eichbühlstrasse 33, 8004 Zurich, Switzerland"
+          },
+          {
+            "label": "Email",
+            "value": "info@theodors.ch",
+            "type": "email"
+          },
+          {
+            "label": "Phone / WhatsApp",
+            "value": "+41 76 244 02 59",
+            "type": "tel"
+          },
+          {
+            "label": "Website",
+            "value": "theodors.ch",
+            "type": "url"
+          }
         ]
       },
       {
-        "heading": "Lessons",
-        "body": [
-          "Lessons are delivered exclusively online via Zoom.",
-          "Zoom rooms are secured with waiting room and passcode."
+        "heading": "Tutoring services",
+        "entries": [
+          {
+            "label": "Lesson format",
+            "value": "Lessons are delivered exclusively online via Zoom."
+          },
+          {
+            "label": "Security",
+            "value": "Zoom rooms are secured with waiting room and passcode."
+          }
         ]
       },
       {
         "heading": "VAT status",
-        "body": [
-          "Annual revenue < CHF 100,000 → not VAT-registered."
+        "entries": [
+          {
+            "label": "Swiss VAT",
+            "value": "Annual revenue < CHF 100,000 → not VAT-registered."
+          }
         ]
       },
       {
-        "heading": "Disclaimer",
-        "body": [
-          "Content is reviewed with care; however, no liability is assumed for completeness, accuracy, or currency.",
-          "External links are beyond our control."
+        "heading": "Liability & external links",
+        "entries": [
+          {
+            "label": "Content responsibility",
+            "value": "Content is reviewed with care; however, no liability is assumed for completeness, accuracy, or currency."
+          },
+          {
+            "label": "External links",
+            "value": "External links are beyond our control."
+          }
         ]
       }
+    ],
+    "notes": [
+      "Tutoring contracts are subject to Swiss law.",
+      "In case of dispute, the competent venue is Zurich, Switzerland."
     ]
   },
   "privacy": {

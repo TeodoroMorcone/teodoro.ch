@@ -1,37 +1,76 @@
 {
   "impressum": {
     "title": "Impressum",
+    "intro": "Dieses Impressum enthält die gesetzlich vorgeschriebenen Angaben für die Nachhilfe-Tätigkeit.",
+    "notesTitle": "Wichtige Hinweise",
     "sections": [
       {
-        "heading": "Verantwortlich",
-        "body": [
-          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
-          "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
-          "E-Mail: info@theodors.ch",
-          "Tel./WhatsApp: +41 76 244 02 59",
-          "Web: theodors.ch"
+        "heading": "Geschäftsdaten",
+        "entries": [
+          {
+            "label": "Name",
+            "value": "Teodoro Morcone (Teodoro Morcone Nachhilfe)"
+          },
+          {
+            "label": "Sitz",
+            "value": "Eichbühlstrasse 33, 8004 Zürich, Schweiz"
+          },
+          {
+            "label": "E-Mail",
+            "value": "info@theodors.ch",
+            "type": "email"
+          },
+          {
+            "label": "Telefon / WhatsApp",
+            "value": "+41 76 244 02 59",
+            "type": "tel"
+          },
+          {
+            "label": "Website",
+            "value": "theodors.ch",
+            "type": "url"
+          }
         ]
       },
       {
-        "heading": "Unterricht",
-        "body": [
-          "Der Unterricht findet ausschliesslich online via Zoom statt.",
-          "Zoom-Räume verfügen über Warteraum und Passcode."
+        "heading": "Unterrichtsdetails",
+        "entries": [
+          {
+            "label": "Format",
+            "value": "Der Unterricht findet ausschliesslich online via Zoom statt."
+          },
+          {
+            "label": "Sicherheit",
+            "value": "Zoom-Räume verfügen über Warteraum und Passcode."
+          }
         ]
       },
       {
         "heading": "Umsatzsteuer",
-        "body": [
-          "Umsatz < CHF 100’000/Jahr → nicht MWST-pflichtig."
+        "entries": [
+          {
+            "label": "Schweizer MWST",
+            "value": "Umsatz < CHF 100’000/Jahr → nicht MWST-pflichtig."
+          }
         ]
       },
       {
-        "heading": "Haftungsausschluss",
-        "body": [
-          "Alle Inhalte wurden sorgfältig geprüft; dennoch wird keine Gewähr für Aktualität, Vollständigkeit und Richtigkeit übernommen.",
-          "Links zu externen Websites liegen ausserhalb unseres Verantwortungsbereichs."
+        "heading": "Haftung & Links",
+        "entries": [
+          {
+            "label": "Inhalte",
+            "value": "Alle Inhalte wurden sorgfältig geprüft; dennoch kann keine Gewähr für Aktualität, Vollständigkeit und Richtigkeit übernommen werden."
+          },
+          {
+            "label": "Externe Links",
+            "value": "Links zu externen Websites liegen ausserhalb unseres Verantwortungsbereichs."
+          }
         ]
       }
+    ],
+    "notes": [
+      "Es gilt Schweizer Recht für alle Unterrichtsverträge.",
+      "Gerichtsstand ist Zürich, Schweiz."
     ]
   },
   "privacy": {

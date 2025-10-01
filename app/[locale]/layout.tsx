@@ -117,7 +117,7 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
           {skipToContent}
         </a>
         <ActiveSectionProvider sectionIds={sectionIds} topOffset={144}>
-          <div className="relative flex min-h-screen bg-surface text-primary dark:bg-primary dark:text-surface">
+          <div className="relative flex min-h-[100svh] flex-col bg-surface text-primary dark:bg-primary dark:text-surface lg:flex-row">
             <Sidebar
               locale={locale}
               navItems={navItems}

@@ -1,37 +1,76 @@
 {
   "impressum": {
     "title": "Impressum",
+    "intro": "Questo impressum riassume le informazioni obbligatorie per l’attività di ripetizioni.",
+    "notesTitle": "Note importanti",
     "sections": [
       {
-        "heading": "Responsabile",
-        "body": [
-          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
-          "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
-          "E-mail: info@theodors.ch",
-          "Tel./WhatsApp: +41 76 244 02 59",
-          "Web: theodors.ch"
+        "heading": "Dati dell’attività",
+        "entries": [
+          {
+            "label": "Nome",
+            "value": "Teodoro Morcone (Teodoro Morcone Nachhilfe)"
+          },
+          {
+            "label": "Sede legale",
+            "value": "Eichbühlstrasse 33, 8004 Zurigo, Svizzera"
+          },
+          {
+            "label": "E-mail",
+            "value": "info@theodors.ch",
+            "type": "email"
+          },
+          {
+            "label": "Telefono / WhatsApp",
+            "value": "+41 76 244 02 59",
+            "type": "tel"
+          },
+          {
+            "label": "Sito web",
+            "value": "theodors.ch",
+            "type": "url"
+          }
         ]
       },
       {
-        "heading": "Lezioni",
-        "body": [
-          "Le lezioni si svolgono esclusivamente online via Zoom.",
-          "Le stanze Zoom sono protette da sala d’attesa e passcode."
+        "heading": "Servizi didattici",
+        "entries": [
+          {
+            "label": "Formato delle lezioni",
+            "value": "Le lezioni si svolgono esclusivamente online via Zoom."
+          },
+          {
+            "label": "Sicurezza",
+            "value": "Le stanze Zoom sono protette da sala d’attesa e passcode."
+          }
         ]
       },
       {
         "heading": "IVA",
-        "body": [
-          "Fatturato < CHF 100’000/anno → attività non soggetta a IVA."
+        "entries": [
+          {
+            "label": "IVA svizzera",
+            "value": "Fatturato < CHF 100’000/anno → attività non soggetta a IVA."
+          }
         ]
       },
       {
-        "heading": "Disclaimer",
-        "body": [
-          "Tutti i contenuti sono stati verificati con cura, ma non si garantisce completezza, correttezza o aggiornamento.",
-          "I link esterni sono al di fuori della nostra responsabilità."
+        "heading": "Responsabilità & link",
+        "entries": [
+          {
+            "label": "Contenuti",
+            "value": "Tutti i contenuti sono stati verificati con cura, ma non si garantisce completezza, correttezza o aggiornamento."
+          },
+          {
+            "label": "Link esterni",
+            "value": "I link a siti esterni sono al di fuori della nostra responsabilità."
+          }
         ]
       }
+    ],
+    "notes": [
+      "I contratti di ripetizione sono soggetti al diritto svizzero.",
+      "Foro competente: Zurigo, Svizzera."
     ]
   },
   "privacy": {
