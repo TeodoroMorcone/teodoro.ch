@@ -12,10 +12,11 @@ export type NavKey =
   | "comparison"
   | "glossary"
   | "contact"
-  | "legal"
-  | "impressum";
+  | "impressum"
+  | "terms"
+  | "privacy";
 
-export type SectionNavKey = Exclude<NavKey, "legal">;
+export type SectionNavKey = NavKey;
 
 export type SectionLink = {
   id: SectionNavKey;
@@ -43,6 +44,8 @@ export const SECTION_LINKS: SectionLink[] = [
   {id: "glossary", navKey: "glossary", targetId: "glossary", href: "#glossary"},
   {id: "contact", navKey: "contact", targetId: "contact", href: "#contact"},
   {id: "impressum", navKey: "impressum", targetId: "impressum", href: "#impressum"},
+  {id: "terms", navKey: "terms", targetId: "terms", href: "#terms"},
+  {id: "privacy", navKey: "privacy", targetId: "privacy", href: "#privacy"},
 ];
 
 export const LEGAL_LINK: LegalLink = {

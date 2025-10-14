@@ -12,6 +12,8 @@ import {HeroSection} from "@/components/sections/hero-section";
 import {HowItWorksSection} from "@/components/sections/how-it-works-section";
 import {HowToSection} from "@/components/sections/how-to-section";
 import {ImpressumSection} from "@/components/sections/impressum-section";
+import {TermsSection} from "@/components/sections/terms-section";
+import {PrivacySection} from "@/components/sections/privacy-section";
 import {PricingSection} from "@/components/sections/pricing-section";
 import {ResultsSection} from "@/components/sections/results-section";
 import {ServicesSection} from "@/components/sections/services-section";
@@ -81,6 +83,19 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
   const tCommon = await getTranslations({locale, namespace: "common"});
   const tLanding = await getTranslations({locale, namespace: "landing"});
 
+  const landingSectionsRaw = tLanding.raw("sections");
+  const landingSectionsRecord =
+    landingSectionsRaw && typeof landingSectionsRaw === "object" && !Array.isArray(landingSectionsRaw)
+      ? (landingSectionsRaw as Record<string, unknown>)
+      : undefined;
+
+  console.log("[LocaleLandingPage] landing sections snapshot", {
+    locale,
+    sectionKeys: landingSectionsRecord ? Object.keys(landingSectionsRecord) : [],
+    hasAgbSection: landingSectionsRecord ? "agb" in landingSectionsRecord : false,
+    hasPrivacySection: landingSectionsRecord ? "privacy" in landingSectionsRecord : false,
+  });
+
   const hero = tLanding.raw("hero") as LandingContent["hero"];
   const tldr = tLanding.raw("tldr") as LandingContent["tldr"];
   const intentClusters = tLanding.raw("intentClusters") as LandingContent["intentClusters"];
@@ -96,6 +111,8 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
   const contactRaw = tLanding.raw("contact");
   const contact = contactRaw as LandingContent["contact"];
   const impressum = tLanding.raw("impressum") as LandingContent["impressum"];
+  const terms = tLanding.raw("sections.terms") as LandingContent["sections"]["terms"];
+  const privacy = tLanding.raw("sections.privacy") as LandingContent["sections"]["privacy"];
   const outboundLinks = tLanding.raw("outboundLinks") as LandingContent["outboundLinks"];
 
   const contactDetails = (contactRaw as {details?: unknown})?.details;
@@ -138,7 +155,6 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
                 helper: tCommon("zoom.helper"),
                 passcode: tCommon("zoom.passcode"),
               },
-              helper: tCommon("cta.tertiaryHelper"),
             }}
           />
 
@@ -174,6 +190,10 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
           />
 
           <ImpressumSection impressum={impressum} />
+
+          <TermsSection terms={terms} />
+
+          <PrivacySection privacy={privacy} />
         </article>
       </main>
 

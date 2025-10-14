@@ -16,13 +16,14 @@
     "glossary": "Glossary",
     "contact": "Contact",
     "impressum": "Impressum",
-    "legal": "Legal"
+    "legal": "Legal",
+    "terms": "Terms",
+    "privacy": "Privacy"
   },
   "cta": {
     "primary": "Book a free consultation",
     "secondary": "Explore services",
-    "tertiary": "Launch Zoom consultation",
-    "tertiaryHelper": "Opens Zoom directly. Browser fallback available."
+    "tertiary": "Launch Zoom consultation"
   },
   "accessibility": {
     "skipToContent": "Skip to content",
@@ -56,6 +57,7 @@
     "impressum": "Impressum",
     "privacy": "Privacy",
     "cookies": "Cookie settings",
+    "cookiesAction": "Open settings",
     "contact": "Get in touch",
     "address": "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
     "copyright": "© {{year}} Teodoro Morcone Nachhilfe"

@@ -7,7 +7,7 @@
     "illustration": {
       "src": "/images/avatar.jpeg",
       "alt": "Teodoro Morcone erklärt Mathematik per Online-Whiteboard",
-      "caption": "Teodoro Morcone"
+      "caption": ""
     }
   },
   "tldr": {
@@ -364,6 +364,154 @@
           ]
         }
       ]
+    },
+    "terms": {
+      "title": "Allgemeine Geschäftsbedingungen (AGB)",
+      "intro": "Stand: Oktober 2025",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "1. Geltungsbereich",
+          "body": [
+            "Diese AGB regeln das Vertragsverhältnis zwischen Teodoro Morcone, Einzelfirma «Teodoro Morcone Nachhilfe» (nachfolgend «Anbieter») und Kund:innen, die Mathematik-Nachhilfe buchen.",
+            "Abweichende Bedingungen gelten nur, wenn sie schriftlich vereinbart wurden."
+          ]
+        },
+        {
+          "id": "services",
+          "heading": "2. Leistungen & Unterrichtsformat",
+          "body": [
+            "Der Unterricht findet grundsätzlich online statt. Der konkrete Ort bzw. das eingesetzte Tool wird bei der Buchung festgelegt.",
+            "Inhalt, Umfang und Lernziele werden im Vorgespräch bzw. bei der Terminbuchung definiert."
+          ]
+        },
+        {
+          "id": "booking",
+          "heading": "3. Buchung über Calendly / Vertragsschluss",
+          "body": [
+            "Termine werden über Calendly gebucht. Mit der Bestätigung durch Calendly kommt der Vertrag zustande; es gelten zusätzlich die Nutzungsbedingungen von Calendly.",
+            "Der Kalender zeigt verfügbare Zeiten. Der Anbieter kann Anfragen ablehnen oder alternative Vorschläge unterbreiten."
+          ]
+        },
+        {
+          "id": "pricing",
+          "heading": "4. Preise & Zahlung über Stripe",
+          "body": [
+            "Es gelten die auf der Website veröffentlichten Preise.",
+            "Die Zahlung erfolgt bargeldlos über Stripe (z. B. Kreditkarte). Es gelten ergänzend die Stripe-Bedingungen.",
+            "Rechnungen bzw. Belege werden elektronisch bereitgestellt."
+          ]
+        },
+        {
+          "id": "cancellations",
+          "heading": "5. Stornierung, Umbuchung & Nichterscheinen",
+          "bullets": [
+            "Stornierung oder Umbuchung ist bis 24 Stunden vor Terminbeginn kostenlos möglich.",
+            "Bei späterer Stornierung, Umbuchung (< 24 h) oder Nichterscheinen wird die Lektion zu 100 % verrechnet.",
+            "Bei Verspätung der Kundin / des Kunden endet die Lektion zum vereinbarten Zeitpunkt; es besteht kein Anspruch auf Nachholen.",
+            "Fällt der Unterricht wegen Krankheit oder Verhinderung des Anbieters aus, werden bereits bezahlte Beträge gutgeschrieben oder Ersatztermine angeboten."
+          ]
+        },
+        {
+          "id": "client-duties",
+          "heading": "6. Pflichten der Kund:innen",
+          "body": [
+            "Kund:innen sorgen für Pünktlichkeit sowie eine geeignete Lernumgebung (online insbesondere stabile Internetverbindung sowie funktionierende Kamera und Mikrofon).",
+            "Für minderjährige Lernende ist die Buchung bzw. Einwilligung durch eine erziehungsberechtigte Person erforderlich."
+          ]
+        },
+        {
+          "id": "materials",
+          "heading": "7. Unterrichtsmaterial & Urheberrecht",
+          "body": [
+            "Vom Anbieter bereitgestellte Materialien sind urheberrechtlich geschützt und ausschliesslich für den Eigengebrauch bestimmt.",
+            "Eine Weitergabe oder Veröffentlichung ohne Zustimmung ist untersagt."
+          ]
+        },
+        {
+          "id": "liability",
+          "heading": "8. Haftung",
+          "body": [
+            "Die Nachhilfe dient der Lernunterstützung; für Prüfungsergebnisse oder Noten wird keine Garantie übernommen.",
+            "Die gesetzliche Haftung für vorsätzliches oder grob fahrlässiges Handeln bleibt vorbehalten."
+          ]
+        },
+        {
+          "id": "refunds",
+          "heading": "9. Widerruf / Rückerstattung",
+          "body": [
+            "Es besteht kein gesetzlicher allgemeiner Widerruf für bereits erbrachte Unterrichtsleistungen.",
+            "Rückerstattungen erfolgen gemäss Ziffer 5 oder bei Ausfall durch den Anbieter (Ziffer 5.4)."
+          ]
+        },
+        {
+          "id": "jurisdiction",
+          "heading": "10. Gerichtsstand & anwendbares Recht",
+          "body": [
+            "Es gilt materielles Schweizer Recht.",
+            "Gerichtsstand ist Zürich."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "11. Änderungen der AGB",
+          "body": [
+            "Der Anbieter kann diese AGB jederzeit anpassen.",
+            "Es gilt die zum Zeitpunkt der Buchung veröffentlichte Fassung."
+          ]
+        }
+      ],
+      "contact": {
+        "heading": "Kontakt",
+        "lines": [
+          "Teodoro Morcone Nachhilfe",
+          "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
+          "E-Mail: info@theodors.ch",
+          "Tel.: +41 76 244 02 59"
+        ]
+      }
+    },
+    "privacy": {
+      "title": "Datenschutz (Kurzinfo)",
+      "intro": "Kurzübersicht zur Bearbeitung personenbezogener Daten durch Teodoro Morcone Nachhilfe. Die vollständige Datenschutzerklärung enthält alle Details.",
+      "sections": [
+        {
+          "id": "processing",
+          "heading": "Wie Personendaten bearbeitet werden",
+          "body": [
+            "Personendaten werden gemäss revidiertem DSG verarbeitet. Im Fokus stehen die Organisation des Unterrichts, die Bearbeitung von Anfragen und die sichere Durchführung von Online-Sessions.",
+            "Eingesetzte Auftragsbearbeiter sind vertrauenswürdige Dienstleister; vollständige Liste und Rechtsgrundlagen finden sich in der Datenschutzerklärung."
+          ],
+          "bullets": [
+            "Calendly (Terminplanung & Erinnerungen)",
+            "Stripe (bargeldlose Zahlungen)",
+            "Google Analytics 4 (Statistiken nur nach Zustimmung)",
+            "Zoom (Video-Unterricht mit Warteraum & Passcode)"
+          ]
+        },
+        {
+          "id": "rights",
+          "heading": "Ihre Rechte & Kontrollmöglichkeiten",
+          "body": [
+            "Sie können jederzeit Auskunft, Berichtigung oder Löschung Ihrer Daten verlangen.",
+            "Einwilligungen für Analyse-Cookies lassen sich über den Cookie-Link im Footer anpassen."
+          ],
+          "bullets": [
+            "Analyse-Einwilligung ohne Einfluss auf essentielle Dienste widerrufen",
+            "Kopie oder Löschung per E-Mail an info@theodors.ch verlangen",
+            "Ungeklärte Anliegen beim EDÖB melden"
+          ]
+        }
+      ],
+      "contact": {
+        "heading": "Datenschutz-Kontakt",
+        "lines": [
+          "Teodoro Morcone Nachhilfe",
+          "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
+          "E-Mail: info@theodors.ch",
+          "Tel.: +41 76 244 02 59"
+        ]
+      }
     }
   },
   "contact": {

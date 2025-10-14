@@ -154,6 +154,40 @@ export type GlossaryContent = {
   title: string;
   entries: GlossaryEntry[];
 };
+
+export type TermsSection = {
+  id: string;
+  heading: string;
+  body?: string[];
+  bullets?: string[];
+};
+
+export type TermsContact = {
+  heading: string;
+  lines: string[];
+};
+
+export type TermsContent = {
+  title: string;
+  intro?: string;
+  sections: TermsSection[];
+  contact?: TermsContact;
+};
+
+export type PrivacySection = {
+  id: string;
+  heading: string;
+  body?: string[];
+  bullets?: string[];
+};
+
+export type PrivacyContent = {
+  title: string;
+  intro?: string;
+  sections: PrivacySection[];
+  contact?: TermsContact;
+};
+
 export type ContactDetail = {
   label: string;
   value: string;
@@ -236,6 +270,8 @@ export type LandingContent = {
     howTo: HowToContent;
     comparison: ComparisonContent;
     glossary: GlossaryContent;
+    terms: TermsContent;
+    privacy: PrivacyContent;
   };
   contact: ContactContent;
   impressum: ImpressumContent;

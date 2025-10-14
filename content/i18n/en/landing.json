@@ -7,7 +7,7 @@
     "illustration": {
       "src": "/images/avatar.jpeg",
       "alt": "Teodoro Morcone teaches a student via online whiteboard",
-      "caption": "Teodoro Morcone"
+      "caption": ""
     }
   },
   "tldr": {
@@ -364,6 +364,154 @@
           ]
         }
       ]
+    },
+    "terms": {
+      "title": "Terms & Conditions",
+      "intro": "Last updated: October 2025",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "1. Scope",
+          "body": [
+            "These terms and conditions govern the agreement between Teodoro Morcone, sole proprietorship “Teodoro Morcone Nachhilfe” (the “Provider”), and clients booking mathematics tutoring services.",
+            "Different provisions apply only if confirmed in writing."
+          ]
+        },
+        {
+          "id": "services",
+          "heading": "2. Services & lesson format",
+          "body": [
+            "Lessons are generally delivered online. The exact medium or location is agreed upon during booking.",
+            "Lesson content, scope, and objectives are defined during the consultation or booking process."
+          ]
+        },
+        {
+          "id": "booking",
+          "heading": "3. Booking via Calendly / contract formation",
+          "body": [
+            "Appointments are scheduled through Calendly. Once Calendly confirms the booking, the contract is formed; Calendly’s terms of use also apply.",
+            "Availability shown in the calendar may change. The Provider may decline a request or suggest alternatives."
+          ]
+        },
+        {
+          "id": "pricing",
+          "heading": "4. Pricing & payment via Stripe",
+          "body": [
+            "Current prices are published on the website.",
+            "Payments are processed cashlessly via Stripe (e.g., card payments). Stripe’s terms apply in addition.",
+            "Invoices or receipts are provided electronically."
+          ]
+        },
+        {
+          "id": "cancellations",
+          "heading": "5. Cancellation, rescheduling & no-shows",
+          "bullets": [
+            "Sessions can be cancelled or rescheduled free of charge up to 24 hours before the start time.",
+            "Late cancellations, reschedules (< 24h), or no-shows are billed at 100% of the lesson price.",
+            "Should the client arrive late, the session still ends at the scheduled time; no additional time is owed.",
+            "If the Provider must cancel due to illness or unforeseen circumstances, prepaid fees are credited or an alternative appointment is offered."
+          ]
+        },
+        {
+          "id": "client-duties",
+          "heading": "6. Client responsibilities",
+          "body": [
+            "Clients ensure punctuality and an appropriate learning environment (for online lessons: stable internet connection plus functioning camera/microphone).",
+            "For minor learners, booking and consent must be provided by a parent or legal guardian."
+          ]
+        },
+        {
+          "id": "materials",
+          "heading": "7. Lesson materials & copyright",
+          "body": [
+            "Materials supplied by the Provider are protected by copyright and may be used only for personal learning.",
+            "Sharing or publishing the materials without permission is prohibited."
+          ]
+        },
+        {
+          "id": "liability",
+          "heading": "8. Liability",
+          "body": [
+            "Tutoring provides learning support; no guarantee is given for specific grades or exam results.",
+            "Statutory liability for wilful misconduct or gross negligence remains unaffected."
+          ]
+        },
+        {
+          "id": "refunds",
+          "heading": "9. Withdrawal / refunds",
+          "body": [
+            "There is no statutory right of withdrawal for tutoring services already delivered.",
+            "Refunds follow clause 5 or apply if the Provider cancels (see clause 5.4)."
+          ]
+        },
+        {
+          "id": "jurisdiction",
+          "heading": "10. Governing law & jurisdiction",
+          "body": [
+            "Swiss substantive law applies.",
+            "Jurisdiction is Zurich, Switzerland."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "11. Changes to these terms",
+          "body": [
+            "The Provider may amend these terms at any time.",
+            "The version published at the time of booking applies."
+          ]
+        }
+      ],
+      "contact": {
+        "heading": "Contact",
+        "lines": [
+          "Teodoro Morcone Nachhilfe",
+          "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
+          "Email: info@theodors.ch",
+          "Phone: +41 76 244 02 59"
+        ]
+      }
+    },
+    "privacy": {
+      "title": "Privacy (summary)",
+      "intro": "Summary of how Teodoro Morcone Nachhilfe processes personal data. Read the full privacy notice for details.",
+      "sections": [
+        {
+          "id": "processing",
+          "heading": "How personal data is processed",
+          "body": [
+            "Personal data is processed in line with Swiss data protection law (revDSG). Focus is on organising lessons, handling enquiries, and providing secure online sessions.",
+            "Processors include trusted service providers; the full list and legal bases are documented in the privacy notice."
+          ],
+          "bullets": [
+            "Calendly (scheduling & reminders)",
+            "Stripe (cashless payments)",
+            "Google Analytics 4 (statistics only after consent)",
+            "Zoom (video lessons with waiting room and passcode)"
+          ]
+        },
+        {
+          "id": "rights",
+          "heading": "Your rights & controls",
+          "body": [
+            "You can request access, correction, or deletion of your data at any time.",
+            "Consent choices for analytics cookies can be changed via the cookie settings link in the footer."
+          ],
+          "bullets": [
+            "Withdraw consent for analytics without affecting essential services",
+            "Request a copy or deletion by email at info@theodors.ch",
+            "Report concerns to the Swiss FDPIC if unresolved"
+          ]
+        }
+      ],
+      "contact": {
+        "heading": "Privacy contact",
+        "lines": [
+          "Teodoro Morcone Nachhilfe",
+          "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
+          "Email: info@theodors.ch",
+          "Phone: +41 76 244 02 59"
+        ]
+      }
     }
   },
   "contact": {

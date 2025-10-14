@@ -7,7 +7,7 @@
     "illustration": {
       "src": "/images/avatar.jpeg",
       "alt": "Teodoro Morcone spiega matematica con una lavagna digitale",
-      "caption": "Teodoro Morcone"
+      "caption": ""
     }
   },
   "tldr": {
@@ -364,6 +364,154 @@
           ]
         }
       ]
+    },
+    "terms": {
+      "title": "Termini e Condizioni",
+      "intro": "Aggiornato: ottobre 2025",
+      "sections": [
+        {
+          "id": "scope",
+          "heading": "1. Ambito di applicazione",
+          "body": [
+            "I presenti termini regolano il rapporto contrattuale tra Teodoro Morcone, ditta individuale «Teodoro Morcone Nachhilfe» (di seguito «Fornitore»), e i clienti che prenotano lezioni di matematica.",
+            "Condizioni differenti sono valide solo previa conferma scritta."
+          ]
+        },
+        {
+          "id": "services",
+          "heading": "2. Servizi e formato delle lezioni",
+          "body": [
+            "Le lezioni si svolgono generalmente online. Lo strumento o luogo specifico viene concordato al momento della prenotazione.",
+            "Contenuti, durata e obiettivi vengono definiti durante la consulenza o la fase di prenotazione."
+          ]
+        },
+        {
+          "id": "booking",
+          "heading": "3. Prenotazioni tramite Calendly / conclusione del contratto",
+          "body": [
+            "Gli appuntamenti si fissano tramite Calendly. Con la conferma di Calendly il contratto si considera concluso; si applicano inoltre i termini d’uso di Calendly.",
+            "Le disponibilità nel calendario possono variare; il Fornitore può rifiutare richieste o proporre alternative."
+          ]
+        },
+        {
+          "id": "pricing",
+          "heading": "4. Prezzi e pagamento tramite Stripe",
+          "body": [
+            "Si applicano i prezzi pubblicati sul sito web.",
+            "Il pagamento avviene in modo cashless tramite Stripe (ad es. carta di credito) e sono validi i relativi termini d’uso.",
+            "Ricevute o fatture vengono fornite in formato elettronico."
+          ]
+        },
+        {
+          "id": "cancellations",
+          "heading": "5. Cancellazioni, spostamenti e assenze",
+          "bullets": [
+            "Le sessioni possono essere annullate o spostate gratuitamente fino a 24 ore prima dell’orario concordato.",
+            "Cancellazioni tardive, spostamenti (< 24h) o assenze senza preavviso vengono fatturati al 100% del costo della lezione.",
+            "In caso di ritardo da parte del cliente, la lezione termina comunque all’orario stabilito; non è previsto recupero.",
+            "Se il Fornitore annulla per malattia o impedimento, gli importi già pagati vengono accreditati oppure è proposto un nuovo appuntamento."
+          ]
+        },
+        {
+          "id": "client-duties",
+          "heading": "6. Obblighi delle/gli clienti",
+          "body": [
+            "Le/gli clienti garantiscono puntualità e un ambiente adatto allo studio (per l’online: connessione stabile e dispositivi funzionanti).",
+            "Per studenti minorenni è richiesta la prenotazione o autorizzazione da parte di un tutore o genitore."
+          ]
+        },
+        {
+          "id": "materials",
+          "heading": "7. Materiali didattici e diritto d’autore",
+          "body": [
+            "I materiali forniti dal Fornitore sono protetti da copyright e destinati esclusivamente all’uso personale.",
+            "È vietata la condivisione o pubblicazione senza autorizzazione."
+          ]
+        },
+        {
+          "id": "liability",
+          "heading": "8. Responsabilità",
+          "body": [
+            "Le ripetizioni supportano l’apprendimento; non viene garantito alcun risultato specifico in termini di voti o esami.",
+            "Rimane ferma la responsabilità per dolo o colpa grave nei limiti di legge."
+          ]
+        },
+        {
+          "id": "refunds",
+          "heading": "9. Recesso / rimborsi",
+          "body": [
+            "Non sussiste un diritto di recesso generale per lezioni già erogate.",
+            "I rimborsi avvengono secondo quanto previsto al punto 5 o in caso di annullamento da parte del Fornitore (punto 5.4)."
+          ]
+        },
+        {
+          "id": "jurisdiction",
+          "heading": "10. Foro competente e legge applicabile",
+          "body": [
+            "Si applica il diritto materiale svizzero.",
+            "Il foro competente è Zurigo, Svizzera."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "11. Modifiche ai termini",
+          "body": [
+            "Il Fornitore può modificare i presenti termini in qualsiasi momento.",
+            "Fa fede la versione pubblicata al momento della prenotazione."
+          ]
+        }
+      ],
+      "contact": {
+        "heading": "Contatti",
+        "lines": [
+          "Teodoro Morcone Nachhilfe",
+          "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
+          "E-mail: info@theodors.ch",
+          "Tel.: +41 76 244 02 59"
+        ]
+      }
+    },
+    "privacy": {
+      "title": "Privacy (sintesi)",
+      "intro": "Panoramica sul trattamento dei dati personali da parte di Teodoro Morcone Nachhilfe. L’informativa completa riporta tutti i dettagli.",
+      "sections": [
+        {
+          "id": "processing",
+          "heading": "Come vengono trattati i dati personali",
+          "body": [
+            "I dati personali sono gestiti nel rispetto della legislazione svizzera sulla protezione dei dati (revDSG). Le finalità principali sono l’organizzazione delle lezioni, la gestione delle richieste e il funzionamento sicuro delle sessioni online.",
+            "I responsabili del trattamento sono fornitori affidabili; l’elenco completo e le basi giuridiche sono descritti nell’informativa privacy."
+          ],
+          "bullets": [
+            "Calendly (programmazione appuntamenti & promemoria)",
+            "Stripe (pagamenti cashless)",
+            "Google Analytics 4 (statistiche solo previo consenso)",
+            "Zoom (lezioni video con sala d’attesa e passcode)"
+          ]
+        },
+        {
+          "id": "rights",
+          "heading": "Diritti e controllo",
+          "body": [
+            "Puoi richiedere in qualsiasi momento accesso, rettifica o cancellazione dei tuoi dati.",
+            "Le preferenze di consenso per i cookie analitici si gestiscono tramite il link alle impostazioni cookie nel footer."
+          ],
+          "bullets": [
+            "Revocare il consenso all’analisi senza impatto sui servizi essenziali",
+            "Richiedere copia o cancellazione scrivendo a info@theodors.ch",
+            "Segnalare eventuali problemi all’IFPDP se non risolti"
+          ]
+        }
+      ],
+      "contact": {
+        "heading": "Contatto privacy",
+        "lines": [
+          "Teodoro Morcone Nachhilfe",
+          "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
+          "E-mail: info@theodors.ch",
+          "Tel.: +41 76 244 02 59"
+        ]
+      }
     }
   },
   "contact": {

@@ -16,13 +16,14 @@
     "glossary": "Glossar",
     "contact": "Kontakt",
     "impressum": "Impressum",
-    "legal": "Rechtliches"
+    "legal": "Rechtliches",
+    "terms": "AGB",
+    "privacy": "Datenschutz"
   },
   "cta": {
     "primary": "Kostenloses Erstgespräch buchen",
     "secondary": "Leistungen entdecken",
-    "tertiary": "Zoom-Beratung starten",
-    "tertiaryHelper": "Öffnet Zoom direkt. Browser-Fallback verfügbar."
+    "tertiary": "Zoom-Beratung starten"
   },
   "accessibility": {
     "skipToContent": "Zum Inhalt springen",
@@ -56,6 +57,7 @@
     "impressum": "Impressum",
     "privacy": "Datenschutz",
     "cookies": "Cookie-Einstellungen",
+    "cookiesAction": "Einstellungen öffnen",
     "contact": "Kontakt aufnehmen",
     "address": "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
     "copyright": "© {{year}} Teodoro Morcone Nachhilfe"

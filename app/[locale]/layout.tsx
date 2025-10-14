@@ -10,7 +10,7 @@ import {ThemeToggle} from "@/components/navigation/theme-toggle";
 import {MobileNav} from "@/components/layout/mobile-nav";
 import {Sidebar} from "@/components/layout/sidebar";
 import {AppProviders} from "@/components/providers/app-providers";
-import {SECTION_LINKS, LEGAL_LINK} from "@/config/navigation";
+import {SECTION_LINKS} from "@/config/navigation";
 import {ZOOM_LINKS} from "@/config/zoom";
 import {getMessages} from "@/lib/i18n/get-messages";
 import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
@@ -46,11 +46,6 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
     targetId: link.targetId,
   }));
 
-  const legalLink = {
-    label: tCommon("nav.legal"),
-    href: LEGAL_LINK.href(locale),
-  };
-
   const privacyLink = {
     label: tCommon("footer.privacy"),
     href: `/${locale}/legal/privacy`,
@@ -67,7 +62,6 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
     },
     tertiary: {
       label: tCommon("cta.tertiary"),
-      helper: tCommon("cta.tertiaryHelper"),
       href: ZOOM_LINKS.consultation.deepLink,
     },
   };
@@ -78,7 +72,7 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
     language: tCommon("localeSwitcher.label"),
     theme: tCommon("themeToggle.label"),
     cookies: tCommon("footer.cookies"),
-    privacy: tCommon("footer.privacy"),
+    cookiesAction: tCommon("footer.cookiesAction"),
   };
 
   const mobileLabels = {
@@ -121,8 +115,6 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
             <Sidebar
               locale={locale}
               navItems={navItems}
-              legalLink={legalLink}
-              privacyLink={privacyLink}
               ctas={ctas}
               labels={sidebarLabels}
               activeLocaleName={activeLocaleName}
@@ -134,7 +126,6 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
               <MobileNav
                 locale={locale}
                 navItems={navItems}
-                legalLink={legalLink}
                 privacyLink={privacyLink}
                 ctas={ctas}
                 labels={mobileLabels}

@@ -16,11 +16,6 @@ type MobileNavItem = {
   targetId?: string;
 };
 
-type MobileLegalLink = {
-  label: string;
-  href: string;
-};
-
 type MobilePrivacyLink = {
   label: string;
   href: string;
@@ -38,7 +33,7 @@ type MobileCtas = {
   tertiary: {
     label: string;
     href: string;
-    helper: string;
+    helper?: string;
   };
 };
 
@@ -56,7 +51,6 @@ type MobileLabels = {
 type MobileNavProps = {
   locale: string;
   navItems: MobileNavItem[];
-  legalLink: MobileLegalLink;
   privacyLink: MobilePrivacyLink;
   ctas: MobileCtas;
   labels: MobileLabels;
@@ -69,7 +63,6 @@ type MobileNavProps = {
 export function MobileNav({
   locale,
   navItems,
-  legalLink,
   privacyLink,
   ctas,
   labels,
@@ -287,7 +280,9 @@ export function MobileNav({
                   >
                     {ctas.tertiary.label}
                   </a>
-                  <p className="text-xs text-secondary dark:text-surface/70">{ctas.tertiary.helper}</p>
+                  {ctas.tertiary.helper ? (
+                    <p className="text-xs text-secondary dark:text-surface/70">{ctas.tertiary.helper}</p>
+                  ) : null}
                 </div>
               </div>
 
@@ -310,13 +305,6 @@ export function MobileNav({
                   onClick={handleNavigate}
                 >
                   {privacyLink.label}
-                </Link>
-                <Link
-                  className="text-sm font-medium text-secondary underline-offset-4 hover:text-accent hover:underline dark:text-surface/70 dark:hover:text-accent"
-                  href={legalLink.href}
-                  onClick={handleNavigate}
-                >
-                  {legalLink.label}
                 </Link>
               </div>
             </SheetContent>
