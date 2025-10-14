@@ -8,19 +8,19 @@ import {cn} from "@/lib/utils/cn";
 import {useActiveSection} from "./active-section-provider";
 
 type NavLinkProps = {
-  href: `#${string}` | string;
+  href: string;
   label: string;
-  targetId: string;
+  targetId?: string;
   onNavigate?: () => void;
 };
 
 export function NavLink({href, label, targetId, onNavigate}: NavLinkProps) {
   const {activeId} = useActiveSection();
-  const isActive = activeId === targetId;
+  const isActive = targetId ? activeId === targetId : false;
 
   const handleClick = useCallback(
     (event: ReactMouseEvent<HTMLAnchorElement>) => {
-      if (href.startsWith("#")) {
+      if (href.startsWith("#") && targetId) {
         const element = document.getElementById(targetId);
 
         if (element) {

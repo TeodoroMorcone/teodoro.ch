@@ -457,6 +457,43 @@
       ]
     }
   },
+  "impressum": {
+    "title": "Impressum",
+    "description": "Required legal information for Teodoro Morcone Nachhilfe.",
+    "entries": [
+      {
+        "label": "Responsible party",
+        "value": "Teodoro Morcone (Teodoro Morcone Nachhilfe)"
+      },
+      {
+        "label": "Address",
+        "value": "Eichbühlstrasse 33, 8004 Zurich, Switzerland"
+      },
+      {
+        "label": "Email",
+        "value": "info@theodors.ch",
+        "href": "mailto:info@theodors.ch",
+        "type": "email"
+      },
+      {
+        "label": "Phone / WhatsApp",
+        "value": "+41 76 244 02 59",
+        "href": "tel:+41762440259",
+        "type": "tel"
+      },
+      {
+        "label": "Website",
+        "value": "theodors.ch",
+        "href": "https://theodors.ch",
+        "type": "url"
+      }
+    ],
+    "notes": [
+      "Lessons take place exclusively online via Zoom.",
+      "Not VAT-registered (annual revenue < CHF 100,000).",
+      "For privacy questions contact info@theodors.ch."
+    ]
+  },
   "outboundLinks": [
     {
       "name": "TODO – Zurich education department Gymiprüfung",

@@ -154,12 +154,26 @@ export type GlossaryContent = {
   title: string;
   entries: GlossaryEntry[];
 };
-
 export type ContactDetail = {
   label: string;
   value: string;
   href: string;
 };
+
+export type ImpressumEntry = {
+  label: string;
+  value: string;
+  href?: string;
+  type?: "email" | "tel" | "url";
+};
+
+export type ImpressumContent = {
+  title: string;
+  description: string;
+  entries: ImpressumEntry[];
+  notes?: string[];
+};
+
 
 export type ContactFormFieldId = "name" | "email" | "phone" | "level" | "message";
 
@@ -224,5 +238,6 @@ export type LandingContent = {
     glossary: GlossaryContent;
   };
   contact: ContactContent;
+  impressum: ImpressumContent;
   outboundLinks: OutboundLink[];
 };

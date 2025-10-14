@@ -11,6 +11,7 @@ import {GlossarySection} from "@/components/sections/glossary-section";
 import {HeroSection} from "@/components/sections/hero-section";
 import {HowItWorksSection} from "@/components/sections/how-it-works-section";
 import {HowToSection} from "@/components/sections/how-to-section";
+import {ImpressumSection} from "@/components/sections/impressum-section";
 import {PricingSection} from "@/components/sections/pricing-section";
 import {ResultsSection} from "@/components/sections/results-section";
 import {ServicesSection} from "@/components/sections/services-section";
@@ -94,6 +95,7 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
   const glossary = tLanding.raw("sections.glossary") as LandingContent["sections"]["glossary"];
   const contactRaw = tLanding.raw("contact");
   const contact = contactRaw as LandingContent["contact"];
+  const impressum = tLanding.raw("impressum") as LandingContent["impressum"];
   const outboundLinks = tLanding.raw("outboundLinks") as LandingContent["outboundLinks"];
 
   const contactDetails = (contactRaw as {details?: unknown})?.details;
@@ -170,6 +172,8 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
               passcode: tCommon("zoom.passcode"),
             }}
           />
+
+          <ImpressumSection impressum={impressum} />
         </article>
       </main>
 

@@ -11,9 +11,9 @@ import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet";
 
 type MobileNavItem = {
   id: string;
-  href: `#${string}`;
+  href: string;
   label: string;
-  targetId: string;
+  targetId?: string;
 };
 
 type MobileLegalLink = {
@@ -90,20 +90,28 @@ export function MobileNav({
       return;
     }
 
-    const logViewportMetrics = () => {
+    const logViewportMetrics = (reason: string) => {
       const scrollingElement = document.scrollingElement ?? document.documentElement;
       const mainElement = document.getElementById("main-content");
       const mainRect = mainElement?.getBoundingClientRect();
+      const html = document.documentElement;
+      const body = document.body;
 
       console.log("[MobileNav] viewport metrics", {
+        reason,
         innerHeight: window.innerHeight,
+        innerWidth: window.innerWidth,
         outerHeight: window.outerHeight,
+        outerWidth: window.outerWidth,
         visualViewportHeight: window.visualViewport?.height ?? null,
+        visualViewportWidth: window.visualViewport?.width ?? null,
         visualViewportScale: window.visualViewport?.scale ?? null,
-        clientHeight: document.documentElement?.clientHeight ?? null,
-        clientWidth: document.documentElement?.clientWidth ?? null,
-        bodyClientHeight: document.body?.clientHeight ?? null,
-        bodyScrollHeight: document.body?.scrollHeight ?? null,
+        clientHeight: html?.clientHeight ?? null,
+        clientWidth: html?.clientWidth ?? null,
+        bodyClientHeight: body?.clientHeight ?? null,
+        bodyScrollHeight: body?.scrollHeight ?? null,
+        bodyStyleOverflow: body?.style?.overflow || null,
+        bodyStylePosition: body?.style?.position || null,
         docScrollHeight: scrollingElement?.scrollHeight ?? null,
         docOffsetHeight:
           scrollingElement instanceof HTMLElement ? scrollingElement.offsetHeight : null,
@@ -118,19 +126,65 @@ export function MobileNav({
       });
     };
 
-    logViewportMetrics();
-    window.addEventListener("resize", logViewportMetrics);
-    window.visualViewport?.addEventListener("resize", logViewportMetrics);
+    logViewportMetrics("initial-mount");
+    const resizeHandler = () => logViewportMetrics("resize");
+    const visualResizeHandler = () => logViewportMetrics("visual-viewport-resize");
+
+    window.addEventListener("resize", resizeHandler);
+    window.visualViewport?.addEventListener("resize", visualResizeHandler);
 
     return () => {
-      window.removeEventListener("resize", logViewportMetrics);
-      window.visualViewport?.removeEventListener("resize", logViewportMetrics);
+      window.removeEventListener("resize", resizeHandler);
+      window.visualViewport?.removeEventListener("resize", visualResizeHandler);
     };
   }, []);
 
   const handleNavigate = useCallback(() => {
     setOpen(false);
   }, []);
+
+  useEffect(() => {
+    if (process.env.NODE_ENV !== "development") {
+      return;
+    }
+
+    if (typeof window === "undefined" || typeof document === "undefined") {
+      return;
+    }
+
+    const logDrawerState = (phase: "open-change" | "after-transition") => {
+      const html = document.documentElement;
+      const body = document.body;
+      const scrollingElement = document.scrollingElement ?? html;
+      const mainElement = document.getElementById("main-content");
+      const mainRect = mainElement?.getBoundingClientRect();
+
+      console.log("[MobileNav] drawer state", {
+        phase,
+        open,
+        bodyStyleOverflow: body?.style?.overflow || null,
+        bodyDatasetScrollLock: body?.dataset?.radixScrollLock || null,
+        htmlStyleOverflow: html?.style?.overflow || null,
+        docScrollHeight: scrollingElement?.scrollHeight ?? null,
+        docClientHeight: scrollingElement?.clientHeight ?? null,
+        mainRect: mainRect
+          ? {
+              top: Math.round(mainRect.top),
+              bottom: Math.round(mainRect.bottom),
+              height: Math.round(mainRect.height),
+            }
+          : null,
+      });
+    };
+
+    logDrawerState("open-change");
+
+    const timeout = window.setTimeout(() => {
+      logDrawerState("after-transition");
+    }, 250);
+
+    return () => window.clearTimeout(timeout);
+  }, [open]);
 
   const languageControl =
     languageSwitcher ??
@@ -203,7 +257,7 @@ export function MobileNav({
                       key={item.id}
                       href={item.href}
                       label={item.label}
-                      targetId={item.targetId}
+                      {...(item.targetId ? {targetId: item.targetId} : {})}
                       onNavigate={handleNavigate}
                     />
                   ))}

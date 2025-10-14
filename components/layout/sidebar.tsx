@@ -9,9 +9,9 @@ import type {Locale} from "@/lib/i18n/locales";
 
 type SidebarNavItem = {
   id: string;
-  href: `#${string}`;
+  href: string;
   label: string;
-  targetId: string;
+  targetId?: string;
 };
 
 type SidebarLegalLink = {
@@ -101,9 +101,9 @@ export function Sidebar({
   return (
     <aside
       aria-label={labels.navigation}
-      className="hidden bg-surface text-primary dark:bg-primary dark:text-surface lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-80 lg:flex-col lg:justify-between lg:border-r lg:border-secondary/20"
+      className="hidden bg-surface text-primary dark:bg-primary dark:text-surface lg:sticky lg:top-0 lg:flex lg:min-h-dvh lg:max-h-dvh lg:w-80 lg:flex-col lg:justify-between lg:border-r lg:border-secondary/20 lg:overflow-y-auto lg:overscroll-contain"
     >
-      <div className="flex flex-col gap-8 p-8">
+      <div className="flex flex-col gap-5 p-5">
         <Link
           href={`/${locale}`}
           className="inline-flex flex-col gap-1 text-left"
@@ -112,38 +112,38 @@ export function Sidebar({
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/80">
             Teodoro Morcone
           </span>
-          <span className="text-2xl font-semibold leading-tight">Nachhilfe</span>
+          <span className="text-xl font-semibold leading-tight">Nachhilfe</span>
         </Link>
 
         <nav aria-label={labels.navigation}>
-          <ul className="flex flex-col gap-2">
+          <ul className="flex flex-col gap-1">
             {navItems.map((item) => (
               <NavLink
                 key={item.id}
                 href={item.href}
                 label={item.label}
-                targetId={item.targetId}
+                {...(item.targetId ? {targetId: item.targetId} : {})}
               />
             ))}
           </ul>
         </nav>
 
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-2">
           <a
-            className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-3.5 py-2 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary"
             href={ctas.primary.href}
           >
             {ctas.primary.label}
           </a>
           <a
-            className="inline-flex items-center justify-center rounded-full border border-secondary px-4 py-3 text-sm font-semibold text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:text-surface"
+            className="inline-flex items-center justify-center rounded-full border border-secondary px-3.5 py-2 text-sm font-semibold text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:text-surface"
             href={ctas.secondary.href}
           >
             {ctas.secondary.label}
           </a>
-          <div className="space-y-1">
+          <div className="space-y-0.5">
             <a
-              className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary"
+              className="inline-flex items-center justify-center rounded-full bg-primary px-3.5 py-2 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary"
               href={ctas.tertiary.href}
             >
               {ctas.tertiary.label}
@@ -153,7 +153,7 @@ export function Sidebar({
         </div>
       </div>
 
-      <div className="flex flex-col gap-4 border-t border-secondary/20 p-8 text-sm">
+      <div className="flex flex-col gap-3 border-t border-secondary/20 p-5 text-sm">
         {languageControl}
         {themeControl}
         <button
