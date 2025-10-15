@@ -1,3 +1,6 @@
+"use client";
+
+import {useEffect, useState} from "react";
 import Image from "next/image";
 import {useTranslations} from "next-intl";
 
@@ -18,8 +21,33 @@ type HeroSectionProps = {
   };
 };
 
+const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/60min";
+const DEFAULT_EMBED_DOMAIN = "theodors.ch";
+
 export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
   const t = useTranslations("landing");
+  const [calendlyUrl, setCalendlyUrl] = useState(
+    `${CALENDLY_EVENT_URL}?embed_domain=${DEFAULT_EMBED_DOMAIN}&embed_type=Inline`,
+  );
+
+  useEffect(() => {
+    const hasWindow = typeof window !== "undefined";
+    const host = hasWindow && window.location.hostname ? window.location.hostname : DEFAULT_EMBED_DOMAIN;
+    const nextUrl = `${CALENDLY_EVENT_URL}?embed_domain=${host}&embed_type=Inline`;
+
+    setCalendlyUrl(nextUrl);
+
+    console.info("[HeroSection] Calendly iframe ready", {
+      heading: hero.heading,
+      hasWindow,
+      host,
+      url: nextUrl,
+    });
+
+    if (!hasWindow) {
+      return;
+    }
+  }, [hero.heading]);
 
   return (
     <section
@@ -47,6 +75,14 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
           includeLesson={false}
           variant="inline"
           className="mt-6"
+        />
+        <iframe
+          className="mt-6 rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
+          src={calendlyUrl}
+          style={{width: "100%", minWidth: 320, height: 700}}
+          frameBorder={0}
+          title="Calendly Booking"
+          loading="lazy"
         />
       </div>
       <div className="flex flex-col gap-6 rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10">

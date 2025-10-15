@@ -39,12 +39,19 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
   const messages = await getMessages(locale);
   const tCommon = await getTranslations({locale, namespace: "common"});
 
-  const navItems = SECTION_LINKS.map((link) => ({
+  const filteredSectionLinks = SECTION_LINKS.filter((link) => link.id !== "glossary");
+
+  const navItems = filteredSectionLinks.map((link) => ({
     id: link.id,
     href: link.href,
     label: tCommon(`nav.${link.navKey}`),
     targetId: link.targetId,
   }));
+
+  console.log("[LocaleLayout] nav item configuration", {
+    totalItems: navItems.length,
+    navKeys: navItems.map((item) => item.id),
+  });
 
   const privacyLink = {
     label: tCommon("footer.privacy"),

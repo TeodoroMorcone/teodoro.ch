@@ -1,3 +1,7 @@
+"use client";
+
+import {useEffect, useState} from "react";
+
 import {ContactForm} from "@/components/sections/contact-form";
 import {SectionHeading} from "@/components/ui/section-heading";
 import {ZoomQuickLaunch, type ZoomLaunchLabels} from "@/components/ui/zoom-quick-launch";
@@ -8,8 +12,29 @@ type ContactSectionProps = {
   zoomLabels: ZoomLaunchLabels;
 };
 
+const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/60min";
+const DEFAULT_EMBED_DOMAIN = "theodors.ch";
+
 export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
   const detailItems = Array.isArray(contact.details) ? contact.details : [];
+  const [calendlyUrl, setCalendlyUrl] = useState(
+    `${CALENDLY_EVENT_URL}?embed_domain=${DEFAULT_EMBED_DOMAIN}&embed_type=Inline`,
+  );
+
+  useEffect(() => {
+    const hasWindow = typeof window !== "undefined";
+    const host = hasWindow && window.location.hostname ? window.location.hostname : DEFAULT_EMBED_DOMAIN;
+    const nextUrl = `${CALENDLY_EVENT_URL}?embed_domain=${host}&embed_type=Inline`;
+
+    setCalendlyUrl(nextUrl);
+
+    console.info("[ContactSection] Calendly iframe ready", {
+      title: contact.title,
+      hasWindow,
+      host,
+      url: nextUrl,
+    });
+  }, [contact.title]);
 
   return (
     <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-28">
@@ -38,6 +63,15 @@ export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
           </div>
 
           <ZoomQuickLaunch labels={zoomLabels} />
+
+          <iframe
+            className="mt-6 rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
+            src={calendlyUrl}
+            style={{width: "100%", minWidth: 320, height: 700}}
+            frameBorder={0}
+            title="Calendly Booking"
+            loading="lazy"
+          />
         </div>
 
         <div className="rounded-3xl border border-secondary/20 bg-surface px-6 py-6 shadow-sm dark:border-surface/20 dark:bg-primary/40">
