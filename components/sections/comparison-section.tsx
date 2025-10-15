@@ -13,8 +13,9 @@ export function ComparisonSection({comparison}: ComparisonSectionProps) {
         title={comparison.title}
         description={comparison.description}
       />
-      <div className="mt-8 overflow-hidden rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/20 dark:bg-primary/40">
-        <table className="min-w-full border-collapse text-sm">
+      <div className="mt-8 rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/20 dark:bg-primary/40">
+        <div className="overflow-x-auto overscroll-x-contain rounded-3xl">
+          <table className="min-w-full border-collapse text-sm">
           <thead>
             <tr className="bg-primary/10 text-left uppercase tracking-[0.2em] text-secondary dark:bg-surface/10 dark:text-surface/70">
               <th className="px-6 py-4 text-xs font-semibold text-primary dark:text-surface">Metric</th>
@@ -43,6 +44,7 @@ export function ComparisonSection({comparison}: ComparisonSectionProps) {
             ))}
           </tbody>
         </table>
+        </div>
       </div>
       <p className="mt-4 text-xs text-secondary dark:text-surface/70">{comparison.footnote}</p>
     </section>
