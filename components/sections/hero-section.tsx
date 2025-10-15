@@ -21,7 +21,7 @@ type HeroSectionProps = {
   };
 };
 
-const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/60min";
+const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
 const DEFAULT_EMBED_DOMAIN = "theodors.ch";
 
 export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
@@ -46,7 +46,13 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
       return;
     }
 
-    const nextUrl = `${CALENDLY_EVENT_URL}?embed_domain=${host}&embed_type=Inline`;
+    const url = new URL(CALENDLY_EVENT_URL);
+    url.searchParams.set("embed_domain", host);
+    url.searchParams.set("embed_type", "Inline");
+    url.searchParams.set("hide_event_type_details", "1");
+    url.searchParams.set("hide_gdpr_banner", "1");
+
+    const nextUrl = url.toString();
 
     setCalendlyUrl((prev) => (prev !== nextUrl ? nextUrl : prev));
 
