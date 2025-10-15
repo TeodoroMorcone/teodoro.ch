@@ -20,7 +20,7 @@ export const SheetOverlay = forwardRef<ElementRef<typeof Dialog.Overlay>, Compon
   ({className, ...props}, ref) => (
     <Dialog.Overlay
       ref={ref}
-      className={cn("fixed inset-0 bg-primary/40 backdrop-blur-sm transition-opacity duration-200 ease-soft-sine data-[state=closed]:opacity-0 data-[state=open]:opacity-100", className)}
+      className={cn("fixed inset-0 z-50 bg-primary/40 backdrop-blur-sm transition-opacity duration-200 ease-soft-sine data-[state=closed]:opacity-0 data-[state=open]:opacity-100", className)}
       {...props}
     />
   ),
@@ -36,7 +36,7 @@ export const SheetContent = forwardRef<ElementRef<typeof Dialog.Content>, SheetC
       <Dialog.Content
         ref={ref}
         className={cn(
-          "fixed inset-y-0 right-0 flex w-80 max-w-full flex-col gap-6 bg-surface p-6 text-primary shadow-sidebar outline-none transition-transform duration-200 ease-soft-sine data-[state=closed]:translate-x-full data-[state=open]:translate-x-0 dark:bg-primary dark:text-surface",
+          "fixed inset-y-0 right-0 z-50 flex w-80 max-w-full flex-col gap-6 bg-surface p-6 text-primary shadow-sidebar outline-none transition-transform duration-200 ease-soft-sine data-[state=closed]:translate-x-full data-[state=open]:translate-x-0 dark:bg-primary dark:text-surface",
           className,
         )}
         {...props}

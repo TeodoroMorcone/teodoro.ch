@@ -23,7 +23,9 @@
   "cta": {
     "primary": "Book a free consultation",
     "secondary": "Explore services",
-    "tertiary": "Launch Zoom consultation"
+    "tertiary": "Launch Zoom consultation",
+    "whatsapp": "Chat on WhatsApp",
+    "whatsappAria": "Open WhatsApp chat with Teodoro Morcone"
   },
   "accessibility": {
     "skipToContent": "Skip to content",

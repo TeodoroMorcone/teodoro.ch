@@ -23,7 +23,9 @@
   "cta": {
     "primary": "Prenota una consulenza gratuita",
     "secondary": "Scopri i servizi",
-    "tertiary": "Avvia consulenza Zoom"
+    "tertiary": "Avvia consulenza Zoom",
+    "whatsapp": "Scrivi su WhatsApp",
+    "whatsappAria": "Apri chat WhatsApp con Teodoro Morcone"
   },
   "accessibility": {
     "skipToContent": "Passa al contenuto",

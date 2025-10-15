@@ -1,4 +1,5 @@
 import {Suspense, type ReactNode} from "react";
+import {MessageCircle} from "lucide-react";
 import {notFound} from "next/navigation";
 import {NextIntlClientProvider} from "next-intl";
 import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
@@ -71,6 +72,12 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
       label: tCommon("cta.tertiary"),
       href: ZOOM_LINKS.consultation.deepLink,
     },
+  };
+
+  const whatsappContact = {
+    href: "https://wa.me/41762440259",
+    label: tCommon("cta.whatsapp"),
+    ariaLabel: tCommon("cta.whatsappAria"),
   };
 
   const sidebarLabels = {
@@ -149,6 +156,16 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
             </div>
           </div>
         </ActiveSectionProvider>
+        <a
+          href={whatsappContact.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={whatsappContact.ariaLabel}
+          className="fixed bottom-6 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sidebar transition-transform duration-200 ease-soft-sine hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:bottom-8 sm:right-8 sm:h-16 sm:w-16"
+        >
+          <MessageCircle aria-hidden="true" className="h-7 w-7" />
+          <span className="sr-only">{whatsappContact.label}</span>
+        </a>
       </AppProviders>
     </NextIntlClientProvider>
   );

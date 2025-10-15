@@ -23,7 +23,9 @@
   "cta": {
     "primary": "Kostenloses Erstgespräch buchen",
     "secondary": "Leistungen entdecken",
-    "tertiary": "Zoom-Beratung starten"
+    "tertiary": "Zoom-Beratung starten",
+    "whatsapp": "Auf WhatsApp schreiben",
+    "whatsappAria": "WhatsApp-Chat mit Teodoro Morcone öffnen"
   },
   "accessibility": {
     "skipToContent": "Zum Inhalt springen",

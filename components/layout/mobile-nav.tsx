@@ -227,8 +227,8 @@ export function MobileNav({
             >
               <Menu aria-hidden="true" className="h-5 w-5" />
             </SheetTrigger>
-            <SheetContent className="flex h-full max-h-screen w-full max-w-xs flex-col overflow-y-auto">
-              <div className="flex items-center justify-between">
+            <SheetContent className="flex h-full max-h-screen w-full max-w-xs flex-col overflow-hidden p-0">
+              <div className="flex items-center justify-between border-b border-secondary/20 px-5 py-4 dark:border-surface/20">
                 <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/80">
                   {labels.navigation}
                 </span>
@@ -243,70 +243,86 @@ export function MobileNav({
                 </button>
               </div>
 
-              <nav aria-label={labels.navigation} className="mt-6">
-                <ul className="flex flex-col gap-3">
-                  {navItems.map((item) => (
-                    <NavLink
-                      key={item.id}
-                      href={item.href}
-                      label={item.label}
-                      {...(item.targetId ? {targetId: item.targetId} : {})}
-                      onNavigate={handleNavigate}
-                    />
-                  ))}
-                </ul>
-              </nav>
-
-              <div className="mt-8 flex flex-col gap-3">
-                <a
-                  className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary"
-                  href={ctas.primary.href}
-                  onClick={handleNavigate}
-                >
-                  {ctas.primary.label}
-                </a>
-                <a
-                  className="inline-flex items-center justify-center rounded-full border border-secondary px-4 py-3 text-sm font-semibold text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:text-surface"
-                  href={ctas.secondary.href}
-                  onClick={handleNavigate}
-                >
-                  {ctas.secondary.label}
-                </a>
-                <div className="space-y-1">
-                  <a
-                    className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-3 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary"
-                    href={ctas.tertiary.href}
+              <div className="flex flex-1 flex-col overflow-hidden">
+                <div className="flex flex-1 flex-col gap-5 overflow-y-auto px-5 pt-6 pb-4">
+                  <Link
+                    href={`/${locale}`}
+                    className="inline-flex flex-col gap-1 text-left"
+                    aria-label={labels.home}
                     onClick={handleNavigate}
                   >
-                    {ctas.tertiary.label}
-                  </a>
-                  {ctas.tertiary.helper ? (
-                    <p className="text-xs text-secondary dark:text-surface/70">{ctas.tertiary.helper}</p>
-                  ) : null}
+                    <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary dark:text-surface/80">
+                      Teodoro Morcone
+                    </span>
+                    <span className="text-xl font-semibold leading-tight">Nachhilfe</span>
+                  </Link>
+
+                  <nav aria-label={labels.navigation}>
+                    <ul className="flex flex-col gap-1">
+                      {navItems.map((item) => (
+                        <NavLink
+                          key={item.id}
+                          href={item.href}
+                          label={item.label}
+                          {...(item.targetId ? {targetId: item.targetId} : {})}
+                          onNavigate={handleNavigate}
+                        />
+                      ))}
+                    </ul>
+                  </nav>
+
+                  <div className="flex flex-col items-center gap-4">
+                    <a
+                      className="inline-flex w-full items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-3 text-[0.79rem] font-semibold text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
+                      href={ctas.primary.href}
+                      onClick={handleNavigate}
+                    >
+                      {ctas.primary.label}
+                    </a>
+                    <a
+                      className="inline-flex w-full items-center justify-center rounded-full border border-secondary/30 px-4 py-3 text-sm font-semibold text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/30 dark:text-surface"
+                      href={ctas.secondary.href}
+                      onClick={handleNavigate}
+                    >
+                      {ctas.secondary.label}
+                    </a>
+                    <div className="flex w-full flex-col items-center space-y-2">
+                      <a
+                        className="inline-flex w-full items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
+                        href={ctas.tertiary.href}
+                        onClick={handleNavigate}
+                      >
+                        {ctas.tertiary.label}
+                      </a>
+                      {ctas.tertiary.helper ? (
+                        <p className="text-center text-xs text-secondary dark:text-surface/70">{ctas.tertiary.helper}</p>
+                      ) : null}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-3 border-t border-secondary/20 px-5 py-4 text-sm dark:border-surface/20">
+                  {languageControl}
+                  {themeControl}
+                  <button
+                    type="button"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-secondary/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-secondary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/20 dark:text-surface/80 dark:hover:border-accent dark:hover:text-accent"
+                    onClick={() => {
+                      consent.openPreferences();
+                      setOpen(false);
+                    }}
+                  >
+                    {labels.cookies}
+                  </button>
+                  <Link
+                    className="inline-flex w-full items-center justify-center rounded-full border border-secondary/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-secondary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/20 dark:text-surface/80 dark:hover:border-accent dark:hover:text-accent"
+                    href={privacyLink.href}
+                    onClick={handleNavigate}
+                  >
+                    {privacyLink.label}
+                  </Link>
                 </div>
               </div>
 
-              <div className="mt-8 space-y-3 border-t border-secondary/20 pt-6 text-sm dark:border-surface/20">
-                {languageControl}
-                {themeControl}
-                <button
-                  type="button"
-                  className="w-full text-left text-sm font-medium text-secondary underline-offset-4 hover:text-accent hover:underline dark:text-surface/70 dark:hover:text-accent"
-                  onClick={() => {
-                    consent.openPreferences();
-                    setOpen(false);
-                  }}
-                >
-                  {labels.cookies}
-                </button>
-                <Link
-                  className="text-sm font-medium text-secondary underline-offset-4 hover:text-accent hover:underline dark:text-surface/70 dark:hover:text-accent"
-                  href={privacyLink.href}
-                  onClick={handleNavigate}
-                >
-                  {privacyLink.label}
-                </Link>
-              </div>
             </SheetContent>
           </Sheet>
         </div>
