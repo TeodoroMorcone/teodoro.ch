@@ -2,6 +2,8 @@
   "hero": {
     "heading": "Mathe sicher meistern mit persönlicher Nachhilfe",
     "subheading": "Strukturierte Online-Unterstützung für Gymiprüfung, BMS/HMS/FMS Aufnahme und laufende Schulbegleitung – direkt aus Zürich.",
+    "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
+    "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Porträt von Teodoro Morcone, der online Nachhilfe anbietet",
@@ -497,6 +499,7 @@
   "contact": {
     "title": "Kontakt & Buchung",
     "description": "Schreibe mir eine kurze Nachricht mit Zielsetzung, Schulstufe und gewünschtem Zeitraum. Ich melde mich innerhalb eines Werktages.",
+    "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
     "details": [
       {
         "label": "E-Mail",

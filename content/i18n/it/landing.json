@@ -2,6 +2,7 @@
   "hero": {
     "heading": "Domina la matematica con ripetizioni personalizzate",
     "subheading": "Supporto strutturato online per la Gymiprüfung e gli esami BMS/HMS/FMS, con follow-up continuo direttamente da Zurigo.",
+    "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Ritratto di Teodoro Morcone sorridente pronto per una lezione online",
@@ -497,6 +498,7 @@
   "contact": {
     "title": "Contatti & prenotazioni",
     "description": "Scrivimi indicando obiettivi, classe e periodo desiderato. Ti risponderò entro un giorno lavorativo.",
+    "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
     "details": [
       {
         "label": "E-mail",

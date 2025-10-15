@@ -1,6 +1,7 @@
 "use client";
 
 import {useEffect, useRef, useState} from "react";
+import {useTranslations} from "next-intl";
 
 import {ContactForm} from "@/components/sections/contact-form";
 import {SectionHeading} from "@/components/ui/section-heading";
@@ -16,18 +17,30 @@ const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/60min";
 const DEFAULT_EMBED_DOMAIN = "theodors.ch";
 
 export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
+  const t = useTranslations("landing");
   const detailItems = Array.isArray(contact.details) ? contact.details : [];
   const calendlyFrameRef = useRef<HTMLIFrameElement | null>(null);
-  const [calendlyUrl, setCalendlyUrl] = useState(
-    `${CALENDLY_EVENT_URL}?embed_domain=${DEFAULT_EMBED_DOMAIN}&embed_type=Inline`,
-  );
+  const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null);
+  const calendlyLoadingLabel =
+    contact.calendlyLoadingFallback ??
+    t("hero.calendlyLoadingFallback", {defaultMessage: "Calendly scheduling is loading…"});
 
   useEffect(() => {
     const hasWindow = typeof window !== "undefined";
     const host = hasWindow && window.location.hostname ? window.location.hostname : DEFAULT_EMBED_DOMAIN;
+
+    if (!hasWindow) {
+      console.info("[ContactSection] Calendly iframe deferred", {
+        title: contact.title,
+        hasWindow,
+        host,
+      });
+      return;
+    }
+
     const nextUrl = `${CALENDLY_EVENT_URL}?embed_domain=${host}&embed_type=Inline`;
 
-    setCalendlyUrl(nextUrl);
+    setCalendlyUrl((prev) => (prev !== nextUrl ? nextUrl : prev));
 
     console.info("[ContactSection] Calendly iframe ready", {
       title: contact.title,
@@ -40,6 +53,11 @@ export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
   useEffect(() => {
     if (typeof window === "undefined") {
       console.info("[ContactSection] Calendly width instrumentation skipped", {phase: "ssr"});
+      return;
+    }
+
+    if (!calendlyUrl) {
+      console.info("[ContactSection] Calendly width instrumentation pending", {phase: "awaiting-src"});
       return;
     }
 
@@ -70,7 +88,7 @@ export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [calendlyUrl]);
 
   return (
     <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-28">
@@ -108,15 +126,25 @@ export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
       </div>
 
       <div className="mt-10">
-        <iframe
-          ref={calendlyFrameRef}
-          className="w-full rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
-          src={calendlyUrl}
-          style={{width: "100%", minWidth: 320, height: 700}}
-          frameBorder={0}
-          title="Calendly Booking"
-          loading="lazy"
-        />
+        {calendlyUrl ? (
+          <iframe
+            ref={calendlyFrameRef}
+            className="w-full rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
+            src={calendlyUrl}
+            style={{width: "100%", minWidth: 320, height: 700}}
+            frameBorder={0}
+            title="Calendly Booking"
+            loading="lazy"
+          />
+        ) : (
+          <div
+            className="flex h-[700px] w-full items-center justify-center rounded-3xl border border-secondary/20 bg-surface text-sm text-secondary shadow-sm dark:border-surface/30 dark:bg-primary/30 dark:text-surface/80"
+            role="status"
+            aria-live="polite"
+          >
+            <span>{calendlyLoadingLabel}</span>
+          </div>
+        )}
       </div>
     </section>
   );

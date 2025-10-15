@@ -27,17 +27,28 @@ const DEFAULT_EMBED_DOMAIN = "theodors.ch";
 export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
   const t = useTranslations("landing");
   const calendlyFrameRef = useRef<HTMLIFrameElement | null>(null);
-  const [calendlyUrl, setCalendlyUrl] = useState(
-    `${CALENDLY_EVENT_URL}?embed_domain=${DEFAULT_EMBED_DOMAIN}&embed_type=Inline`,
-  );
+  const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null);
   const expertName = hero.expertName ?? "Teodoro Morcone";
+  const calendlyLoadingLabel =
+    hero.calendlyLoadingFallback ??
+    t("hero.calendlyLoadingFallback", {defaultMessage: "Calendly scheduling is loading…"});
 
   useEffect(() => {
     const hasWindow = typeof window !== "undefined";
     const host = hasWindow && window.location.hostname ? window.location.hostname : DEFAULT_EMBED_DOMAIN;
+
+    if (!hasWindow) {
+      console.info("[HeroSection] Calendly iframe deferred", {
+        heading: hero.heading,
+        hasWindow,
+        host,
+      });
+      return;
+    }
+
     const nextUrl = `${CALENDLY_EVENT_URL}?embed_domain=${host}&embed_type=Inline`;
 
-    setCalendlyUrl(nextUrl);
+    setCalendlyUrl((prev) => (prev !== nextUrl ? nextUrl : prev));
 
     console.info("[HeroSection] Calendly iframe ready", {
       heading: hero.heading,
@@ -45,15 +56,16 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
       host,
       url: nextUrl,
     });
-
-    if (!hasWindow) {
-      return;
-    }
   }, [hero.heading]);
 
   useEffect(() => {
     if (typeof window === "undefined") {
       console.info("[HeroSection] Calendly width instrumentation skipped", {phase: "ssr"});
+      return;
+    }
+
+    if (!calendlyUrl) {
+      console.info("[HeroSection] Calendly width instrumentation pending", {phase: "awaiting-src"});
       return;
     }
 
@@ -84,7 +96,7 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
       cancelAnimationFrame(rafId);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [calendlyUrl]);
 
 
   return (
@@ -151,15 +163,25 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
         </figure>
       </div>
       <div className="mt-10 lg:col-span-2">
-        <iframe
-          ref={calendlyFrameRef}
-          className="w-full rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
-          src={calendlyUrl}
-          style={{width: "100%", minWidth: 320, height: 700}}
-          frameBorder={0}
-          title="Calendly Booking"
-          loading="lazy"
-        />
+        {calendlyUrl ? (
+          <iframe
+            ref={calendlyFrameRef}
+            className="w-full rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
+            src={calendlyUrl}
+            style={{width: "100%", minWidth: 320, height: 700}}
+            frameBorder={0}
+            title="Calendly Booking"
+            loading="lazy"
+          />
+        ) : (
+          <div
+            className="flex h-[700px] w-full items-center justify-center rounded-3xl border border-secondary/20 bg-surface text-sm text-secondary shadow-sm dark:border-surface/30 dark:bg-primary/30 dark:text-surface/80"
+            role="status"
+            aria-live="polite"
+          >
+            <span>{calendlyLoadingLabel}</span>
+          </div>
+        )}
       </div>
     </section>
   );

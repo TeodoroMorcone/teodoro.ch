@@ -12,6 +12,7 @@ export type HeroContent = {
   badge: string;
   expertName?: string;
   mathSnippet?: string | null;
+  calendlyLoadingFallback?: string;
   illustration?: HeroIllustration;
 };
 
@@ -248,6 +249,7 @@ export type ContactContent = {
   form: ContactFormContent;
   responseTime: string;
   officeHours: string;
+  calendlyLoadingFallback?: string;
 };
 
 export type OutboundLink = {

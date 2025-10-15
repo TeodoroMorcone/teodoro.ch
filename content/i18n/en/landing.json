@@ -2,6 +2,7 @@
   "hero": {
     "heading": "Master math with personalized tutoring",
     "subheading": "Structured online support for Gymnasium entrance and BMS/HMS/FMS exams, plus ongoing academic coaching from Zurich.",
+    "calendlyLoadingFallback": "Calendly scheduling is loading…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Portrait of Teodoro Morcone smiling and ready to tutor online",
@@ -497,6 +498,7 @@
   "contact": {
     "title": "Contact & booking",
     "description": "Send a short message with goals, school level, and preferred timeframe. I’ll reply within one business day.",
+    "calendlyLoadingFallback": "Calendly scheduling is loading…",
     "details": [
       {
         "label": "Email",
