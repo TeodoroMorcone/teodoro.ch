@@ -62,6 +62,7 @@ export function Sidebar({
 }: SidebarProps) {
   const consent = useConsent();
   const asideRef = useRef<HTMLElement | null>(null);
+  const primaryCtaRef = useRef<HTMLAnchorElement | null>(null);
   const languageControl =
     languageSwitcher ??
     (
@@ -127,6 +128,20 @@ export function Sidebar({
     };
   }, []);
 
+  useEffect(() => {
+    const element = primaryCtaRef.current;
+
+    if (!element) {
+      console.warn("[Sidebar] primary CTA instrumentation", {hasElement: false});
+      return;
+    }
+
+    console.log("[Sidebar] primary CTA instrumentation", {
+      id: element.id || null,
+      className: element.className,
+    });
+  }, []);
+
   const cookieControl = (
     <button
       type="button"
@@ -175,7 +190,9 @@ export function Sidebar({
 
           <div className="flex flex-col items-center gap-4">
             <a
-              className="inline-flex w-full max-w-xs items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-3 text-sm font-semibold text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
+              id="sidebar-primary-cta"
+              ref={primaryCtaRef}
+              className="inline-flex w-full max-w-xs items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-3 text-[0.79rem] font-semibold text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
               href={ctas.primary.href}
             >
               {ctas.primary.label}
