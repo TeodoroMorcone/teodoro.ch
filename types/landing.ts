@@ -10,6 +10,7 @@ export type HeroContent = {
   heading: string;
   subheading: string;
   badge: string;
+  expertName?: string;
   mathSnippet?: string | null;
   illustration?: HeroIllustration;
 };

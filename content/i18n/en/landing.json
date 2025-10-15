@@ -3,6 +3,7 @@
     "heading": "Master math with personalized tutoring",
     "subheading": "Structured online support for Gymnasium entrance and BMS/HMS/FMS exams, plus ongoing academic coaching from Zurich.",
     "badge": "100% online (Zoom)",
+    "expertName": "Teodoro Morcone",
     "avatarAlt": "Portrait of Teodoro Morcone smiling and ready to tutor online",
     "illustration": {
       "src": "/images/avatar.jpeg",
@@ -251,37 +252,22 @@
           "name": "Assess & set goals",
           "description": "Review recent tests, define target scores, and pinpoint blockers.",
           "duration": "1–2 sessions",
-          "materials": [
-            "Recent tests",
-            "School assignments"
-          ],
-          "notes": [
-            "Run a diagnostic test if needed."
-          ]
+          "materials": ["Recent tests", "School assignments"],
+          "notes": ["Run a diagnostic test if needed."]
         },
         {
           "name": "Strengthen foundations",
           "description": "Systematically revisit key topics with scaffolded practice and focused error correction.",
           "duration": "4–8 weeks",
-          "materials": [
-            "Theory handouts",
-            "Practice sets with solutions"
-          ],
-          "notes": [
-            "Log weekly checkpoints and progress."
-          ]
+          "materials": ["Theory handouts", "Practice sets with solutions"],
+          "notes": ["Log weekly checkpoints and progress."]
         },
         {
           "name": "Simulate & refine",
           "description": "Conduct full-length mock exams, debrief thoroughly, and refine time management.",
           "duration": "2–4 weeks",
-          "materials": [
-            "Mock exam PDFs",
-            "Time-planning sheets"
-          ],
-          "notes": [
-            "Build mental strategies and scheduled breaks."
-          ]
+          "materials": ["Mock exam PDFs", "Time-planning sheets"],
+          "notes": ["Build mental strategies and scheduled breaks."]
         }
       ],
       "disclaimer": "The plan is tailored individually – we’ll tailor details during the initial consult."
@@ -345,23 +331,17 @@
         {
           "term": "Gymiprüfung",
           "definition": "Central admission exam for Zurich’s long-track or short-track Gymnasium.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         },
         {
           "term": "BMS",
           "definition": "Berufsmaturitätsschule – combines vocational training with general education.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         },
         {
           "term": "Mock exam",
           "definition": "Full exam simulation under real conditions to build familiarity with format and timing.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         }
       ]
     },
@@ -634,6 +614,10 @@
         "value": "theodors.ch",
         "href": "https://theodors.ch",
         "type": "url"
+      },
+      {
+        "label": "UID",
+        "value": "CHE-274.085.496"
       }
     ],
     "notes": [

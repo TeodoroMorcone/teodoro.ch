@@ -3,6 +3,7 @@
     "heading": "Mathe sicher meistern mit persönlicher Nachhilfe",
     "subheading": "Strukturierte Online-Unterstützung für Gymiprüfung, BMS/HMS/FMS Aufnahme und laufende Schulbegleitung – direkt aus Zürich.",
     "badge": "100% online (Zoom)",
+    "expertName": "Teodoro Morcone",
     "avatarAlt": "Porträt von Teodoro Morcone, der online Nachhilfe anbietet",
     "illustration": {
       "src": "/images/avatar.jpeg",
@@ -251,37 +252,22 @@
           "name": "Analyse & Zielsetzung",
           "description": "Bestehende Tests und Noten analysieren, genaue Zielnoten definieren und Lernblocker identifizieren.",
           "duration": "1–2 Sessions",
-          "materials": [
-            "Letzte Prüfungen",
-            "Schulaufgaben"
-          ],
-          "notes": [
-            "Bei Unsicherheit Diagnosetest durchführen."
-          ]
+          "materials": ["Letzte Prüfungen", "Schulaufgaben"],
+          "notes": ["Bei Unsicherheit Diagnosetest durchführen."]
         },
         {
           "name": "Fundament stärken",
           "description": "Relevante Themen systematisch wiederholen, mit abgestuften Übungsserien vertiefen und Lücken schliessen.",
           "duration": "4–8 Wochen",
-          "materials": [
-            "Theorieblätter",
-            "Aufgabenserien mit Lösungen"
-          ],
-          "notes": [
-            "Wöchentliche Mini-Checks dokumentieren."
-          ]
+          "materials": ["Theorieblätter", "Aufgabenserien mit Lösungen"],
+          "notes": ["Wöchentliche Mini-Checks dokumentieren."]
         },
         {
           "name": "Simulation & Feinschliff",
           "description": "Mock-Exams unter Echtzeitbedingungen durchführen, Review-Session, Strategien für Zeitmanagement schärfen.",
           "duration": "2–4 Wochen",
-          "materials": [
-            "Mock-Exam PDFs",
-            "Zeitplanungs-Sheets"
-          ],
-          "notes": [
-            "Mentale Vorbereitung und Pausenmanagement einplanen."
-          ]
+          "materials": ["Mock-Exam PDFs", "Zeitplanungs-Sheets"],
+          "notes": ["Mentale Vorbereitung und Pausenmanagement einplanen."]
         }
       ],
       "disclaimer": "Individuelle Anpassungen sind möglich – bei Fragen gerne im Erstgespräch klären."
@@ -345,23 +331,17 @@
         {
           "term": "Gymiprüfung",
           "definition": "Zentrale Aufnahmeprüfung für den Übertritt ans Lang- oder Kurzgymnasium im Kanton Zürich.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         },
         {
           "term": "BMS",
           "definition": "Berufsmaturitätsschule – kombiniert berufliche Grundbildung mit gymnasialen Inhalten.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         },
         {
           "term": "Mock-Exam",
           "definition": "Prüfungssimulation unter realen Bedingungen zur Gewöhnung an Zeitdruck und Aufgabenformat.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         }
       ]
     },
@@ -634,6 +614,10 @@
         "value": "theodors.ch",
         "href": "https://theodors.ch",
         "type": "url"
+      },
+      {
+        "label": "UID",
+        "value": "CHE-274.085.496"
       }
     ],
     "notes": [

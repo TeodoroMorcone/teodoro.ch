@@ -3,6 +3,7 @@
     "heading": "Domina la matematica con ripetizioni personalizzate",
     "subheading": "Supporto strutturato online per la Gymiprüfung e gli esami BMS/HMS/FMS, con follow-up continuo direttamente da Zurigo.",
     "badge": "100% online (Zoom)",
+    "expertName": "Teodoro Morcone",
     "avatarAlt": "Ritratto di Teodoro Morcone sorridente pronto per una lezione online",
     "illustration": {
       "src": "/images/avatar.jpeg",
@@ -251,37 +252,22 @@
           "name": "Analisi & obiettivi",
           "description": "Valutare verifiche recenti, definire i punteggi target e identificare gli ostacoli.",
           "duration": "1–2 sessioni",
-          "materials": [
-            "Verifiche passate",
-            "Compiti scolastici"
-          ],
-          "notes": [
-            "Se necessario si effettua un test diagnostico."
-          ]
+          "materials": ["Verifiche passate", "Compiti scolastici"],
+          "notes": ["Se necessario si effettua un test diagnostico."]
         },
         {
           "name": "Consolidare le fondamenta",
           "description": "Ripasso sistematico degli argomenti rilevanti con esercizi graduati e correzione degli errori ricorrenti.",
           "duration": "4–8 settimane",
-          "materials": [
-            "Schede teoriche",
-            "Serie di esercizi con soluzioni"
-          ],
-          "notes": [
-            "Monitoraggio settimanale dei progressi."
-          ]
+          "materials": ["Schede teoriche", "Serie di esercizi con soluzioni"],
+          "notes": ["Monitoraggio settimanale dei progressi."]
         },
         {
           "name": "Simulazioni & rifinitura",
           "description": "Mock-exam in tempo reale, analisi dettagliata e ottimizzazione della gestione del tempo.",
           "duration": "2–4 settimane",
-          "materials": [
-            "Prove simulate",
-            "Template per la gestione del tempo"
-          ],
-          "notes": [
-            "Integrare strategie mentali e pause mirate."
-          ]
+          "materials": ["Prove simulate", "Template per la gestione del tempo"],
+          "notes": ["Integrare strategie mentali e pause mirate."]
         }
       ],
       "disclaimer": "Il percorso viene adattato alle esigenze individuali; discuteremo eventuali modifiche durante la consulenza iniziale."
@@ -345,23 +331,17 @@
         {
           "term": "Gymiprüfung",
           "definition": "Esame centrale di ammissione al ginnasio (scuola superiore) nel Canton Zurigo.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         },
         {
           "term": "BMS",
           "definition": "Scuola di maturità professionale che combina formazione professionale e contenuti liceali.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         },
         {
           "term": "Mock exam",
           "definition": "Simulazione completa d’esame per abituarsi alle condizioni reali di tempo e formato.",
-          "relatedLinks": [
-            "TODO"
-          ]
+          "relatedLinks": ["TODO"]
         }
       ]
     },
@@ -634,6 +614,10 @@
         "value": "theodors.ch",
         "href": "https://theodors.ch",
         "type": "url"
+      },
+      {
+        "label": "UID",
+        "value": "CHE-274.085.496"
       }
     ],
     "notes": [

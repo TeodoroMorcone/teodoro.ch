@@ -1,6 +1,6 @@
 "use client";
 
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
 import {ContactForm} from "@/components/sections/contact-form";
 import {SectionHeading} from "@/components/ui/section-heading";
@@ -17,6 +17,7 @@ const DEFAULT_EMBED_DOMAIN = "theodors.ch";
 
 export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
   const detailItems = Array.isArray(contact.details) ? contact.details : [];
+  const calendlyFrameRef = useRef<HTMLIFrameElement | null>(null);
   const [calendlyUrl, setCalendlyUrl] = useState(
     `${CALENDLY_EVENT_URL}?embed_domain=${DEFAULT_EMBED_DOMAIN}&embed_type=Inline`,
   );
@@ -35,6 +36,41 @@ export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
       url: nextUrl,
     });
   }, [contact.title]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      console.info("[ContactSection] Calendly width instrumentation skipped", {phase: "ssr"});
+      return;
+    }
+
+    const logMetrics = (phase: string) => {
+      const iframeEl = calendlyFrameRef.current;
+
+      if (!iframeEl) {
+        console.warn("[ContactSection] Calendly width instrumentation", {phase, hasElement: false});
+        return;
+      }
+
+      const rect = iframeEl.getBoundingClientRect();
+      const parentRect = iframeEl.parentElement?.getBoundingClientRect() ?? null;
+
+      console.info("[ContactSection] Calendly width instrumentation", {
+        phase,
+        iframeWidth: rect.width,
+        parentWidth: parentRect?.width ?? null,
+      });
+    };
+
+    const handleResize = () => logMetrics("resize");
+    const rafId = requestAnimationFrame(() => logMetrics("mount"));
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-28">
@@ -63,21 +99,24 @@ export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
           </div>
 
           <ZoomQuickLaunch labels={zoomLabels} />
-
-          <iframe
-            className="mt-6 rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
-            src={calendlyUrl}
-            style={{width: "100%", minWidth: 320, height: 700}}
-            frameBorder={0}
-            title="Calendly Booking"
-            loading="lazy"
-          />
         </div>
 
         <div className="rounded-3xl border border-secondary/20 bg-surface px-6 py-6 shadow-sm dark:border-surface/20 dark:bg-primary/40">
           <h3 className="text-lg font-semibold text-primary dark:text-surface">{contact.form.title}</h3>
           <ContactForm form={contact.form} />
         </div>
+      </div>
+
+      <div className="mt-10">
+        <iframe
+          ref={calendlyFrameRef}
+          className="w-full rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
+          src={calendlyUrl}
+          style={{width: "100%", minWidth: 320, height: 700}}
+          frameBorder={0}
+          title="Calendly Booking"
+          loading="lazy"
+        />
       </div>
     </section>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import {useTranslations} from "next-intl";
 
@@ -26,9 +26,11 @@ const DEFAULT_EMBED_DOMAIN = "theodors.ch";
 
 export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
   const t = useTranslations("landing");
+  const calendlyFrameRef = useRef<HTMLIFrameElement | null>(null);
   const [calendlyUrl, setCalendlyUrl] = useState(
     `${CALENDLY_EVENT_URL}?embed_domain=${DEFAULT_EMBED_DOMAIN}&embed_type=Inline`,
   );
+  const expertName = hero.expertName ?? "Teodoro Morcone";
 
   useEffect(() => {
     const hasWindow = typeof window !== "undefined";
@@ -48,6 +50,42 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
       return;
     }
   }, [hero.heading]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      console.info("[HeroSection] Calendly width instrumentation skipped", {phase: "ssr"});
+      return;
+    }
+
+    const logMetrics = (phase: string) => {
+      const iframeEl = calendlyFrameRef.current;
+
+      if (!iframeEl) {
+        console.warn("[HeroSection] Calendly width instrumentation", {phase, hasElement: false});
+        return;
+      }
+
+      const rect = iframeEl.getBoundingClientRect();
+      const parentRect = iframeEl.parentElement?.getBoundingClientRect() ?? null;
+
+      console.info("[HeroSection] Calendly width instrumentation", {
+        phase,
+        iframeWidth: rect.width,
+        parentWidth: parentRect?.width ?? null,
+      });
+    };
+
+    const handleResize = () => logMetrics("resize");
+    const rafId = requestAnimationFrame(() => logMetrics("mount"));
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      cancelAnimationFrame(rafId);
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
 
   return (
     <section
@@ -76,14 +114,6 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
           variant="inline"
           className="mt-6"
         />
-        <iframe
-          className="mt-6 rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
-          src={calendlyUrl}
-          style={{width: "100%", minWidth: 320, height: 700}}
-          frameBorder={0}
-          title="Calendly Booking"
-          loading="lazy"
-        />
       </div>
       <div className="flex flex-col gap-6 rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10">
         <SectionHeading
@@ -96,17 +126,22 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
             </p>
           }
         />
-        <figure className="flex flex-col gap-4">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 shadow-lg ring-1 ring-primary/10 dark:from-surface/20 dark:via-surface/10 dark:to-primary/30">
-            <Image
-              src="/images/avatar.webp"
-              alt={t("hero.avatarAlt")}
-              width={640}
-              height={640}
-              priority
-              sizes="(min-width: 1024px) 28rem, 80vw"
-              className="h-full w-full rounded-2xl object-cover"
-            />
+        <figure className="flex flex-col items-center gap-4">
+          <div className="flex w-full flex-col items-center gap-3 rounded-3xl border border-primary/15 bg-primary/5 p-6 shadow-xl backdrop-blur-sm dark:border-primary/30 dark:bg-surface/25">
+            <div className="relative w-full overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 shadow-lg ring-1 ring-primary/10 dark:from-surface/20 dark:via-surface/10 dark:to-primary/30">
+              <Image
+                src="/images/avatar.webp"
+                alt={t("hero.avatarAlt")}
+                width={640}
+                height={640}
+                priority
+                sizes="(min-width: 1024px) 28rem, 80vw"
+                className="h-full w-full rounded-2xl object-cover"
+              />
+            </div>
+            <p className="text-base font-semibold tracking-wide text-primary dark:text-accent">
+              {expertName}
+            </p>
           </div>
           {hero.illustration?.caption ? (
             <figcaption className="text-xs uppercase tracking-[0.2em] text-secondary/70 dark:text-surface/60">
@@ -114,6 +149,17 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
             </figcaption>
           ) : null}
         </figure>
+      </div>
+      <div className="mt-10 lg:col-span-2">
+        <iframe
+          ref={calendlyFrameRef}
+          className="w-full rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
+          src={calendlyUrl}
+          style={{width: "100%", minWidth: 320, height: 700}}
+          frameBorder={0}
+          title="Calendly Booking"
+          loading="lazy"
+        />
       </div>
     </section>
   );
