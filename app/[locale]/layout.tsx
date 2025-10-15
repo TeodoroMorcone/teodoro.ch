@@ -1,4 +1,4 @@
-import type {ReactNode} from "react";
+import {Suspense, type ReactNode} from "react";
 import {notFound} from "next/navigation";
 import {NextIntlClientProvider} from "next-intl";
 import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
@@ -99,10 +99,14 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
   const skipToContent = tCommon("accessibility.skipToContent");
 
   const sidebarLanguageSwitcher = (
-    <LanguageSwitcher currentLocale={locale} label={sidebarLabels.language} />
+    <Suspense fallback={null}>
+      <LanguageSwitcher currentLocale={locale} label={sidebarLabels.language} />
+    </Suspense>
   );
   const mobileLanguageSwitcher = (
-    <LanguageSwitcher currentLocale={locale} label={mobileLabels.language} />
+    <Suspense fallback={null}>
+      <LanguageSwitcher currentLocale={locale} label={mobileLabels.language} />
+    </Suspense>
   );
   const sidebarThemeToggle = <ThemeToggle label={sidebarLabels.theme} />;
   const mobileThemeToggle = <ThemeToggle label={mobileLabels.theme} />;
