@@ -204,8 +204,8 @@ export function MobileNav({
 
   return (
     <header className="sticky top-0 z-40 border-b border-secondary/30 bg-surface/95 text-primary backdrop-blur-md dark:border-surface/20 dark:bg-primary/95 dark:text-surface lg:hidden">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
-        <Link href={`/${locale}`} className="flex flex-col text-left" aria-label={labels.home}>
+      <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <Link href={`/${locale}`} className="flex flex-col pr-14 text-left sm:pr-0" aria-label={labels.home}>
           <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/80">
             Teodoro Morcone
           </span>
@@ -222,8 +222,8 @@ export function MobileNav({
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
-              className="inline-flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border border-secondary/40 text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/30 dark:text-surface sm:self-auto sm:justify-center"
-              aria-label={labels.open}
+              className="absolute right-6 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/40 text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/30 dark:text-surface sm:static sm:flex-shrink-0 sm:self-auto sm:justify-center"
+              aria-label={open ? labels.close : labels.open}
             >
               <Menu aria-hidden="true" className="h-5 w-5" />
             </SheetTrigger>
