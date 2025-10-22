@@ -228,6 +228,7 @@ export type ContactContent = {
   officeHours: string;
   calendlyLoadingFallback?: string;
   calendlyTriggerLabel?: string;
+  calendlyPlaceholder?: string;
   policy?: ContactPolicy;
 };
 
