@@ -6,7 +6,6 @@ import {useTranslations} from "next-intl";
 
 import {CTAButton} from "@/components/ui/cta-button";
 import {SectionHeading} from "@/components/ui/section-heading";
-import {ZoomQuickLaunch, type ZoomLaunchLabels} from "@/components/ui/zoom-quick-launch";
 import type {HeroContent} from "@/types/landing";
 
 type HeroSectionProps = {
@@ -15,16 +14,12 @@ type HeroSectionProps = {
     primary: {label: string; href: string};
     secondary: {label: string; href: string};
   };
-  zoom: {
-    labels: ZoomLaunchLabels;
-    helper?: string;
-  };
 };
 
 const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
 const DEFAULT_EMBED_DOMAIN = "theodors.ch";
 
-export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
+export function HeroSection({hero, ctas}: HeroSectionProps) {
   const t = useTranslations("landing");
   const calendlyFrameRef = useRef<HTMLIFrameElement | null>(null);
   const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null);
@@ -125,13 +120,6 @@ export function HeroSection({hero, ctas, zoom}: HeroSectionProps) {
             {ctas.secondary.label}
           </CTAButton>
         </div>
-        <ZoomQuickLaunch
-          labels={zoom.labels}
-          helperText={zoom.helper ?? zoom.labels.helper}
-          includeLesson={false}
-          variant="inline"
-          className="mt-6"
-        />
       </div>
       <div className="flex flex-col gap-6 rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10">
         <SectionHeading

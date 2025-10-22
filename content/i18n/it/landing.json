@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Domina la matematica con ripetizioni personalizzate",
-    "subheading": "Supporto strutturato online per la Gymiprüfung e gli esami BMS/HMS/FMS, con follow-up continuo direttamente da Zurigo.",
+    "subheading": "Supporto strutturato online per la Gymiprüfung, le ammissioni BMS, gli esami finali BM2 e le ammissioni HMS/FMS, con follow-up continuo direttamente da Zurigo.",
     "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
@@ -17,7 +17,7 @@
     "items": [
       {
         "label": "Per chi?",
-        "description": "Studentesse e studenti in cammino verso gli esami di ammissione o di diploma per Gymi, BMS, HMS e FMS."
+        "description": "Studentesse e studenti in cammino verso gli esami di ammissione o di diploma per Gymi, BMS, BM2, HMS e FMS."
       },
       {
         "label": "Cosa?",
@@ -33,7 +33,7 @@
       },
       {
         "label": "Come iniziare?",
-        "description": "Prenota una consulenza gratuita e ricevi un riscontro entro 24 ore."
+        "description": "Richiedi la prima consulenza gratuita via WhatsApp; le lezioni Zoom successive si pianificano poi insieme tramite Calendly."
       }
     ]
   },
@@ -82,7 +82,7 @@
         {
           "id": "bms-hms-fms",
           "name": "Preparazione esami BMS/HMS/FMS",
-          "copy": "Percorso strutturato per esami di ammissione e di diploma delle scuole medie superiori professionali con esercizi pratici."
+          "copy": "Percorso strutturato per esami di ammissione e di diploma (inclusa la matematica BM2) delle scuole medie superiori professionali con esercizi pratici."
         },
         {
           "id": "exam-coaching",
@@ -241,7 +241,7 @@
         {
           "id": "faq-bms",
           "question": "Prepari anche le parti specifiche per BMS/HMS/FMS?",
-          "answer": "Sì, conosco i format tipici e organizzo simulazioni realistiche, inclusa la parte di comprensione e scrittura."
+          "answer": "Sì, conosco i format tipici per BMS, BM2, HMS e FMS e organizzo simulazioni realistiche, inclusa la parte di comprensione e scrittura."
         }
       ]
     },
@@ -337,6 +337,11 @@
         {
           "term": "BMS",
           "definition": "Scuola di maturità professionale che combina formazione professionale e contenuti liceali.",
+          "relatedLinks": ["TODO"]
+        },
+        {
+          "term": "BM2",
+          "definition": "Percorso di maturità professionale per titolari di attestato federale (EFZ) con esame finale di matematica intensivo e moduli di cultura generale.",
           "relatedLinks": ["TODO"]
         },
         {
@@ -497,7 +502,7 @@
   },
   "contact": {
     "title": "Contatti & prenotazioni",
-    "description": "Scrivimi indicando obiettivi, classe e periodo desiderato. Ti risponderò entro un giorno lavorativo.",
+    "description": "Scrivimi subito su WhatsApp con obiettivi, classe e periodo desiderato: il primo confronto avviene lì. Le sessioni Zoom successive le programmiamo insieme su Calendly.",
     "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
     "details": [
       {
@@ -516,60 +521,6 @@
         "href": "https://www.instagram.com/Teo6oro/"
       }
     ],
-    "form": {
-      "title": "Modulo di contatto",
-      "fields": [
-        {
-          "id": "name",
-          "label": "Nome",
-          "placeholder": "Nome e cognome",
-          "type": "text",
-          "required": true
-        },
-        {
-          "id": "email",
-          "label": "E-mail",
-          "placeholder": "nome@mail.ch",
-          "type": "email",
-          "required": true
-        },
-        {
-          "id": "phone",
-          "label": "Telefono (opzionale)",
-          "placeholder": "+41 …",
-          "type": "tel",
-          "required": false
-        },
-        {
-          "id": "level",
-          "label": "Classe / obiettivo",
-          "placeholder": "es. 2ª Sek, Gymi lungo",
-          "type": "text",
-          "required": true
-        },
-        {
-          "id": "message",
-          "label": "Messaggio",
-          "placeholder": "Quali temi vuoi affrontare?",
-          "type": "textarea",
-          "required": true
-        }
-      ],
-      "privacyNote": "Inviando il modulo confermi di aver letto l’informativa sulla privacy.",
-      "submitLabel": "Invia messaggio",
-      "success": "Grazie! Ti risponderò entro 24 ore.",
-      "error": "Si è verificato un errore. Riprova più tardi.",
-      "validation": {
-        "nameRequired": "Inserisci il tuo nome.",
-        "nameTooLong": "Il nome può contenere al massimo 120 caratteri.",
-        "emailInvalid": "Inserisci un indirizzo e-mail valido.",
-        "phoneInvalid": "Il numero di telefono contiene caratteri non validi.",
-        "levelRequired": "Indica la classe o l’obiettivo.",
-        "levelTooLong": "L’indicazione può contenere al massimo 160 caratteri.",
-        "messageRequired": "Descrivi brevemente la tua richiesta.",
-        "messageTooLong": "Il messaggio può contenere al massimo 1500 caratteri."
-      }
-    },
     "responseTime": "Risposta entro 24h (lun–ven)",
     "officeHours": "Orari di lezione: lun–sab su appuntamento",
     "policy": {

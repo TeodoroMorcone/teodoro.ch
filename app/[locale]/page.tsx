@@ -144,19 +144,7 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
     <>
       <main id="main-content" className="min-h-screen bg-surface text-primary dark:bg-primary dark:text-surface">
         <article className="mx-auto flex w-full max-w-6xl flex-col gap-24 px-6 py-16 lg:px-12">
-          <HeroSection
-            hero={hero}
-            ctas={heroCtas}
-            zoom={{
-              labels: {
-                consultation: tCommon("zoom.consultation"),
-                lesson: tCommon("zoom.lesson"),
-                fallback: tCommon("zoom.fallback"),
-                helper: tCommon("zoom.helper"),
-                passcode: tCommon("zoom.passcode"),
-              },
-            }}
-          />
+          <HeroSection hero={hero} ctas={heroCtas} />
 
           <TLDRSection tldr={tldr} intentClusters={intentClusters} />
 
@@ -178,16 +166,7 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
 
           <GlossarySection glossary={glossary} />
 
-          <ContactSection
-            contact={contact}
-            zoomLabels={{
-              consultation: tCommon("zoom.consultation"),
-              lesson: tCommon("zoom.lesson"),
-              fallback: tCommon("zoom.fallback"),
-              helper: tCommon("zoom.helper"),
-              passcode: tCommon("zoom.passcode"),
-            }}
-          />
+          <ContactSection contact={contact} />
 
           <ImpressumSection impressum={impressum} />
 

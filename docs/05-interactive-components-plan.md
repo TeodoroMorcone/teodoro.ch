@@ -11,7 +11,6 @@
 | `LanguageSwitcher` | Client | Change locale, preserve current route/hash | next-intl, Router |
 | `ThemeToggle` | Client | Toggle between light/dark/system | next-themes |
 | `ZoomQuickLaunch` | Client | Trigger Zoom deep link with fallback | Zoom config, analytics |
-| `ContactForm` | Client | Submit inquiries via react-hook-form + zod | RHF, zod, fetch API |
 | `CookieBanner` | Client | Consent Mode v2 manager | next/script, GA4 loader |
 | `ConsentPreferences` | Client | Manage consent after initial choice | Local storage, GA4 |
 | `ActiveSectionProvider` | Client | IntersectionObserver for nav | IntersectionObserver API |
@@ -85,20 +84,18 @@
 - Performance:
   - Client component to handle analytics; static markup otherwise.
 
-## 7. Contact Form
+## 7. Contact Section (No Form)
 - Implementation:
-  - react-hook-form with zod schema in `lib/validation/contact.ts`.
-  - Fields: name, email, phone (optional), studentLevel (select), message, consent checkbox.
-  - Submit via `/api/form` route (server handler to send email or queue). SSR ensures no hydration except form.
-  - Provide success banner on completion.
+  - Present key contact details (email, phone, Instagram) with clear labels and links.
+  - Embed Calendly inline via iframe; ensure fallback messaging while loading.
+  - Provide optional policy block outlining cancellations and working with minors.
 - Accessibility:
-  - Labels associated using `htmlFor`.
-  - Inline error messages with `aria-live="polite"`.
-  - `aria-invalid` on fields with errors.
-  - Submit button disabled while loading with spinner icon and `aria-live`.
+  - Maintain semantic headings and list structure for contact details.
+  - Ensure Calendly iframe has descriptive title and `aria-live` fallback messaging.
+  - Keep link targets descriptive and accessible (underline on hover, sufficient contrast).
 - Performance:
-  - Only contact section uses client component; lazy load after interaction? We can keep as standard because necessary.
-  - Use dynamic import with `ssr: false` if we want to reduce initial JS? probably keep as standard.
+  - Defer Calendly iframe initialization until client-side to avoid blocking SSR.
+  - Reuse existing contact data shape to avoid extra client bundles.
 
 ## 8. Cookie Banner & Consent Manager
 - `CookieBanner`:
@@ -126,7 +123,6 @@
 - Provide hook `useAnalytics()` returning methods to send events (no-ops until GA ready).
 - Components:
   - Zoom Quick Launch button uses hook.
-  - ContactForm emits `generate_lead`.
   - Services section view event triggered via IntersectionObserver or on section view (server hooking to route? optional).
 - Ensure events sanitized (no PII). Event parameters localized keys (IDs) not user input.
 
@@ -142,7 +138,6 @@
 - `LanguageSwitcherProps = { locale: Locale; locales: LocaleInfo[]; className?: string }`.
 - `ThemeToggleProps = { className?: string }`.
 - `ZoomQuickLaunchProps = { links: ZoomLink[]; layout?: "horizontal" | "vertical"; variant?: "hero" | "contact" }`.
-- `ContactFormProps = { locale: Locale; translations: ContactFormStrings }`.
 - `CookieBannerProps = { locale: Locale; strings: CookieStrings }`.
 - Provide `ZoomLink = { type: "consultation" | "lesson"; label: string; ariaLabel: string; deepLink: string; fallbackLink: string; helper?: string }`.
 
@@ -161,7 +156,6 @@
 - Use React Testing Library (future) to validate:
   - Language switch updates URL.
   - Theme toggle toggles class.
-  - ContactForm validation messages.
   - Cookie banner updates consent state.
 - For IntersectionObserver, provide mock in tests.
 

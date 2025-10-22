@@ -3,22 +3,41 @@
 import {useEffect, useRef, useState} from "react";
 import {useTranslations} from "next-intl";
 
-import {ContactForm} from "@/components/sections/contact-form";
 import {SectionHeading} from "@/components/ui/section-heading";
-import {ZoomQuickLaunch, type ZoomLaunchLabels} from "@/components/ui/zoom-quick-launch";
 import type {ContactContent, ContactDetail} from "@/types/landing";
 
 type ContactSectionProps = {
   contact: ContactContent;
-  zoomLabels: ZoomLaunchLabels;
 };
 
 const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
 const DEFAULT_EMBED_DOMAIN = "theodors.ch";
 
-export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
+export function ContactSection({contact}: ContactSectionProps) {
   const t = useTranslations("landing");
   const detailItems = Array.isArray(contact.details) ? contact.details : [];
+
+  const emailDetail = detailItems.find((detail) => detail.href?.startsWith("mailto:"));
+  const phoneDetail = detailItems.find((detail) => detail.href?.startsWith("tel:"));
+  const ctaDetails: ContactDetail[] = [emailDetail, phoneDetail].filter(
+    (detail): detail is ContactDetail => Boolean(detail),
+  );
+  const policy = contact.policy;
+
+  if (ctaDetails.length === 0 && detailItems.length > 0) {
+    const fallbackPrimary = detailItems[0];
+    if (fallbackPrimary) {
+      ctaDetails.push(fallbackPrimary);
+    }
+  }
+
+  if (ctaDetails.length === 1) {
+    const fallbackDetail = detailItems.find((detail) => !ctaDetails.includes(detail));
+    if (fallbackDetail) {
+      ctaDetails.push(fallbackDetail);
+    }
+  }
+
   const calendlyFrameRef = useRef<HTMLIFrameElement | null>(null);
   const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null);
   const calendlyLoadingLabel =
@@ -117,17 +136,64 @@ export function ContactSection({contact, zoomLabels}: ContactSectionProps) {
               </li>
             ))}
           </ul>
-          <div className="text-xs text-secondary dark:text-surface/70">
-            <p>{contact.responseTime}</p>
-            <p>{contact.officeHours}</p>
-          </div>
-
-          <ZoomQuickLaunch labels={zoomLabels} />
         </div>
 
         <div className="rounded-3xl border border-secondary/20 bg-surface px-6 py-6 shadow-sm dark:border-surface/20 dark:bg-primary/40">
-          <h3 className="text-lg font-semibold text-primary dark:text-surface">{contact.form.title}</h3>
-          <ContactForm form={contact.form} />
+          <div className="flex h-full flex-col gap-6">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/70">
+                {contact.responseTime}
+              </p>
+              <p className="mt-2 text-sm text-secondary dark:text-surface/70">{contact.officeHours}</p>
+            </div>
+
+            {ctaDetails.length > 0 ? (
+              <div className="flex flex-col gap-3">
+                {ctaDetails.map((detail) => (
+                  <a
+                    key={detail.href ?? detail.label}
+                    href={detail.href ?? "#"}
+                    className="group flex flex-col rounded-2xl border border-secondary/20 bg-primary/5 px-5 py-4 transition hover:border-primary/40 hover:bg-primary/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary dark:border-surface/20 dark:bg-primary/30 dark:hover:border-surface/40 dark:hover:bg-primary/40"
+                  >
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/70">
+                      {detail.label}
+                    </span>
+                    <span className="text-lg font-semibold text-primary transition group-hover:text-accent dark:text-surface dark:group-hover:text-surface">
+                      {detail.value}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <p className="text-sm text-secondary dark:text-surface/80">{contact.description}</p>
+            )}
+
+            {policy ? (
+              <div className="space-y-5 rounded-2xl bg-primary/5 p-4 text-sm text-secondary dark:bg-primary/20 dark:text-surface/85">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/70">
+                    {policy.cancellationTitle}
+                  </p>
+                  <ul className="mt-2 list-disc space-y-1 pl-4">
+                    {policy.cancellationItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/70">
+                    {policy.minorsTitle}
+                  </p>
+                  <ul className="mt-2 list-disc space-y-1 pl-4">
+                    {policy.minorsItems.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
 

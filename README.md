@@ -36,9 +36,12 @@ NEXT_PUBLIC_ZOOM_LESSON_FALLBACK=https://zoom.us/j/YYYYYYYYYYY?pwd=YYYYYYYY
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 GOOGLE_PLACES_API_KEY=AIzaSyXXXXXX
 GOOGLE_PLACE_ID=ChIJxxxxxxxxxxxxxxxx
+CONTACT_FORM_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/XXXXXXX/XXXXXXXXX
+CONTACT_FORM_WEBHOOK_SECRET=super-secure-token
 ```
 
 - **Zoom links** must point to waiting-room enabled meetings with passcodes (no raw PMI).
+- **Contact webhook** (optional) forwards submissions to your CRM/automation tool. If unset, submissions are accepted but only logged server-side.
 - GA ID is optional locally; analytics loads only after consent.
 
 ## 3. Available Scripts
@@ -107,5 +110,45 @@ Husky/lint-staged are prepared for future Git hooks (install via `npm run prepar
 2. Provide `.env.production` with Zoom + GA values.
 3. Deploy (e.g., Vercel). After first deploy, execute production Lighthouse audits and share report URLs.
 4. Confirm consent flow on live domain and submit sitemap / hreflang via Google Search Console if applicable.
+
+### Render.com Deployment Checklist
+
+1. **Create Web Service**
+   - Blueprint: *Web Service*
+   - Runtime: **Node 20 (LTS)**
+   - Build command: `npm run build`
+   - Start command: `npm run start`
+   - Instance type: pick at least a Starter/Standard plan for consistent cold starts (middleware + SSR).
+
+2. **Environment Variables**
+   In the Render dashboard (`Settings → Environment`), add the variables listed in the *Required Environment Variables* section above. Recommended values:
+   | Key | Notes |
+   | --- | ----- |
+   | `NEXT_PUBLIC_ZOOM_CONSULTATION_DEEP_LINK` | Zoom deep link for consultation meeting (passcode-protected). |
+   | `NEXT_PUBLIC_ZOOM_CONSULTATION_FALLBACK` | HTTPS fallback URL (same meeting). |
+   | `NEXT_PUBLIC_ZOOM_LESSON_DEEP_LINK` | Optional second meeting (leave empty to hide). |
+   | `NEXT_PUBLIC_ZOOM_LESSON_FALLBACK` | HTTPS fallback for lesson. |
+   | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | GA4 ID (omit in staging if not needed). |
+   | `GOOGLE_PLACES_API_KEY` & `GOOGLE_PLACE_ID` | Required for reviews fetch. Restrict key to Places API + Render IP ranges if possible. |
+   | `CONTACT_FORM_WEBHOOK_URL` (optional) | CRM/Zapier endpoint for contact submissions. |
+   | `CONTACT_FORM_WEBHOOK_SECRET` (optional) | Bearer token Render will send in the `Authorization` header. |
+
+   *Render automatically restarts the service when environment variables change; no additional configuration is needed.*
+
+3. **Headers & Networking**
+   - No custom header configuration is necessary—security headers & CSP are injected by `middleware.ts`.
+   - Ensure the Render service is behind HTTPS (default). HSTS will instruct browsers to reuse TLS.
+   - If deploying multiple instances, be aware the contact rate limiter is in-memory per instance. For higher traffic, add an external store (Redis) and update the limiter accordingly.
+
+4. **Runtime Considerations**
+   - Enable automatic deploys from your main branch or trigger manual redeploys after merging.
+   - Turn on health checks (`/`) with sensible timeouts; the landing page is static and should respond quickly.
+   - Optionally attach Render’s CDN (Static Outbound) for edge caching—CSP permits only the listed third-party domains.
+
+5. **Post-deploy QA**
+   - Visit your Render URL, accept/decline cookies, and verify GA requests respect consent.
+  - Submit the contact form; confirm the 202 response, webhook delivery (if configured), and the success message.
+  - Validate Zoom buttons appear only when links are provided.
+  - Re-run Lighthouse (Render exposes deploy previews to test before switching DNS).
 
 For further architectural context see the `docs/` folder (plans 01–10) covering scaffolding, localization, accessibility, analytics, SEO, and QA strategy.

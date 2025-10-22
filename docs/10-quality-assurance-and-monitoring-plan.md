@@ -8,12 +8,12 @@
 ## 1. Testing Strategy Overview
 - **Static analysis**: TypeScript strict mode (`npm run typecheck`), ESLint (`npm run lint`), Prettier (`npm run format`).
 - **Unit tests** (future): Set up Vitest or Jest for component and hook testing.
-  - Focus on interactive components (LanguageSwitcher, ConsentBanner, ContactForm).
+  - Focus on interactive components (LanguageSwitcher, ConsentBanner, ZoomQuickLaunch).
   - Mock IntersectionObserver and GA functions.
 - **Integration tests**: Use Playwright or Cypress to validate:
   - Locale routing, language switch, and translation rendering.
   - Cookie banner consent flow.
-  - Contact form submission success/error paths.
+  - Calendly embed loads and interacts correctly across devices.
 - **Accessibility tests**:
   - Automated: `axe-core` in Playwright or `@axe-core/react` (dev mode).
   - Manual: Keyboard navigation, screen reader session (NVDA/VoiceOver).
@@ -49,7 +49,7 @@ Create `docs/qa-checklist.md` later containing:
 - ✅ Sidebar + drawer accessible via keyboard, screen readers.
 - ✅ Consent banner focus trap, Accept/Reject behavior, GA not loaded when denied.
 - ✅ Performance budgets within thresholds on 4G/Slow CPU.
-- ✅ Form validation messages localized, success state triggers analytics event (if consent).
+- ✅ Calendly embed renders, loads availability, and respects consent settings.
 - ✅ Zoom quick launch opens deep link and fallback (test on desktop + mobile).
 - ✅ Legal pages accessible, links correct.
 - ✅ Glossary, FAQ, How-To content consistent across locales.
@@ -75,7 +75,7 @@ Create `docs/qa-checklist.md` later containing:
   - Use Vercel Analytics (optionally) respecting consent.
   - Consider SpeedCurve or Calibre for Core Web Vitals monitoring (only after consent).
   - Keep data collection minimal; store PII-free metrics.
-- Log management: If contact form logs errors, ensure no PII stored beyond operational needs.
+- Log management: If Calendly integration logs errors, ensure no PII stored beyond operational needs.
 
 ## 6. Deployment Checklist
 - Ensure `.env.production` includes GA ID and Zoom links.
@@ -96,7 +96,7 @@ Create `docs/qa-checklist.md` later containing:
 
 ## 8. Post-launch Monitoring
 - Weekly review of Core Web Vitals (GA4 or external service).
-- Monitor contact form submissions (email logs).
+- Monitor Calendly booking analytics and email notifications.
 - Keep track of user feedback for accessibility/performance improvements.
 - Document incidents and fixes in `docs/changelog.md` (future).
 

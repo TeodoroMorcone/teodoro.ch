@@ -196,6 +196,13 @@ export type ContactDetail = {
   href: string;
 };
 
+export type ContactPolicy = {
+  cancellationTitle: string;
+  cancellationItems: string[];
+  minorsTitle: string;
+  minorsItems: string[];
+};
+
 export type ImpressumEntry = {
   label: string;
   value: string;
@@ -211,45 +218,14 @@ export type ImpressumContent = {
 };
 
 
-export type ContactFormFieldId = "name" | "email" | "phone" | "level" | "message";
-
-export type ContactFormField = {
-  id: ContactFormFieldId;
-  label: string;
-  placeholder: string;
-  type: "text" | "email" | "tel" | "textarea";
-  required: boolean;
-};
-
-export type ContactFormValidationMessages = {
-  nameRequired: string;
-  nameTooLong: string;
-  emailInvalid: string;
-  phoneInvalid: string;
-  levelRequired: string;
-  levelTooLong: string;
-  messageRequired: string;
-  messageTooLong: string;
-};
-
-export type ContactFormContent = {
-  title: string;
-  fields: ContactFormField[];
-  privacyNote: string;
-  submitLabel: string;
-  success: string;
-  error: string;
-  validation: ContactFormValidationMessages;
-};
-
 export type ContactContent = {
   title: string;
   description: string;
   details: ContactDetail[];
-  form: ContactFormContent;
   responseTime: string;
   officeHours: string;
   calendlyLoadingFallback?: string;
+  policy?: ContactPolicy;
 };
 
 export type OutboundLink = {

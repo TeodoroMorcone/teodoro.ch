@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Master math with personalized tutoring",
-    "subheading": "Structured online support for Gymnasium entrance and BMS/HMS/FMS exams, plus ongoing academic coaching from Zurich.",
+    "subheading": "Structured online support for Gymnasium entrance, BMS admission, BM2 final exams, and HMS/FMS entrance, plus ongoing academic coaching from Zurich.",
     "calendlyLoadingFallback": "Calendly scheduling is loading…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
@@ -17,7 +17,7 @@
     "items": [
       {
         "label": "Who?",
-        "description": "Students on their way to the entrance or final exams for Gymi, BMS, HMS, and FMS."
+        "description": "Students on their way to the entrance or final exams for Gymi, BMS, BM2, HMS, and FMS."
       },
       {
         "label": "What?",
@@ -33,7 +33,7 @@
       },
       {
         "label": "How to start?",
-        "description": "Book a free consultation and receive a response within 24 hours."
+        "description": "Request your free consultation via WhatsApp; follow-up Zoom lessons are then scheduled together through Calendly."
       }
     ]
   },
@@ -82,7 +82,7 @@
         {
           "id": "bms-hms-fms",
           "name": "BMS/HMS/FMS exam prep",
-          "copy": "Structured roadmap for vocational middle school entrance and final exams with practical drill sessions."
+          "copy": "Structured roadmap for vocational middle school entrance and final exams (including BM2 maths) with practical drill sessions."
         },
         {
           "id": "exam-coaching",
@@ -241,7 +241,7 @@
         {
           "id": "faq-bms",
           "question": "Do you cover specific BMS/HMS/FMS components?",
-          "answer": "Yes. I’m familiar with the exam formats and run realistic simulations, including reasoning and writing sections."
+          "answer": "Yes. I’m familiar with the exam formats for BMS, BM2, HMS, and FMS and run realistic simulations, including reasoning and writing sections."
         }
       ]
     },
@@ -337,6 +337,11 @@
         {
           "term": "BMS",
           "definition": "Berufsmaturitätsschule – combines vocational training with general education.",
+          "relatedLinks": ["TODO"]
+        },
+        {
+          "term": "BM2",
+          "definition": "Second vocational baccalaureate pathway for EFZ graduates with a condensed maths final exam and complementary general education.",
           "relatedLinks": ["TODO"]
         },
         {
@@ -497,7 +502,7 @@
   },
   "contact": {
     "title": "Contact & booking",
-    "description": "Send a short message with goals, school level, and preferred timeframe. I’ll reply within one business day.",
+    "description": "Send a quick WhatsApp message with your goals, school level, and preferred timeframe – the initial chat happens there. Subsequent Zoom sessions are coordinated together through Calendly.",
     "calendlyLoadingFallback": "Calendly scheduling is loading…",
     "details": [
       {
@@ -516,60 +521,6 @@
         "href": "https://www.instagram.com/Teo6oro/"
       }
     ],
-    "form": {
-      "title": "Contact form",
-      "fields": [
-        {
-          "id": "name",
-          "label": "Name",
-          "placeholder": "First and last name",
-          "type": "text",
-          "required": true
-        },
-        {
-          "id": "email",
-          "label": "Email",
-          "placeholder": "name@mail.ch",
-          "type": "email",
-          "required": true
-        },
-        {
-          "id": "phone",
-          "label": "Phone (optional)",
-          "placeholder": "+41 …",
-          "type": "tel",
-          "required": false
-        },
-        {
-          "id": "level",
-          "label": "Grade / goal",
-          "placeholder": "e.g. 2nd Sek, Gymi short-track",
-          "type": "text",
-          "required": true
-        },
-        {
-          "id": "message",
-          "label": "Message",
-          "placeholder": "Which topics would you like to tackle?",
-          "type": "textarea",
-          "required": true
-        }
-      ],
-      "privacyNote": "By submitting you confirm you’ve read the privacy notice.",
-      "submitLabel": "Send message",
-      "success": "Thank you! I’ll respond within 24 hours.",
-      "error": "Something went wrong. Please try again later.",
-      "validation": {
-        "nameRequired": "Please enter your name.",
-        "nameTooLong": "Name must be 120 characters or fewer.",
-        "emailInvalid": "Enter a valid email address.",
-        "phoneInvalid": "Phone number contains invalid characters.",
-        "levelRequired": "Please provide your grade or goal.",
-        "levelTooLong": "This field must be 160 characters or fewer.",
-        "messageRequired": "Please add a short message.",
-        "messageTooLong": "Message must be 1500 characters or fewer."
-      }
-    },
     "responseTime": "Reply within 24h (Mon–Fri)",
     "officeHours": "Session times: Mon–Sat by appointment",
     "policy": {

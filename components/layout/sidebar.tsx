@@ -23,7 +23,7 @@ type SidebarCtas = {
     label: string;
     href: string;
   };
-  tertiary: {
+  tertiary?: {
     label: string;
     href: string;
     helper?: string;
@@ -92,8 +92,8 @@ export function Sidebar({
     consentPreferencesAvailable: typeof consent.openPreferences === "function",
   });
   console.log("[Sidebar] CTA copy diagnostics", {
-    tertiaryLabel: ctas.tertiary.label,
-    tertiaryHelper: ctas.tertiary.helper ?? null,
+    tertiaryLabel: ctas.tertiary?.label ?? null,
+    tertiaryHelper: ctas.tertiary?.helper ?? null,
   });
 
   useEffect(() => {
@@ -197,17 +197,19 @@ export function Sidebar({
             >
               {ctas.primary.label}
             </a>
-            <div className="flex w-full max-w-xs flex-col items-center space-y-2">
-              <a
-                className="inline-flex w-full items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
-                href={ctas.tertiary.href}
-              >
-                {ctas.tertiary.label}
-              </a>
-              {ctas.tertiary.helper ? (
-                <p className="text-center text-xs text-secondary dark:text-surface/70">{ctas.tertiary.helper}</p>
-              ) : null}
-            </div>
+            {ctas.tertiary ? (
+              <div className="flex w-full max-w-xs flex-col items-center space-y-2">
+                <a
+                  className="inline-flex w-full items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
+                  href={ctas.tertiary.href}
+                >
+                  {ctas.tertiary.label}
+                </a>
+                {ctas.tertiary.helper ? (
+                  <p className="text-center text-xs text-secondary dark:text-surface/70">{ctas.tertiary.helper}</p>
+                ) : null}
+              </div>
+            ) : null}
           </div>
         </div>
 

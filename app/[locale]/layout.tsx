@@ -12,7 +12,6 @@ import {MobileNav} from "@/components/layout/mobile-nav";
 import {Sidebar} from "@/components/layout/sidebar";
 import {AppProviders} from "@/components/providers/app-providers";
 import {SECTION_LINKS} from "@/config/navigation";
-import {ZOOM_LINKS} from "@/config/zoom";
 import {getMessages} from "@/lib/i18n/get-messages";
 import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
 
@@ -67,10 +66,6 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
     secondary: {
       label: tCommon("cta.secondary"),
       href: SECTION_LINKS.find((link) => link.id === "services")?.href ?? "#services",
-    },
-    tertiary: {
-      label: tCommon("cta.tertiary"),
-      href: ZOOM_LINKS.consultation.deepLink,
     },
   };
 

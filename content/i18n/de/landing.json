@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Mathe sicher meistern mit persönlicher Nachhilfe",
-    "subheading": "Strukturierte Online-Unterstützung für Gymiprüfung, BMS/HMS/FMS Aufnahme und laufende Schulbegleitung – direkt aus Zürich.",
+    "subheading": "Strukturierte Online-Unterstützung für Gymiprüfung, BMS-Aufnahme, BM2-Abschlussprüfungen sowie HMS/FMS-Aufnahme und laufende Schulbegleitung – direkt aus Zürich.",
     "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
     "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
     "badge": "100% online (Zoom)",
@@ -18,7 +18,7 @@
     "items": [
       {
         "label": "Für wen?",
-        "description": "Schüler:innen auf dem Weg zu den Aufnahme- oder Abschlussprüfungen für Gymi, BMS, HMS und FMS."
+        "description": "Schüler:innen auf dem Weg zu den Aufnahme- oder Abschlussprüfungen für Gymi, BMS, BM2, HMS und FMS."
       },
       {
         "label": "Was?",
@@ -34,7 +34,7 @@
       },
       {
         "label": "Wie starten?",
-        "description": "Kostenloses Erstgespräch buchen und innerhalb von 24h Rückmeldung erhalten."
+        "description": "Kostenloses Erstgespräch via WhatsApp anfragen; Folgetermine laufen dann über Calendly als Zoom-Sessions."
       }
     ]
   },
@@ -83,7 +83,7 @@
         {
           "id": "bms-hms-fms",
           "name": "BMS, HMS & FMS Prüfungsvorbereitung",
-          "copy": "Strukturierter Fahrplan für Aufnahme- und Abschlussprüfungen der beruflichen Mittelschulen mit praxisnahen Übungseinheiten."
+          "copy": "Strukturierter Fahrplan für Aufnahme- und Abschlussprüfungen (inkl. BM2-Mathematik) an beruflichen Mittelschulen mit praxisnahen Übungseinheiten."
         },
         {
           "id": "exam-coaching",
@@ -242,7 +242,7 @@
         {
           "id": "faq-bms",
           "question": "Bereiten Sie auch auf BMS/HMS/FMS spezifische Teile vor?",
-          "answer": "Ja. Ich kenne die typischen Aufgabenformate und arbeite mit praxisnahen Simulationen sowie Aufsatzstrategien."
+          "answer": "Ja. Ich kenne die typischen Aufgabenformate für BMS, BM2, HMS und FMS und arbeite mit praxisnahen Simulationen sowie Aufsatzstrategien."
         }
       ]
     },
@@ -338,6 +338,11 @@
         {
           "term": "BMS",
           "definition": "Berufsmaturitätsschule – kombiniert berufliche Grundbildung mit gymnasialen Inhalten.",
+          "relatedLinks": ["TODO"]
+        },
+        {
+          "term": "BM2",
+          "definition": "Berufsmaturität für Berufsleute mit EFZ – bereitet praxisnah auf die verkürzte Abschlussprüfung in Mathematik und weitere Fächer vor.",
           "relatedLinks": ["TODO"]
         },
         {
@@ -498,7 +503,7 @@
   },
   "contact": {
     "title": "Kontakt & Buchung",
-    "description": "Schreibe mir eine kurze Nachricht mit Zielsetzung, Schulstufe und gewünschtem Zeitraum. Ich melde mich innerhalb eines Werktages.",
+    "description": "Schreibe mir eine kurze WhatsApp-Nachricht mit Zielsetzung, Schulstufe und Zeitraum – das erste Kennenlernen findet dort statt. Alle weiteren Zoom-Lektionen planen wir gemeinsam via Calendly.",
     "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
     "details": [
       {
@@ -517,60 +522,6 @@
         "href": "https://www.instagram.com/Teo6oro/"
       }
     ],
-    "form": {
-      "title": "Kontaktformular",
-      "fields": [
-        {
-          "id": "name",
-          "label": "Name",
-          "placeholder": "Vor- und Nachname",
-          "type": "text",
-          "required": true
-        },
-        {
-          "id": "email",
-          "label": "E-Mail",
-          "placeholder": "name@mail.ch",
-          "type": "email",
-          "required": true
-        },
-        {
-          "id": "phone",
-          "label": "Telefon (optional)",
-          "placeholder": "+41 …",
-          "type": "tel",
-          "required": false
-        },
-        {
-          "id": "level",
-          "label": "Klassenstufe / Ziel",
-          "placeholder": "z.B. 2. Sek, Gymi-Lang",
-          "type": "text",
-          "required": true
-        },
-        {
-          "id": "message",
-          "label": "Nachricht",
-          "placeholder": "Welche Themen sollen wir anpacken?",
-          "type": "textarea",
-          "required": true
-        }
-      ],
-      "privacyNote": "Mit dem Absenden bestätigst du die Datenschutzhinweise gelesen zu haben.",
-      "submitLabel": "Nachricht senden",
-      "success": "Danke! Ich melde mich innerhalb von 24 Stunden.",
-      "error": "Ups, etwas ist schiefgelaufen. Bitte erneut versuchen.",
-      "validation": {
-        "nameRequired": "Bitte gib deinen Namen ein.",
-        "nameTooLong": "Der Name darf maximal 120 Zeichen lang sein.",
-        "emailInvalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
-        "phoneInvalid": "Die Telefonnummer enthält ungültige Zeichen.",
-        "levelRequired": "Bitte gib deine Klassenstufe oder dein Ziel an.",
-        "levelTooLong": "Die Angabe darf maximal 160 Zeichen lang sein.",
-        "messageRequired": "Bitte beschreibe kurz dein Anliegen.",
-        "messageTooLong": "Die Nachricht darf maximal 1500 Zeichen enthalten."
-      }
-    },
     "responseTime": "Antwort innerhalb von 24h (Mo–Fr)",
     "officeHours": "Unterrichtszeiten: Mo–Sa nach Vereinbarung",
     "policy": {
