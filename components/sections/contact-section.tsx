@@ -1,8 +1,8 @@
 "use client";
 
-import {useEffect, useRef, useState} from "react";
 import {useTranslations} from "next-intl";
 
+import {CalendlyInlineEmbed} from "@/components/ui/calendly-inline-embed";
 import {SectionHeading} from "@/components/ui/section-heading";
 import type {ContactContent, ContactDetail} from "@/types/landing";
 
@@ -11,7 +11,6 @@ type ContactSectionProps = {
 };
 
 const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
-const DEFAULT_EMBED_DOMAIN = "teodoro.ch";
 
 export function ContactSection({contact}: ContactSectionProps) {
   const t = useTranslations("landing");
@@ -38,82 +37,18 @@ export function ContactSection({contact}: ContactSectionProps) {
     }
   }
 
-  const calendlyFrameRef = useRef<HTMLIFrameElement | null>(null);
-  const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null);
   const calendlyLoadingLabel =
     contact.calendlyLoadingFallback ??
     t("hero.calendlyLoadingFallback", {defaultMessage: "Calendly scheduling is loading…"});
-
-  useEffect(() => {
-    const hasWindow = typeof window !== "undefined";
-    const host = hasWindow && window.location.hostname ? window.location.hostname : DEFAULT_EMBED_DOMAIN;
-
-    if (!hasWindow) {
-      console.info("[ContactSection] Calendly iframe deferred", {
-        title: contact.title,
-        hasWindow,
-        host,
-      });
-      return;
-    }
-
-    const url = new URL(CALENDLY_EVENT_URL);
-    url.searchParams.set("embed_domain", host);
-    url.searchParams.set("embed_type", "Inline");
-    url.searchParams.set("hide_event_type_details", "1");
-    url.searchParams.set("hide_gdpr_banner", "1");
-
-    const nextUrl = url.toString();
-
-    setCalendlyUrl((prev) => (prev !== nextUrl ? nextUrl : prev));
-
-    console.info("[ContactSection] Calendly iframe ready", {
-      title: contact.title,
-      hasWindow,
-      host,
-      url: nextUrl,
+  const calendlyTriggerLabel =
+    contact.calendlyTriggerLabel ??
+    t("hero.calendlyTriggerLabel", {defaultMessage: "Open booking calendar"});
+  const calendlyPlaceholder =
+    contact.calendlyPlaceholder ??
+    t("contact.calendlyPlaceholder", {
+      defaultMessage: "Open the booking calendar only when you’re ready to choose a slot.",
     });
-  }, [contact.title]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      console.info("[ContactSection] Calendly width instrumentation skipped", {phase: "ssr"});
-      return;
-    }
-
-    if (!calendlyUrl) {
-      console.info("[ContactSection] Calendly width instrumentation pending", {phase: "awaiting-src"});
-      return;
-    }
-
-    const logMetrics = (phase: string) => {
-      const iframeEl = calendlyFrameRef.current;
-
-      if (!iframeEl) {
-        console.warn("[ContactSection] Calendly width instrumentation", {phase, hasElement: false});
-        return;
-      }
-
-      const rect = iframeEl.getBoundingClientRect();
-      const parentRect = iframeEl.parentElement?.getBoundingClientRect() ?? null;
-
-      console.info("[ContactSection] Calendly width instrumentation", {
-        phase,
-        iframeWidth: rect.width,
-        parentWidth: parentRect?.width ?? null,
-      });
-    };
-
-    const handleResize = () => logMetrics("resize");
-    const rafId = requestAnimationFrame(() => logMetrics("mount"));
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      cancelAnimationFrame(rafId);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [calendlyUrl]);
+  const calendlyFrameTitle = t("contact.calendlyFrameTitle", {defaultMessage: "Calendly booking"});
 
   return (
     <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-28">
@@ -198,25 +133,16 @@ export function ContactSection({contact}: ContactSectionProps) {
       </div>
 
       <div className="mt-10">
-        {calendlyUrl ? (
-          <iframe
-            ref={calendlyFrameRef}
-            className="w-full rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
-            src={calendlyUrl}
-            style={{width: "100%", minWidth: 320, height: 700}}
-            frameBorder={0}
-            title="Calendly Booking"
-            loading="lazy"
-          />
-        ) : (
-          <div
-            className="flex h-[700px] w-full items-center justify-center rounded-3xl border border-secondary/20 bg-surface text-sm text-secondary shadow-sm dark:border-surface/30 dark:bg-primary/30 dark:text-surface/80"
-            role="status"
-            aria-live="polite"
-          >
-            <span>{calendlyLoadingLabel}</span>
-          </div>
-        )}
+        <CalendlyInlineEmbed
+          eventUrl={CALENDLY_EVENT_URL}
+          buttonLabel={calendlyTriggerLabel}
+          loadingLabel={calendlyLoadingLabel}
+          placeholderLabel={calendlyPlaceholder}
+          title={calendlyFrameTitle}
+          className="w-full"
+          iframeClassName="rounded-3xl"
+          height={700}
+        />
       </div>
     </section>
   );

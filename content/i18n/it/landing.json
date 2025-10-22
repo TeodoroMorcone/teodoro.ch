@@ -3,6 +3,8 @@
     "heading": "Domina la matematica con ripetizioni personalizzate",
     "subheading": "Supporto strutturato online per la Gymiprüfung, le ammissioni BMS, gli esami finali BM2 e le ammissioni HMS/FMS, con follow-up continuo direttamente da Zurigo.",
     "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
+    "calendlyTriggerLabel": "Apri il calendario di prenotazione",
+    "calendlyPlaceholder": "Il calendario di prenotazione si carica solo quando lo richiedi, per mantenere la pagina veloce.",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Ritratto di Teodoro Morcone sorridente pronto per una lezione online",
@@ -504,6 +506,8 @@
     "title": "Contatti & prenotazioni",
     "description": "Scrivimi subito su WhatsApp con obiettivi, classe e periodo desiderato: il primo confronto avviene lì. Le sessioni Zoom successive le programmiamo insieme su Calendly.",
     "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
+    "calendlyTriggerLabel": "Carica il calendario Calendly",
+    "calendlyPlaceholder": "Carica il calendario di prenotazione solo quando sei pronto a scegliere un orario.",
     "details": [
       {
         "label": "E-mail",

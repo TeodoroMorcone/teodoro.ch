@@ -3,6 +3,8 @@
     "heading": "Master math with personalized tutoring",
     "subheading": "Structured online support for Gymnasium entrance, BMS admission, BM2 final exams, and HMS/FMS entrance, plus ongoing academic coaching from Zurich.",
     "calendlyLoadingFallback": "Calendly scheduling is loading…",
+    "calendlyTriggerLabel": "Open booking calendar",
+    "calendlyPlaceholder": "The booking calendar loads only after you request it so the page stays fast.",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Portrait of Teodoro Morcone smiling and ready to tutor online",
@@ -504,6 +506,8 @@
     "title": "Contact & booking",
     "description": "Send a quick WhatsApp message with your goals, school level, and preferred timeframe – the initial chat happens there. Subsequent Zoom sessions are coordinated together through Calendly.",
     "calendlyLoadingFallback": "Calendly scheduling is loading…",
+    "calendlyTriggerLabel": "Load the Calendly calendar",
+    "calendlyPlaceholder": "Load the booking calendar only when you are ready to pick a slot.",
     "details": [
       {
         "label": "Email",

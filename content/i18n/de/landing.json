@@ -3,7 +3,8 @@
     "heading": "Mathe sicher meistern mit persönlicher Nachhilfe",
     "subheading": "Strukturierte Online-Unterstützung für Gymiprüfung, BMS-Aufnahme, BM2-Abschlussprüfungen sowie HMS/FMS-Aufnahme und laufende Schulbegleitung – direkt aus Zürich.",
     "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
-    "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
+    "calendlyTriggerLabel": "Buchungskalender öffnen",
+    "calendlyPlaceholder": "Der Buchungskalender lädt erst, wenn du ihn anforderst – so bleibt die Seite schnell.",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Porträt von Teodoro Morcone, der online Nachhilfe anbietet",
@@ -505,6 +506,8 @@
     "title": "Kontakt & Buchung",
     "description": "Schreibe mir eine kurze WhatsApp-Nachricht mit Zielsetzung, Schulstufe und Zeitraum – das erste Kennenlernen findet dort statt. Alle weiteren Zoom-Lektionen planen wir gemeinsam via Calendly.",
     "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
+    "calendlyTriggerLabel": "Calendly-Kalender laden",
+    "calendlyPlaceholder": "Lade den Buchungskalender erst, wenn du bereit bist, einen Termin auszuwählen.",
     "details": [
       {
         "label": "E-Mail",

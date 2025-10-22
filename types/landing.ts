@@ -11,8 +11,10 @@ export type HeroContent = {
   subheading: string;
   badge: string;
   expertName?: string;
+  avatarAlt?: string;
   mathSnippet?: string | null;
   calendlyLoadingFallback?: string;
+  calendlyTriggerLabel?: string;
   illustration?: HeroIllustration;
 };
 
@@ -225,6 +227,7 @@ export type ContactContent = {
   responseTime: string;
   officeHours: string;
   calendlyLoadingFallback?: string;
+  calendlyTriggerLabel?: string;
   policy?: ContactPolicy;
 };
 

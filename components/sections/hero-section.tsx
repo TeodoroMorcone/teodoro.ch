@@ -1,9 +1,9 @@
 "use client";
 
-import {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import {useTranslations} from "next-intl";
 
+import {CalendlyInlineEmbed} from "@/components/ui/calendly-inline-embed";
 import {CTAButton} from "@/components/ui/cta-button";
 import {SectionHeading} from "@/components/ui/section-heading";
 import type {HeroContent} from "@/types/landing";
@@ -17,88 +17,17 @@ type HeroSectionProps = {
 };
 
 const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
-const DEFAULT_EMBED_DOMAIN = "teodoro.ch";
 
 export function HeroSection({hero, ctas}: HeroSectionProps) {
   const t = useTranslations("landing");
-  const calendlyFrameRef = useRef<HTMLIFrameElement | null>(null);
-  const [calendlyUrl, setCalendlyUrl] = useState<string | null>(null);
   const expertName = hero.expertName ?? "Teodoro Morcone";
   const calendlyLoadingLabel =
     hero.calendlyLoadingFallback ??
     t("hero.calendlyLoadingFallback", {defaultMessage: "Calendly scheduling is loading…"});
-
-  useEffect(() => {
-    const hasWindow = typeof window !== "undefined";
-    const host = hasWindow && window.location.hostname ? window.location.hostname : DEFAULT_EMBED_DOMAIN;
-
-    if (!hasWindow) {
-      console.info("[HeroSection] Calendly iframe deferred", {
-        heading: hero.heading,
-        hasWindow,
-        host,
-      });
-      return;
-    }
-
-    const url = new URL(CALENDLY_EVENT_URL);
-    url.searchParams.set("embed_domain", host);
-    url.searchParams.set("embed_type", "Inline");
-    url.searchParams.set("hide_event_type_details", "1");
-    url.searchParams.set("hide_gdpr_banner", "1");
-
-    const nextUrl = url.toString();
-
-    setCalendlyUrl((prev) => (prev !== nextUrl ? nextUrl : prev));
-
-    console.info("[HeroSection] Calendly iframe ready", {
-      heading: hero.heading,
-      hasWindow,
-      host,
-      url: nextUrl,
-    });
-  }, [hero.heading]);
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      console.info("[HeroSection] Calendly width instrumentation skipped", {phase: "ssr"});
-      return;
-    }
-
-    if (!calendlyUrl) {
-      console.info("[HeroSection] Calendly width instrumentation pending", {phase: "awaiting-src"});
-      return;
-    }
-
-    const logMetrics = (phase: string) => {
-      const iframeEl = calendlyFrameRef.current;
-
-      if (!iframeEl) {
-        console.warn("[HeroSection] Calendly width instrumentation", {phase, hasElement: false});
-        return;
-      }
-
-      const rect = iframeEl.getBoundingClientRect();
-      const parentRect = iframeEl.parentElement?.getBoundingClientRect() ?? null;
-
-      console.info("[HeroSection] Calendly width instrumentation", {
-        phase,
-        iframeWidth: rect.width,
-        parentWidth: parentRect?.width ?? null,
-      });
-    };
-
-    const handleResize = () => logMetrics("resize");
-    const rafId = requestAnimationFrame(() => logMetrics("mount"));
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      cancelAnimationFrame(rafId);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [calendlyUrl]);
-
+  const calendlyTriggerLabel =
+    hero.calendlyTriggerLabel ??
+    t("hero.calendlyTriggerLabel", {defaultMessage: "Open booking calendar"});
+  const calendlyFrameTitle = t("hero.calendlyFrameTitle", {defaultMessage: "Calendly booking"});
 
   return (
     <section
@@ -157,25 +86,15 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
         </figure>
       </div>
       <div className="mt-10 lg:col-span-2">
-        {calendlyUrl ? (
-          <iframe
-            ref={calendlyFrameRef}
-            className="w-full rounded-3xl border border-secondary/20 bg-surface shadow-sm dark:border-surface/30 dark:bg-primary/30"
-            src={calendlyUrl}
-            style={{width: "100%", minWidth: 320, height: 700}}
-            frameBorder={0}
-            title="Calendly Booking"
-            loading="lazy"
-          />
-        ) : (
-          <div
-            className="flex h-[700px] w-full items-center justify-center rounded-3xl border border-secondary/20 bg-surface text-sm text-secondary shadow-sm dark:border-surface/30 dark:bg-primary/30 dark:text-surface/80"
-            role="status"
-            aria-live="polite"
-          >
-            <span>{calendlyLoadingLabel}</span>
-          </div>
-        )}
+        <CalendlyInlineEmbed
+          eventUrl={CALENDLY_EVENT_URL}
+          buttonLabel={calendlyTriggerLabel}
+          loadingLabel={calendlyLoadingLabel}
+          title={calendlyFrameTitle}
+          className="w-full"
+          iframeClassName="rounded-3xl"
+          height={700}
+        />
       </div>
     </section>
   );
