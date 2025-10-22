@@ -12,9 +12,9 @@ export function buildOrganizationJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "@id": "https://theodors.ch/#organization",
+    "@id": "https://teodoro.ch/#organization",
     "name": "Teodoro Morcone Nachhilfe",
-    "url": "https://theodors.ch",
+    "url": "https://teodoro.ch",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Eichbühlstrasse 33",
@@ -47,7 +47,7 @@ export function buildServiceJsonLd(locale: string, data: ServiceJsonLdInput) {
       "name": plan.name,
       "priceCurrency": "CHF",
       "availability": "https://schema.org/InStock",
-      "url": `https://theodors.ch/${locale}#pricing-${plan.id}`,
+      "url": `https://teodoro.ch/${locale}#pricing-${plan.id}`,
       "description": plan.features.join("; "),
     };
 
@@ -81,10 +81,10 @@ export function buildServiceJsonLd(locale: string, data: ServiceJsonLdInput) {
   return {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `https://theodors.ch/${locale}#service`,
+    "@id": `https://teodoro.ch/${locale}#service`,
     "name": services.title,
     "description": hero.subheading,
-    "provider": {"@id": "https://theodors.ch/#organization"},
+    "provider": {"@id": "https://teodoro.ch/#organization"},
     "serviceType": services.items.map((item) => item.name),
     "offers": aggregateOffer,
     "areaServed": [
@@ -92,7 +92,7 @@ export function buildServiceJsonLd(locale: string, data: ServiceJsonLdInput) {
       {"@type": "AdministrativeArea", "name": "Switzerland"},
     ],
     "inLanguage": inLanguage,
-    "url": `https://theodors.ch/${locale}`,
+    "url": `https://teodoro.ch/${locale}`,
   } satisfies JsonLd;
 }
 

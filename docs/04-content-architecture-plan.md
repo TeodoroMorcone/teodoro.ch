@@ -147,7 +147,7 @@ Example (landing.json):
       "title": "...",
       "description": "...",
       "details": [
-        { "label": "Email", "value": "info@theodors.ch", "href": "mailto:..." }
+        { "label": "Email", "value": "info@teodoro.ch", "href": "mailto:..." }
       ],
       "form": {
         "title": "...",

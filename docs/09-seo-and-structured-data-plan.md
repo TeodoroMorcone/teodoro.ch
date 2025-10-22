@@ -18,7 +18,7 @@
 - Twitter Card: summary_large_image with same image.
 
 ## 2. Canonical & Hreflang
-- Base URL: https://theodors.ch.
+- Base URL: https://teodoro.ch.
 - For each locale page:
   - Canonical: `/de`, `/it`, `/en`.
   - `<link rel="alternate" hreflang="de-CH" href="/de">`

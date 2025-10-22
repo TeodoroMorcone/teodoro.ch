@@ -16,9 +16,9 @@
 - Mandatory data:
   - Business owner: Teodoro Morcone (Teodoro Morcone Nachhilfe)
   - Address: Eichbühlstrasse 33, 8004 Zürich, Schweiz
-  - Email: info@theodors.ch
+  - Email: info@teodoro.ch
   - Phone/WhatsApp: +41 76 244 02 59
-  - Website: theodors.ch
+  - Website: teodoro.ch
   - Statement: Umsatz < CHF 100’000/Jahr → nicht MWST-pflichtig (translated).
   - Lessons exclusively online via Zoom.
 - Layout:

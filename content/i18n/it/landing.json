@@ -452,7 +452,7 @@
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
-          "E-mail: info@theodors.ch",
+          "E-mail: info@teodoro.ch",
           "Tel.: +41 76 244 02 59"
         ]
       }
@@ -484,7 +484,7 @@
           ],
           "bullets": [
             "Revocare il consenso all’analisi senza impatto sui servizi essenziali",
-            "Richiedere copia o cancellazione scrivendo a info@theodors.ch",
+            "Richiedere copia o cancellazione scrivendo a info@teodoro.ch",
             "Segnalare eventuali problemi all’IFPDP se non risolti"
           ]
         }
@@ -494,7 +494,7 @@
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
-          "E-mail: info@theodors.ch",
+          "E-mail: info@teodoro.ch",
           "Tel.: +41 76 244 02 59"
         ]
       }
@@ -507,8 +507,8 @@
     "details": [
       {
         "label": "E-mail",
-        "value": "info@theodors.ch",
-        "href": "mailto:info@theodors.ch"
+        "value": "info@teodoro.ch",
+        "href": "mailto:info@teodoro.ch"
       },
       {
         "label": "Telefono / WhatsApp",
@@ -552,8 +552,8 @@
       },
       {
         "label": "E-mail",
-        "value": "info@theodors.ch",
-        "href": "mailto:info@theodors.ch",
+        "value": "info@teodoro.ch",
+        "href": "mailto:info@teodoro.ch",
         "type": "email"
       },
       {
@@ -564,8 +564,8 @@
       },
       {
         "label": "Sito web",
-        "value": "theodors.ch",
-        "href": "https://theodors.ch",
+        "value": "teodoro.ch",
+        "href": "https://teodoro.ch",
         "type": "url"
       },
       {
@@ -576,7 +576,7 @@
     "notes": [
       "Le lezioni si svolgono esclusivamente online tramite Zoom.",
       "Non soggetto a IVA (fatturato annuo < CHF 100’000).",
-      "Per richieste sulla privacy scrivere a info@theodors.ch."
+      "Per richieste sulla privacy scrivere a info@teodoro.ch."
     ]
   },
   "outboundLinks": [

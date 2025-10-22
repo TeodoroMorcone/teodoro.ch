@@ -11,7 +11,7 @@ type ContactSectionProps = {
 };
 
 const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
-const DEFAULT_EMBED_DOMAIN = "theodors.ch";
+const DEFAULT_EMBED_DOMAIN = "teodoro.ch";
 
 export function ContactSection({contact}: ContactSectionProps) {
   const t = useTranslations("landing");

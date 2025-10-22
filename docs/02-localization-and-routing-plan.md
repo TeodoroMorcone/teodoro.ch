@@ -91,7 +91,7 @@ lib/i18n/
   - it-CH pointing to /it.
   - en-CH pointing to /en.
   - x-default pointing to /de.
-- Ensure canonical for each locale uses full URL (https://theodors.ch/{locale}/{slug}).
+- Ensure canonical for each locale uses full URL (https://teodoro.ch/{locale}/{slug}).
 - Provide metadata.base in root layout to simplify building canonical URLs.
 
 ## 8. JSON-LD Localization

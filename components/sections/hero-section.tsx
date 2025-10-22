@@ -17,7 +17,7 @@ type HeroSectionProps = {
 };
 
 const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
-const DEFAULT_EMBED_DOMAIN = "theodors.ch";
+const DEFAULT_EMBED_DOMAIN = "teodoro.ch";
 
 export function HeroSection({hero, ctas}: HeroSectionProps) {
   const t = useTranslations("landing");

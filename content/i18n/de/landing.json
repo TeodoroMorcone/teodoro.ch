@@ -453,7 +453,7 @@
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
-          "E-Mail: info@theodors.ch",
+          "E-Mail: info@teodoro.ch",
           "Tel.: +41 76 244 02 59"
         ]
       }
@@ -485,7 +485,7 @@
           ],
           "bullets": [
             "Analyse-Einwilligung ohne Einfluss auf essentielle Dienste widerrufen",
-            "Kopie oder Löschung per E-Mail an info@theodors.ch verlangen",
+            "Kopie oder Löschung per E-Mail an info@teodoro.ch verlangen",
             "Ungeklärte Anliegen beim EDÖB melden"
           ]
         }
@@ -495,7 +495,7 @@
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
-          "E-Mail: info@theodors.ch",
+          "E-Mail: info@teodoro.ch",
           "Tel.: +41 76 244 02 59"
         ]
       }
@@ -508,8 +508,8 @@
     "details": [
       {
         "label": "E-Mail",
-        "value": "info@theodors.ch",
-        "href": "mailto:info@theodors.ch"
+        "value": "info@teodoro.ch",
+        "href": "mailto:info@teodoro.ch"
       },
       {
         "label": "Telefon / WhatsApp",
@@ -553,8 +553,8 @@
       },
       {
         "label": "E-Mail",
-        "value": "info@theodors.ch",
-        "href": "mailto:info@theodors.ch",
+        "value": "info@teodoro.ch",
+        "href": "mailto:info@teodoro.ch",
         "type": "email"
       },
       {
@@ -565,8 +565,8 @@
       },
       {
         "label": "Website",
-        "value": "theodors.ch",
-        "href": "https://theodors.ch",
+        "value": "teodoro.ch",
+        "href": "https://teodoro.ch",
         "type": "url"
       },
       {
@@ -577,7 +577,7 @@
     "notes": [
       "Unterricht findet ausschliesslich online via Zoom statt.",
       "Nicht MWST-pflichtig (Umsatz < CHF 100’000/Jahr).",
-      "Datenschutz-Anfragen bitte an info@theodors.ch richten."
+      "Datenschutz-Anfragen bitte an info@teodoro.ch richten."
     ]
   },
   "outboundLinks": [

@@ -452,7 +452,7 @@
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
-          "Email: info@theodors.ch",
+          "Email: info@teodoro.ch",
           "Phone: +41 76 244 02 59"
         ]
       }
@@ -484,7 +484,7 @@
           ],
           "bullets": [
             "Withdraw consent for analytics without affecting essential services",
-            "Request a copy or deletion by email at info@theodors.ch",
+            "Request a copy or deletion by email at info@teodoro.ch",
             "Report concerns to the Swiss FDPIC if unresolved"
           ]
         }
@@ -494,7 +494,7 @@
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
-          "Email: info@theodors.ch",
+          "Email: info@teodoro.ch",
           "Phone: +41 76 244 02 59"
         ]
       }
@@ -507,8 +507,8 @@
     "details": [
       {
         "label": "Email",
-        "value": "info@theodors.ch",
-        "href": "mailto:info@theodors.ch"
+        "value": "info@teodoro.ch",
+        "href": "mailto:info@teodoro.ch"
       },
       {
         "label": "Phone / WhatsApp",
@@ -552,8 +552,8 @@
       },
       {
         "label": "Email",
-        "value": "info@theodors.ch",
-        "href": "mailto:info@theodors.ch",
+        "value": "info@teodoro.ch",
+        "href": "mailto:info@teodoro.ch",
         "type": "email"
       },
       {
@@ -564,8 +564,8 @@
       },
       {
         "label": "Website",
-        "value": "theodors.ch",
-        "href": "https://theodors.ch",
+        "value": "teodoro.ch",
+        "href": "https://teodoro.ch",
         "type": "url"
       },
       {
@@ -576,7 +576,7 @@
     "notes": [
       "Lessons take place exclusively online via Zoom.",
       "Not VAT-registered (annual revenue < CHF 100,000).",
-      "For privacy questions contact info@theodors.ch."
+      "For privacy questions contact info@teodoro.ch."
     ]
   },
   "outboundLinks": [

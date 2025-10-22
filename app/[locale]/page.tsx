@@ -42,7 +42,7 @@ export async function generateMetadata({params}: LocalePageProps): Promise<Metad
 
   const t = await getTranslations({locale: localeParam, namespace: "common.meta"});
 
-  const url = `https://theodors.ch/${localeParam}`;
+  const url = `https://teodoro.ch/${localeParam}`;
 
   return {
     title: t("title"),
@@ -50,8 +50,8 @@ export async function generateMetadata({params}: LocalePageProps): Promise<Metad
     alternates: {
       canonical: url,
       languages: Object.fromEntries(
-        LOCALES.map((loc) => [loc, `https://theodors.ch/${loc}`]).concat([
-          ["x-default" as const, `https://theodors.ch/${DEFAULT_LOCALE}`],
+        LOCALES.map((loc) => [loc, `https://teodoro.ch/${loc}`]).concat([
+          ["x-default" as const, `https://teodoro.ch/${DEFAULT_LOCALE}`],
         ]),
       ),
     },

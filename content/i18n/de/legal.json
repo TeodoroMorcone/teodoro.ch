@@ -17,7 +17,7 @@
           },
           {
             "label": "E-Mail",
-            "value": "info@theodors.ch",
+            "value": "info@teodoro.ch",
             "type": "email"
           },
           {
@@ -27,7 +27,7 @@
           },
           {
             "label": "Website",
-            "value": "theodors.ch",
+            "value": "teodoro.ch",
             "type": "url"
           }
         ]
@@ -84,7 +84,7 @@
         "body": [
           "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
           "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
-          "Kontakt: info@theodors.ch, +41 76 244 02 59"
+          "Kontakt: info@teodoro.ch, +41 76 244 02 59"
         ]
       },
       {
@@ -161,7 +161,7 @@
     ],
     "rights": {
       "title": "Kontakt für Datenschutzanfragen",
-      "email": "info@theodors.ch",
+      "email": "info@teodoro.ch",
       "reference": "FDPIC: https://www.edoeb.admin.ch"
     },
     "cookieLink": "Cookie-Einstellungen"
