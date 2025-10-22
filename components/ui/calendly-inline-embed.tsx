@@ -16,6 +16,7 @@ type CalendlyInlineEmbedProps = {
   title: string;
   className?: string;
   iframeClassName?: string;
+  placeholderLabel?: string;
   height?: number;
 };
 
@@ -31,6 +32,13 @@ export function CalendlyInlineEmbed({
 }: CalendlyInlineEmbedProps) {
   const [iframeUrl, setIframeUrl] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  if (process.env.NODE_ENV !== "production") {
+    console.debug("[CalendlyInlineEmbed] incoming props", {
+      eventUrl,
+      hasPlaceholderLabel: Boolean(placeholderLabel),
+    });
+  }
 
   const handleActivate = useCallback(() => {
     if (iframeUrl) {
