@@ -109,7 +109,7 @@ Husky/lint-staged are prepared for future Git hooks (install via `npm run prepar
 1. Run `npm run qa` locally; address any failures.
 2. Provide `.env.production` with Zoom + GA values.
 3. Deploy (e.g., Vercel). After first deploy, execute production Lighthouse audits and share report URLs.
-4. Confirm consent flow on live domain and submit sitemap / hreflang via Google Search Console if applicable.
+4. Confirm consent flow on live domain and submit sitemap / hreflang via Google Search Console if applicable. The sitemap is available at `/sitemap.xml` and is generated dynamically at request time using the localized routes. Optionally set `NEXT_PUBLIC_SITE_URL` to override the default canonical host (`https://teodoro.ch`) when running in other environments.
 
 ### Render.com Deployment Checklist
 
