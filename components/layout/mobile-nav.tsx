@@ -211,7 +211,7 @@ export function MobileNav({
           className="flex items-center gap-3 pr-14 text-left sm:pr-0"
           aria-label={labels.home}
         >
-          <span className="inline-flex items-center justify-center rounded-full bg-primary px-3 py-1 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-surface">
+          <span className="inline-flex items-center justify-center rounded-full bg-primary px-3 py-1 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-primary">
             <Image
               src="/images/white_160x48.webp"
               alt="Teodoro Morcone"
@@ -266,7 +266,7 @@ export function MobileNav({
                     aria-label={labels.home}
                     onClick={handleNavigate}
                   >
-                    <span className="inline-flex items-center justify-center rounded-full bg-primary px-3 py-1 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-surface">
+                    <span className="inline-flex items-center justify-center rounded-full bg-primary px-3 py-1 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-primary">
                       <Image
                         src="/images/white_160x48.webp"
                         alt="Teodoro Morcone"

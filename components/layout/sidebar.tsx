@@ -170,7 +170,7 @@ export function Sidebar({
             className="inline-flex items-center gap-3 text-left"
             aria-label={labels.home}
           >
-            <span className="inline-flex w-fit items-center justify-center rounded-full bg-transparent px-4 py-2 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-transparent">
+            <span className="inline-flex w-fit items-center justify-center rounded-full bg-primary px-4 py-2 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-primary">
               <Image
                 src="/images/white_160x48.webp"
                 alt="Teodoro Morcone"
