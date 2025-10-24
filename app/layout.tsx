@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Teodoro Morcone Nachhilfe",
   description:
     "Professionelle Mathematik-Nachhilfe für Gymiprüfung, BMS/HMS/FMS und laufende Betreuung.",
+  icons: {
+    icon: "/images/64x64.png",
+    apple: "/images/64x64.png",
+    shortcut: "/images/64x64.png",
+  },
 };
 
 type RootLayoutProps = {

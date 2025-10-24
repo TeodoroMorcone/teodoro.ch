@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Forge your mathematical strength",
-    "subheading": "Strengthen your mathematical knowledge with tailored coaching for Gymnasium entrance, BMS admission, BM2 finals, and HMS/FMS success from Zurich.",
+    "subheading": "Strengthen your mathematical knowledge with tailored coaching for short- and long-track Gymnasium entrance exams, HMS/BMS/FMS admissions, and the BM2 final exam – all delivered from Zurich.",
     "calendlyLoadingFallback": "Calendly scheduling is loading…",
     "calendlyTriggerLabel": "Open booking calendar",
     "calendlyPlaceholder": "The booking calendar loads only after you request it so the page stays fast.",
@@ -19,23 +19,23 @@
     "items": [
       {
         "label": "Who?",
-        "description": "Students on their way to the entrance or final exams for Gymi, BMS, BM2, HMS, and FMS."
+        "description": "Preparation for short- and long-track Gymnasium entrance exams, HMS/BMS/FMS admissions, and the BM2 final exam with structured 1:1 coaching for students across Zurich and Switzerland."
       },
       {
         "label": "What?",
-        "description": "Targeted diagnostics, structured study plans, and realistic exam simulations."
+        "description": "Diagnostic kick-off, tailored learning plans, adaptive practice sets, proctored mock exams with video debriefs, and mindset coaching for time and stress management."
       },
       {
         "label": "Where?",
-        "description": "Based in Zurich – sessions run exclusively via Zoom."
+        "description": "100% online via Zoom with shared whiteboard, optional recordings, and bilingual materials in German, Italian, and English."
       },
       {
         "label": "Pricing",
-        "description": "Single lessons or flexible packages with bespoke offers available."
+        "description": "Single session CHF 60, 5-pack CHF 275, 10-pack CHF 500 – includes follow-up notes, progress tracking, and 24-hour response time."
       },
       {
         "label": "How to start?",
-        "description": "Request your free consultation via WhatsApp; follow-up Zoom lessons are then scheduled together through Calendly."
+        "description": "Send a WhatsApp message → receive a free consultation within 24 hours → lock in dates and activate your Calendly-based learning plan."
       }
     ]
   },
@@ -79,12 +79,12 @@
         {
           "id": "gymnasium",
           "name": "Gymnasium prep",
-          "copy": "Focused Gymiprüfung preparation covering algebra, geometry, and applied word problems."
+          "copy": "Focused preparation for short- and long-track Gymnasium entrance exams covering algebra, geometry, and applied word problems."
         },
         {
           "id": "bms-hms-fms",
           "name": "BMS/HMS/FMS exam prep",
-          "copy": "Structured roadmap for vocational middle school entrance and final exams (including BM2 maths) with practical drill sessions."
+          "copy": "Structured roadmap for HMS, BMS, and FMS entrance exams plus the BM2 final exam with practical drill sessions."
         },
         {
           "id": "exam-coaching",
@@ -213,37 +213,37 @@
         {
           "id": "faq-cancellation",
           "question": "How do reschedules and cancellations work?",
-          "answer": "Sessions can be moved or cancelled free of charge up to 24 hours in advance. Late cancellations are billed as a full session."
+          "answer": "Gymnasium entrance exam prep sessions can be moved or cancelled free of charge up to 24 hours in advance. Late changes (< 24h) or no-shows are billed in full so that reserved slots remain available for other candidates."
         },
         {
           "id": "faq-materials",
           "question": "What materials do you use?",
-          "answer": "I combine proprietary practice sets, official exam papers, and customised worksheets. Everything is shared digitally."
+          "answer": "I blend proprietary practice sets, official Zurich education department papers, adaptive drills mapped to your diagnostic results, and annotated solution walk-throughs. All resources are shared digitally with versioned feedback."
         },
         {
           "id": "faq-online",
           "question": "Is tutoring exclusively online?",
-          "answer": "Yes. All lessons run on Zoom with a shared whiteboard, notes, and optional recordings for key solution steps."
+          "answer": "Yes. Sessions run on Zoom with collaborative whiteboard work, breakout problem drills, and optional recordings of key solution frameworks so you can review afterwards."
         },
         {
           "id": "faq-response",
           "question": "How quickly do you respond to inquiries?",
-          "answer": "Typically within 24 hours with proposed time slots and follow-up questions."
+          "answer": "Within 24 hours you receive proposed time slots, a mini goal analysis, and—if helpful—a prep sheet to complete before the diagnostic call."
         },
         {
           "id": "faq-payment",
           "question": "What are the payment options?",
-          "answer": "Invoice or Stripe within 10 days. Packages are payable in advance."
+          "answer": "Pay securely via invoice or Stripe (card, Twint). Packages are settled before the first session; single lessons are due within 10 days of delivery."
         },
         {
           "id": "faq-privacy",
           "question": "How is personal data handled?",
-          "answer": "Data is used solely to organise lessons. Analytics only load after consent, and Zoom recordings happen only with explicit permission."
+          "answer": "Personal data is processed solely for lesson delivery in line with Swiss revDSG. Analytics and tracking scripts load only after your consent, and Zoom recordings require written approval."
         },
         {
           "id": "faq-bms",
           "question": "Do you cover specific BMS/HMS/FMS components?",
-          "answer": "Yes. I’m familiar with the exam formats for BMS, BM2, HMS, and FMS and run realistic simulations, including reasoning and writing sections."
+          "answer": "Yes. I cover the full competency profile for BMS, BM2, HMS, and FMS, including quantitative reasoning, essay prompts, and full-length simulations scored against official rubrics."
         }
       ]
     },
@@ -253,24 +253,24 @@
       "steps": [
         {
           "name": "Assess & set goals",
-          "description": "Review recent tests, define target scores, and pinpoint blockers.",
+          "description": "Review recent tests, collate grade history, define target scores, and identify bottlenecks while drafting the roadmap worksheet.",
           "duration": "1–2 sessions",
-          "materials": ["Recent tests", "School assignments"],
-          "notes": ["Run a diagnostic test if needed."]
+          "materials": ["Recent tests", "School assignments", "Roadmap worksheet"],
+          "notes": ["Run a diagnostic test if needed.", "Share briefing notes with guardians for under-16 learners."]
         },
         {
           "name": "Strengthen foundations",
-          "description": "Systematically revisit key topics with scaffolded practice and focused error correction.",
+          "description": "Revisit priority topics through micro-sprints, tackle adaptive practice sets, and document error patterns directly in the shared whiteboard workspace.",
           "duration": "4–8 weeks",
-          "materials": ["Theory handouts", "Practice sets with solutions"],
-          "notes": ["Log weekly checkpoints and progress."]
+          "materials": ["Theory handouts", "Adaptive practice sets", "Shared whiteboard notes"],
+          "notes": ["Log weekly checkpoints and progress.", "Update the shared progress dashboard after each sprint."]
         },
         {
           "name": "Simulate & refine",
-          "description": "Conduct full-length mock exams, debrief thoroughly, and refine time management.",
+          "description": "Run proctored mock exams under timed conditions, debrief with scoring rubrics, and reinforce pacing, mindset, and rest strategies.",
           "duration": "2–4 weeks",
-          "materials": ["Mock exam PDFs", "Time-planning sheets"],
-          "notes": ["Build mental strategies and scheduled breaks."]
+          "materials": ["Mock exam PDFs", "Time-planning sheets", "Stress-resilience toolkit"],
+          "notes": ["Build mental strategies and scheduled breaks.", "Assemble a final exam-day checklist and reinforcement plan."]
         }
       ],
       "disclaimer": "The plan is tailored individually – we’ll tailor details during the initial consult."

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {useEffect, useRef, type ReactNode} from "react";
 
 import {useConsent} from "@/components/consent/consent-context";
@@ -166,13 +167,23 @@ export function Sidebar({
         <div className="flex flex-1 flex-col gap-4 overflow-y-auto px-5 pt-6 pb-4 lg:overscroll-contain">
           <Link
             href={`/${locale}`}
-            className="inline-flex flex-col gap-1 text-left"
+            className="inline-flex items-center gap-3 text-left"
             aria-label={labels.home}
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary dark:text-surface/80">
-              Teodoro Morcone
+            <span className="inline-flex w-fit items-center justify-center rounded-full bg-transparent px-4 py-2 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-transparent">
+              <Image
+                src="/images/white_160x48.webp"
+                alt="Teodoro Morcone"
+                width={160}
+                height={48}
+                priority
+                className="h-6 w-auto"
+                sizes="80px"
+              />
             </span>
-            <span className="text-xl font-semibold leading-tight">Nachhilfe</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary dark:text-surface/80">
+              Nachhilfe
+            </span>
           </Link>
 
           <nav aria-label={labels.navigation}>

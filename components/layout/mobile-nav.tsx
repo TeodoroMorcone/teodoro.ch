@@ -3,6 +3,7 @@
 import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
 import {Menu, X} from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import {useCallback, useEffect, useState, type ReactNode} from "react";
 
 import {useConsent} from "@/components/consent/consent-context";
@@ -205,11 +206,25 @@ export function MobileNav({
   return (
     <header className="sticky top-0 z-40 border-b border-secondary/30 bg-surface/95 text-primary backdrop-blur-md dark:border-surface/20 dark:bg-primary/95 dark:text-surface lg:hidden">
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
-        <Link href={`/${locale}`} className="flex flex-col pr-14 text-left sm:pr-0" aria-label={labels.home}>
-          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/80">
-            Teodoro Morcone
+        <Link
+          href={`/${locale}`}
+          className="flex items-center gap-3 pr-14 text-left sm:pr-0"
+          aria-label={labels.home}
+        >
+          <span className="inline-flex items-center justify-center rounded-full bg-primary px-3 py-1 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-surface">
+            <Image
+              src="/images/white_160x48.webp"
+              alt="Teodoro Morcone"
+              width={160}
+              height={48}
+              priority
+              className="h-6 w-auto"
+              sizes="80px"
+            />
           </span>
-          <span className="text-lg font-semibold leading-tight">Nachhilfe</span>
+          <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/80">
+            Nachhilfe
+          </span>
         </Link>
 
         <div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center sm:justify-end sm:gap-3">
@@ -247,14 +262,23 @@ export function MobileNav({
                 <div className="flex flex-1 flex-col gap-5 overflow-y-auto px-5 pt-6 pb-4">
                   <Link
                     href={`/${locale}`}
-                    className="inline-flex flex-col gap-1 text-left"
+                    className="inline-flex items-center gap-3 text-left"
                     aria-label={labels.home}
                     onClick={handleNavigate}
                   >
-                    <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary dark:text-surface/80">
-                      Teodoro Morcone
+                    <span className="inline-flex items-center justify-center rounded-full bg-primary px-3 py-1 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-surface">
+                      <Image
+                        src="/images/white_160x48.webp"
+                        alt="Teodoro Morcone"
+                        width={160}
+                        height={48}
+                        className="h-6 w-auto"
+                        sizes="80px"
+                      />
                     </span>
-                    <span className="text-xl font-semibold leading-tight">Nachhilfe</span>
+                    <span className="text-xs font-semibold uppercase tracking-[0.4em] text-secondary dark:text-surface/80">
+                      Nachhilfe
+                    </span>
                   </Link>
 
                   <nav aria-label={labels.navigation}>

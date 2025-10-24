@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Allena la tua padronanza matematica",
-    "subheading": "Rinforza le tue conoscenze matematiche con coaching personalizzato per Gymiprüfung, BMS, BM2, HMS e FMS, con supporto continuo da Zurigo.",
+    "subheading": "Rinforza le tue conoscenze matematiche con coaching personalizzato per le prove di ammissione al Kurz- und Langgymnasium, i percorsi HMS/BMS/FMS e l’esame finale BM2 – tutto da Zurigo.",
     "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
     "calendlyTriggerLabel": "Apri il calendario di prenotazione",
     "calendlyPlaceholder": "Il calendario di prenotazione si carica solo quando lo richiedi, per mantenere la pagina veloce.",
@@ -19,23 +19,23 @@
     "items": [
       {
         "label": "Per chi?",
-        "description": "Studentesse e studenti in cammino verso gli esami di ammissione o di diploma per Gymi, BMS, BM2, HMS e FMS."
+        "description": "Preparazione per le prove di ammissione al Kurz- und Langgymnasium, ai percorsi HMS/BMS/FMS e all’esame finale BM2 con coaching 1:1 strutturato per studenti di Zurigo e di tutta la Svizzera."
       },
       {
         "label": "Cosa?",
-        "description": "Diagnosi mirata, piani di studio strutturati e simulazioni realistiche."
+        "description": "Colloquio diagnostico, piano di studio su misura, esercizi adattivi, mock exam con debriefing video e coaching su gestione del tempo e dello stress."
       },
       {
         "label": "Dove?",
-        "description": "Basato a Zurigo – le lezioni si svolgono esclusivamente online via Zoom."
+        "description": "100% online via Zoom con lavagna condivisa, eventuali registrazioni e materiali bilingue (tedesco, italiano, inglese)."
       },
       {
         "label": "Fascia prezzi",
-        "description": "Lezioni singole o pacchetti con offerte personalizzate su richiesta."
+        "description": "Lezione singola CHF 60, pacchetto 5 CHF 275, pacchetto 10 CHF 500 – include follow-up, report e risposta entro 24 ore."
       },
       {
         "label": "Come iniziare?",
-        "description": "Richiedi la prima consulenza gratuita via WhatsApp; le lezioni Zoom successive si pianificano poi insieme tramite Calendly."
+        "description": "Scrivi su WhatsApp → ricevi consulenza gratuita entro 24 ore → fissiamo le date e avviamo il piano Calendly personalizzato."
       }
     ]
   },
@@ -79,12 +79,12 @@
         {
           "id": "gymnasium",
           "name": "Preparazione ginnasio",
-          "copy": "Preparazione mirata alla Gymiprüfung con focus su algebra, geometria e problemi contestualizzati."
+          "copy": "Preparazione mirata alle prove di ammissione Kurz- und Langgymnasium con focus su algebra, geometria e problemi contestualizzati."
         },
         {
           "id": "bms-hms-fms",
           "name": "Preparazione esami BMS/HMS/FMS",
-          "copy": "Percorso strutturato per esami di ammissione e di diploma (inclusa la matematica BM2) delle scuole medie superiori professionali con esercizi pratici."
+          "copy": "Percorso strutturato per le ammissioni HMS/BMS/FMS e per l’esame finale BM2 delle scuole professionali, con esercitazioni pratiche mirate."
         },
         {
           "id": "exam-coaching",
@@ -213,37 +213,37 @@
         {
           "id": "faq-cancellation",
           "question": "Come funziona la cancellazione o lo spostamento delle lezioni?",
-          "answer": "Le sessioni possono essere spostate o annullate gratuitamente fino a 24 ore prima. Le cancellazioni tardive vengono conteggiate come lezione."
+          "answer": "Le sessioni di preparazione Gymiprüfung possono essere spostate o annullate gratuitamente fino a 24 ore prima. Modifiche tardive (< 24h) o assenze vengono addebitate al 100% per mantenere aperti gli slot prenotati."
         },
         {
           "id": "faq-materials",
           "question": "Che materiale utilizzi durante il percorso?",
-          "answer": "Utilizzo esercizi proprietari, prove ufficiali e schede personalizzate. Tutti i materiali sono condivisi in formato digitale."
+          "answer": "Utilizzo esercizi proprietari, prove ufficiali della Bildungsdirektion Zurigo, drill adattivi basati sulla diagnosi e walkthrough annotati. Tutte le risorse vengono condivise digitalmente con feedback versionato."
         },
         {
           "id": "faq-online",
           "question": "Le lezioni sono solo online?",
-          "answer": "Sì. Tutte le sessioni si svolgono su Zoom con lavagna condivisa, note e registrazioni dei passaggi chiave su richiesta."
+          "answer": "Sì. Tutte le sessioni avvengono su Zoom con lavagna collaborativa, esercizi in breakout room e registrazioni opzionali delle strategie risolutive principali."
         },
         {
           "id": "faq-response",
           "question": "Quanto tempo impieghi a rispondere alle richieste?",
-          "answer": "Generalmente rispondo entro 24 ore con possibili fasce orarie e domande integrative."
+          "answer": "Entro 24 ore ricevi proposte di orario, una mini analisi degli obiettivi e, se utile, un foglio preparatorio da completare prima del colloquio diagnostico."
         },
         {
           "id": "faq-payment",
           "question": "Quali sono le modalità di pagamento?",
-          "answer": "Fattura o pagamento Stripe entro 10 giorni. I pacchetti vengono saldati anticipatamente."
+          "answer": "Pagamento con fattura o Stripe (carta, Twint). I pacchetti si saldano prima dell’avvio; le lezioni singole si pagano entro 10 giorni dalla sessione."
         },
         {
           "id": "faq-privacy",
           "question": "Come gestisci i dati personali?",
-          "answer": "Le informazioni raccolte servono solo all’organizzazione delle lezioni. Analytics caricati solo dopo consenso. Registrazioni Zoom solo con autorizzazione."
+          "answer": "I dati personali sono trattati esclusivamente per l’erogazione delle lezioni secondo il revDSG. Script di analytics partono solo dopo il tuo consenso; registrazioni Zoom avvengono soltanto con autorizzazione scritta."
         },
         {
           "id": "faq-bms",
           "question": "Prepari anche le parti specifiche per BMS/HMS/FMS?",
-          "answer": "Sì, conosco i format tipici per BMS, BM2, HMS e FMS e organizzo simulazioni realistiche, inclusa la parte di comprensione e scrittura."
+          "answer": "Sì, copro l’intero profilo di competenze per BMS, BM2, HMS e FMS, inclusi ragionamento quantitativo, tracce di scrittura e simulazioni complete con rubriche ufficiali."
         }
       ]
     },
@@ -253,24 +253,24 @@
       "steps": [
         {
           "name": "Analisi & obiettivi",
-          "description": "Valutare verifiche recenti, definire i punteggi target e identificare gli ostacoli.",
+          "description": "Analizzare verifiche recenti, ricostruire lo storico voti, fissare obiettivi e identificare blocchi preparando il foglio di roadmap.",
           "duration": "1–2 sessioni",
-          "materials": ["Verifiche passate", "Compiti scolastici"],
-          "notes": ["Se necessario si effettua un test diagnostico."]
+          "materials": ["Verifiche passate", "Compiti scolastici", "Foglio roadmap"],
+          "notes": ["Se necessario si effettua un test diagnostico.", "Prevedere un briefing con i genitori per studenti under 16."]
         },
         {
           "name": "Consolidare le fondamenta",
-          "description": "Ripasso sistematico degli argomenti rilevanti con esercizi graduati e correzione degli errori ricorrenti.",
+          "description": "Ripasso degli argomenti prioritari con micro-sprint, esercizi adattivi e analisi degli errori direttamente nella lavagna condivisa.",
           "duration": "4–8 settimane",
-          "materials": ["Schede teoriche", "Serie di esercizi con soluzioni"],
-          "notes": ["Monitoraggio settimanale dei progressi."]
+          "materials": ["Schede teoriche", "Esercizi adattivi con soluzioni", "Note sulla lavagna condivisa"],
+          "notes": ["Monitoraggio settimanale dei progressi.", "Aggiornare il dashboard condiviso dopo ogni sprint."]
         },
         {
           "name": "Simulazioni & rifinitura",
-          "description": "Mock-exam in tempo reale, analisi dettagliata e ottimizzazione della gestione del tempo.",
+          "description": "Svolgere mock exam cronometrati, debriefing con rubriche di valutazione e consolidamento di ritmo, mindset e strategie di recupero.",
           "duration": "2–4 settimane",
-          "materials": ["Prove simulate", "Template per la gestione del tempo"],
-          "notes": ["Integrare strategie mentali e pause mirate."]
+          "materials": ["Prove simulate", "Template gestione tempo", "Toolkit resilienza allo stress"],
+          "notes": ["Integrare strategie mentali e pause mirate.", "Creare checklist finale per il giorno dell’esame."]
         }
       ],
       "disclaimer": "Il percorso viene adattato alle esigenze individuali; discuteremo eventuali modifiche durante la consulenza iniziale."

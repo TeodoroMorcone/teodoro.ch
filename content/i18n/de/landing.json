@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Stärke deine mathematische Kraft",
-    "subheading": "Stärke dein mathematisches Wissen und Selbstvertrauen mit individueller Begleitung für Gymiprüfung, BMS, BM2, HMS und FMS – direkt aus Zürich.",
+    "subheading": "Stärke dein mathematisches Wissen mit individueller Begleitung für Kurz- und Langgymnasium-Aufnahmeprüfungen, HMS/BMS/FMS-Verfahren sowie die BM2-Abschlussprüfung – direkt aus Zürich.",
     "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
     "calendlyTriggerLabel": "Buchungskalender öffnen",
     "calendlyPlaceholder": "Der Buchungskalender lädt erst, wenn du ihn anforderst – so bleibt die Seite schnell.",
@@ -19,23 +19,23 @@
     "items": [
       {
         "label": "Für wen?",
-        "description": "Schüler:innen auf dem Weg zu den Aufnahme- oder Abschlussprüfungen für Gymi, BMS, BM2, HMS und FMS."
+        "description": "Vorbereitung auf Kurz- und Langgymnasium-Aufnahmeprüfungen, HMS/BMS/FMS-Verfahren sowie die BM2-Abschlussprüfung mit strukturierter 1:1-Begleitung für Schüler:innen aus Zürich und der ganzen Schweiz."
       },
       {
         "label": "Was?",
-        "description": "Individuelle Diagnose, strukturierte Lernpläne, realistische Simulationen."
+        "description": "Diagnose-Call, personalisierte Lernfahrpläne, adaptive Übungspakete, Mock-Exams mit Videofeedback sowie Stress- und Zeitmanagement-Training."
       },
       {
         "label": "Wo?",
-        "description": "Aus Zürich – Unterricht findet ausschliesslich online via Zoom statt."
+        "description": "100 % online via Zoom mit gemeinsamem Whiteboard, optionalen Aufzeichnungen und Materialien in Deutsch, Italienisch und Englisch."
       },
       {
         "label": "Preisrahmen",
-        "description": "Flexible Einzellektionen oder Pakete, individuelle Offerten auf Anfrage."
+        "description": "Einzellektion CHF 60, 5er-Paket CHF 275, 10er-Paket CHF 500 – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden."
       },
       {
         "label": "Wie starten?",
-        "description": "Kostenloses Erstgespräch via WhatsApp anfragen; Folgetermine laufen dann über Calendly als Zoom-Sessions."
+        "description": "WhatsApp schreiben → kostenloses Erstgespräch innerhalb von 24 Stunden → Termine fixieren und Lernplan über Calendly aktivieren."
       }
     ]
   },
@@ -79,12 +79,12 @@
         {
           "id": "gymnasium",
           "name": "Gymnasium-Vorbereitung",
-          "copy": "Gezielte Vorbereitung auf die zentrale Aufnahmeprüfung mit Fokus auf Algebra, Geometrie und Textaufgaben."
+          "copy": "Gezielte Vorbereitung auf die Kurz- und Langgymnasium-Aufnahmeprüfung mit Fokus auf Algebra, Geometrie und Textaufgaben."
         },
         {
           "id": "bms-hms-fms",
           "name": "BMS, HMS & FMS Prüfungsvorbereitung",
-          "copy": "Strukturierter Fahrplan für Aufnahme- und Abschlussprüfungen (inkl. BM2-Mathematik) an beruflichen Mittelschulen mit praxisnahen Übungseinheiten."
+          "copy": "Strukturierter Fahrplan für HMS-, BMS- und FMS-Aufnahmeprüfungen sowie die BM2-Abschlussprüfung an beruflichen Mittelschulen mit praxisnahen Übungseinheiten."
         },
         {
           "id": "exam-coaching",
@@ -213,37 +213,37 @@
         {
           "id": "faq-cancellation",
           "question": "Wie funktionieren Absagen und Verschiebungen?",
-          "answer": "Lektionen können bis 24 Stunden vorher kostenlos verschoben oder abgesagt werden. Kurzfristige Absagen werden als Lektion verrechnet."
+          "answer": "Lektionen im Gymiprüfung Coaching Zürich können bis 24 Stunden vorher kostenlos verschoben oder abgesagt werden. Kurzfristige Änderungen (< 24 h) oder No-Shows werden vollständig berechnet, damit reservierte Slots verfügbar bleiben."
         },
         {
           "id": "faq-materials",
           "question": "Welche Materialien werden verwendet?",
-          "answer": "Ich arbeite mit eigenen Aufgabenserien, offiziellen Prüfungsunterlagen und individuell abgestimmten Übungsblättern. Alle Dokumente werden digital zur Verfügung gestellt."
+          "answer": "Ich kombiniere eigene Aufgabenserien, Originalprüfungen der Bildungsdirektion Zürich sowie adaptive Übungssätze, die auf deine Diagnoseergebnisse abgestimmt sind. Alle Materialien erhältst du digital inkl. Musterlösungen und Lernjournal."
         },
         {
           "id": "faq-online",
           "question": "Findet der Unterricht ausschliesslich online statt?",
-          "answer": "Ja. Alle Sessions laufen über Zoom mit gemeinsamem Whiteboard, geteilten Notizen und aufgezeichneten Lösungswegen nach Bedarf."
+          "answer": "Ja. Alle Sessions laufen über Zoom mit gemeinsamem Whiteboard, Breakout-Übungen und optionalen Aufzeichnungen der wichtigsten Lösungsstrategien, sodass du jederzeit nacharbeiten kannst."
         },
         {
           "id": "faq-response",
           "question": "Wie schnell erhalte ich eine Rückmeldung auf meine Anfrage?",
-          "answer": "In der Regel melde ich mich innerhalb von 24 Stunden mit Terminvorschlägen und ersten Fragen zur Zielsetzung."
+          "answer": "Innerhalb von 24 Stunden erhältst du konkrete Terminvorschläge, eine kurze Zielanalyse und – wenn nötig – ein Vorbereitungsblatt für den Diagnose-Call."
         },
         {
           "id": "faq-payment",
           "question": "Wie erfolgt die Bezahlung?",
-          "answer": "Die Abrechnung erfolgt per Rechnung oder Stripe-Zahlung innerhalb von 10 Tagen. Paketpreise werden im Voraus fällig."
+          "answer": "Die Bezahlung erfolgt per Rechnung oder Stripe-Link (Kreditkarte, Twint). Pakete werden vor dem Start beglichen; Einzellektionen zahlst du innerhalb von 10 Tagen nach der Session."
         },
         {
           "id": "faq-privacy",
           "question": "Wie werden Daten geschützt?",
-          "answer": "Persönliche Daten werden ausschliesslich zur Organisation des Unterrichts genutzt. Analytics werden erst nach Zustimmung geladen. Zoom-Aufzeichnungen erfolgen nur mit expliziter Einwilligung."
+          "answer": "Personendaten werden ausschliesslich zur Organisation der Nachhilfe genutzt und nach revDSG gespeichert. Analytics- und Tracking-Skripte werden erst nach deiner Consent-Auswahl geladen, Zoom-Aufzeichnungen nur mit schriftlicher Einwilligung."
         },
         {
           "id": "faq-bms",
           "question": "Bereiten Sie auch auf BMS/HMS/FMS spezifische Teile vor?",
-          "answer": "Ja. Ich kenne die typischen Aufgabenformate für BMS, BM2, HMS und FMS und arbeite mit praxisnahen Simulationen sowie Aufsatzstrategien."
+          "answer": "Ja, inklusive spezifischer Anforderungsprofile für BMS, BM2, HMS und FMS. Wir trainieren quantitative Aufgaben, Sprach-/Aufsatzteile und führen realistische Simulationen mit Bewertungsraster durch."
         }
       ]
     },
@@ -253,24 +253,24 @@
       "steps": [
         {
           "name": "Analyse & Zielsetzung",
-          "description": "Bestehende Tests und Noten analysieren, genaue Zielnoten definieren und Lernblocker identifizieren.",
+          "description": "Bestehende Tests, Noten und Lernprotokolle analysieren, Zielnoten festlegen, Lernblocker identifizieren und ein Roadmap-Worksheet vorbereiten.",
           "duration": "1–2 Sessions",
-          "materials": ["Letzte Prüfungen", "Schulaufgaben"],
-          "notes": ["Bei Unsicherheit Diagnosetest durchführen."]
+          "materials": ["Letzte Prüfungen", "Schulaufgaben", "Roadmap-Worksheet"],
+          "notes": ["Bei Unsicherheit einen strukturierten Diagnosetest durchführen.", "Elternbriefing für Minderjährige einplanen."]
         },
         {
           "name": "Fundament stärken",
-          "description": "Relevante Themen systematisch wiederholen, mit abgestuften Übungsserien vertiefen und Lücken schliessen.",
+          "description": "Relevante Themen mit Micro-Learning-Sprints wiederholen, adaptive Übungsserien bearbeiten und Fehleranalysen im gemeinsamen Whiteboard dokumentieren.",
           "duration": "4–8 Wochen",
-          "materials": ["Theorieblätter", "Aufgabenserien mit Lösungen"],
-          "notes": ["Wöchentliche Mini-Checks dokumentieren."]
+          "materials": ["Theorieblätter", "Adaptive Aufgabenserien mit Lösungen", "Whiteboard-Notizen"],
+          "notes": ["Wöchentliche Mini-Checks dokumentieren.", "Fortschritts-Tracking im gemeinsamen Dashboard pflegen."]
         },
         {
           "name": "Simulation & Feinschliff",
-          "description": "Mock-Exams unter Echtzeitbedingungen durchführen, Review-Session, Strategien für Zeitmanagement schärfen.",
+          "description": "Ganztägige oder modulare Mock-Exams unter Echtzeitbedingungen durchführen, Auswertung mit Bewertungsraster besprechen und Strategien für Zeit-, Stress- und Pausenmanagement festigen.",
           "duration": "2–4 Wochen",
-          "materials": ["Mock-Exam PDFs", "Zeitplanungs-Sheets"],
-          "notes": ["Mentale Vorbereitung und Pausenmanagement einplanen."]
+          "materials": ["Mock-Exam PDFs", "Zeitplanungs-Sheets", "Stress-Resilience-Toolkit"],
+          "notes": ["Mentale Vorbereitung und Pausenmanagement einplanen.", "Finale Checkliste für den Prüfungstag erstellen."]
         }
       ],
       "disclaimer": "Individuelle Anpassungen sind möglich – bei Fragen gerne im Erstgespräch klären."

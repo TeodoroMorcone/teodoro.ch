@@ -2,7 +2,8 @@ import type {Metadata} from "next";
 import {notFound} from "next/navigation";
 import {getTranslations} from "next-intl/server";
 
-import {LOCALES, isLocale} from "@/lib/i18n/locales";
+import {buildPageMetadata} from "@/lib/seo/meta";
+import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
 
 type LegalPageProps = {
   params: {
@@ -21,12 +22,16 @@ export async function generateMetadata({params}: LegalPageProps): Promise<Metada
     notFound();
   }
 
-  const t = await getTranslations({locale: localeParam, namespace: "common.meta"});
+  const locale: Locale = localeParam;
+  const t = await getTranslations({locale, namespace: "common.meta"});
 
-  return {
+  return buildPageMetadata({
+    locale,
+    path: "legal/impressum",
     title: t("title"),
     description: t("description"),
-  };
+    robotsIndex: false,
+  });
 }
 
 export default async function ImpressumPage({params}: LegalPageProps) {

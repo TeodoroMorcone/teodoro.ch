@@ -19,8 +19,9 @@ import {ResultsSection} from "@/components/sections/results-section";
 import {ServicesSection} from "@/components/sections/services-section";
 import {TLDRSection} from "@/components/sections/tldr-section";
 import {getGoogleReviews} from "@/lib/reviews/google";
-import {buildFaqJsonLd, buildHowToJsonLd, buildOrganizationJsonLd, buildServiceJsonLd, buildSpeakableJsonLd} from "@/lib/seo/jsonld";
-import {DEFAULT_LOCALE, LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
+import {buildLandingJsonLd} from "@/lib/seo/jsonld";
+import {buildPageMetadata} from "@/lib/seo/meta";
+import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
 import type {LandingContent} from "@/types/landing";
 
 export async function generateStaticParams() {
@@ -40,35 +41,15 @@ export async function generateMetadata({params}: LocalePageProps): Promise<Metad
     notFound();
   }
 
-  const t = await getTranslations({locale: localeParam, namespace: "common.meta"});
+  const locale = localeParam as Locale;
 
-  const url = `https://teodoro.ch/${localeParam}`;
+  const t = await getTranslations({locale, namespace: "common.meta"});
 
-  return {
+  return buildPageMetadata({
+    locale,
     title: t("title"),
     description: t("description"),
-    alternates: {
-      canonical: url,
-      languages: Object.fromEntries(
-        LOCALES.map((loc) => [loc, `https://teodoro.ch/${loc}`]).concat([
-          ["x-default" as const, `https://teodoro.ch/${DEFAULT_LOCALE}`],
-        ]),
-      ),
-    },
-    openGraph: {
-      title: t("title"),
-      description: t("description"),
-      url,
-      type: "website",
-      locale: `${localeParam}-CH`,
-      siteName: "Teodoro Morcone Nachhilfe",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t("title"),
-      description: t("description"),
-    },
-  };
+  });
 }
 
 export default async function LocaleLandingPage({params}: LocalePageProps) {
@@ -132,13 +113,29 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
     secondary: {label: tCommon("cta.secondary"), href: "#services"},
   };
 
-  const organizationJsonLd = buildOrganizationJsonLd();
-  const serviceJsonLd = buildServiceJsonLd(locale, {hero, services, pricing});
-  const faqJsonLd = buildFaqJsonLd(faq);
-  const speakableJsonLd = buildSpeakableJsonLd(tldr);
-  const howToJsonLd = buildHowToJsonLd(howTo);
+  const landingContent: LandingContent = {
+    hero,
+    tldr,
+    intentClusters,
+    sections: {
+      services,
+      howItWorks,
+      results,
+      about,
+      pricing,
+      faq,
+      howTo,
+      comparison,
+      glossary,
+      terms,
+      privacy,
+    },
+    contact,
+    impressum,
+    outboundLinks,
+  };
 
-  const jsonLdPayloads = [organizationJsonLd, serviceJsonLd, faqJsonLd, speakableJsonLd, howToJsonLd];
+  const jsonLdPayloads = buildLandingJsonLd({locale, content: landingContent});
 
   return (
     <>
