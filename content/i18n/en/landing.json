@@ -31,7 +31,7 @@
       },
       {
         "label": "Pricing",
-        "description": "Single session CHF 60, 5-pack CHF 275, 10-pack CHF 500 – includes follow-up notes, progress tracking, and 24-hour response time."
+        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 500 – includes follow-up notes, progress tracking, and 24-hour response time."
       },
       {
         "label": "How to start?",
@@ -171,7 +171,7 @@
         {
           "id": "single",
           "name": "Single session",
-          "price": "CHF 60",
+          "price": "CHF 70",
           "unit": "per 60 minutes",
           "features": [
             "Individual lesson with tailored material",
@@ -183,8 +183,8 @@
         {
           "id": "five-pack",
           "name": "5-pack",
-          "price": "CHF 275",
-          "unit": "5 × 60 minutes (CHF 55 per lesson)",
+          "price": "CHF 300",
+          "unit": "5 × 60 minutes (CHF 60 per lesson)",
           "features": [
             "Structured learning plan",
             "Weekly feedback & monitoring",
@@ -320,8 +320,8 @@
         {
           "metric": "Price per lesson",
           "values": {
-            "single": "CHF 60",
-            "fivePack": "CHF 55",
+            "single": "CHF 70",
+            "fivePack": "CHF 60",
             "tenPack": "CHF 50"
           }
         }

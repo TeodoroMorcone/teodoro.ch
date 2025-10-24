@@ -31,7 +31,7 @@
       },
       {
         "label": "Fascia prezzi",
-        "description": "Lezione singola CHF 60, pacchetto 5 CHF 275, pacchetto 10 CHF 500 – include follow-up, report e risposta entro 24 ore."
+        "description": "Lezione singola CHF 70, pacchetto 5 CHF 300, pacchetto 10 CHF 500 – include follow-up, report e risposta entro 24 ore."
       },
       {
         "label": "Come iniziare?",
@@ -171,7 +171,7 @@
         {
           "id": "single",
           "name": "Lezione singola",
-          "price": "CHF 60",
+          "price": "CHF 70",
           "unit": "per 60 minuti",
           "features": [
             "Lezione individuale con materiale dedicato",
@@ -183,8 +183,8 @@
         {
           "id": "five-pack",
           "name": "Pacchetto 5 lezioni",
-          "price": "CHF 275",
-          "unit": "5 × 60 minuti (CHF 55 a lezione)",
+          "price": "CHF 300",
+          "unit": "5 × 60 minuti (CHF 60 a lezione)",
           "features": [
             "Piano di lavoro strutturato",
             "Feedback e monitoraggio settimanale",
@@ -320,8 +320,8 @@
         {
           "metric": "Prezzo per lezione",
           "values": {
-            "single": "CHF 60",
-            "fivePack": "CHF 55",
+            "single": "CHF 70",
+            "fivePack": "CHF 60",
             "tenPack": "CHF 50"
           }
         }

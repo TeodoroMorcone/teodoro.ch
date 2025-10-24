@@ -31,7 +31,7 @@
       },
       {
         "label": "Preisrahmen",
-        "description": "Einzellektion CHF 60, 5er-Paket CHF 275, 10er-Paket CHF 500 – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden."
+        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 500 – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden."
       },
       {
         "label": "Wie starten?",
@@ -171,7 +171,7 @@
         {
           "id": "single",
           "name": "Einzellektion",
-          "price": "CHF 60",
+          "price": "CHF 70",
           "unit": "pro 60 Minuten",
           "features": [
             "Individuelle Lektion inkl. Material",
@@ -183,8 +183,8 @@
         {
           "id": "five-pack",
           "name": "5er Paket",
-          "price": "CHF 275",
-          "unit": "5 × 60 Minuten (CHF 55 pro Lektion)",
+          "price": "CHF 300",
+          "unit": "5 × 60 Minuten (CHF 60 pro Lektion)",
           "features": [
             "Strukturierter Lernplan",
             "Zwischenfeedback & Monitoring",
@@ -320,8 +320,8 @@
         {
           "metric": "Preis pro Lektion",
           "values": {
-            "single": "CHF 60",
-            "fivePack": "CHF 55",
+            "single": "CHF 70",
+            "fivePack": "CHF 60",
             "tenPack": "CHF 50"
           }
         }
