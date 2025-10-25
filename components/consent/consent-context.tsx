@@ -1,6 +1,6 @@
 "use client";
 
-import {createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode} from "react";
+import {createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode} from "react";
 
 import {DEFAULT_CONSENT, GRANTED_CONSENT, getMeasurementId} from "@/config/analytics";
 import {isGaReady, loadGaScript, setGaReady} from "@/lib/analytics/gtag";
@@ -55,6 +55,7 @@ export function ConsentProvider({children}: ConsentProviderProps) {
   const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
   const [announcement, setAnnouncement] = useState<string | null>(null);
   const hasMeasurementId = Boolean(getMeasurementId());
+  const hasSyncedInitialConsent = useRef(false);
 
   const syncAnalyticsConsent = useCallback(
     (analyticsEnabled: boolean) => {
@@ -118,6 +119,24 @@ export function ConsentProvider({children}: ConsentProviderProps) {
       console.warn("[ConsentProvider] Failed to persist consent state", error);
     }
   }, [isReady, state]);
+
+  useEffect(() => {
+    if (!isReady) {
+      return;
+    }
+
+    if (hasSyncedInitialConsent.current) {
+      return;
+    }
+
+    hasSyncedInitialConsent.current = true;
+
+    if (state.analytics) {
+      syncAnalyticsConsent(true);
+    } else if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      pushConsentUpdate(DEFAULT_CONSENT);
+    }
+  }, [isReady, state.analytics, syncAnalyticsConsent]);
 
   const openBanner = useCallback(() => {
     setIsBannerVisible(true);

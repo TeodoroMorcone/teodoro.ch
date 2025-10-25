@@ -1,5 +1,6 @@
 import type {Metadata} from "next";
 import type {ReactNode} from "react";
+import {DEFAULT_CONSENT} from "@/config/analytics";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,8 +19,24 @@ type RootLayoutProps = {
 };
 
 export default function RootLayout({children}: RootLayoutProps) {
+  const consentInitScript = `
+    (function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      window.gtag = window.gtag || gtag;
+      window.gtag('consent', 'default', ${JSON.stringify(DEFAULT_CONSENT)});
+      window.gtag('set', 'ads_data_redaction', true);
+    })();
+  `.trim();
+
   return (
     <html lang="de" suppressHydrationWarning>
+      <head>
+        <script
+          id="ga-consent-init"
+          dangerouslySetInnerHTML={{__html: consentInitScript}}
+        />
+      </head>
       <body className="min-h-screen bg-surface text-primary antialiased transition-colors duration-200 ease-soft-sine dark:bg-primary dark:text-surface">
         {children}
       </body>
