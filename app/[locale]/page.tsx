@@ -18,6 +18,7 @@ import {PricingSection} from "@/components/sections/pricing-section";
 import {ResultsSection} from "@/components/sections/results-section";
 import {ServicesSection} from "@/components/sections/services-section";
 import {TLDRSection} from "@/components/sections/tldr-section";
+import {CalendlyInlineEmbed} from "@/components/ui/calendly-inline-embed";
 import {getGoogleReviews} from "@/lib/reviews/google";
 import {buildLandingJsonLd} from "@/lib/seo/jsonld";
 import {buildPageMetadata} from "@/lib/seo/meta";
@@ -33,6 +34,8 @@ type LocalePageProps = {
     locale: string;
   };
 };
+
+const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
 
 export async function generateMetadata({params}: LocalePageProps): Promise<Metadata> {
   const {locale: localeParam} = params;
@@ -105,13 +108,26 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
     detailsKeys: contactDetails && !Array.isArray(contactDetails) && typeof contactDetails === "object" ? Object.keys(contactDetails as Record<string, unknown>) : undefined,
   });
 
-  const googleReviews = await getGoogleReviews();
+  const googleReviews = await getGoogleReviews(18);
 
 
   const heroCtas = {
     primary: {label: tCommon("cta.primary"), href: "#contact"},
     secondary: {label: tCommon("cta.secondary"), href: "#services"},
   };
+
+  const calendlyLoadingLabel =
+    (hero?.calendlyLoadingFallback as string | undefined) ??
+    tLanding("hero.calendlyLoadingFallback", {defaultMessage: "Calendly scheduling is loading…"});
+  const calendlyTriggerLabel =
+    (hero?.calendlyTriggerLabel as string | undefined) ??
+    tLanding("hero.calendlyTriggerLabel", {defaultMessage: "Open booking calendar"});
+  const calendlyFrameTitle = tLanding("hero.calendlyFrameTitle", {defaultMessage: "Calendly booking"});
+  const calendlyPlaceholderLabel =
+    (contact?.calendlyPlaceholder as string | undefined) ??
+    tLanding("contact.calendlyPlaceholder", {
+      defaultMessage: "Open the booking calendar only when you’re ready to choose a slot.",
+    });
 
   const landingContent: LandingContent = {
     hero,
@@ -143,13 +159,24 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
         <article className="mx-auto flex w-full max-w-6xl flex-col gap-24 px-6 py-16 lg:px-12">
           <HeroSection hero={hero} ctas={heroCtas} />
 
+          <ResultsSection results={results} reviews={googleReviews} />
+
+          <CalendlyInlineEmbed
+            eventUrl={CALENDLY_EVENT_URL}
+            buttonLabel={calendlyTriggerLabel}
+            loadingLabel={calendlyLoadingLabel}
+            placeholderLabel={calendlyPlaceholderLabel}
+            title={calendlyFrameTitle}
+            className="w-full"
+            iframeClassName="rounded-3xl"
+            height={700}
+          />
+
           <TLDRSection tldr={tldr} intentClusters={intentClusters} />
 
           <ServicesSection services={services} />
 
           <HowItWorksSection howItWorks={howItWorks} />
-
-          <ResultsSection results={results} outboundLinks={outboundLinks} reviews={googleReviews} />
 
           <AboutSection about={about} />
 

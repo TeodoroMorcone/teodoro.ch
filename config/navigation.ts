@@ -32,10 +32,10 @@ export type LegalLink = {
 };
 
 export const SECTION_LINKS: SectionLink[] = [
+  {id: "results", navKey: "results", targetId: "results", href: "#results"},
   {id: "tldr", navKey: "tldr", targetId: "tldr", href: "#tldr"},
   {id: "services", navKey: "services", targetId: "services", href: "#services"},
   {id: "howItWorks", navKey: "howItWorks", targetId: "how-it-works", href: "#how-it-works"},
-  {id: "results", navKey: "results", targetId: "results", href: "#results"},
   {id: "about", navKey: "about", targetId: "about", href: "#about"},
   {id: "pricing", navKey: "pricing", targetId: "pricing", href: "#pricing"},
   {id: "faq", navKey: "faq", targetId: "faq", href: "#faq"},

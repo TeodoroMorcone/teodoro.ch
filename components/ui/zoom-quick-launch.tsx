@@ -1,4 +1,4 @@
-import {ZOOM_LINKS, type ZoomLink} from "@/config/zoom";
+import {ZOOM_LINKS, isZoomEnabled, type ZoomLink} from "@/config/zoom";
 import {cn} from "@/lib/utils/cn";
 
 import {CTAButton} from "@/components/ui/cta-button";
@@ -64,6 +64,10 @@ export function ZoomQuickLaunch({
   variant = "card",
   className,
 }: ZoomQuickLaunchProps) {
+  if (!isZoomEnabled) {
+    return null;
+  }
+
   const consultationLink = ZOOM_LINKS.consultation;
   const lessonLink = ZOOM_LINKS.lesson;
 

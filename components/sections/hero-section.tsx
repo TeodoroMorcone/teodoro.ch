@@ -3,7 +3,6 @@
 import Image from "next/image";
 import {useTranslations} from "next-intl";
 
-import {CalendlyInlineEmbed} from "@/components/ui/calendly-inline-embed";
 import {CTAButton} from "@/components/ui/cta-button";
 import {SectionHeading} from "@/components/ui/section-heading";
 import type {HeroContent} from "@/types/landing";
@@ -16,18 +15,10 @@ type HeroSectionProps = {
   };
 };
 
-const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
 
 export function HeroSection({hero, ctas}: HeroSectionProps) {
   const t = useTranslations("landing");
   const expertName = hero.expertName ?? "Teodoro Morcone";
-  const calendlyLoadingLabel =
-    hero.calendlyLoadingFallback ??
-    t("hero.calendlyLoadingFallback", {defaultMessage: "Calendly scheduling is loading…"});
-  const calendlyTriggerLabel =
-    hero.calendlyTriggerLabel ??
-    t("hero.calendlyTriggerLabel", {defaultMessage: "Open booking calendar"});
-  const calendlyFrameTitle = t("hero.calendlyFrameTitle", {defaultMessage: "Calendly booking"});
 
   return (
     <section
@@ -84,17 +75,6 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
             </figcaption>
           ) : null}
         </figure>
-      </div>
-      <div className="mt-10 lg:col-span-2">
-        <CalendlyInlineEmbed
-          eventUrl={CALENDLY_EVENT_URL}
-          buttonLabel={calendlyTriggerLabel}
-          loadingLabel={calendlyLoadingLabel}
-          title={calendlyFrameTitle}
-          className="w-full"
-          iframeClassName="rounded-3xl"
-          height={700}
-        />
       </div>
     </section>
   );

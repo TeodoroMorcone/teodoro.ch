@@ -1,0 +1,22 @@
+{
+  "analytics": {
+    "gaMeasurementId": "G-RGVQL8M7V5"
+  },
+  "reviews": {
+    "mode": "static",
+    "staticFeedPath": "/data/google-reviews.json",
+    "fallbackLocale": "de"
+  },
+  "zoom": {
+    "enabled": false,
+    "requiresPasscode": true,
+    "consultation": {
+      "deepLink": "",
+      "fallback": ""
+    },
+    "lesson": {
+      "deepLink": "",
+      "fallback": ""
+    }
+  }
+}
