@@ -69,10 +69,19 @@ export type ResultsPlaceholder = {
   label: string;
 };
 
+export type ResultsReviewSummary = {
+  badge?: string;
+  headline: string;
+  body: string[];
+  ctaLabel?: string;
+  ctaHref?: string;
+};
+
 export type ResultsContent = {
   title: string;
   description: string;
-  placeholders: ResultsPlaceholder[];
+  reviewSummary?: ResultsReviewSummary;
+  placeholders?: ResultsPlaceholder[];
 };
 
 export type AboutContent = {

@@ -1,10 +1,12 @@
 "use client";
 
-import {useCallback, useMemo, useState} from "react";
+import {useCallback, useEffect, useMemo, useState} from "react";
 
 import type {GoogleReview} from "@/lib/reviews/google";
 
-const CHUNK_SIZE = 6;
+const DESKTOP_CHUNK_SIZE = 6;
+const MOBILE_CHUNK_SIZE = 1;
+const MOBILE_BREAKPOINT_QUERY = "(max-width: 639px)";
 
 type ReviewsCarouselProps = {
   reviews: GoogleReview[];
@@ -21,8 +23,44 @@ function chunkReviews(reviews: GoogleReview[], size: number): ReviewSlide[] {
 }
 
 export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
-  const slides = useMemo(() => chunkReviews(reviews, CHUNK_SIZE), [reviews]);
+  const [chunkSize, setChunkSize] = useState(DESKTOP_CHUNK_SIZE);
+  const slides = useMemo(() => chunkReviews(reviews, chunkSize), [reviews, chunkSize]);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return;
+    }
+
+    const mediaQuery = window.matchMedia(MOBILE_BREAKPOINT_QUERY);
+
+    const applyChunkSize = (matches: boolean) => {
+      const nextSize = matches ? MOBILE_CHUNK_SIZE : DESKTOP_CHUNK_SIZE;
+
+      setChunkSize((current) => {
+        if (current === nextSize) {
+          return current;
+        }
+
+        setActiveIndex(0);
+        return nextSize;
+      });
+    };
+
+    applyChunkSize(mediaQuery.matches);
+
+    const handleChange = (event: MediaQueryListEvent) => {
+      applyChunkSize(event.matches);
+    };
+
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleChange);
+      return () => mediaQuery.removeEventListener("change", handleChange);
+    }
+
+    mediaQuery.addListener(handleChange);
+    return () => mediaQuery.removeListener(handleChange);
+  }, []);
 
   const totalSlides = slides.length;
   const canNavigate = totalSlides > 1;

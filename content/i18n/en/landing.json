@@ -142,17 +142,17 @@
     },
     "results": {
       "title": "Results & social proof",
-      "description": "Coming soon – real testimonials will be placed here as they become available.",
-      "placeholders": [
-        {
-          "type": "testimonial",
-          "label": "TODO: Add testimonial"
-        },
-        {
-          "type": "logo",
-          "label": "TODO: Add partner/school logo"
-        }
-      ]
+      "description": "Hear directly from families who trust Teodoro Morcone Nachhilfe – every testimonial below comes from Google and Tutor24.",
+      "reviewSummary": {
+        "badge": "★ 5.0 rating",
+        "headline": "Consistent progress and lasting confidence",
+        "body": [
+          "Parents highlight multi-year coaching that rebuilt confidence, sharpened study habits, and delivered sustained grade improvements.",
+          "Students appreciate the patient, multilingual tutoring style that makes complex math approachable and even fun."
+        ],
+        "ctaLabel": "Open Google reviews",
+        "ctaHref": "https://www.google.com/search?q=Teodoro+Morcone+Nachhilfe+Reviews"
+      }
     },
     "about": {
       "title": "About the tutor",
