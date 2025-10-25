@@ -8,7 +8,7 @@ const SECURITY_HEADERS: Record<string, string> = {
   "X-Frame-Options": "DENY",
   "Referrer-Policy": "strict-origin-when-cross-origin",
   "Permissions-Policy":
-    "camera=(), microphone=(), geolocation=(), payment=(), usb=(), fullscreen=(self), accelerometer=(), ambient-light-sensor=(), autoplay=(self)",
+    "camera=(), microphone=(), geolocation=(), payment=(), usb=(), fullscreen=(self), accelerometer=(), autoplay=(self)",
   "Cross-Origin-Opener-Policy": "same-origin",
   "Cross-Origin-Resource-Policy": "same-origin",
   "X-XSS-Protection": "0",

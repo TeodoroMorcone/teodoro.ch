@@ -10,6 +10,8 @@ import {useConsent} from "@/components/consent/consent-context";
 import {NavLink} from "@/components/navigation/nav-link";
 import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet";
 
+const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
+
 type MobileNavItem = {
   id: string;
   href: string;
@@ -76,7 +78,7 @@ export function MobileNav({
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== "development") {
+    if (!IS_DEVELOPMENT) {
       return;
     }
 
@@ -138,7 +140,7 @@ export function MobileNav({
   }, []);
 
   useEffect(() => {
-    if (process.env.NODE_ENV !== "development") {
+    if (!IS_DEVELOPMENT) {
       return;
     }
 

@@ -505,6 +505,7 @@
   "contact": {
     "title": "Contact & booking",
     "description": "Send a quick WhatsApp message with your goals, school level, and preferred timeframe – the initial chat happens there. Subsequent Zoom sessions are coordinated together through Calendly.",
+    "calendlyFrameTitle": "Book a lesson with Calendly",
     "calendlyLoadingFallback": "Calendly scheduling is loading…",
     "calendlyTriggerLabel": "Load the Calendly calendar",
     "calendlyPlaceholder": "Load the booking calendar only when you are ready to pick a slot.",

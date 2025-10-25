@@ -8,6 +8,8 @@ import {useConsent} from "@/components/consent/consent-context";
 import {NavLink} from "@/components/navigation/nav-link";
 import type {Locale} from "@/lib/i18n/locales";
 
+const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
+
 type SidebarNavItem = {
   id: string;
   href: string;
@@ -87,17 +89,23 @@ export function Sidebar({
       </button>
     );
 
-  console.log("[Sidebar] control composition", {
-    hasLanguageSwitcher: Boolean(languageSwitcher),
-    hasThemeToggle: Boolean(themeToggle),
-    consentPreferencesAvailable: typeof consent.openPreferences === "function",
-  });
-  console.log("[Sidebar] CTA copy diagnostics", {
-    tertiaryLabel: ctas.tertiary?.label ?? null,
-    tertiaryHelper: ctas.tertiary?.helper ?? null,
-  });
+  if (IS_DEVELOPMENT) {
+    console.log("[Sidebar] control composition", {
+      hasLanguageSwitcher: Boolean(languageSwitcher),
+      hasThemeToggle: Boolean(themeToggle),
+      consentPreferencesAvailable: typeof consent.openPreferences === "function",
+    });
+    console.log("[Sidebar] CTA copy diagnostics", {
+      tertiaryLabel: ctas.tertiary?.label ?? null,
+      tertiaryHelper: ctas.tertiary?.helper ?? null,
+    });
+  }
 
   useEffect(() => {
+    if (!IS_DEVELOPMENT) {
+      return;
+    }
+
     const sidebarElement = asideRef.current;
 
     if (!sidebarElement) {
@@ -130,6 +138,10 @@ export function Sidebar({
   }, []);
 
   useEffect(() => {
+    if (!IS_DEVELOPMENT) {
+      return;
+    }
+
     const element = primaryCtaRef.current;
 
     if (!element) {
