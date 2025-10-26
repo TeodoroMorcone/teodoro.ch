@@ -2,9 +2,10 @@
   "hero": {
     "heading": "Stärke deine mathematische Kraft",
     "subheading": "Stärke dein mathematisches Wissen mit individueller Begleitung für Kurz- und Langgymnasium-Aufnahmeprüfungen, HMS/BMS/FMS-Verfahren sowie die BM2-Abschlussprüfung – direkt aus Zürich.",
-    "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
-    "calendlyTriggerLabel": "Buchungskalender öffnen",
-    "calendlyPlaceholder": "Der Buchungskalender lädt erst, wenn du ihn anforderst – so bleibt die Seite schnell.",
+    "bookingFrameTitle": "Online-Lektion buchen",
+    "bookingAvailabilityNote": "Calendesk zeigt dir verfügbare Zeiten in Echtzeit, damit du den passenden Slot wählen kannst.",
+    "bookingActivationLabel": "Buchungskalender laden",
+    "bookingLoadingLabel": "Calendesk-Verfügbarkeit wird geladen…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Porträt von Teodoro Morcone, der online Nachhilfe anbietet",
@@ -35,7 +36,7 @@
       },
       {
         "label": "Wie starten?",
-        "description": "WhatsApp schreiben → kostenloses Erstgespräch innerhalb von 24 Stunden → Termine fixieren und Lernplan über Calendly aktivieren."
+        "description": "WhatsApp schreiben → kostenloses Erstgespräch innerhalb von 24 Stunden → Termine fixieren und Lernplan über Calendesk aktivieren."
       }
     ]
   },
@@ -375,9 +376,9 @@
         },
         {
           "id": "booking",
-          "heading": "3. Buchung über Calendly / Vertragsschluss",
+          "heading": "3. Buchung über Calendesk / Vertragsschluss",
           "body": [
-            "Termine werden über Calendly gebucht. Mit der Bestätigung durch Calendly kommt der Vertrag zustande; es gelten zusätzlich die Nutzungsbedingungen von Calendly.",
+            "Termine werden über Calendesk gebucht. Mit der Bestätigung durch Calendesk kommt der Vertrag zustande; es gelten zusätzlich die Nutzungsbedingungen von Calendesk.",
             "Der Kalender zeigt verfügbare Zeiten. Der Anbieter kann Anfragen ablehnen oder alternative Vorschläge unterbreiten."
           ]
         },
@@ -471,7 +472,7 @@
             "Eingesetzte Auftragsbearbeiter sind vertrauenswürdige Dienstleister; vollständige Liste und Rechtsgrundlagen finden sich in der Datenschutzerklärung."
           ],
           "bullets": [
-            "Calendly (Terminplanung & Erinnerungen)",
+            "Calendesk (Terminplanung & Erinnerungen)",
             "Stripe (bargeldlose Zahlungen)",
             "Google Analytics 4 (Statistiken nur nach Zustimmung)",
             "Zoom (Video-Unterricht mit Warteraum & Passcode)"
@@ -504,10 +505,12 @@
   },
   "contact": {
     "title": "Kontakt & Buchung",
-    "description": "Schreibe mir eine kurze WhatsApp-Nachricht mit Zielsetzung, Schulstufe und Zeitraum – das erste Kennenlernen findet dort statt. Alle weiteren Zoom-Lektionen planen wir gemeinsam via Calendly.",
-    "calendlyLoadingFallback": "Calendly-Planung wird geladen…",
-    "calendlyTriggerLabel": "Calendly-Kalender laden",
-    "calendlyPlaceholder": "Lade den Buchungskalender erst, wenn du bereit bist, einen Termin auszuwählen.",
+    "description": "Schreibe mir eine kurze WhatsApp-Nachricht mit Zielsetzung, Schulstufe und Zeitraum – das erste Kennenlernen findet dort statt. Alle weiteren Zoom-Lektionen planen wir gemeinsam via Calendesk.",
+    "bookingFrameTitle": "Online-Lektion buchen",
+    "bookingAvailabilityNote": "Calendesk zeigt dir verfügbare Zeiten in Echtzeit, damit du den passenden Slot wählen kannst.",
+    "bookingActivationLabel": "Buchungskalender laden",
+    "bookingLoadingLabel": "Calendesk-Verfügbarkeit wird geladen…",
+    "bookingEmbedUrl": "https://lhctbmf6wa.calendesk.net/",
     "details": [
       {
         "label": "E-Mail",

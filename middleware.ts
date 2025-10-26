@@ -21,7 +21,7 @@ const RAW_CONTENT_SECURITY_POLICY = `
   img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://lh3.googleusercontent.com;
   font-src 'self' https://fonts.gstatic.com;
   connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://maps.googleapis.com;
-  frame-src 'self' https://calendly.com;
+  frame-src 'self' https://lhctbmf6wa.calendesk.net https://calendesk.net https://www.calendesk.net;
   frame-ancestors 'none';
   object-src 'none';
   base-uri 'self';

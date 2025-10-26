@@ -13,8 +13,10 @@ export type HeroContent = {
   expertName?: string;
   avatarAlt?: string;
   mathSnippet?: string | null;
-  calendlyLoadingFallback?: string;
-  calendlyTriggerLabel?: string;
+  bookingFrameTitle?: string;
+  bookingAvailabilityNote?: string;
+  bookingActivationLabel?: string;
+  bookingLoadingLabel?: string;
   illustration?: HeroIllustration;
 };
 
@@ -235,9 +237,11 @@ export type ContactContent = {
   details: ContactDetail[];
   responseTime: string;
   officeHours: string;
-  calendlyLoadingFallback?: string;
-  calendlyTriggerLabel?: string;
-  calendlyPlaceholder?: string;
+  bookingFrameTitle?: string;
+  bookingAvailabilityNote?: string;
+  bookingActivationLabel?: string;
+  bookingLoadingLabel?: string;
+  bookingEmbedUrl?: string;
   policy?: ContactPolicy;
 };
 

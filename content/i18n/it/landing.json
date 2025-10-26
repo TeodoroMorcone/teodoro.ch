@@ -2,9 +2,10 @@
   "hero": {
     "heading": "Allena la tua padronanza matematica",
     "subheading": "Rinforza le tue conoscenze matematiche con coaching personalizzato per le prove di ammissione al Kurz- und Langgymnasium, i percorsi HMS/BMS/FMS e l’esame finale BM2 – tutto da Zurigo.",
-    "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
-    "calendlyTriggerLabel": "Apri il calendario di prenotazione",
-    "calendlyPlaceholder": "Il calendario di prenotazione si carica solo quando lo richiedi, per mantenere la pagina veloce.",
+    "bookingFrameTitle": "Prenota una lezione online",
+    "bookingAvailabilityNote": "Calendesk mostra in tempo reale le disponibilità, così puoi scegliere lo slot perfetto.",
+    "bookingActivationLabel": "Carica il calendario delle prenotazioni",
+    "bookingLoadingLabel": "Calendesk sta caricando le disponibilità…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Ritratto di Teodoro Morcone sorridente pronto per una lezione online",
@@ -35,7 +36,7 @@
       },
       {
         "label": "Come iniziare?",
-        "description": "Scrivi su WhatsApp → ricevi consulenza gratuita entro 24 ore → fissiamo le date e avviamo il piano Calendly personalizzato."
+        "description": "Scrivi su WhatsApp → ricevi consulenza gratuita entro 24 ore → fissiamo le date e avviamo il piano Calendesk personalizzato."
       }
     ]
   },
@@ -375,9 +376,9 @@
         },
         {
           "id": "booking",
-          "heading": "3. Prenotazioni tramite Calendly / conclusione del contratto",
+          "heading": "3. Prenotazioni tramite Calendesk / conclusione del contratto",
           "body": [
-            "Gli appuntamenti si fissano tramite Calendly. Con la conferma di Calendly il contratto si considera concluso; si applicano inoltre i termini d’uso di Calendly.",
+            "Gli appuntamenti si fissano tramite Calendesk. Con la conferma di Calendesk il contratto si considera concluso; si applicano inoltre i termini d’uso di Calendesk.",
             "Le disponibilità nel calendario possono variare; il Fornitore può rifiutare richieste o proporre alternative."
           ]
         },
@@ -471,7 +472,7 @@
             "I responsabili del trattamento sono fornitori affidabili; l’elenco completo e le basi giuridiche sono descritti nell’informativa privacy."
           ],
           "bullets": [
-            "Calendly (programmazione appuntamenti & promemoria)",
+            "Calendesk (programmazione appuntamenti & promemoria)",
             "Stripe (pagamenti cashless)",
             "Google Analytics 4 (statistiche solo previo consenso)",
             "Zoom (lezioni video con sala d’attesa e passcode)"
@@ -504,10 +505,12 @@
   },
   "contact": {
     "title": "Contatti & prenotazioni",
-    "description": "Scrivimi subito su WhatsApp con obiettivi, classe e periodo desiderato: il primo confronto avviene lì. Le sessioni Zoom successive le programmiamo insieme su Calendly.",
-    "calendlyLoadingFallback": "Calendly sta caricando la disponibilità…",
-    "calendlyTriggerLabel": "Carica il calendario Calendly",
-    "calendlyPlaceholder": "Carica il calendario di prenotazione solo quando sei pronto a scegliere un orario.",
+    "description": "Scrivimi subito su WhatsApp con obiettivi, classe e periodo desiderato: il primo confronto avviene lì. Le sessioni Zoom successive le programmiamo insieme su Calendesk.",
+    "bookingFrameTitle": "Prenota una lezione online",
+    "bookingAvailabilityNote": "Calendesk mostra in tempo reale le disponibilità, così puoi scegliere lo slot perfetto.",
+    "bookingActivationLabel": "Carica il calendario delle prenotazioni",
+    "bookingLoadingLabel": "Calendesk sta caricando le disponibilità…",
+    "bookingEmbedUrl": "https://lhctbmf6wa.calendesk.net/",
     "details": [
       {
         "label": "E-mail",

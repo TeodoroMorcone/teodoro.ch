@@ -2,7 +2,7 @@
 
 import {useTranslations} from "next-intl";
 
-import {CalendlyInlineEmbed} from "@/components/ui/calendly-inline-embed";
+import {CalendeskEmbed, DEFAULT_CALENDESK_EMBED_URL} from "@/components/ui/calendesk-embed";
 import {SectionHeading} from "@/components/ui/section-heading";
 import type {ContactContent, ContactDetail} from "@/types/landing";
 
@@ -10,7 +10,6 @@ type ContactSectionProps = {
   contact: ContactContent;
 };
 
-const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
 
 export function ContactSection({contact}: ContactSectionProps) {
   const t = useTranslations("landing");
@@ -37,18 +36,21 @@ export function ContactSection({contact}: ContactSectionProps) {
     }
   }
 
-  const calendlyLoadingLabel =
-    contact.calendlyLoadingFallback ??
-    t("hero.calendlyLoadingFallback", {defaultMessage: "Calendly scheduling is loading…"});
-  const calendlyTriggerLabel =
-    contact.calendlyTriggerLabel ??
-    t("hero.calendlyTriggerLabel", {defaultMessage: "Open booking calendar"});
-  const calendlyPlaceholder =
-    contact.calendlyPlaceholder ??
-    t("contact.calendlyPlaceholder", {
-      defaultMessage: "Open the booking calendar only when you’re ready to choose a slot.",
+  const bookingFrameTitle =
+    contact.bookingFrameTitle ??
+    t("contact.bookingFrameTitle", {defaultMessage: "Book a lesson online"});
+  const bookingAvailabilityNote =
+    contact.bookingAvailabilityNote ??
+    t("contact.bookingAvailabilityNote", {
+      defaultMessage: "Availability updates in real time. Pick the slot that fits you best.",
     });
-  const calendlyFrameTitle = t("contact.calendlyFrameTitle", {defaultMessage: "Calendly booking"});
+  const bookingActivationLabel =
+    contact.bookingActivationLabel ??
+    t("contact.bookingActivationLabel", {defaultMessage: "Load the booking calendar"});
+  const bookingLoadingLabel =
+    contact.bookingLoadingLabel ??
+    t("contact.bookingLoadingLabel", {defaultMessage: "Calendesk availability is loading…"});
+  const bookingEmbedUrl = contact.bookingEmbedUrl ?? DEFAULT_CALENDESK_EMBED_URL;
 
   return (
     <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-28">
@@ -132,17 +134,16 @@ export function ContactSection({contact}: ContactSectionProps) {
         </div>
       </div>
 
-      <div className="mt-10">
-        <CalendlyInlineEmbed
-          eventUrl={CALENDLY_EVENT_URL}
-          buttonLabel={calendlyTriggerLabel}
-          loadingLabel={calendlyLoadingLabel}
-          placeholderLabel={calendlyPlaceholder}
-          title={calendlyFrameTitle}
+      <div className="mt-10 space-y-4">
+        <CalendeskEmbed
+          title={bookingFrameTitle}
+          activationLabel={bookingActivationLabel}
+          loadingLabel={bookingLoadingLabel}
+          src={bookingEmbedUrl}
           className="w-full"
           iframeClassName="rounded-3xl"
-          height={700}
         />
+        <p className="text-sm text-secondary dark:text-surface/70">{bookingAvailabilityNote}</p>
       </div>
     </section>
   );

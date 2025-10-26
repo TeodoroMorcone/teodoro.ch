@@ -18,7 +18,7 @@ import {PricingSection} from "@/components/sections/pricing-section";
 import {ResultsSection} from "@/components/sections/results-section";
 import {ServicesSection} from "@/components/sections/services-section";
 import {TLDRSection} from "@/components/sections/tldr-section";
-import {CalendlyInlineEmbed} from "@/components/ui/calendly-inline-embed";
+import {CalendeskEmbed, DEFAULT_CALENDESK_EMBED_URL} from "@/components/ui/calendesk-embed";
 import {getGoogleReviews} from "@/lib/reviews/google";
 import {buildLandingJsonLd} from "@/lib/seo/jsonld";
 import {buildPageMetadata} from "@/lib/seo/meta";
@@ -35,7 +35,6 @@ type LocalePageProps = {
   };
 };
 
-const CALENDLY_EVENT_URL = "https://calendly.com/teo6oro/new-meeting";
 
 export async function generateMetadata({params}: LocalePageProps): Promise<Metadata> {
   const {locale: localeParam} = params;
@@ -116,18 +115,25 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
     secondary: {label: tCommon("cta.secondary"), href: "#services"},
   };
 
-  const calendlyLoadingLabel =
-    (hero?.calendlyLoadingFallback as string | undefined) ??
-    tLanding("hero.calendlyLoadingFallback", {defaultMessage: "Calendly scheduling is loading…"});
-  const calendlyTriggerLabel =
-    (hero?.calendlyTriggerLabel as string | undefined) ??
-    tLanding("hero.calendlyTriggerLabel", {defaultMessage: "Open booking calendar"});
-  const calendlyFrameTitle = tLanding("hero.calendlyFrameTitle", {defaultMessage: "Calendly booking"});
-  const calendlyPlaceholderLabel =
-    (contact?.calendlyPlaceholder as string | undefined) ??
-    tLanding("contact.calendlyPlaceholder", {
-      defaultMessage: "Open the booking calendar only when you’re ready to choose a slot.",
+  const bookingFrameTitle =
+    hero?.bookingFrameTitle ??
+    contact?.bookingFrameTitle ??
+    tLanding("contact.bookingFrameTitle", {defaultMessage: "Book a lesson online"});
+  const bookingAvailabilityNote =
+    hero?.bookingAvailabilityNote ??
+    contact?.bookingAvailabilityNote ??
+    tLanding("contact.bookingAvailabilityNote", {
+      defaultMessage: "Availability updates in real time. Pick the slot that fits you best.",
     });
+  const bookingActivationLabel =
+    hero?.bookingActivationLabel ??
+    contact?.bookingActivationLabel ??
+    tLanding("contact.bookingActivationLabel", {defaultMessage: "Load the booking calendar"});
+  const bookingLoadingLabel =
+    hero?.bookingLoadingLabel ??
+    contact?.bookingLoadingLabel ??
+    tLanding("contact.bookingLoadingLabel", {defaultMessage: "Calendesk availability is loading…"});
+  const bookingEmbedUrl = contact?.bookingEmbedUrl ?? DEFAULT_CALENDESK_EMBED_URL;
 
   const landingContent: LandingContent = {
     hero,
@@ -161,16 +167,17 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
 
           <ResultsSection results={results} reviews={googleReviews} />
 
-          <CalendlyInlineEmbed
-            eventUrl={CALENDLY_EVENT_URL}
-            buttonLabel={calendlyTriggerLabel}
-            loadingLabel={calendlyLoadingLabel}
-            placeholderLabel={calendlyPlaceholderLabel}
-            title={calendlyFrameTitle}
-            className="w-full"
-            iframeClassName="rounded-3xl"
-            height={700}
-          />
+          <div className="flex flex-col gap-4">
+            <CalendeskEmbed
+              title={bookingFrameTitle}
+              activationLabel={bookingActivationLabel}
+              loadingLabel={bookingLoadingLabel}
+              src={bookingEmbedUrl}
+              className="w-full"
+              iframeClassName="rounded-3xl"
+            />
+            <p className="text-sm text-secondary dark:text-surface/70">{bookingAvailabilityNote}</p>
+          </div>
 
           <TLDRSection tldr={tldr} intentClusters={intentClusters} />
 
