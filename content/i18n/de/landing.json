@@ -246,7 +246,7 @@
         {
           "id": "faq-payment",
           "question": "Wie erfolgt die Bezahlung?",
-          "answer": "Die Bezahlung erfolgt per Rechnung oder Stripe-Link (Kreditkarte, Twint). Pakete werden vor dem Start beglichen; Einzellektionen zahlst du innerhalb von 10 Tagen nach der Session."
+          "answer": "Die Bezahlung erfolgt per Rechnung oder Stripe-Link (Kreditkarte, Twint). Pakete und Einzellektionen werden vor der ersten Session vorausbezahlt."
         },
         {
           "id": "faq-privacy",
@@ -256,7 +256,7 @@
         {
           "id": "faq-bms",
           "question": "Bereiten Sie auch auf BMS/HMS/FMS spezifische Teile vor?",
-          "answer": "Ja, inklusive spezifischer Anforderungsprofile für BMS, BM2, HMS und FMS. Wir trainieren quantitative Aufgaben, Sprach-/Aufsatzteile und führen realistische Simulationen mit Bewertungsraster durch."
+          "answer": "Ja, inklusive spezifischer Anforderungsprofile für BMS, BM2, HMS und FMS. Ich trainiere quantitative Aufgaben, Sprach-/Aufsatzteile und führe realistische Simulationen mit Bewertungsraster durch."
         }
       ]
     },
@@ -364,22 +364,22 @@
         {
           "term": "Gymiprüfung",
           "definition": "Zentrale Aufnahmeprüfung für den Übertritt ans Lang- oder Kurzgymnasium im Kanton Zürich.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "BMS",
           "definition": "Berufsmaturitätsschule – kombiniert berufliche Grundbildung mit gymnasialen Inhalten.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "BM2",
           "definition": "Berufsmaturität für Berufsleute mit EFZ – bereitet praxisnah auf die verkürzte Abschlussprüfung in Mathematik und weitere Fächer vor.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "Mock-Exam",
           "definition": "Prüfungssimulation unter realen Bedingungen zur Gewöhnung an Zeitdruck und Aufgabenformat.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         }
       ]
     },
@@ -534,7 +534,7 @@
   },
   "contact": {
     "title": "Kontakt & Buchung",
-    "description": "Schreibe mir eine kurze WhatsApp-Nachricht mit Zielsetzung, Schulstufe und Zeitraum – das erste Kennenlernen findet dort statt. Alle weiteren Zoom-Lektionen planen wir gemeinsam via Calendesk.",
+    "description": "Schreibe mir eine kurze WhatsApp-Nachricht mit Zielsetzung, Schulstufe und Zeitraum – das erste Kennenlernen findet dort statt. Alle weiteren Zoom-Lektionen plane ich gemeinsam mit dir via Calendesk.",
     "bookingFrameTitle": "Online-Lektion buchen",
     "bookingAvailabilityNote": "Calendesk zeigt dir verfügbare Zeiten in Echtzeit, damit du den passenden Slot wählen kannst.",
     "bookingActivationLabel": "Buchungskalender laden",
@@ -615,18 +615,5 @@
       "Datenschutz-Anfragen bitte an info@teodoro.ch richten."
     ]
   },
-  "outboundLinks": [
-    {
-      "name": "TODO – Bildungsdirektion Zürcher Gymiprüfung",
-      "url": "https://example.com",
-      "description": "Offizielle Informationen zur Aufnahmeprüfung.",
-      "category": "authority"
-    },
-    {
-      "name": "TODO – BMS Zürich",
-      "url": "https://example.com",
-      "description": "Rahmenbedingungen für die Berufsmaturitätsschule.",
-      "category": "authority"
-    }
-  ]
+  "outboundLinks": []
 }

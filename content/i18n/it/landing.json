@@ -246,7 +246,7 @@
         {
           "id": "faq-payment",
           "question": "Quali sono le modalità di pagamento?",
-          "answer": "Pagamento con fattura o Stripe (carta, Twint). I pacchetti si saldano prima dell’avvio; le lezioni singole si pagano entro 10 giorni dalla sessione."
+          "answer": "Pagamento con fattura o Stripe (carta, Twint). Pacchetti e lezioni singole si saldano prima della prima sessione confermata."
         },
         {
           "id": "faq-privacy",
@@ -364,22 +364,22 @@
         {
           "term": "Gymiprüfung",
           "definition": "Esame centrale di ammissione al ginnasio (scuola superiore) nel Canton Zurigo.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "BMS",
           "definition": "Scuola di maturità professionale che combina formazione professionale e contenuti liceali.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "BM2",
           "definition": "Percorso di maturità professionale per titolari di attestato federale (EFZ) con esame finale di matematica intensivo e moduli di cultura generale.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "Mock exam",
           "definition": "Simulazione completa d’esame per abituarsi alle condizioni reali di tempo e formato.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         }
       ]
     },
@@ -534,7 +534,7 @@
   },
   "contact": {
     "title": "Contatti & prenotazioni",
-    "description": "Scrivimi subito su WhatsApp con obiettivi, classe e periodo desiderato: il primo confronto avviene lì. Le sessioni Zoom successive le programmiamo insieme su Calendesk.",
+    "description": "Scrivimi subito su WhatsApp con obiettivi, classe e periodo desiderato: il primo confronto avviene lì. Le sessioni Zoom successive le programmo insieme a te su Calendesk.",
     "bookingFrameTitle": "Prenota una lezione online",
     "bookingAvailabilityNote": "Calendesk mostra in tempo reale le disponibilità, così puoi scegliere lo slot perfetto.",
     "bookingActivationLabel": "Carica il calendario delle prenotazioni",
@@ -615,18 +615,5 @@
       "Per richieste sulla privacy scrivere a info@teodoro.ch."
     ]
   },
-  "outboundLinks": [
-    {
-      "name": "TODO – Direzione dell’educazione Zurigo Gymiprüfung",
-      "url": "https://example.com",
-      "description": "Informazioni ufficiali sull’esame di ammissione.",
-      "category": "authority"
-    },
-    {
-      "name": "TODO – BMS Zurigo",
-      "url": "https://example.com",
-      "description": "Dettagli sulla scuola di maturità professionale.",
-      "category": "authority"
-    }
-  ]
+  "outboundLinks": []
 }

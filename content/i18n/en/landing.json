@@ -246,7 +246,7 @@
         {
           "id": "faq-payment",
           "question": "What are the payment options?",
-          "answer": "Pay securely via invoice or Stripe (card, Twint). Packages are settled before the first session; single lessons are due within 10 days of delivery."
+          "answer": "Pay securely via invoice or Stripe (card, Twint). Packages and single lessons are prepaid before the first session is confirmed."
         },
         {
           "id": "faq-privacy",
@@ -286,7 +286,7 @@
           "notes": ["Build mental strategies and scheduled breaks.", "Assemble a final exam-day checklist and reinforcement plan."]
         }
       ],
-      "disclaimer": "The plan is tailored individually – we’ll tailor details during the initial consult."
+      "disclaimer": "The plan is tailored individually – I'll finalise the details during the initial consult."
     },
     "comparison": {
       "title": "Compare your options",
@@ -364,22 +364,22 @@
         {
           "term": "Gymiprüfung",
           "definition": "Central admission exam for Zurich’s long-track or short-track Gymnasium.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "BMS",
           "definition": "Berufsmaturitätsschule – combines vocational training with general education.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "BM2",
           "definition": "Second vocational baccalaureate pathway for EFZ graduates with a condensed maths final exam and complementary general education.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         },
         {
           "term": "Mock exam",
           "definition": "Full exam simulation under real conditions to build familiarity with format and timing.",
-          "relatedLinks": ["TODO"]
+          "relatedLinks": []
         }
       ]
     },
@@ -615,18 +615,5 @@
       "For privacy questions contact info@teodoro.ch."
     ]
   },
-  "outboundLinks": [
-    {
-      "name": "TODO – Zurich education department Gymiprüfung",
-      "url": "https://example.com",
-      "description": "Official information on the entrance exam.",
-      "category": "authority"
-    },
-    {
-      "name": "TODO – BMS Zurich",
-      "url": "https://example.com",
-      "description": "Details on vocational baccalaureate programmes.",
-      "category": "authority"
-    }
-  ]
+  "outboundLinks": []
 }
