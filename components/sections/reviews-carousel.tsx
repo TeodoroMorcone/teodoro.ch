@@ -3,6 +3,8 @@
 import {useCallback, useEffect, useMemo, useState} from "react";
 
 import type {GoogleReview} from "@/lib/reviews/google";
+import type {LucideIcon} from "lucide-react";
+import {Facebook, Globe, Instagram, Linkedin, Twitter, Youtube} from "lucide-react";
 
 const DESKTOP_CHUNK_SIZE = 6;
 const MOBILE_CHUNK_SIZE = 1;
@@ -20,6 +22,33 @@ function chunkReviews(reviews: GoogleReview[], size: number): ReviewSlide[] {
     chunks.push(reviews.slice(index, index + size));
   }
   return chunks;
+}
+
+const SOCIAL_ICON_COMPONENTS: Record<string, LucideIcon> = {
+  facebook: Facebook,
+  instagram: Instagram,
+  linkedin: Linkedin,
+  twitter: Twitter,
+  x: Twitter,
+  youtube: Youtube,
+  globe: Globe,
+  web: Globe,
+  website: Globe,
+};
+
+const FALLBACK_SOCIAL_ICON: LucideIcon = Globe;
+
+function getSocialIconComponent(name?: string | null): LucideIcon | null {
+  if (!name) {
+    return null;
+  }
+
+  const key = name.trim().toLowerCase();
+  if (!key) {
+    return null;
+  }
+
+  return SOCIAL_ICON_COMPONENTS[key] ?? FALLBACK_SOCIAL_ICON;
 }
 
 export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
@@ -95,52 +124,68 @@ export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
     <div className="flex flex-col gap-6">
       <div className="relative overflow-hidden rounded-3xl border border-secondary/20 bg-surface p-6 shadow-sm dark:border-surface/20 dark:bg-primary/20">
         <div className="grid gap-5 sm:grid-cols-2">
-          {activeSlide.map((review) => (
-            <article
-              key={`${review.authorName}-${review.text.slice(0, 32)}`}
-              className="group flex h-full flex-col gap-3 rounded-3xl border border-secondary/20 bg-surface px-5 py-4 text-sm text-primary shadow-sm transition-transform transition-colors duration-200 ease-soft-sine hover:-translate-y-1 hover:bg-primary hover:text-surface hover:shadow-sidebar dark:border-surface/20 dark:bg-primary/30 dark:text-surface dark:hover:bg-surface dark:hover:text-primary"
-            >
-              <header className="flex items-center gap-3">
-                {review.profilePhotoUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={review.profilePhotoUrl}
-                    alt={`Avatar of ${review.authorName}`}
-                    className="h-9 w-9 rounded-full border border-secondary/30 object-cover transition-colors duration-200 group-hover:border-surface dark:group-hover:border-primary"
-                    loading="lazy"
-                  />
-                ) : (
-                  <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/30 text-xs font-semibold uppercase text-primary transition-colors duration-200 group-hover:bg-surface group-hover:text-primary dark:text-surface dark:group-hover:bg-primary dark:group-hover:text-surface">
-                    {review.authorName.slice(0, 2)}
+          {activeSlide.map((review) => {
+            const IconComponent = getSocialIconComponent(review.socialIcon);
+            const socialLabel = review.socialIcon?.trim() || "social";
+
+            return (
+              <article
+                key={`${review.authorName}-${review.text.slice(0, 32)}`}
+                className="group flex h-full flex-col gap-3 rounded-3xl border border-secondary/20 bg-surface px-5 py-4 text-sm text-primary shadow-sm transition-transform transition-colors duration-200 ease-soft-sine hover:-translate-y-1 hover:bg-primary hover:text-surface hover:shadow-sidebar dark:border-surface/20 dark:bg-primary/30 dark:text-surface dark:hover:bg-surface dark:hover:text-primary"
+              >
+                <header className="flex items-center gap-3">
+                  {review.profilePhotoUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={review.profilePhotoUrl}
+                      alt={`Avatar of ${review.authorName}`}
+                      className="h-9 w-9 rounded-full border border-secondary/30 object-cover transition-colors duration-200 group-hover:border-surface dark:group-hover:border-primary"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/30 text-xs font-semibold uppercase text-primary transition-colors duration-200 group-hover:bg-surface group-hover:text-primary dark:text-surface dark:group-hover:bg-primary dark:group-hover:text-surface">
+                      {review.authorName.slice(0, 2)}
+                    </div>
+                  )}
+
+                  <div className="flex flex-1 items-center gap-2">
+                    <span className="font-semibold text-primary transition-colors duration-200 group-hover:text-surface dark:text-surface dark:group-hover:text-primary">
+                      {review.authorName}
+                    </span>
+                    {IconComponent && review.socialUrl ? (
+                      <a
+                        href={review.socialUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Open ${review.authorName}'s ${socialLabel} profile`}
+                        className="inline-flex h-7 w-7 items-center justify-center rounded-full text-secondary transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent group-hover:text-surface dark:text-surface/80 dark:group-hover:text-primary"
+                      >
+                        <IconComponent className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
+                      </a>
+                    ) : null}
+                    <div className="ml-auto flex items-center gap-1 text-xs font-semibold text-[#f6c343] transition-colors duration-200 group-hover:text-[#ffd76f] dark:text-[#f6c343] dark:group-hover:text-[#ffd76f]">
+                      {Array.from({length: 5}).map((_, index) => (
+                        <span key={index}>{index < Math.round(review.rating) ? "★" : "☆"}</span>
+                      ))}
+                    </div>
                   </div>
-                )}
+                </header>
 
-                <div className="flex flex-1 items-center gap-2">
-                  <span className="font-semibold text-primary transition-colors duration-200 group-hover:text-surface dark:text-surface dark:group-hover:text-primary">
-                    {review.authorName}
-                  </span>
-                  <div className="ml-auto flex items-center gap-1 text-xs font-semibold text-[#f6c343] transition-colors duration-200 group-hover:text-[#ffd76f] dark:text-[#f6c343] dark:group-hover:text-[#ffd76f]">
-                    {Array.from({length: 5}).map((_, index) => (
-                      <span key={index}>{index < Math.round(review.rating) ? "★" : "☆"}</span>
-                    ))}
-                  </div>
-                </div>
-              </header>
+                <p className="text-sm text-secondary transition-colors duration-200 group-hover:text-surface/85 dark:text-surface/80 dark:group-hover:text-primary/85">
+                  {review.text}
+                </p>
 
-              <p className="text-sm text-secondary transition-colors duration-200 group-hover:text-surface/85 dark:text-surface/80 dark:group-hover:text-primary/85">
-                {review.text}
-              </p>
-
-              {review.url ? (
-                <a
-                  href={review.url}
-                  className="text-xs font-semibold uppercase tracking-[0.2em] text-accent transition-colors duration-200 hover:underline group-hover:text-surface dark:group-hover:text-primary"
-                >
-                  View review source
-                </a>
-              ) : null}
-            </article>
-          ))}
+                {review.url ? (
+                  <a
+                    href={review.url}
+                    className="text-xs font-semibold uppercase tracking-[0.2em] text-accent transition-colors duration-200 hover:underline group-hover:text-surface dark:group-hover:text-primary"
+                  >
+                    View review source
+                  </a>
+                ) : null}
+              </article>
+            );
+          })}
         </div>
 
       </div>

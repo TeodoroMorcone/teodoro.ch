@@ -11,6 +11,8 @@ export type GoogleReview = {
   text: string;
   profilePhotoUrl?: string;
   url?: string;
+  socialIcon?: string;
+  socialUrl?: string;
 };
 
 type GooglePlaceReview = {
