@@ -26,6 +26,12 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+@layer base {
+    #root > div > div > div {
+    background-color: theme("colors.primary.DEFAULT") !important;
+  }
+}
+
 
 @layer utilities {
   .text-balance {
