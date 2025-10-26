@@ -4,7 +4,6 @@ import Image from "next/image";
 import {useTranslations} from "next-intl";
 
 import {CTAButton} from "@/components/ui/cta-button";
-import {SectionHeading} from "@/components/ui/section-heading";
 import type {HeroContent} from "@/types/landing";
 
 type HeroSectionProps = {
@@ -19,6 +18,12 @@ type HeroSectionProps = {
 export function HeroSection({hero, ctas}: HeroSectionProps) {
   const t = useTranslations("landing");
   const expertName = hero.expertName ?? "Teodoro Morcone";
+  const portraitSrc = hero.illustration?.src ?? "/images/avatar.webp";
+  const portraitAlt = hero.illustration?.alt ?? t("hero.avatarAlt");
+  const defaultPortraitCaption = "Ich sehe etwa so aus.";
+  const rawPortraitCaption = hero.illustration?.caption?.trim() ?? "";
+  const portraitCaption =
+    rawPortraitCaption.length > 0 ? rawPortraitCaption : defaultPortraitCaption;
 
   return (
     <section
@@ -41,40 +46,27 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
           </CTAButton>
         </div>
       </div>
-      <div className="flex flex-col gap-6 rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10">
-        <SectionHeading
-          eyebrow={hero.illustration ? "Portrait" : "Hero"}
-          title=""
-          description={
-            <p className="text-sm text-secondary dark:text-surface/70">
-              {hero.illustration?.caption ??
-                "Ein Blick hinter die Kulissen: so sehen unsere Online-Sessions aus."}
-            </p>
-          }
-        />
-        <figure className="flex flex-col items-center gap-4">
-          <div className="flex w-full flex-col items-center gap-3 rounded-3xl border border-primary/15 bg-primary/5 p-6 shadow-xl backdrop-blur-sm dark:border-primary/30 dark:bg-surface/25">
-            <div className="relative w-full overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 via-primary/5 to-accent/10 shadow-lg ring-1 ring-primary/10 dark:from-surface/20 dark:via-surface/10 dark:to-primary/30">
-              <Image
-                src="/images/avatar.webp"
-                alt={t("hero.avatarAlt")}
-                width={640}
-                height={640}
-                priority
-                sizes="(min-width: 1024px) 28rem, 80vw"
-                className="h-full w-full rounded-2xl object-cover"
-              />
-            </div>
-            <p className="text-base font-semibold tracking-wide text-primary dark:text-accent">
-              {expertName}
-            </p>
+      <div className="relative flex flex-col gap-6 overflow-hidden rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10 sm:p-10 min-h-[22rem] sm:min-h-[26rem]">
+        <div className="absolute -inset-8 sm:-inset-10">
+          <Image
+            src={portraitSrc}
+            alt={portraitAlt}
+            fill
+            priority
+            sizes="(min-width: 1024px) 32rem, 100vw"
+            className="hero-portrait-object hero-portrait-scale h-full w-full object-cover"
+          />
+        </div>
+        <div className="pointer-events-none absolute -inset-8 sm:-inset-10 bg-gradient-to-t from-black/35 via-black/15 to-transparent dark:from-surface/55 dark:via-surface/35 dark:to-transparent" />
+        <div className="relative z-10 mt-auto flex flex-col gap-3 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]">
+          <span className="inline-flex w-fit items-center rounded-full bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-sm">
+            Portrait
+          </span>
+          <div className="max-w-md space-y-2 rounded-2xl bg-black/25 p-6 backdrop-blur-md">
+            <p className="text-lg font-semibold tracking-wide text-white sm:text-xl">{expertName}</p>
+            <p className="text-sm leading-relaxed text-white/85 sm:text-base">{portraitCaption}</p>
           </div>
-          {hero.illustration?.caption ? (
-            <figcaption className="text-xs uppercase tracking-[0.2em] text-secondary/70 dark:text-surface/60">
-              {hero.illustration.caption}
-            </figcaption>
-          ) : null}
-        </figure>
+        </div>
       </div>
     </section>
   );
