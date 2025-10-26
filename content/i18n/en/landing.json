@@ -32,7 +32,7 @@
       },
       {
         "label": "Pricing",
-        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 500 – includes follow-up notes, progress tracking, and 24-hour response time."
+        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 550 (approx. 2 lessons a month), 13-pack CHF 650 (approx. 3 lessons a month) – includes follow-up notes, progress tracking, and 24-hour response time."
       },
       {
         "label": "How to start?",
@@ -59,7 +59,7 @@
     {
       "id": "pricing",
       "title": "Pricing approach",
-      "body": "Transparent hourly rates, discounted 5- and 10-lesson bundles, and custom proposals for longer engagements."
+      "body": "Transparent hourly rates, discounted 5-, 10-, and 13-lesson bundles, and custom proposals for longer engagements."
     },
     {
       "id": "delivery",
@@ -197,14 +197,26 @@
         {
           "id": "ten-pack",
           "name": "10-pack",
-          "price": "CHF 500",
-          "unit": "10 × 60 minutes (CHF 50 per lesson)",
+          "price": "CHF 550",
+          "unit": "10 × 60 minutes (CHF 55 per lesson, approx 2 lessons a month)",
           "features": [
             "Full exam preparation programme",
             "Detailed weekly reports",
             "Priority scheduling"
           ],
           "cta": "Start the programme"
+        },
+        {
+          "id": "thirteen-pack",
+          "name": "13-pack",
+          "price": "CHF 650",
+          "unit": "13 × 60 minutes (CHF 50 per lesson, approx 3 lessons a month)",
+          "features": [
+            "Long-term mastery curriculum",
+            "Monthly strategy review & guardian updates",
+            "Flexible scheduling across school terms"
+          ],
+          "cta": "Secure ongoing coaching"
         }
       ]
     },
@@ -291,6 +303,10 @@
         {
           "key": "tenPack",
           "label": "10-pack"
+        },
+        {
+          "key": "thirteenPack",
+          "label": "13-pack"
         }
       ],
       "rows": [
@@ -299,7 +315,8 @@
           "values": {
             "single": "60 minutes",
             "fivePack": "60 minutes",
-            "tenPack": "60 minutes"
+            "tenPack": "60 minutes",
+            "thirteenPack": "60 minutes"
           }
         },
         {
@@ -307,7 +324,8 @@
           "values": {
             "single": "Focus on immediate goals",
             "fivePack": "Structured plan + homework",
-            "tenPack": "Complete programme + mock exams"
+            "tenPack": "Complete programme + mock exams",
+            "thirteenPack": "Long-term roadmap + guardian coordination"
           }
         },
         {
@@ -315,7 +333,17 @@
           "values": {
             "single": "On request",
             "fivePack": "Weekly",
-            "tenPack": "Weekly + dedicated reviews"
+            "tenPack": "Weekly + dedicated reviews",
+            "thirteenPack": "Bi-weekly reviews + monthly reports"
+          }
+        },
+        {
+          "metric": "Total package price",
+          "values": {
+            "single": "CHF 70",
+            "fivePack": "CHF 300",
+            "tenPack": "CHF 550",
+            "thirteenPack": "CHF 650"
           }
         },
         {
@@ -323,11 +351,12 @@
           "values": {
             "single": "CHF 70",
             "fivePack": "CHF 60",
-            "tenPack": "CHF 50"
+            "tenPack": "CHF 55",
+            "thirteenPack": "CHF 50"
           }
         }
       ],
-      "footnote": "All prices exclude VAT (service not VAT-registered). Adjustments possible for custom programmes."
+      "footnote": "All prices exclude VAT (service not VAT-registered). Approximate monthly counts and totals assume consistent scheduling."
     },
     "glossary": {
       "title": "Glossary",

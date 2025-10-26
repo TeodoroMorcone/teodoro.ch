@@ -32,7 +32,7 @@
       },
       {
         "label": "Fascia prezzi",
-        "description": "Lezione singola CHF 70, pacchetto 5 CHF 300, pacchetto 10 CHF 500 – include follow-up, report e risposta entro 24 ore."
+        "description": "Lezione singola CHF 70, pacchetto 5 CHF 300, pacchetto 10 CHF 550 (circa 2 lezioni al mese), pacchetto 13 CHF 650 (circa 3 lezioni al mese) – include follow-up, report e risposta entro 24 ore."
       },
       {
         "label": "Come iniziare?",
@@ -59,7 +59,7 @@
     {
       "id": "pricing",
       "title": "Tariffe",
-      "body": "Tariffe trasparenti a lezione, sconti per pacchetti da 5 o 10 unità e proposte su misura per percorsi più lunghi."
+      "body": "Tariffe trasparenti a lezione, sconti per pacchetti da 5, 10 e 13 unità e proposte su misura per percorsi più lunghi."
     },
     {
       "id": "delivery",
@@ -197,14 +197,26 @@
         {
           "id": "ten-pack",
           "name": "Pacchetto 10 lezioni",
-          "price": "CHF 500",
-          "unit": "10 × 60 minuti (CHF 50 a lezione)",
+          "price": "CHF 550",
+          "unit": "10 × 60 minuti (CHF 55 a lezione, circa 2 lezioni al mese)",
           "features": [
             "Preparazione completa all’esame",
             "Report settimanali dettagliati",
             "Priorità nelle fasce orarie"
           ],
           "cta": "Avvia il programma"
+        },
+        {
+          "id": "thirteen-pack",
+          "name": "Pacchetto 13 lezioni",
+          "price": "CHF 650",
+          "unit": "13 × 60 minuti (CHF 50 a lezione, circa 3 lezioni al mese)",
+          "features": [
+            "Curriculum di lungo periodo",
+            "Revisione strategica mensile e aggiornamenti per i genitori",
+            "Pianificazione flessibile durante l’anno scolastico"
+          ],
+          "cta": "Prenota il percorso continuativo"
         }
       ]
     },
@@ -291,6 +303,10 @@
         {
           "key": "tenPack",
           "label": "Pacchetto 10"
+        },
+        {
+          "key": "thirteenPack",
+          "label": "Pacchetto 13"
         }
       ],
       "rows": [
@@ -299,7 +315,8 @@
           "values": {
             "single": "60 minuti",
             "fivePack": "60 minuti",
-            "tenPack": "60 minuti"
+            "tenPack": "60 minuti",
+            "thirteenPack": "60 minuti"
           }
         },
         {
@@ -307,7 +324,8 @@
           "values": {
             "single": "Focus sugli obiettivi del momento",
             "fivePack": "Piano strutturato + compiti",
-            "tenPack": "Percorso completo + mock exam"
+            "tenPack": "Percorso completo + mock exam",
+            "thirteenPack": "Roadmap di lungo periodo + coordinamento con i genitori"
           }
         },
         {
@@ -315,7 +333,17 @@
           "values": {
             "single": "Su richiesta",
             "fivePack": "Settimanale",
-            "tenPack": "Settimanale + review dedicate"
+            "tenPack": "Settimanale + review dedicate",
+            "thirteenPack": "Ogni due settimane + report mensile"
+          }
+        },
+        {
+          "metric": "Prezzo totale pacchetto",
+          "values": {
+            "single": "CHF 70",
+            "fivePack": "CHF 300",
+            "tenPack": "CHF 550",
+            "thirteenPack": "CHF 650"
           }
         },
         {
@@ -323,11 +351,12 @@
           "values": {
             "single": "CHF 70",
             "fivePack": "CHF 60",
-            "tenPack": "CHF 50"
+            "tenPack": "CHF 55",
+            "thirteenPack": "CHF 50"
           }
         }
       ],
-      "footnote": "Prezzi IVA esclusa (non soggetto a IVA). Possibili adattamenti per esigenze specifiche."
+      "footnote": "Prezzi IVA esclusa (non soggetto a IVA). I riferimenti mensili e i totali sono indicativi e basati su una pianificazione regolare."
     },
     "glossary": {
       "title": "Glossario",

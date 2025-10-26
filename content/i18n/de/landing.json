@@ -32,7 +32,7 @@
       },
       {
         "label": "Preisrahmen",
-        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 500 – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden."
+        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 550 (ca. 2 Lektionen pro Monat), 13er-Paket CHF 650 (ca. 3 Lektionen pro Monat) – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden."
       },
       {
         "label": "Wie starten?",
@@ -59,7 +59,7 @@
     {
       "id": "pricing",
       "title": "Preisgestaltung",
-      "body": "Transparente Stundenansätze, vergünstigte Pakete (5er / 10er) und massgeschneiderte Angebote für längere Begleitungen."
+      "body": "Transparente Stundenansätze, vergünstigte Pakete (5er / 10er / 13er) und massgeschneiderte Angebote für längere Begleitungen."
     },
     {
       "id": "delivery",
@@ -197,14 +197,26 @@
         {
           "id": "ten-pack",
           "name": "10er Paket",
-          "price": "CHF 500",
-          "unit": "10 × 60 Minuten (CHF 50 pro Lektion)",
+          "price": "CHF 550",
+          "unit": "10 × 60 Minuten (CHF 55 pro Lektion, ca. 2 Lektionen pro Monat)",
           "features": [
             "Komplette Prüfungsvorbereitung",
             "Wöchentliche Fortschrittsberichte",
             "Priorisierte Terminwahl"
           ],
           "cta": "Programm starten"
+        },
+        {
+          "id": "thirteen-pack",
+          "name": "13er Paket",
+          "price": "CHF 650",
+          "unit": "13 × 60 Minuten (CHF 50 pro Lektion, ca. 3 Lektionen pro Monat)",
+          "features": [
+            "Langfristiges Mastery-Curriculum",
+            "Monatliche Strategie-Reviews & Eltern-Updates",
+            "Flexible Terminplanung über Schulphasen"
+          ],
+          "cta": "Kontingent sichern"
         }
       ]
     },
@@ -291,6 +303,10 @@
         {
           "key": "tenPack",
           "label": "10er Paket"
+        },
+        {
+          "key": "thirteenPack",
+          "label": "13er Paket"
         }
       ],
       "rows": [
@@ -299,7 +315,8 @@
           "values": {
             "single": "60 Minuten",
             "fivePack": "60 Minuten",
-            "tenPack": "60 Minuten"
+            "tenPack": "60 Minuten",
+            "thirteenPack": "60 Minuten"
           }
         },
         {
@@ -307,7 +324,8 @@
           "values": {
             "single": "Individuelle Schwerpunkte",
             "fivePack": "Strukturierter Plan inklusive Hausaufgaben",
-            "tenPack": "Komplettes Programm inkl. Mock-Exams"
+            "tenPack": "Komplettes Programm inkl. Mock-Exams",
+            "thirteenPack": "Langfristiger Fahrplan + Elternkoordination"
           }
         },
         {
@@ -315,7 +333,17 @@
           "values": {
             "single": "Auf Anfrage",
             "fivePack": "Wöchentlich",
-            "tenPack": "Wöchentlich + Review Calls"
+            "tenPack": "Wöchentlich + Review Calls",
+            "thirteenPack": "Zweiwöchentlich + Monatsberichte"
+          }
+        },
+        {
+          "metric": "Paketpreis gesamt",
+          "values": {
+            "single": "CHF 70",
+            "fivePack": "CHF 300",
+            "tenPack": "CHF 550",
+            "thirteenPack": "CHF 650"
           }
         },
         {
@@ -323,11 +351,12 @@
           "values": {
             "single": "CHF 70",
             "fivePack": "CHF 60",
-            "tenPack": "CHF 50"
+            "tenPack": "CHF 55",
+            "thirteenPack": "CHF 50"
           }
         }
       ],
-      "footnote": "Alle Preise verstehen sich ohne MWST (nicht MWST-pflichtig). Anpassungen bei individuellen Programmen möglich."
+      "footnote": "Alle Preise verstehen sich ohne MWST (nicht MWST-pflichtig). Monatliche Angaben und Gesamtpreise sind Näherungswerte bei regelmässiger Planung."
     },
     "glossary": {
       "title": "Glossar",
