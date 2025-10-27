@@ -29,24 +29,24 @@
     "rating": 5,
     "text": "Teodoro unterrichtet ausgezeichnet in mehreren Sprachen. Er ist sehr vertrauenswürdig und sorgt für enorme Fortschritte. Ich bin begeistert.",
     "url": "https://tutor24.ch/en/providers/1580036#reviews",
-    "socialIcon": "",
-    "socialUrl": ""
+    "socialIcon": "Instagram",
+    "socialUrl": "https://www.instagram.com/claudia_b_s_"
   },
   {
     "authorName": "Marco C.",
     "rating": 5,
     "text": "Teo ist sehr vertrauenswürdig und pünktlich. Unsere beiden Kinder freuen sich immer wieder darauf, sich mit Teo in knifflige Probleme zu vertiefen. Die Zusammenarbeit hat sich definitiv bewährt, sowohl vor Ort als auch bei Video-Telefonie-Sitzungen. Immer gerne wieder!",
     "url": "https://www.google.com/search?sca_esv=dc9ce39bf885719d&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-E8ykEPKP9L6BD43CGnTT7vPcGhAlEKMeRmzLencRUIq9_vw-d5r49iMv72RUzv5sgAxlHNvZbnpJ_SfpV8-SJp-MYrbjy97RaW8AyBC--RmJ2HFTMA%3D%3D&q=Teodoro+Morcone+Nachhilfe+Reviews&sa=X&ved=2ahUKEwjhnZ62nb-QAxVY0AIHHf60EBsQ0bkNegQINxAD&biw=1920&bih=911&dpr=2",
-    "socialIcon": "",
-    "socialUrl": ""
+    "socialIcon": "Instagram",
+    "socialUrl": "https://www.instagram.com/marcocaflisch/"
   },
   {
     "authorName": "Yasmine S.",
     "rating": 5,
     "text": "Teodoro is a great teacher, he’s very reliable and prepares well for his classes. He also speaks many languages, which is very helpful too!",
     "url": "https://tutor24.ch/en/providers/1580036#reviews",
-    "socialIcon": "",
-    "socialUrl": ""
+    "socialIcon": "Instagram",
+    "socialUrl": "https://www.instagram.com/interstitialbeirut"
   },
   {
     "authorName": "Fitim B.",
@@ -69,8 +69,8 @@
     "rating": 5,
     "text": "Mir hat sehr gut gefallen, dass Teodoro so viel Geduld und Zeit hat. Er versucht auf verschiedene Arten, mir das Thema begreiflich zu machen. Danke!",
     "url": "https://tutor24.ch/en/providers/1580036#reviews",
-    "socialIcon": "",
-    "socialUrl": ""
+    "socialIcon": "tiktok",
+    "socialUrl": "https://www.tiktok.com/@dan.odermatt/"
   },
   {
     "authorName": "Martin S.",
@@ -93,7 +93,29 @@
     "rating": 5,
     "text": "Unter Teodoros Anleitung konnte ich die faszinierenden Aspekte der Mathematik wirklich schätzen lernen. Seine Art, komplexe Themen in verständliche Einheiten zu zerlegen, hat mir geholfen, selbst die schwierigsten Konzepte zu meistern. Seine Geduld und sein Engagement haben meinen Lernprozess erheblich bereichert. Ich bin Teodoro zutiefst dankbar und empfehle ihn jedem, der eine solide mathematische Bildung sucht.",
     "url": "https://tutor24.ch/en/providers/1580036#reviews",
-    "socialIcon": "",
-    "socialUrl": ""
-  }
+    "socialIcon": "Instagram",
+    "socialUrl": "https://www.instagram.com/mia.seeholzer/"
+  },
+  {"authorName": "Viktorya Senkal",
+    "rating": 5,
+    "text": "Teo ist für seine Professionalität, Kontinuität, Präsenz und Seriosität sehr zu schätzen!! Er erledigt seine Arbeit mit grosse Leidenschaft! Ich kann ihn nur weiterempfehlen und wünsche ihm viel Erfolg! Auf jeden Fall verdient 😊",
+    "url": "",
+    "socialIcon": "Instagram",
+    "socialUrl": "https://https://www.instagram.com/viktoryasenkal/"
+    },
+  {"authorName": "Dren",
+    "rating": 5,
+    "text": "Ich bin definitiv en langsame Lerner und da ish mer ufgefalle, dass de Theodoro en ganz geduldige ish. Er nimmt sich würklich Zitt, bis mers endli mal kapiert het. Preis-Leistig also top! Er ish eifach en geile Siech!!!",
+    "url": "",
+    "socialIcon": "Instagram",
+    "socialUrl": "https://https://www.instagram.com/dreni.berisha01/"
+    },
+  {"authorName": "Ginevra",
+    "rating": 5,
+    "text": "Er weiß, wie man motiviert und instruiert, aber auch, wann es Zeit ist, die Bremse zu ziehen. Er stärkt seine Schüler mental und macht ihnen Mut für die Prüfung. Er macht Witze, gestaltet den Unterricht lebendig und ist sympathisch sowie einfühlsam. Ich folge ihm auch gerne auf Instagram, weil er mich zu außerschulischen Disziplinen wie Sport motiviert und mehrere Hundert Kilo hebt.",
+    "url": "",
+    "socialIcon": "Instagram",
+    "socialUrl": "https://https://www.instagram.com/claudia_b_s_/"
+    }
+
 ]
