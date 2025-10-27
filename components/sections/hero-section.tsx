@@ -57,7 +57,6 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
             className="hero-portrait-object hero-portrait-scale h-full w-full object-cover"
           />
         </div>
-        <div className="pointer-events-none absolute -inset-8 sm:-inset-10 bg-gradient-to-t from-black/35 via-black/15 to-transparent dark:from-surface/55 dark:via-surface/35 dark:to-transparent" />
         <div className="relative z-10 mt-auto flex flex-col gap-3 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]">
           <span className="inline-flex w-fit items-center rounded-full bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-sm">
             Portrait
