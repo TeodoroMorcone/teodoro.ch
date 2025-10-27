@@ -1,6 +1,8 @@
 "use client";
 
-import {useCallback, useEffect, useMemo, useState} from "react";
+import {forwardRef, useCallback, useEffect, useMemo, useState} from "react";
+
+import type {ComponentProps} from "react";
 
 import type {GoogleReview} from "@/lib/reviews/google";
 import type {LucideIcon} from "lucide-react";
@@ -24,10 +26,29 @@ function chunkReviews(reviews: GoogleReview[], size: number): ReviewSlide[] {
   return chunks;
 }
 
+type IconProps = ComponentProps<typeof Facebook>;
+
+const TikTokIcon = forwardRef<SVGSVGElement, IconProps>(({color = "currentColor", strokeWidth: _strokeWidth, ...rest}, ref) => (
+  <svg
+    ref={ref}
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill={color}
+    {...rest}
+  >
+    <path d="M21.54 6.42a5.73 5.73 0 0 1-3.16-.98 6.02 6.02 0 0 1-1.38-1.44 6.44 6.44 0 0 1-.17-1.97H14v12.24a2.76 2.76 0 1 1-2-2.64V8.74a6.06 6.06 0 0 0-5 9.69 6.06 6.06 0 0 0 5 2.31 5.98 5.98 0 0 0 4.24-1.76A6 6 0 0 0 18 15V8.06a9 9 0 0 0 3.54.94z" />
+  </svg>
+));
+TikTokIcon.displayName = "TikTokIcon";
+
 const SOCIAL_ICON_COMPONENTS: Record<string, LucideIcon> = {
   facebook: Facebook,
   instagram: Instagram,
   linkedin: Linkedin,
+  tiktok: TikTokIcon,
+  "tik-tok": TikTokIcon,
   twitter: Twitter,
   x: Twitter,
   youtube: Youtube,
