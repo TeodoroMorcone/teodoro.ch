@@ -32,7 +32,7 @@
       },
       {
         "label": "Fascia prezzi",
-        "description": "Lezione singola CHF 70, pacchetto 5 CHF 300, pacchetto 10 CHF 550 (circa 2 lezioni al mese), pacchetto 13 CHF 650 (circa 3 lezioni al mese) – include follow-up, report e risposta entro 24 ore."
+        "description": "Lezione singola CHF 70, pacchetto 5 CHF 300, pacchetto 10 CHF 550 (circa 2 lezioni a settimana), pacchetto 13 CHF 650 (circa 3 lezioni a settimana) – include follow-up, report e risposta entro 24 ore."
       },
       {
         "label": "Come iniziare?",
@@ -198,7 +198,7 @@
           "id": "ten-pack",
           "name": "Pacchetto 10 lezioni",
           "price": "CHF 550",
-          "unit": "10 × 60 minuti (CHF 55 a lezione, circa 2 lezioni al mese)",
+          "unit": "10 × 60 minuti (CHF 55 a lezione, circa 2 lezioni a settimana)",
           "features": [
             "Preparazione completa all’esame",
             "Report settimanali dettagliati",
@@ -210,7 +210,7 @@
           "id": "thirteen-pack",
           "name": "Pacchetto 13 lezioni",
           "price": "CHF 650",
-          "unit": "13 × 60 minuti (CHF 50 a lezione, circa 3 lezioni al mese)",
+          "unit": "13 × 60 minuti (CHF 50 a lezione, circa 3 lezioni a settimana)",
           "features": [
             "Curriculum di lungo periodo",
             "Revisione strategica mensile e aggiornamenti per i genitori",

@@ -32,7 +32,7 @@
       },
       {
         "label": "Preisrahmen",
-        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 550 (ca. 2 Lektionen pro Monat), 13er-Paket CHF 650 (ca. 3 Lektionen pro Monat) – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden."
+        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 550 (ca. 2 Lektionen pro Woche), 13er-Paket CHF 650 (ca. 3 Lektionen pro Woche) – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden."
       },
       {
         "label": "Wie starten?",
@@ -198,7 +198,7 @@
           "id": "ten-pack",
           "name": "10er Paket",
           "price": "CHF 550",
-          "unit": "10 × 60 Minuten (CHF 55 pro Lektion, ca. 2 Lektionen pro Monat)",
+          "unit": "10 × 60 Minuten (CHF 55 pro Lektion, ca. 2 Lektionen pro Woche)",
           "features": [
             "Komplette Prüfungsvorbereitung",
             "Wöchentliche Fortschrittsberichte",
@@ -210,7 +210,7 @@
           "id": "thirteen-pack",
           "name": "13er Paket",
           "price": "CHF 650",
-          "unit": "13 × 60 Minuten (CHF 50 pro Lektion, ca. 3 Lektionen pro Monat)",
+          "unit": "13 × 60 Minuten (CHF 50 pro Lektion, ca. 3 Lektionen pro Woche)",
           "features": [
             "Langfristiges Mastery-Curriculum",
             "Monatliche Strategie-Reviews & Eltern-Updates",

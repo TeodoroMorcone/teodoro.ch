@@ -32,7 +32,7 @@
       },
       {
         "label": "Pricing",
-        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 550 (approx. 2 lessons a month), 13-pack CHF 650 (approx. 3 lessons a month) – includes follow-up notes, progress tracking, and 24-hour response time."
+        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 550 (approx. 2 lessons per week), 13-pack CHF 650 (approx. 3 lessons per week) – includes follow-up notes, progress tracking, and 24-hour response time."
       },
       {
         "label": "How to start?",
@@ -198,7 +198,7 @@
           "id": "ten-pack",
           "name": "10-pack",
           "price": "CHF 550",
-          "unit": "10 × 60 minutes (CHF 55 per lesson, approx 2 lessons a month)",
+          "unit": "10 × 60 minutes (CHF 55 per lesson, approx 2 lessons per week)",
           "features": [
             "Full exam preparation programme",
             "Detailed weekly reports",
@@ -210,7 +210,7 @@
           "id": "thirteen-pack",
           "name": "13-pack",
           "price": "CHF 650",
-          "unit": "13 × 60 minutes (CHF 50 per lesson, approx 3 lessons a month)",
+          "unit": "13 × 60 minutes (CHF 50 per lesson, approx 3 lessons per week)",
           "features": [
             "Long-term mastery curriculum",
             "Monthly strategy review & guardian updates",
