@@ -12,9 +12,10 @@ type NavLinkProps = {
   label: string;
   targetId?: string;
   onNavigate?: () => void;
+  emoji?: string;
 };
 
-export function NavLink({href, label, targetId, onNavigate}: NavLinkProps) {
+export function NavLink({href, label, targetId, onNavigate, emoji}: NavLinkProps) {
   const {activeId} = useActiveSection();
   const isActive = targetId ? activeId === targetId : false;
 
@@ -55,13 +56,25 @@ export function NavLink({href, label, targetId, onNavigate}: NavLinkProps) {
         prefetch={false}
       >
         <span>{label}</span>
-        <span
-          aria-hidden="true"
-          className={cn(
-            "ml-3 h-2 w-2 rounded-full transition-colors duration-200 ease-soft-sine",
-            isActive ? "bg-surface" : "bg-secondary/30 dark:bg-surface/40",
-          )}
-        />
+        {emoji ? (
+          <span
+            aria-hidden="true"
+            className={cn(
+              "ml-3 text-lg leading-none transition-transform duration-200 ease-soft-sine",
+              isActive ? "scale-110 opacity-100" : "opacity-60",
+            )}
+          >
+            {emoji}
+          </span>
+        ) : (
+          <span
+            aria-hidden="true"
+            className={cn(
+              "ml-3 h-2 w-2 rounded-full transition-colors duration-200 ease-soft-sine",
+              isActive ? "bg-surface" : "bg-secondary/30 dark:bg-surface/40",
+            )}
+          />
+        )}
       </Link>
     </li>
   );

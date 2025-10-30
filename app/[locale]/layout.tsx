@@ -11,7 +11,7 @@ import {ThemeToggle} from "@/components/navigation/theme-toggle";
 import {MobileNav} from "@/components/layout/mobile-nav";
 import {Sidebar} from "@/components/layout/sidebar";
 import {AppProviders} from "@/components/providers/app-providers";
-import {SECTION_LINKS} from "@/config/navigation";
+import {NAV_EMOJIS, SECTION_LINKS} from "@/config/navigation";
 import {getMessages} from "@/lib/i18n/get-messages";
 import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
 
@@ -46,6 +46,7 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
     href: link.href,
     label: tCommon(`nav.${link.navKey}`),
     targetId: link.targetId,
+    emoji: NAV_EMOJIS[link.navKey],
   }));
 
   console.log("[LocaleLayout] nav item configuration", {

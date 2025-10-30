@@ -48,6 +48,24 @@ export const SECTION_LINKS: SectionLink[] = [
   {id: "privacy", navKey: "privacy", targetId: "privacy", href: "#privacy"},
 ];
 
+export const NAV_EMOJIS: Record<NavKey | "legal", string> = {
+  tldr: "⚡",
+  services: "🛠️",
+  howItWorks: "⚙️",
+  results: "📈",
+  about: "👤",
+  pricing: "💰",
+  faq: "❓",
+  howTo: "📘",
+  comparison: "🆚",
+  glossary: "📚",
+  contact: "✉️",
+  impressum: "🏢",
+  terms: "📜",
+  privacy: "🔒",
+  legal: "⚖️",
+};
+
 export const LEGAL_LINK: LegalLink = {
   id: "legal",
   navKey: "legal",

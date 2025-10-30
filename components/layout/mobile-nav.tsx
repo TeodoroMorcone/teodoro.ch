@@ -19,6 +19,7 @@ type MobileNavItem = {
   href: string;
   label: string;
   targetId?: string;
+  emoji?: string;
 };
 
 
@@ -292,6 +293,7 @@ export function MobileNav({
                           href={item.href}
                           label={item.label}
                           {...(item.targetId ? {targetId: item.targetId} : {})}
+                          {...(item.emoji ? {emoji: item.emoji} : {})}
                           onNavigate={handleNavigate}
                         />
                       ))}

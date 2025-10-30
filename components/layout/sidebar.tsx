@@ -17,6 +17,7 @@ type SidebarNavItem = {
   href: string;
   label: string;
   targetId?: string;
+  emoji?: string;
 };
 
 type SidebarCtas = {
@@ -208,6 +209,7 @@ export function Sidebar({
                   href={item.href}
                   label={item.label}
                   {...(item.targetId ? {targetId: item.targetId} : {})}
+                  {...(item.emoji ? {emoji: item.emoji} : {})}
                 />
               ))}
             </ul>
