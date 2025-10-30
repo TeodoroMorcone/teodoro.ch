@@ -1,7 +1,7 @@
 "use client";
 
 import {useState} from "react";
-import type {ComponentPropsWithoutRef} from "react";
+import type {ComponentPropsWithoutRef, CSSProperties} from "react";
 import {CalendarDays} from "lucide-react";
 
 import {cn} from "@/lib/utils/cn";
@@ -39,10 +39,15 @@ export function CalendeskEmbed({
   const [isActivated, setIsActivated] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
+  const cssVariables = {
+    "--calendesk-desktop-height": `${desktopHeight}px`,
+    "--calendesk-mobile-height": `${mobileHeight}px`,
+  } as CSSProperties;
+
   const statusMessage = !isActivated ? "" : isLoaded ? `${title} ready` : loadingLabel;
 
   return (
-    <div className={cn("w-full", className)}>
+    <div className={cn("w-full", className)} style={cssVariables}>
       {isActivated ? (
         <div className={cn(FRAME_WRAPPER_BASE_CLASSES, "calendesk-shell relative overflow-hidden")}>
           <iframe
@@ -91,36 +96,6 @@ export function CalendeskEmbed({
       <p className="sr-only" role="status" aria-live="polite">
         {statusMessage}
       </p>
-
-      <style jsx>{`
-        .calendesk-shell {
-          min-height: ${desktopHeight}px;
-        }
-
-        .calendesk-frame {
-          width: 100%;
-          display: block;
-          border: none;
-          max-width: 1280px;
-          margin: 0 auto;
-        }
-
-        @media (max-width: 600px) {
-          .calendesk-shell {
-            min-height: ${mobileHeight}px;
-          }
-
-          .calendesk-frame {
-            height: ${mobileHeight}px;
-          }
-        }
-
-        @media (min-width: 600px) {
-          .calendesk-frame {
-            height: ${desktopHeight}px;
-          }
-        }
-      `}</style>
     </div>
   );
 }

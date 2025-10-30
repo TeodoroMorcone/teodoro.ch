@@ -22,7 +22,7 @@ const config: Config = {
     extend: {
       colors: {
         primary: "#19183B",
-        secondary: "#708993",
+        secondary: "#4A5F6B",
         accent: "#A1C2BD",
         surface: "#E7F2EF",
       },

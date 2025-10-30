@@ -9,6 +9,8 @@ import {NavLink} from "@/components/navigation/nav-link";
 import type {Locale} from "@/lib/i18n/locales";
 
 const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
+const ENABLE_LAYOUT_DIAGNOSTICS =
+  IS_DEVELOPMENT && process.env.NEXT_PUBLIC_ENABLE_LAYOUT_DIAGNOSTICS === "true";
 
 type SidebarNavItem = {
   id: string;
@@ -89,7 +91,7 @@ export function Sidebar({
       </button>
     );
 
-  if (IS_DEVELOPMENT) {
+  if (ENABLE_LAYOUT_DIAGNOSTICS) {
     console.log("[Sidebar] control composition", {
       hasLanguageSwitcher: Boolean(languageSwitcher),
       hasThemeToggle: Boolean(themeToggle),
@@ -102,7 +104,7 @@ export function Sidebar({
   }
 
   useEffect(() => {
-    if (!IS_DEVELOPMENT) {
+    if (!ENABLE_LAYOUT_DIAGNOSTICS) {
       return;
     }
 
@@ -138,7 +140,7 @@ export function Sidebar({
   }, []);
 
   useEffect(() => {
-    if (!IS_DEVELOPMENT) {
+    if (!ENABLE_LAYOUT_DIAGNOSTICS) {
       return;
     }
 

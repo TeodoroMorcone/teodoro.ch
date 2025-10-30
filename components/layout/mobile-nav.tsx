@@ -11,6 +11,8 @@ import {NavLink} from "@/components/navigation/nav-link";
 import {Sheet, SheetContent, SheetTrigger} from "@/components/ui/sheet";
 
 const IS_DEVELOPMENT = process.env.NODE_ENV === "development";
+const ENABLE_LAYOUT_DIAGNOSTICS =
+  IS_DEVELOPMENT && process.env.NEXT_PUBLIC_ENABLE_LAYOUT_DIAGNOSTICS === "true";
 
 type MobileNavItem = {
   id: string;
@@ -19,10 +21,6 @@ type MobileNavItem = {
   targetId?: string;
 };
 
-type MobilePrivacyLink = {
-  label: string;
-  href: string;
-};
 
 type MobileCtas = {
   primary: {
@@ -48,13 +46,11 @@ type MobileLabels = {
   language: string;
   theme: string;
   cookies: string;
-  privacy: string;
 };
 
 type MobileNavProps = {
   locale: string;
   navItems: MobileNavItem[];
-  privacyLink: MobilePrivacyLink;
   ctas: MobileCtas;
   labels: MobileLabels;
   activeLocaleName: string;
@@ -66,7 +62,6 @@ type MobileNavProps = {
 export function MobileNav({
   locale,
   navItems,
-  privacyLink,
   ctas,
   labels,
   activeLocaleName,
@@ -78,7 +73,7 @@ export function MobileNav({
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (!IS_DEVELOPMENT) {
+    if (!ENABLE_LAYOUT_DIAGNOSTICS) {
       return;
     }
 
@@ -140,7 +135,7 @@ export function MobileNav({
   }, []);
 
   useEffect(() => {
-    if (!IS_DEVELOPMENT) {
+    if (!ENABLE_LAYOUT_DIAGNOSTICS) {
       return;
     }
 
@@ -244,8 +239,14 @@ export function MobileNav({
             >
               <Menu aria-hidden="true" className="h-5 w-5" />
             </SheetTrigger>
-            <SheetContent className="flex h-full max-h-screen w-full max-w-xs flex-col overflow-hidden p-0">
-              <div className="flex items-center justify-between border-b border-secondary/20 px-5 py-4 dark:border-surface/20">
+            <SheetContent
+              className="flex h-full max-h-screen w-full max-w-xs flex-col overflow-hidden p-0"
+              title={labels.navigation}
+              description={labels.navigation}
+            >
+              <div
+                className="flex items-center justify-between border-b border-secondary/20 px-5 py-4 dark:border-surface/20"
+              >
                 <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/80">
                   {labels.navigation}
                 </span>
@@ -341,13 +342,6 @@ export function MobileNav({
                   >
                     {labels.cookies}
                   </button>
-                  <Link
-                    className="inline-flex w-full items-center justify-center rounded-full border border-secondary/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-secondary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/20 dark:text-surface/80 dark:hover:border-accent dark:hover:text-accent"
-                    href={privacyLink.href}
-                    onClick={handleNavigate}
-                  >
-                    {privacyLink.label}
-                  </Link>
                 </div>
               </div>
 

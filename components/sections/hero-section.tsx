@@ -32,7 +32,7 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
       className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]"
     >
       <div>
-        <span className="inline-flex items-center rounded-full bg-accent/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-primary dark:bg-accent/50">
+        <span className="inline-flex items-center rounded-full bg-accent/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white dark:bg-accent/50 dark:text-white">
           {hero.badge}
         </span>
         <h1 id="hero-heading" className="mt-6 text-4xl font-semibold leading-tight lg:text-5xl">

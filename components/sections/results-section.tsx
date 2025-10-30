@@ -26,7 +26,7 @@ export function ResultsSection({results, reviews = []}: ResultsSectionProps) {
           <div className="rounded-3xl border border-accent/30 bg-accent/10 p-6 shadow-sm dark:border-accent/40 dark:bg-primary/40">
             <div className="space-y-4">
               {summary?.badge ? (
-                <span className="inline-flex items-center rounded-full bg-accent/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-accent dark:bg-accent/30 dark:text-primary">
+                <span className="inline-flex items-center rounded-full bg-accent/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-white dark:bg-accent/30 dark:text-white">
                   {summary.badge}
                 </span>
               ) : null}
@@ -42,17 +42,6 @@ export function ResultsSection({results, reviews = []}: ResultsSectionProps) {
                   </p>
                 ))}
               </div>
-
-              {summary?.ctaLabel && summary?.ctaHref ? (
-                <a
-                  href={summary.ctaHref}
-                  className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.2em] text-accent transition-colors duration-200 hover:text-primary hover:underline dark:text-accent dark:hover:text-surface"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {summary.ctaLabel} →
-                </a>
-              ) : null}
             </div>
           </div>
         ) : null}
@@ -67,7 +56,7 @@ export function ResultsSection({results, reviews = []}: ResultsSectionProps) {
                 className="group flex items-center justify-between rounded-3xl border border-dashed border-secondary/40 bg-surface px-6 py-4 text-sm text-secondary transition-transform transition-colors duration-200 ease-soft-sine hover:-translate-y-1 hover:bg-primary hover:text-surface hover:shadow-sidebar dark:border-surface/30 dark:bg-primary/30 dark:text-surface/70 dark:hover:bg-surface dark:hover:text-primary"
               >
                 <span>{placeholder.label}</span>
-                <span className="text-xs uppercase tracking-[0.2em] text-secondary/70 transition-colors duration-200 group-hover:text-surface/80 dark:text-surface/50 dark:group-hover:text-primary/80">
+                <span className="text-xs uppercase tracking-[0.2em] text-primary/70 transition-colors duration-200 group-hover:text-surface/80 dark:text-surface/50 dark:group-hover:text-primary/80">
                   TODO
                 </span>
               </div>

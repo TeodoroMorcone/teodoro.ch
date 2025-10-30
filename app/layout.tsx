@@ -1,3 +1,4 @@
+import Script from "next/script";
 import type {Metadata} from "next";
 import type {ReactNode} from "react";
 import {DEFAULT_CONSENT} from "@/config/analytics";
@@ -31,13 +32,12 @@ export default function RootLayout({children}: RootLayoutProps) {
 
   return (
     <html lang="de" suppressHydrationWarning>
-      <head>
-        <script
+      <body className="min-h-screen bg-surface text-primary antialiased transition-colors duration-200 ease-soft-sine dark:bg-primary dark:text-surface">
+        <Script
           id="ga-consent-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{__html: consentInitScript}}
         />
-      </head>
-      <body className="min-h-screen bg-surface text-primary antialiased transition-colors duration-200 ease-soft-sine dark:bg-primary dark:text-surface">
         {children}
       </body>
     </html>

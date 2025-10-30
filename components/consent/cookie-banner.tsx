@@ -84,7 +84,7 @@ export function CookieBanner() {
             >
               {strings.banner.manage}
             </button>
-            <span className="text-xs text-secondary dark:text-secondary/80">
+            <span className="text-xs text-black dark:text-black">
               {strings.preferences.description}
             </span>
           </div>

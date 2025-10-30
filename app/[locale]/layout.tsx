@@ -53,10 +53,6 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
     navKeys: navItems.map((item) => item.id),
   });
 
-  const privacyLink = {
-    label: tCommon("footer.privacy"),
-    href: `/${locale}/legal/privacy`,
-  };
 
   const ctas = {
     primary: {
@@ -92,7 +88,6 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
     language: tCommon("localeSwitcher.label"),
     theme: tCommon("themeToggle.label"),
     cookies: tCommon("footer.cookies"),
-    privacy: tCommon("footer.privacy"),
   };
 
   const activeLocaleName = tCommon(`localeNames.${locale}`);
@@ -139,7 +134,6 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
               <MobileNav
                 locale={locale}
                 navItems={navItems}
-                privacyLink={privacyLink}
                 ctas={ctas}
                 labels={mobileLabels}
                 activeLocaleName={activeLocaleName}
