@@ -5,6 +5,7 @@ import {LOCALES, SUPPORTED_LOCALE_PATHS} from "@/lib/i18n/locales";
 const DEFAULT_SITE_URL = "https://teodoro.ch";
 
 const STATIC_SEGMENTS = ["", "/legal/impressum", "/legal/privacy"];
+const EXCLUDED_PATHS = new Set(["/images/sad.webp", "/images/teodoro_happy.webp"]);
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? DEFAULT_SITE_URL).replace(/\/+$/, "");
@@ -27,7 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   });
 
-  return [
+  const entries: MetadataRoute.Sitemap = [
     {
       url: siteUrl,
       lastModified,
@@ -36,4 +37,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...localizedEntries,
   ];
+
+  return entries.filter(({url}) => {
+    try {
+      const {pathname} = new URL(url);
+      return !EXCLUDED_PATHS.has(pathname);
+    } catch {
+      return true;
+    }
+  });
 }
