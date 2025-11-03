@@ -3,7 +3,7 @@
 import {FocusScope} from "@radix-ui/react-focus-scope";
 import Link from "next/link";
 import {useLocale, useTranslations} from "next-intl";
-import {useEffect, useMemo, useState} from "react";
+import {useMemo, type CSSProperties} from "react";
 
 import {useConsent} from "@/components/consent/consent-context";
 import type {CookieBannerStrings} from "@/types/consent";
@@ -21,47 +21,34 @@ export function CookieBanner() {
     return {banner, preferences, notifications, links};
   }, [t]);
 
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(consent.consent.analytics);
-  const [marketingEnabled, setMarketingEnabled] = useState(consent.consent.marketing);
-
-  useEffect(() => {
-    if (consent.isBannerOpen) {
-      setAnalyticsEnabled(consent.consent.analytics);
-      setMarketingEnabled(consent.consent.marketing);
-    }
-  }, [consent.consent.analytics, consent.consent.marketing, consent.isBannerOpen]);
-
   const privacyHref = `/${locale}/legal/privacy`;
 
   const handleSave = () => {
-    if (analyticsEnabled !== consent.consent.analytics) {
-      consent.updateCategory("analytics", analyticsEnabled);
-    }
-
-    if (marketingEnabled !== consent.consent.marketing) {
-      consent.updateCategory("marketing", marketingEnabled);
-    }
-
     consent.savePreferences();
     consent.announce(strings.notifications.saved);
   };
 
   const handleAcceptAll = () => {
-    setAnalyticsEnabled(true);
-    setMarketingEnabled(true);
     consent.acceptAll();
     consent.announce(strings.notifications.saved);
   };
 
   const handleRejectAll = () => {
-    setAnalyticsEnabled(false);
-    setMarketingEnabled(false);
     consent.rejectAll();
     consent.announce(strings.notifications.saved);
   };
 
-  const actionButtonClass =
-    "inline-flex flex-1 items-center justify-center rounded-full border border-secondary/40 bg-white px-4 py-2 text-sm font-semibold text-primary transition-colors duration-200 ease-soft-sine hover:border-accent hover:bg-accent/5 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/30 dark:bg-white dark:text-primary";
+  const baseActionClass =
+    "inline-flex h-10 w-full shrink-0 items-center justify-center rounded-full px-4 text-sm font-semibold transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1c3f] sm:w-auto";
+  const primaryActionClass = `${baseActionClass} bg-[#1c1c3f] text-white hover:bg-[#13132d]`;
+  const secondaryActionClass = `${baseActionClass} border border-[#1c1c3f] text-[#1c1c3f] hover:bg-[#1c1c3f]/10`;
+  const tertiaryActionClass =
+    "inline-flex h-10 w-full items-center justify-center text-sm font-semibold text-[#1c1c3f] underline-offset-4 hover:text-[#13132d] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1c3f] sm:w-auto";
+
+  const barStyle: CSSProperties = {
+    paddingTop: "0.75rem",
+    paddingBottom: "calc(max(env(safe-area-inset-bottom), 0px) + 0.75rem)",
+  };
 
   return (
     <>
@@ -74,123 +61,33 @@ export function CookieBanner() {
           aria-modal="true"
           aria-labelledby="cookie-banner-heading"
           aria-describedby="cookie-banner-description"
-          className="fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-3xl rounded-3xl border border-secondary/30 bg-white px-6 py-6 text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine dark:border-surface/30 dark:bg-white dark:text-primary sm:bottom-6 sm:px-7 sm:py-7 lg:inset-x-0 lg:bottom-0 lg:mx-0 lg:max-w-none lg:rounded-none lg:border-x-0 lg:border-b-0 lg:border-t lg:border-secondary/20 lg:bg-white lg:px-12 lg:py-6 lg:text-primary lg:shadow-none dark:lg:border-surface/30 dark:lg:bg-white dark:lg:text-primary"
+          className="fixed inset-x-0 bottom-0 z-[60] min-h-[56px] border-t border-[#1c1c3f]/20 bg-white text-[#1c1c3f] shadow-[0_-12px_32px_rgba(15,23,42,0.16)] backdrop-blur transition-colors duration-200 ease-soft-sine dark:border-[#1c1c3f]/20 dark:bg-white dark:text-[#1c1c3f]"
+          style={barStyle}
         >
           <FocusScope loop autoFocus trapped={!consent.isPreferencesOpen}>
-            <div className="flex flex-col gap-6" data-cookie-banner>
-              <div className="space-y-3">
-                <h2 id="cookie-banner-heading" className="text-lg font-semibold">
-                  {strings.banner.title}
-                </h2>
-                <p id="cookie-banner-description" className="text-sm text-secondary dark:text-secondary">
-                  {strings.banner.body}{" "}
-                  <Link
-                    href={privacyHref}
-                    className="font-medium text-primary underline-offset-4 hover:text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-primary"
-                  >
-                    {strings.links.privacy}
-                  </Link>
-                </p>
-              </div>
-
-              <fieldset className="space-y-3" aria-label={strings.preferences.title}>
-                <legend className="sr-only">{strings.preferences.title}</legend>
-
-                <div className="flex items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/60 px-4 py-4 dark:border-surface/20 dark:bg-primary/60">
-                  <div className="space-y-1">
-                    <span
-                      id="cookie-essential-label"
-                      className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
-                    >
-                      {strings.preferences.essentialTitle}
-                    </span>
-                    <p
-                      id="cookie-essential-description"
-                      className="text-sm text-secondary dark:text-surface/80"
-                    >
-                      {strings.preferences.essentialDescription}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <input
-                      id="cookie-essential-toggle"
-                      type="checkbox"
-                      checked
-                      disabled
-                      readOnly
-                      className="h-5 w-5 rounded border-secondary/40 text-primary opacity-60 dark:border-surface/40 dark:bg-primary"
-                      aria-labelledby="cookie-essential-label"
-                      aria-describedby="cookie-essential-description"
-                    />
-                    <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70">
-                      {strings.preferences.alwaysOn}
-                    </span>
-                  </div>
-                </div>
-
-                <label
-                  htmlFor="cookie-analytics-toggle"
-                  className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/50 px-4 py-4 transition-colors duration-200 hover:border-accent dark:border-surface/20 dark:bg-primary/50"
+            <div
+              className="mx-auto flex w-full max-w-5xl flex-col gap-3 px-4 sm:flex-row sm:items-center sm:gap-4 sm:px-6"
+              data-cookie-banner
+            >
+              <h2 id="cookie-banner-heading" className="sr-only">
+                {strings.banner.title}
+              </h2>
+              <p
+                id="cookie-banner-description"
+                className="min-w-0 flex-1 text-sm text-[#1c1c3f] whitespace-normal sm:overflow-hidden sm:text-ellipsis sm:whitespace-nowrap"
+              >
+                <span className="pr-1">{strings.banner.body}</span>
+                <Link
+                  href={privacyHref}
+                  className="inline-flex shrink-0 items-center font-medium text-[#1c1c3f] underline-offset-4 hover:text-[#13132d] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1c3f]"
                 >
-                  <span className="space-y-1">
-                    <span
-                      id="cookie-analytics-label"
-                      className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
-                    >
-                      {strings.preferences.analyticsTitle}
-                    </span>
-                    <p
-                      id="cookie-analytics-description"
-                      className="text-sm text-secondary dark:text-surface/80"
-                    >
-                      {strings.preferences.analyticsDescription}
-                    </p>
-                  </span>
-                  <input
-                    id="cookie-analytics-toggle"
-                    type="checkbox"
-                    className="h-5 w-5 rounded border-secondary/40 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/40 dark:bg-primary dark:text-surface"
-                    checked={analyticsEnabled}
-                    onChange={(event) => setAnalyticsEnabled(event.target.checked)}
-                    aria-labelledby="cookie-analytics-label"
-                    aria-describedby="cookie-analytics-description"
-                  />
-                </label>
-
-                <label
-                  htmlFor="cookie-marketing-toggle"
-                  className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/50 px-4 py-4 transition-colors duration-200 hover:border-accent dark:border-surface/20 dark:bg-primary/50"
-                >
-                  <span className="space-y-1">
-                    <span
-                      id="cookie-marketing-label"
-                      className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
-                    >
-                      {strings.preferences.marketingTitle}
-                    </span>
-                    <p
-                      id="cookie-marketing-description"
-                      className="text-sm text-secondary dark:text-surface/80"
-                    >
-                      {strings.preferences.marketingDescription}
-                    </p>
-                  </span>
-                  <input
-                    id="cookie-marketing-toggle"
-                    type="checkbox"
-                    className="h-5 w-5 rounded border-secondary/40 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/40 dark:bg-primary dark:text-surface"
-                    checked={marketingEnabled}
-                    onChange={(event) => setMarketingEnabled(event.target.checked)}
-                    aria-labelledby="cookie-marketing-label"
-                    aria-describedby="cookie-marketing-description"
-                  />
-                </label>
-              </fieldset>
-
-              <div className="flex flex-col gap-3 sm:flex-row">
+                  {strings.links.privacy}
+                </Link>
+              </p>
+              <div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center sm:gap-3">
                 <button
                   type="button"
-                  className={actionButtonClass}
+                  className={primaryActionClass}
                   data-autofocus
                   onClick={handleAcceptAll}
                   aria-label={strings.banner.accept}
@@ -199,7 +96,7 @@ export function CookieBanner() {
                 </button>
                 <button
                   type="button"
-                  className={actionButtonClass}
+                  className={secondaryActionClass}
                   onClick={handleRejectAll}
                   aria-label={strings.banner.reject}
                 >
@@ -207,18 +104,15 @@ export function CookieBanner() {
                 </button>
                 <button
                   type="button"
-                  className={actionButtonClass}
+                  className={secondaryActionClass}
                   onClick={handleSave}
                   aria-label={strings.preferences.save}
                 >
                   {strings.preferences.save}
                 </button>
-              </div>
-
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                 <button
                   type="button"
-                  className="self-start text-sm font-medium text-primary underline-offset-4 hover:text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-primary"
+                  className={tertiaryActionClass}
                   onClick={() => {
                     consent.openPreferences();
                     consent.announce(null);
@@ -226,9 +120,6 @@ export function CookieBanner() {
                 >
                   {strings.banner.manage}
                 </button>
-                <span className="text-xs text-secondary dark:text-surface/80">
-                  {strings.preferences.description}
-                </span>
               </div>
             </div>
           </FocusScope>
