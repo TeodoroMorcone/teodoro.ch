@@ -4,6 +4,25 @@
 
 
 
+@keyframes whatsapp-counter-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.animate-counter-spin {
+  animation: whatsapp-counter-spin 16s linear infinite;
+  transform-origin: 50% 50%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-counter-spin {
+    animation: none;
+  }
+}
 @layer components {
   .calendesk-shell {
     min-height: var(--calendesk-desktop-height, 900px);
