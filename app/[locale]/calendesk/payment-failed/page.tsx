@@ -4,7 +4,7 @@ import {notFound} from "next/navigation";
 
 import {buildPageMetadata} from "@/lib/seo/meta";
 import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
-import sadIllustration from "@/public/images/sad.webp";
+import sadIllustration from "@/public/images/longhairsad.webp";
 
 type CalendeskRedirectPageProps = {
   params: {
@@ -77,7 +77,7 @@ export async function generateMetadata({params}: CalendeskRedirectPageProps): Pr
     path: "calendesk/payment-failed",
     title: meta.title,
     description: meta.description,
-    imagePath: "/images/sad.webp",
+    imagePath: "/images/longhairsad.webp",
     imageAlt: "Teodoro reacts with disappointment because the payment was not completed.",
     robotsIndex: false,
   });

@@ -110,6 +110,11 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
   const sidebarThemeToggle = <ThemeToggle label={sidebarLabels.theme} />;
   const mobileThemeToggle = <ThemeToggle label={mobileLabels.theme} />;
 
+  console.log("[LocaleLayout] render diagnostics", {
+    locale,
+    navItemsCount: navItems.length,
+    hasWhatsappHref: Boolean(whatsappContact.href),
+  });
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
@@ -168,10 +173,12 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
             </defs>
             <text
               className="text-[12px] uppercase tracking-[0.22em] md:text-[13px] animate-counter-spin"
-              fill="#ffffff"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="0.6"
             >
               <textPath href="#whatsapp-teodoro-arc" startOffset="0%">
-                Whatsapp your tutor Teodoro! 
+                 Whatsapp your tutor Teodoro •
               </textPath>
             </text>
           </svg>

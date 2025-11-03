@@ -4,12 +4,12 @@ import {DEFAULT_LOCALE, HREFLANG_MAP, LOCALES, SUPPORTED_LOCALE_PATHS, type Loca
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://teodoro.ch").replace(/\/+$/, "");
 
-const DEFAULT_OG_IMAGE_PATH = "/images/avatar.webp";
+const DEFAULT_OG_IMAGE_PATH = "/images/chalkbacsk.webp";
 
 const OG_IMAGE_ALT: Record<Locale, string> = {
-  de: "Teodoro Morcone erklärt Mathematik online via Zoom.",
-  it: "Teodoro Morcone offre ripetizioni di matematica online tramite Zoom.",
-  en: "Teodoro Morcone delivering online maths tutoring over Zoom.",
+  de: "Kreidetafel-Hintergrund mit Mathe-Skizzen für Teodoro Morcone Nachhilfe.",
+  it: "Sfondo a lavagna con schizzi matematici per il tutoring di Teodoro Morcone.",
+  en: "Chalkboard backdrop with maths sketches for Teodoro Morcone tutoring.",
 };
 
 const OG_IMAGE_DIMENSIONS = {

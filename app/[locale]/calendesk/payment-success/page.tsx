@@ -4,7 +4,7 @@ import {notFound} from "next/navigation";
 
 import {buildPageMetadata} from "@/lib/seo/meta";
 import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
-import happyIllustration from "@/public/images/teodoro_happy.webp";
+import happyIllustration from "@/public/images/happylonghair.webp";
 
 type CalendeskRedirectPageProps = {
   params: {
@@ -77,7 +77,7 @@ export async function generateMetadata({params}: CalendeskRedirectPageProps): Pr
     path: "calendesk/payment-success",
     title: meta.title,
     description: meta.description,
-    imagePath: "/images/teodoro_happy.webp",
+    imagePath: "/images/happylonghair.webp",
     imageAlt: "Teodoro celebrates because the payment succeeded.",
     robotsIndex: false,
   });

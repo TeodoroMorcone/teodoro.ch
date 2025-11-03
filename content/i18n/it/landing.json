@@ -8,10 +8,10 @@
     "bookingLoadingLabel": "Calendesk sta caricando le disponibilità…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
-    "avatarAlt": "Ritratto di Teodoro Morcone sorridente pronto per una lezione online",
+    "avatarAlt": "Sfondo a lavagna con schizzi matematici che rappresentano il tutoring online di Teodoro",
     "illustration": {
-      "src": "/images/avatar.webp",
-      "alt": "Teodoro Morcone spiega matematica con una lavagna digitale",
+      "src": "/images/chalkbacsk.webp",
+      "alt": "Sfondo a lavagna con disegni matematici fatti a mano che illustrano il tutoring online di Teodoro Morcone",
       "caption": "Più o meno sembro così."
     }
   },

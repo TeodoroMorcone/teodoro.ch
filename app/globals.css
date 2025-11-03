@@ -64,10 +64,14 @@
   .max-h-dvh {
     max-height: 100dvh;
   }
+.hero-portrait-object {
+  object-position: 50% 50%;
+}
 
-  .hero-portrait-object {
-    object-position: 50% 75%;
-  }
+.hero-portrait-scale {
+  transform: scale(0.65);
+  transform-origin: 50% 50%;
+}
 
   .hero-portrait-scale {
     transform: scale(0.85);
@@ -77,8 +81,7 @@
 
 @media (min-width: 1024px) {
   .hero-portrait-object {
-    object-position: 50% 70%;
-    object-fit: none;
+    object-position: 50% 50%;
   }
   
 }

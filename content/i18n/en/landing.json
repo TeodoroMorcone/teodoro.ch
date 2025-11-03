@@ -8,10 +8,10 @@
     "bookingLoadingLabel": "Calendesk availability is loading…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
-    "avatarAlt": "Portrait of Teodoro Morcone smiling and ready to tutor online",
+    "avatarAlt": "Chalkboard background with math sketches representing Teodoro Morcone’s online tutoring",
     "illustration": {
-      "src": "/images/avatar.webp",
-      "alt": "Teodoro Morcone teaches a student via online whiteboard",
+      "src": "/images/chalkbacsk.webp",
+      "alt": "Chalkboard background with hand-drawn math sketches illustrating Teodoro Morcone’s online tutoring",
       "caption": "I look roughly like this."
     }
   },

@@ -8,10 +8,10 @@
     "bookingLoadingLabel": "Calendesk-Verfügbarkeit wird geladen…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
-    "avatarAlt": "Porträt von Teodoro Morcone, der online Nachhilfe anbietet",
+    "avatarAlt": "Kreidetafel-Hintergrund mit Mathe-Skizzen für Teodoros Online-Unterricht",
     "illustration": {
-      "src": "/images/avatar.webp",
-      "alt": "Teodoro Morcone erklärt Mathematik per Online-Whiteboard",
+      "src": "/images/chalkbacsk.webp",
+      "alt": "Kreidetafel-Hintergrund mit handgezeichneten Mathe-Skizzen, die Teodoros Online-Nachhilfe visualisieren",
       "caption": "Ich sehe etwa so aus."
     }
   },
