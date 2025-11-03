@@ -489,33 +489,60 @@
     },
     "privacy": {
       "title": "Privacy (summary)",
-      "intro": "Summary of how Teodoro Morcone Nachhilfe processes personal data. Read the full privacy notice for details.",
+      "intro": "Snapshot of how Teodoro Morcone Nachhilfe handles personal data under Swiss law. Read the full privacy policy for complete details.",
       "sections": [
         {
-          "id": "processing",
-          "heading": "How personal data is processed",
+          "id": "dataCollection",
+          "heading": "Data collection & sources",
           "body": [
-            "Personal data is processed in line with Swiss data protection law (revDSG). Focus is on organising lessons, handling enquiries, and providing secure online sessions.",
-            "Processors include trusted service providers; the full list and legal bases are documented in the privacy notice."
+            "I operate exclusively in Switzerland under the Federal Act on Data Protection (FADP) and gather information when you send a request, schedule via Calendesk, join a Zoom lesson, or message me by email/chat.",
+            "My privately managed Swiss server stores truncated IP addresses, user-agent data, and security logs to protect the service. Consent decisions are documented, and optional Google Analytics 4 events run only after you opt in."
           ],
           "bullets": [
-            "Calendesk (scheduling & reminders)",
-            "Stripe (cashless payments)",
-            "Google Analytics 4 (statistics only after consent)",
-            "Zoom (video lessons with waiting room and passcode)"
+            "Contact details, learning goals, preferred availability, payment references, handwritten preparation notes",
+            "Security telemetry (truncated IP, device diagnostics) retained on Swiss infrastructure",
+            "No automated decision-making or profiling—every booking and lesson plan is handled manually"
+          ]
+        },
+        {
+          "id": "retention",
+          "heading": "Retention & deletion",
+          "body": [
+            "Retention follows Swiss commercial obligations and documented privacy promises. Deletion requests go to privacy@teodoro.ch and are fulfilled once legal duties end."
+          ],
+          "bullets": [
+            "Inquiry emails or chats without lessons: deleted after 12 months",
+            "Active learner profiles, lesson notes, materials: kept up to 3 years after the last session unless earlier deletion is allowed",
+            "Accounting records and payment receipts: stored for 10 years",
+            "Consent & cookie logs: retained for 5 years to evidence compliance",
+            "Security logs: rotated after 12 months; Google Analytics 4 data auto-expires after 14 months"
+          ]
+        },
+        {
+          "id": "thirdParties",
+          "heading": "Third-party services & transfers",
+          "body": [
+            "Only a small, clearly defined set of processors support tutoring operations. Cross-border safeguards rely on FDPIC-recognised adequacy decisions or Standard Contractual Clauses."
+          ],
+          "bullets": [
+            "**Swiss private hosting:** infrastructure located in Switzerland under my sole control",
+            "**Calendesk (Poland/EU):** scheduling, reminders, payment status within EU data centres",
+            "**Zoom (EU data residency, HQ USA):** lessons secured with waiting room, passcode, encryption; recordings require written consent and are deleted within 30 days",
+            "**Google Workspace & Google Analytics (EU/USA):** email, documents, optional analytics with SCCs, IP truncation, and no advertising features",
+            "**Meta Pixel (Meta Platforms, USA):** optional marketing measurement that loads only after explicit consent, governed by SCCs and IP obfuscation"
           ]
         },
         {
           "id": "rights",
-          "heading": "Your rights & controls",
+          "heading": "How to exercise your rights",
           "body": [
-            "You can request access, correction, or deletion of your data at any time.",
-            "Consent choices for analytics cookies can be changed via the cookie settings link in the footer."
+            "Email info@teodoro.ch or write to Teodoro Morcone Nachhilfe, Eichbühlstrasse 33, 8004 Zürich to request access, correction, portability, deletion, or consent withdrawal.",
+            "Identity is verified with proportionate steps and requests are handled within 30 days (extendable by another 30 days for complex cases). Cookie preferences can be adjusted anytime via the footer link."
           ],
           "bullets": [
-            "Withdraw consent for analytics without affecting essential services",
-            "Request a copy or deletion by email at info@teodoro.ch",
-            "Report concerns to the Swiss FDPIC if unresolved"
+            "Update or withdraw analytics consent without affecting essential services",
+            "Request erasure once statutory retention duties end; backups are purged during the next maintenance cycle",
+            "Escalate unresolved concerns to the Federal Data Protection and Information Commissioner (FDPIC)"
           ]
         }
       ],

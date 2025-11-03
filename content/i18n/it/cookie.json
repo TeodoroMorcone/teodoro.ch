@@ -1,18 +1,22 @@
 {
   "banner": {
     "title": "Cookie e privacy",
-    "body": "Utilizzo cookie essenziali per garantire il funzionamento del sito. I cookie analitici opzionali (Google Analytics 4) vengono caricati solo dopo il tuo consenso così posso analizzare l'utilizzo in modo anonimo.",
+    "body": "Utilizzo cookie essenziali per garantire il funzionamento del sito. Gli strumenti analitici opzionali (Google Analytics 4) e gli strumenti di marketing (Meta Pixel) vengono caricati solo dopo il tuo consenso per analizzare l'utilizzo e le campagne.",
     "accept": "Accetta tutto",
     "reject": "Solo essenziali",
+    "save": "Salva impostazioni",
     "manage": "Impostazioni"
   },
   "preferences": {
     "title": "Impostazioni cookie",
-    "description": "Puoi modificare la tua scelta in qualsiasi momento. I cookie essenziali sono necessari per sicurezza, lingua e salvataggio delle preferenze e restano sempre attivi.",
+    "description": "Puoi modificare la tua scelta in qualsiasi momento. I cookie essenziali sono necessari per sicurezza, lingua e salvataggio delle preferenze e restano sempre attivi. I cookie analitici e di marketing restano disattivati finché non acconsenti.",
     "essentialTitle": "Cookie essenziali",
     "essentialDescription": "Necessari per funzioni di base come navigazione, sicurezza e memorizzazione delle preferenze cookie.",
     "analyticsTitle": "Analytics (Google Analytics 4)",
-    "analyticsDescription": "Consente la misurazione anonima dell'utilizzo del sito con anonimizzazione IP. Nessun dato personale viene salvato o combinato con altri servizi Google.",
+    "analyticsDescription": "Consente una misurazione rispettosa della privacy con anonimizzazione IP. Nessun dato personale viene salvato o combinato con altri servizi Google.",
+    "marketingTitle": "Marketing (Meta Pixel)",
+    "marketingDescription": "Aiuta a misurare le prestazioni delle campagne su piattaforme Meta. Gli script di tracciamento vengono caricati solo dopo il tuo consenso.",
+    "alwaysOn": "Sempre attivi",
     "save": "Salva impostazioni",
     "cancel": "Annulla"
   },

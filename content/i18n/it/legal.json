@@ -75,97 +75,70 @@
   },
   "privacy": {
     "title": "Informativa sulla privacy",
-    "lastUpdated": "Aggiornato: settembre 2025",
-    "intro": "Questa informativa descrive come vengono trattati i dati personali nell’ambito delle lezioni di ripetizione e quali diritti spettano agli interessati.",
+    "lastUpdated": "Aggiornato: novembre 2025",
+    "intro": "Le sezioni seguenti illustrano come tratto i dati personali per il servizio di tutoraggio basato in Svizzera, incluse le fonti dei dati, le tempistiche di conservazione, i fornitori terzi coinvolti e i tuoi diritti.",
     "sections": [
       {
-        "id": "controller",
-        "heading": "Titolare del trattamento",
+        "id": "dataCollection",
+        "heading": "Raccolta dei dati & Fonti",
         "body": [
-          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
-          "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
-          "Contatto: info@teodoro.ch, +41 76 244 02 59"
-        ]
-      },
-      {
-        "id": "purposes",
-        "heading": "Finalità della raccolta dati",
-        "list": [
-          "Rispondere alle richieste e preparare accordi didattici",
-          "Organizzare e svolgere le lezioni online (Zoom)",
-          "Garantire il funzionamento tecnico del sito web",
-          "Statistiche opzionali (Google Analytics 4) solo previo consenso",
-          "Fatturazione e comunicazioni correlate alle lezioni"
-        ]
-      },
-      {
-        "id": "dataCategories",
-        "heading": "Categorie di dati trattati",
-        "list": [
-          "Dati di contatto (nome, e-mail, numero telefonico)",
-          "Informazioni su classe, obiettivi e focus d’esame",
-          "Contenuti delle comunicazioni e note delle lezioni",
-          "Metadati delle sessioni Zoom (data, durata); nessuna registrazione di default",
-          "Log tecnici e preferenze cookie"
-        ]
-      },
-      {
-        "id": "legalBases",
-        "heading": "Basi giuridiche",
-        "body": [
-          "Esecuzione di contratto o misure precontrattuali",
-          "Legittimo interesse a fornire un servizio sicuro e funzionante",
-          "Consenso per analisi statistiche, newsletter o eventuali registrazioni"
-        ]
-      },
-      {
-        "id": "processors",
-        "heading": "Destinatari / responsabili esterni",
-        "list": [
-          "Provider di hosting ed e-mail (con accordi sul trattamento dati)",
-          "Zoom Video Communications (senza registrazioni automatiche)",
-          "Servizio di analisi (Google, solo previa autorizzazione)",
-          "Eventuali strumenti di gestione contatti/prenotazioni"
-        ]
-      },
-      {
-        "id": "transfers",
-        "heading": "Trasferimenti internazionali",
-        "body": [
-          "Avvengono solo con adeguate garanzie (Standard Contractual Clauses o misure equivalenti)."
+          "Gestisco il servizio di tutoraggio esclusivamente dalla Svizzera e tratto i dati personali solo per adempiere ai contratti, in conformità alla Legge federale sulla protezione dei dati (LPD) e alle raccomandazioni dell’Incaricato federale della protezione dei dati e della trasparenza (IFPDT). Raccolgo le informazioni direttamente da te quando invii una richiesta, prenoti tramite Calendesk, partecipi a una sessione Zoom o comunichi via e-mail/chat.",
+          "Ciò include recapiti, obiettivi didattici, disponibilità, riferimenti di pagamento e appunti manuali che mi aiutano a preparare la lezione. Il mio server privato situato in Svizzera genera automaticamente indirizzi IP troncati, dati del browser e log di sicurezza per proteggere il servizio. Registro le scelte di consenso per dimostrare la conformità alle linee guida dell’IFPDT. Gli eventi analitici raggiungono Google Analytics 4 solo dopo il tuo consenso esplicito e restano pseudonimizzati. Non applico decisioni automatizzate né profilazione: ogni conferma, ogni piano di lezione e ogni decisione sui prezzi è presa personalmente da me."
         ]
       },
       {
         "id": "retention",
-        "heading": "Conservazione dei dati",
-        "body": [
-          "I dati vengono conservati per il tempo necessario alla collaborazione.",
-          "Documenti contabili e fiscali secondo le tempistiche di legge."
+        "heading": "Conservazione & Cancellazione",
+        "list": [
+          "Le richieste che non portano a lezioni vengono eliminate dopo 12 mesi.",
+          "Profili attivi, appunti di lezione e materiali di supporto restano archiviati fino a tre anni dall’ultima sessione, salvo tua richiesta di cancellazione anticipata e assenza di obblighi legali.",
+          "Documentazione contabile, fatture e ricevute devono essere conservate per 10 anni secondo la normativa commerciale svizzera.",
+          "I registri di consenso e delle preferenze cookie sono mantenuti per cinque anni per attestare la conformità alle raccomandazioni IFPDT.",
+          "I log di sicurezza sul mio server svizzero vengono eliminati dopo 12 mesi; i dati facoltativi di Google Analytics 4 sono impostati per la cancellazione automatica dopo 14 mesi.",
+          "Quando ricevo una richiesta di cancellazione a info@teodoro.ch, elimino i dati entro 30 giorni, una volta conclusi gli obblighi legali, e rimuovo le copie di backup nel successivo ciclo di manutenzione."
+        ]
+      },
+      {
+        "id": "thirdParties",
+        "heading": "Servizi terzi & Trasferimenti",
+        "list": [
+          "**Hosting privato svizzero:** Il sito è ospitato su infrastruttura di mia proprietà situata in Svizzera, quindi l’hosting principale non comporta trasferimenti transfrontalieri.",
+          "**Calendesk (Polonia/UE):** Gestisce pianificazioni, promemoria e stato dei pagamenti in data center europei. Il trasferimento dalla Svizzera verso l’UE si basa sulla decisione di adeguatezza riconosciuta dall’IFPDT; l’accesso è limitato a me e al supporto vincolato da obblighi di riservatezza.",
+          "**Zoom (residenza dati UE, fornitore con sede negli USA):** Le lezioni si svolgono con sala d’attesa, passcode e crittografia. Le registrazioni sono disattivate per impostazione predefinita; se necessarie, chiedo il consenso scritto e le elimino entro 30 giorni, salvo obblighi legali. Le Clausole contrattuali standard (SCC) riconosciute dall’IFPDT e ulteriori controlli tecnici tutelano eventuali trasferimenti verso gli USA.",
+          "**Google Workspace & Google Analytics (UE/USA):** Posta elettronica, collaborazione documentale e statistiche opzionali si avvalgono delle SCC, della cifratura e dell’anonimizzazione degli IP; le funzioni pubblicitarie sono disattivate e comunico solo i dati indispensabili.",
+          "Non vendo i dati personali e li condivido solo con questi responsabili del trattamento o quando la legge svizzera lo impone."
         ]
       },
       {
         "id": "rights",
-        "heading": "Diritti degli interessati",
+        "heading": "Come esercitare i tuoi diritti",
         "body": [
-          "In qualsiasi momento è possibile richiedere accesso, rettifica, cancellazione, limitazione, portabilità o revoca del consenso."
-        ]
-      },
-      {
-        "id": "minors",
-        "heading": "Studenti minorenni",
-        "body": [
-          "Per studenti sotto i 16 anni è richiesta l’approvazione dei genitori o tutori.",
-          "Le comunicazioni avvengono in coordinamento con i genitori.",
-          "Eventuali registrazioni Zoom avvengono solo con autorizzazione scritta."
+          "Per richiedere accesso, rettifica, portabilità, cancellazione o revocare il consenso, scrivimi a info@teodoro.ch oppure a Teodoro Morcone Nachhilfe, Eichbühlstrasse 33, 8004 Zurigo. Verifico l’identità con misure proporzionate (ad esempio una risposta dall’indirizzo registrato) e rispondo entro 30 giorni; se la richiesta è complessa, posso prorogare di ulteriori 30 giorni informandoti in anticipo. Puoi modificare le preferenze sui cookie in qualsiasi momento tramite il link “Impostazioni cookie” nel footer.",
+          "Se ritieni che la risposta non sia conforme, puoi rivolgerti all’Incaricato federale della protezione dei dati e della trasparenza (IFPDT), Feldeggweg 1, 3003 Berna. L’esercizio dei diritti è gratuito, salvo richieste manifestamente infondate o eccessive."
         ]
       }
     ],
     "rights": {
-      "title": "Contatti privacy",
+      "title": "Contatti per richieste privacy",
       "email": "info@teodoro.ch",
-      "reference": "IFPDT: https://www.edoeb.admin.ch"
+      "reference": "Incaricato federale della protezione dei dati e della trasparenza (IFPDT), Feldeggweg 1, 3003 Berna"
     },
-    "cookieLink": "Impostazioni cookie"
+    "cookieLink": "Gestione cookie",
+    "cookieTable": {
+      "title": "Elenco di cookie e tecnologie analoghe",
+      "caption": "Queste tabelle descrivono i cookie e le tecnologie usati su teodoro.ch, raggruppati per finalità.",
+      "columns": {
+        "name": "Nome",
+        "provider": "Fornitore",
+        "purpose": "Finalità",
+        "lifetime": "Durata"
+      },
+      "categories": {
+        "essential": "Cookie essenziali",
+        "analytics": "Statistica (GA4)",
+        "marketing": "Marketing (Meta Pixel)"
+      }
+    }
   },
   "cancellation": {
     "title": "Cancellazioni & assenze",

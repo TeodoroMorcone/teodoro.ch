@@ -489,33 +489,60 @@
     },
     "privacy": {
       "title": "Datenschutz (Kurzinfo)",
-      "intro": "Kurzübersicht zur Bearbeitung personenbezogener Daten durch Teodoro Morcone Nachhilfe. Die vollständige Datenschutzerklärung enthält alle Details.",
+      "intro": "Kurzer Überblick, wie Teodoro Morcone Nachhilfe Personendaten nach Schweizer Recht bearbeitet. Für alle Details siehe die vollständige Datenschutzerklärung.",
       "sections": [
         {
-          "id": "processing",
-          "heading": "Wie Personendaten bearbeitet werden",
+          "id": "dataCollection",
+          "heading": "Datenerhebung & Quellen",
           "body": [
-            "Personendaten werden gemäss revidiertem DSG verarbeitet. Im Fokus stehen die Organisation des Unterrichts, die Bearbeitung von Anfragen und die sichere Durchführung von Online-Sessions.",
-            "Eingesetzte Auftragsbearbeiter sind vertrauenswürdige Dienstleister; vollständige Liste und Rechtsgrundlagen finden sich in der Datenschutzerklärung."
+            "Ich arbeite ausschliesslich in der Schweiz gemäss revidiertem Datenschutzgesetz (revDSG) und erhebe Daten, wenn du eine Anfrage stellst, über Calendesk buchst, an einer Zoom-Lektion teilnimmst oder mich per E-Mail/Chat kontaktierst.",
+            "Mein privat betriebener Schweizer Server speichert gekürzte IP-Adressen, User-Agent-Daten und Sicherheitslogs zum Schutz des Dienstes. Einwilligungen werden protokolliert, und optionale Google-Analytics-4-Ereignisse laufen erst nach deiner aktiven Zustimmung."
           ],
           "bullets": [
-            "Calendesk (Terminplanung & Erinnerungen)",
-            "Stripe (bargeldlose Zahlungen)",
-            "Google Analytics 4 (Statistiken nur nach Zustimmung)",
-            "Zoom (Video-Unterricht mit Warteraum & Passcode)"
+            "Kontaktangaben, Lernziele, bevorzugte Verfügbarkeiten, Zahlungsreferenzen und handschriftliche Vorbereitungsnotizen",
+            "Sicherheits-Telemetrie (gekürzte IP, Geräteinformationen) ausschliesslich auf Schweizer Infrastruktur",
+            "Keine automatisierten Entscheide oder Profiling – jede Buchung und jeder Lernplan wird persönlich erstellt"
+          ]
+        },
+        {
+          "id": "retention",
+          "heading": "Aufbewahrung & Löschung",
+          "body": [
+            "Aufbewahrungsfristen richten sich nach schweizerischen Handels- und Datenschutzpflichten. Löschgesuche sendest du an privacy@teodoro.ch; sie werden umgesetzt, sobald keine gesetzlichen Pflichten mehr entgegenstehen."
+          ],
+          "bullets": [
+            "Anfragen ohne Lektion: Löschung nach spätestens 12 Monaten",
+            "Aktive Lernakten, Unterrichtsnotizen, Materialien: bis zu 3 Jahre nach der letzten Lektion, sofern keine längere Pflicht besteht",
+            "Buchhaltungsunterlagen & Zahlungsbelege: 10 Jahre",
+            "Einwilligungs- und Cookie-Protokolle: 5 Jahre zur Dokumentation der Compliance",
+            "Sicherheitslogs: Rotation nach 12 Monaten; Google-Analytics-4-Daten verfallen automatisch nach 14 Monaten"
+          ]
+        },
+        {
+          "id": "thirdParties",
+          "heading": "Drittanbieter & Übermittlungen",
+          "body": [
+            "Nur ein klar definierter Kreis von Auftragsbearbeitern unterstützt den Unterrichtsbetrieb. Übermittlungen stützen sich auf vom EDÖB anerkannte Angemessenheitsbeschlüsse oder Standardvertragsklauseln (SCC)."
+          ],
+          "bullets": [
+            "**Schweizer Privat-Hosting:** Infrastruktur in der Schweiz unter meiner alleinigen Kontrolle",
+            "**Calendesk (Polen/EU):** Terminplanung, Erinnerungen und Zahlungsstatus in EU-Rechenzentren",
+            "**Zoom (EU-Datenhaltung, Hauptsitz USA):** Lektionen mit Warteraum, Passcode und Verschlüsselung; Aufzeichnungen nur mit schriftlicher Zustimmung und Löschung binnen 30 Tagen",
+            "**Google Workspace & Google Analytics (EU/USA):** E-Mail, Dokumente und optionale Analytics mit SCCs, IP-Kürzung und deaktivierten Werbefunktionen",
+            "**Meta Pixel (Meta Platforms, USA):** Optionales Marketing-Tracking, das erst nach ausdrücklicher Einwilligung lädt und über SCCs sowie IP-Kürzung abgesichert ist"
           ]
         },
         {
           "id": "rights",
-          "heading": "Ihre Rechte & Kontrollmöglichkeiten",
+          "heading": "So nutzt du deine Rechte",
           "body": [
-            "Sie können jederzeit Auskunft, Berichtigung oder Löschung Ihrer Daten verlangen.",
-            "Einwilligungen für Analyse-Cookies lassen sich über den Cookie-Link im Footer anpassen."
+            "Für Auskunft, Berichtigung, Datenportabilität, Löschung oder Widerruf von Einwilligungen schreibe an info@teodoro.ch oder an Teodoro Morcone Nachhilfe, Eichbühlstrasse 33, 8004 Zürich.",
+            "Identität prüfe ich verhältnismässig; Antworten erfolgen innert 30 Tagen (bei komplexen Fällen Verlängerung um maximal 30 Tage). Cookie-Präferenzen kannst du jederzeit über den Footer-Link anpassen."
           ],
           "bullets": [
-            "Analyse-Einwilligung ohne Einfluss auf essentielle Dienste widerrufen",
-            "Kopie oder Löschung per E-Mail an info@teodoro.ch verlangen",
-            "Ungeklärte Anliegen beim EDÖB melden"
+            "Analyse-Einwilligungen aktualisieren oder widerrufen, ohne essentielle Dienste zu beeinträchtigen",
+            "Löschung anfordern, sobald Aufbewahrungspflichten enden; Sicherungskopien werden im nächsten Wartungsfenster bereinigt",
+            "Unzufrieden? Wende dich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB)"
           ]
         }
       ],
@@ -524,7 +551,7 @@
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
-          "E-Mail: info@teodoro.ch",
+          "E-Mail: privacy@teodoro.ch",
           "Tel.: +41 76 244 02 59"
         ]
       }

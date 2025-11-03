@@ -75,96 +75,70 @@
   },
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Updated: September 2025",
-    "intro": "This privacy notice explains how personal data is processed in connection with tutoring services and the rights available to data subjects under Swiss data protection law.",
+    "lastUpdated": "Updated: November 2025",
+    "intro": "The sections below explain how I handle personal data for Swiss-based tutoring services, covering data sources, retention, third-party processors, and your rights.",
     "sections": [
       {
-        "id": "controller",
-        "heading": "Controller",
+        "id": "dataCollection",
+        "heading": "Data Collection & Sources",
         "body": [
-          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
-          "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
-          "Contact: info@teodoro.ch, +41 76 244 02 59"
-        ]
-      },
-      {
-        "id": "purposes",
-        "heading": "Purposes of processing",
-        "list": [
-          "Responding to inquiries and preparing tutoring agreements",
-          "Organising and delivering online lessons via Zoom",
-          "Ensuring technical operation and security of the website",
-          "Optional analytics (Google Analytics 4) only with consent",
-          "Invoicing and lesson-related communication"
-        ]
-      },
-      {
-        "id": "dataCategories",
-        "heading": "Categories of data",
-        "list": [
-          "Contact details (name, email, phone number)",
-          "Information on grade level, goals, and exam focus",
-          "Communication content and lesson notes",
-          "Zoom session metadata (date, duration); no recordings by default",
-          "Technical logs and cookie preferences"
-        ]
-      },
-      {
-        "id": "legalBases",
-        "heading": "Legal bases",
-        "body": [
-          "Contract performance or pre-contractual measures",
-          "Legitimate interest in providing a secure, functional service",
-          "Consent for analytics, newsletters, or any recordings"
-        ]
-      },
-      {
-        "id": "processors",
-        "heading": "Processors & recipients",
-        "list": [
-          "Hosting and email providers (with data processing agreements)",
-          "Zoom Video Communications (no automatic recordings)",
-          "Analytics provider (Google, only after consent)",
-          "Optional contact or scheduling tools"
-        ]
-      },
-      {
-        "id": "transfers",
-        "heading": "International transfers",
-        "body": [
-          "Performed only with appropriate safeguards (Standard Contractual Clauses or equivalent protections)."
+          "I operate exclusively in Switzerland and process personal data to deliver one-on-one tutoring in accordance with the Federal Act on Data Protection (FADP) and the guidance of the Federal Data Protection and Information Commissioner (FDPIC). I collect information directly from you when you submit a contact request, schedule through Calendesk, join a Zoom lesson, or communicate by email or chat.",
+          "This may include contact details, lesson goals, preferred availability, payment references, and manually written preparation notes that help me customise each session. My privately managed Swiss server generates truncated IP addresses, user-agent details, and security logs needed to ensure availability and protect against misuse. Consent decisions are recorded so I can demonstrate compliance. Optional analytics data reaches Google Analytics 4 only after you explicitly opt in via the cookie banner, and those records remain pseudonymised. I do not carry out automated decision-making or profiling—every booking confirmation, lesson plan, and pricing decision is handled personally by me."
         ]
       },
       {
         "id": "retention",
-        "heading": "Retention",
-        "body": [
-          "Contact data and messages are kept as long as needed for collaboration.",
-          "Accounting records retained according to statutory obligations."
+        "heading": "Retention & Deletion",
+        "list": [
+          "Inquiry emails or chat threads that do not result in lessons are deleted after 12 months.",
+          "Active learner profiles, lesson notes, and supporting materials are retained for up to three years after the final session unless you request earlier deletion and no statutory duty requires longer storage.",
+          "Accounting records, invoices, and payment receipts are kept for 10 years to comply with Swiss commercial obligations.",
+          "Cookie and marketing consent logs are stored for five years to evidence adherence to FDPIC guidance.",
+          "Security logs on my Swiss server are rotated after 12 months; optional Google Analytics 4 data is configured to expire automatically after 14 months.",
+          "When you ask for deletion at info@teodoro.ch, I erase the relevant data within 30 days once legal obligations end, and I remove associated backups during the next maintenance cycle."
+        ]
+      },
+      {
+        "id": "thirdParties",
+        "heading": "Third-Party Services & Transfers",
+        "list": [
+          "**Swiss private hosting:** I run the website on infrastructure located in Switzerland under my exclusive control, so core hosting involves no cross-border transfers.",
+          "**Calendesk (Poland, EU):** Handles scheduling, reminders, and payment status within EU data centres. Transfers rely on the FDPIC-recognised adequacy decision for the European Economic Area, and only I and bound support staff can access the data.",
+          "**Zoom (EU data residency, provider headquartered in the USA):** Videoconferencing uses waiting rooms, passcodes, and end-to-end encryption. Recordings are disabled by default; if a recording becomes necessary, I obtain written consent and delete it within 30 days unless a legal retention duty applies. Standard Contractual Clauses (SCCs) acknowledged by the FDPIC, plus strict configuration controls, protect any cross-border access.",
+          "**Google Workspace & Google Analytics (EU/USA):** Email, document collaboration, and optional statistics rely on SCCs, encryption in transit and at rest, IP truncation, and the exclusion of advertising features. I disclose only the minimum data required to operate these services.",
+          "I do not sell personal data and I share it only with these processors or when Swiss law requires disclosure."
         ]
       },
       {
         "id": "rights",
-        "heading": "Data subject rights",
+        "heading": "How to Exercise Your Rights",
         "body": [
-          "You may request access, rectification, erasure, restriction, data portability, or withdraw consent at any time."
-        ]
-      },
-      {
-        "id": "minors",
-        "heading": "Minors",
-        "body": [
-          "For learners under 16, communication occurs with parent/guardian involvement.",
-          "Full legal names of minors are avoided in Zoom unless consent is provided."
+          "For access, rectification, portability, deletion, or consent withdrawal, email info@teodoro.ch or write to Teodoro Morcone Nachhilfe, Eichbühlstrasse 33, 8004 Zürich. I verify identity with proportionate steps (for example, a reply from the registered email address) and respond within 30 days; complex requests may extend by up to another 30 days, with advance notice. You can adjust analytics preferences anytime through the “Cookie settings” link in the footer.",
+          "If you consider my response unsatisfactory, you may contact the Federal Data Protection and Information Commissioner (FDPIC), Feldeggweg 1, 3003 Bern. Exercising your rights is free of charge unless a request is manifestly unfounded or excessive."
         ]
       }
     ],
     "rights": {
-      "title": "Contact for privacy matters",
+      "title": "Contact for privacy requests",
       "email": "info@teodoro.ch",
-      "reference": "Federal Data Protection and Information Commissioner: https://www.edoeb.admin.ch"
+      "reference": "Federal Data Protection and Information Commissioner (FDPIC), Feldeggweg 1, 3003 Bern"
     },
-    "cookieLink": "Cookie settings"
+    "cookieLink": "Cookie management",
+    "cookieTable": {
+      "title": "List of cookies and similar technologies",
+      "caption": "These tables describe the cookies and technologies used on teodoro.ch, grouped by purpose.",
+      "columns": {
+        "name": "Name",
+        "provider": "Provider",
+        "purpose": "Purpose",
+        "lifetime": "Lifetime"
+      },
+      "categories": {
+        "essential": "Essential cookies",
+        "analytics": "Analytics (GA4)",
+        "marketing": "Marketing (Meta Pixel)"
+      }
+    }
   },
   "cancellation": {
     "title": "Cancellations & no-shows",

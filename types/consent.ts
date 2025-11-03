@@ -1,9 +1,18 @@
+export type ConsentCategory = "essential" | "analytics" | "marketing";
+
+export type ConsentState = {
+  essential: true;
+  analytics: boolean;
+  marketing: boolean;
+};
+
 export type CookieBannerStrings = {
   banner: {
     title: string;
     body: string;
     accept: string;
     reject: string;
+    save: string;
     manage: string;
   };
   preferences: {
@@ -13,6 +22,9 @@ export type CookieBannerStrings = {
     essentialDescription: string;
     analyticsTitle: string;
     analyticsDescription: string;
+    marketingTitle: string;
+    marketingDescription: string;
+    alwaysOn: string;
     save: string;
     cancel: string;
   };
@@ -23,3 +35,5 @@ export type CookieBannerStrings = {
     privacy: string;
   };
 };
+
+export type {Consent} from "@/lib/consent";

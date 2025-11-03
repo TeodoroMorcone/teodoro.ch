@@ -75,96 +75,70 @@
   },
   "privacy": {
     "title": "Datenschutzerklärung",
-    "lastUpdated": "Stand: September 2025",
-    "intro": "Diese Datenschutzerklärung beschreibt, wie personenbezogene Daten im Rahmen der Nachhilfeleistungen verarbeitet werden und welche Rechte betroffene Personen haben.",
+    "lastUpdated": "Stand: November 2025",
+    "intro": "Die folgenden Abschnitte beschreiben, wie ich Personendaten für mein schweizerisches Nachhilfeangebot bearbeite – inklusive Datenquellen, Aufbewahrungsdauern, eingesetzten Dienstleistern und deinen Rechten.",
     "sections": [
       {
-        "id": "controller",
-        "heading": "Verantwortliche Stelle",
+        "id": "dataCollection",
+        "heading": "Datenerhebung & Quellen",
         "body": [
-          "Teodoro Morcone (Teodoro Morcone Nachhilfe)",
-          "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
-          "Kontakt: info@teodoro.ch, +41 76 244 02 59"
-        ]
-      },
-      {
-        "id": "purposes",
-        "heading": "Zwecke der Datenverarbeitung",
-        "list": [
-          "Beantwortung von Anfragen und Vorbereitung von Unterrichtsverträgen",
-          "Organisation und Durchführung von Nachhilfelektionen (Zoom)",
-          "Sicherstellung des technischen Betriebs der Website",
-          "Optionale Statistik (Google Analytics 4) nur nach erteilter Einwilligung",
-          "Rechnungsstellung und Kommunikation"
-        ]
-      },
-      {
-        "id": "dataCategories",
-        "heading": "Kategorien von Daten",
-        "list": [
-          "Kontaktangaben (Name, E-Mail, Telefonnummer)",
-          "Angaben zur Schulstufe, Zielsetzung und Prüfungsfokus",
-          "Kommunikationsinhalte (Nachrichten, Notizen aus Lektionen)",
-          "Metadaten von Zoom-Sitzungen (Datum, Dauer); standardmässig keine Aufzeichnungen",
-          "Technische Logdaten und Cookie-Präferenzen"
-        ]
-      },
-      {
-        "id": "legalBases",
-        "heading": "Rechtsgrundlagen",
-        "body": [
-          "Vertrag und vorvertragliche Massnahmen (Art. 31 Abs. 2 lit. a revDSG)",
-          "Berechtigtes Interesse an sicherem und funktionsfähigem Betrieb",
-          "Einwilligung für Analysen, Newsletter oder etwaige Aufzeichnungen"
-        ]
-      },
-      {
-        "id": "processors",
-        "heading": "Empfänger & Auftragsverarbeiter",
-        "list": [
-          "Hosting- und E-Mail-Anbieter (mit DPA)",
-          "Zoom Video Communications (keine automatischen Aufzeichnungen)",
-          "Analyse-Dienst (Google, nur bei Zustimmung)",
-          "Optionale Tools für Kontakt-/Terminverwaltung"
-        ]
-      },
-      {
-        "id": "transfers",
-        "heading": "Internationale Datenübermittlungen",
-        "body": [
-          "Erfolgen nur mit angemessenen Garantien (Standardvertragsklauseln oder vergleichbare Schutzmechanismen)."
+          "Ich biete mein Nachhilfeangebot ausschliesslich in der Schweiz an und bearbeite Personendaten nur zur Vertragserfüllung gemäss revidiertem Datenschutzgesetz (revDSG) sowie den Empfehlungen des Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB). Ich erhebe Daten direkt von dir, wenn du ein Kontaktformular nutzt, Termine über Calendesk buchst, an einer Zoom-Lektion teilnimmst oder per E-Mail bzw. Chat kommunizierst.",
+          "Dazu zählen Kontaktangaben, Lernziele, bevorzugte Zeiten, Zahlungsreferenzen und handschriftliche Notizen, die mir bei der Vorbereitung helfen. Mein privat betriebener Schweizer Server erzeugt gekürzte IP-Adressen, Browserinformationen und Sicherheitslogs, um den Dienst zu schützen. Ich protokolliere Einwilligungen, damit ich die EDÖB-Vorgaben nachweisen kann. Analyseereignisse sende ich nur nach deiner ausdrücklichen Einwilligung an Google Analytics 4; sie bleiben pseudonymisiert. Ich setze keine automatisierten Entscheidungen oder Profiling ein—jede Zusage, jede Unterrichtsplanung und jeder Preisentscheid erfolgt persönlich durch mich."
         ]
       },
       {
         "id": "retention",
-        "heading": "Speicherdauer",
-        "body": [
-          "Kontaktdaten und Nachrichten werden solange aufbewahrt, wie es für die Zusammenarbeit erforderlich ist.",
-          "Rechnungs- und Buchungsunterlagen gemäss gesetzlichen Aufbewahrungsfristen."
+        "heading": "Aufbewahrung & Löschung",
+        "list": [
+          "Anfragen ohne nachfolgende Lektion lösche ich nach spätestens 12 Monaten.",
+          "Aktive Lernakten, Unterrichtsnotizen und Materialien bewahre ich bis zu drei Jahre nach der letzten Lektion auf, sofern du keine frühere Löschung verlangst und keine gesetzlichen Pflichten entgegenstehen.",
+          "Buchhaltungsunterlagen, Rechnungen und Zahlungsbelege müssen gemäss schweizerischem Recht 10 Jahre gespeichert bleiben.",
+          "Einwilligungs- und Cookie-Protokolle sichere ich fünf Jahre, um die Einhaltung der EDÖB-Richtlinien zu dokumentieren.",
+          "Sicherheitslogs auf meinem Schweizer Server werden nach 12 Monaten rotiert; optionale Google-Analytics-Daten löschen sich automatisch nach 14 Monaten.",
+          "Erhalte ich ein Löschgesuch an info@teodoro.ch, entferne ich die betreffenden Daten innerhalb von 30 Tagen, sobald keine gesetzlichen Aufbewahrungspflichten mehr bestehen, und bereinige Sicherungskopien beim nächsten Wartungslauf."
+        ]
+      },
+      {
+        "id": "thirdParties",
+        "heading": "Drittanbieter & Übermittlungen",
+        "list": [
+          "**Schweizer Privat-Hosting:** Die Website läuft auf eigener Infrastruktur innerhalb der Schweiz; dadurch entstehen für das Hosting keine grenzüberschreitenden Übermittlungen.",
+          "**Calendesk (Polen/EU):** Verwaltet Terminplanung, Erinnerungen und Zahlungsstatus in EU-Rechenzentren. Der Datentransfer stützt sich auf den vom EDÖB anerkannten Angemessenheitsbeschluss für den EWR; Zugriff haben nur ich und vertraglich gebundene Supportstellen.",
+          "**Zoom (EU-Datenhaltung, Anbieter mit Sitz in den USA):** Lektionen finden mit Warteraum, Passcodes und Verschlüsselung statt. Aufzeichnungen sind standardmässig deaktiviert; falls sie nötig sind, hole ich eine schriftliche Einwilligung ein und lösche die Aufnahmen spätestens nach 30 Tagen, sofern keine gesetzliche Pflicht dagegen spricht. Standardvertragsklauseln (SCCs) und technische Zusatzmassnahmen schützen allfällige Zugriffe aus Drittstaaten.",
+          "**Google Workspace & Google Analytics (EU/USA):** E-Mail, Dokumente und optionale Statistiken basieren auf SCCs, Verschlüsselung und IP-Anonymisierung; Werbefunktionen sind deaktiviert. Ich übermittle nur die Daten, die für den jeweiligen Zweck erforderlich sind.",
+          "Eine Weitergabe erfolgt ausschliesslich an diese Auftragsbearbeiter oder wenn ich rechtlich dazu verpflichtet bin. Ein Verkauf von Personendaten findet nicht statt."
         ]
       },
       {
         "id": "rights",
-        "heading": "Rechte der betroffenen Personen",
+        "heading": "So üben Sie Ihre Rechte aus",
         "body": [
-          "Betroffene können jederzeit Auskunft, Berichtigung, Löschung, Einschränkung oder Datenübertragbarkeit verlangen sowie Einwilligungen widerrufen."
-        ]
-      },
-      {
-        "id": "minors",
-        "heading": "Umgang mit minderjährigen Lernenden",
-        "body": [
-          "Bei Schüler:innen unter 16 Jahren erfolgt die Kommunikation in Abstimmung mit den Erziehungsberechtigten.",
-          "In Zoom werden keine vollständigen Klarnamen von Minderjährigen verwendet."
+          "Für Auskunft, Berichtigung, Datenübertragbarkeit, Löschung oder den Widerruf einer Einwilligung schreibe an info@teodoro.ch oder an Teodoro Morcone Nachhilfe, Eichbühlstrasse 33, 8004 Zürich. Ich prüfe deine Identität mit verhältnismässigen Mitteln (z.B. Rückmeldung von der hinterlegten Adresse) und beantworte dein Gesuch innert 30 Tagen; bei komplexen Anliegen informiere ich dich über eine mögliche Verlängerung um maximal 30 Tage. Deine Cookie-Präferenzen kannst du jederzeit über den Link «Cookie-Einstellungen» im Footer anpassen.",
+          "Wenn du mit meiner Antwort unzufrieden bist, kannst du dich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB), Feldeggweg 1, 3003 Bern, wenden. Die Wahrnehmung deiner Rechte ist kostenlos, ausser bei offensichtlich unbegründeten oder übermässigen Gesuchen."
         ]
       }
     ],
     "rights": {
       "title": "Kontakt für Datenschutzanfragen",
       "email": "info@teodoro.ch",
-      "reference": "FDPIC: https://www.edoeb.admin.ch"
+      "reference": "Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB), Feldeggweg 1, 3003 Bern"
     },
-    "cookieLink": "Cookie-Einstellungen"
+    "cookieLink": "Cookie-Verwaltung",
+    "cookieTable": {
+      "title": "Liste der Cookies und ähnlichen Technologien",
+      "caption": "Diese Tabellen zeigen die auf teodoro.ch eingesetzten Cookies und Technologien, gruppiert nach Zweck.",
+      "columns": {
+        "name": "Name",
+        "provider": "Anbieter",
+        "purpose": "Zweck",
+        "lifetime": "Speicherdauer"
+      },
+      "categories": {
+        "essential": "Essenzielle Cookies",
+        "analytics": "Statistik (GA4)",
+        "marketing": "Marketing (Meta Pixel)"
+      }
+    }
   },
   "cancellation": {
     "title": "Annullierungen & No-shows",

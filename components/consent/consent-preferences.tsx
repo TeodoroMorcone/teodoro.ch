@@ -4,10 +4,13 @@ import * as Dialog from "@radix-ui/react-dialog";
 import {X} from "lucide-react";
 import Link from "next/link";
 import {useLocale, useTranslations} from "next-intl";
-import {useEffect, useMemo, useState} from "react";
+import {useCallback, useEffect, useMemo, useState} from "react";
 
 import {useConsent} from "@/components/consent/consent-context";
 import type {CookieBannerStrings} from "@/types/consent";
+
+const actionButtonClass =
+  "inline-flex w-full items-center justify-center rounded-full border border-secondary/40 bg-white px-4 py-2 text-sm font-semibold text-primary transition-colors duration-200 ease-soft-sine hover:border-accent hover:bg-accent/5 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/30 dark:bg-white dark:text-primary sm:flex-1";
 
 export function ConsentPreferences() {
   const consent = useConsent();
@@ -22,30 +25,55 @@ export function ConsentPreferences() {
     return {banner, preferences, notifications, links};
   }, [t]);
 
-  const [analyticsEnabled, setAnalyticsEnabled] = useState(consent.state.analytics);
+  const consentValues = consent.consent;
+  const [analyticsEnabled, setAnalyticsEnabled] = useState(consentValues.analytics);
+  const [marketingEnabled, setMarketingEnabled] = useState(consentValues.marketing);
 
   useEffect(() => {
     if (consent.isPreferencesOpen) {
-      setAnalyticsEnabled(consent.state.analytics);
+      setAnalyticsEnabled(consent.consent.analytics);
+      setMarketingEnabled(consent.consent.marketing);
     }
-  }, [consent.isPreferencesOpen, consent.state.analytics]);
+  }, [consent.isPreferencesOpen, consent.consent.analytics, consent.consent.marketing]);
+
+  const resetToggles = useCallback(() => {
+    setAnalyticsEnabled(consent.consent.analytics);
+    setMarketingEnabled(consent.consent.marketing);
+  }, [consent.consent.analytics, consent.consent.marketing]);
 
   const handleOpenChange = (open: boolean) => {
     if (!open) {
+      resetToggles();
       consent.closePreferences();
     }
   };
 
-  const handleCancel = () => {
-    consent.closePreferences();
-  };
+  const savedMessage = strings.notifications.saved;
 
   const handleSave = () => {
-    consent.updatePreferences({
-      analytics: analyticsEnabled,
-      updatedAt: Date.now(),
-    });
-    consent.announce(strings.notifications.saved);
+    if (analyticsEnabled !== consent.consent.analytics) {
+      consent.updateCategory("analytics", analyticsEnabled);
+    }
+    if (marketingEnabled !== consent.consent.marketing) {
+      consent.updateCategory("marketing", marketingEnabled);
+    }
+
+    consent.savePreferences();
+    consent.announce(savedMessage);
+  };
+
+  const handleAcceptAll = () => {
+    setAnalyticsEnabled(true);
+    setMarketingEnabled(true);
+    consent.acceptAll();
+    consent.announce(savedMessage);
+  };
+
+  const handleRejectAll = () => {
+    setAnalyticsEnabled(false);
+    setMarketingEnabled(false);
+    consent.rejectAll();
+    consent.announce(savedMessage);
   };
 
   const privacyHref = `/${locale}/legal/privacy`;
@@ -68,7 +96,7 @@ export function ConsentPreferences() {
                 {strings.preferences.description}{" "}
                 <Link
                   href={privacyHref}
-                  className="font-medium text-primary underline-offset-4 hover:underline dark:text-surface"
+                  className="font-medium text-primary underline-offset-4 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-surface"
                 >
                   {strings.links.privacy}
                 </Link>
@@ -82,58 +110,124 @@ export function ConsentPreferences() {
             </Dialog.Close>
           </div>
 
-          <div className="mt-6 space-y-5">
+          <div className="mt-6 space-y-5" data-cookie-preferences>
             <fieldset className="space-y-4" aria-label={strings.preferences.title}>
               <legend className="sr-only">{strings.preferences.title}</legend>
 
               <div className="flex items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/60 px-4 py-4 dark:border-surface/20 dark:bg-primary/60">
                 <div className="space-y-1">
-                  <span className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70">
+                  <span
+                    id="preferences-essential-label"
+                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
+                  >
                     {strings.preferences.essentialTitle}
                   </span>
-                  <p className="text-sm text-secondary dark:text-surface/80">
+                  <p
+                    id="preferences-essential-description"
+                    className="text-sm text-secondary dark:text-surface/80"
+                  >
                     {strings.preferences.essentialDescription}
                   </p>
                 </div>
-                <span className="rounded-full bg-secondary/20 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-secondary dark:bg-surface/20 dark:text-surface/70">
-                  On
-                </span>
+                <div className="flex items-center gap-3">
+                  <input
+                    id="preferences-essential-toggle"
+                    type="checkbox"
+                    checked
+                    disabled
+                    readOnly
+                    className="h-5 w-5 rounded border-secondary/40 text-primary opacity-60 dark:border-surface/40 dark:bg-primary"
+                    aria-labelledby="preferences-essential-label"
+                    aria-describedby="preferences-essential-description"
+                  />
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70">
+                    {strings.preferences.alwaysOn}
+                  </span>
+                </div>
               </div>
 
-              <label className="flex items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/60 px-4 py-4 transition-colors duration-200 dark:border-surface/20 dark:bg-primary/60">
-                <div className="space-y-1">
-                  <span className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70">
+              <label
+                htmlFor="preferences-analytics-toggle"
+                className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/50 px-4 py-4 transition-colors duration-200 hover:border-accent dark:border-surface/20 dark:bg-primary/50"
+              >
+                <span className="space-y-1">
+                  <span
+                    id="preferences-analytics-label"
+                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
+                  >
                     {strings.preferences.analyticsTitle}
                   </span>
-                  <p className="text-sm text-secondary dark:text-surface/80">
+                  <p
+                    id="preferences-analytics-description"
+                    className="text-sm text-secondary dark:text-surface/80"
+                  >
                     {strings.preferences.analyticsDescription}
                   </p>
-                </div>
-                <span className="inline-flex items-center gap-2">
-                  <input
-                    type="checkbox"
-                    className="h-5 w-5 rounded border-secondary/40 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/40 dark:bg-primary dark:text-surface"
-                    checked={analyticsEnabled}
-                    onChange={(event) => setAnalyticsEnabled(event.target.checked)}
-                    aria-label={strings.preferences.analyticsTitle}
-                  />
                 </span>
+                <input
+                  id="preferences-analytics-toggle"
+                  type="checkbox"
+                  className="h-5 w-5 rounded border-secondary/40 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/40 dark:bg-primary dark:text-surface"
+                  checked={analyticsEnabled}
+                  onChange={(event) => setAnalyticsEnabled(event.target.checked)}
+                  aria-labelledby="preferences-analytics-label"
+                  aria-describedby="preferences-analytics-description"
+                />
+              </label>
+
+              <label
+                htmlFor="preferences-marketing-toggle"
+                className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/50 px-4 py-4 transition-colors duration-200 hover:border-accent dark:border-surface/20 dark:bg-primary/50"
+              >
+                <span className="space-y-1">
+                  <span
+                    id="preferences-marketing-label"
+                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
+                  >
+                    {strings.preferences.marketingTitle}
+                  </span>
+                  <p
+                    id="preferences-marketing-description"
+                    className="text-sm text-secondary dark:text-surface/80"
+                  >
+                    {strings.preferences.marketingDescription}
+                  </p>
+                </span>
+                <input
+                  id="preferences-marketing-toggle"
+                  type="checkbox"
+                  className="h-5 w-5 rounded border-secondary/40 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/40 dark:bg-primary dark:text-surface"
+                  checked={marketingEnabled}
+                  onChange={(event) => setMarketingEnabled(event.target.checked)}
+                  aria-labelledby="preferences-marketing-label"
+                  aria-describedby="preferences-marketing-description"
+                />
               </label>
             </fieldset>
           </div>
 
-          <div className="mt-6 flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-secondary underline-offset-4 transition-colors duration-200 hover:text-accent hover:underline dark:text-surface/70 dark:hover:text-accent"
-              onClick={handleCancel}
+              className={actionButtonClass}
+              onClick={handleAcceptAll}
+              aria-label={strings.banner.accept}
             >
-              {strings.preferences.cancel}
+              {strings.banner.accept}
             </button>
             <button
               type="button"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine hover:bg-accent hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className={actionButtonClass}
+              onClick={handleRejectAll}
+              aria-label={strings.banner.reject}
+            >
+              {strings.banner.reject}
+            </button>
+            <button
+              type="button"
+              className={actionButtonClass}
               onClick={handleSave}
+              aria-label={strings.preferences.save}
             >
               {strings.preferences.save}
             </button>

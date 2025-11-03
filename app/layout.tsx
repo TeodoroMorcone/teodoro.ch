@@ -1,6 +1,9 @@
 import Script from "next/script";
 import type {Metadata} from "next";
 import type {ReactNode} from "react";
+import {AppProviders} from "@/components/providers/app-providers";
+import GA4 from "@/components/GA4";
+import MetaPixel from "@/components/MetaPixel";
 import {DEFAULT_CONSENT} from "@/config/analytics";
 import "./globals.css";
 
@@ -38,7 +41,13 @@ export default function RootLayout({children}: RootLayoutProps) {
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{__html: consentInitScript}}
         />
-        {children}
+        <AppProviders>
+          <>
+            {children}
+            <GA4 />
+            <MetaPixel />
+          </>
+        </AppProviders>
       </body>
     </html>
   );

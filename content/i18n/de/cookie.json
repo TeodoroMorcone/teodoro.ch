@@ -1,18 +1,22 @@
 {
   "banner": {
     "title": "Cookies & Datenschutz",
-    "body": "Ich verwende essenzielle Cookies, um diese Website zu betreiben. Optionale Analyse-Cookies (Google Analytics 4) lade ich erst nach Ihrer Zustimmung, um die Nutzung anonym auszuwerten.",
+    "body": "Ich verwende essenzielle Cookies, um diese Website zu betreiben. Optionale Analyse-Tools (Google Analytics 4) und Marketing-Tools (Meta Pixel) lade ich erst nach Ihrer Zustimmung, um Nutzung und Kampagnenperformance auszuwerten.",
     "accept": "Alle akzeptieren",
     "reject": "Nur Essenzielle",
+    "save": "Einstellungen speichern",
     "manage": "Einstellungen"
   },
   "preferences": {
     "title": "Cookie-Einstellungen",
-    "description": "Sie können Ihre Auswahl jederzeit ändern. Essenzielle Cookies sind notwendig für Sicherheit, Sprache und Consent-Speicherung und bleiben immer aktiv.",
+    "description": "Sie können Ihre Auswahl jederzeit ändern. Essenzielle Cookies sind notwendig für Sicherheit, Sprache und das Speichern Ihrer Zustimmung und bleiben immer aktiv. Analyse- und Marketing-Cookies bleiben deaktiviert, bis Sie zustimmen.",
     "essentialTitle": "Essenzielle Cookies",
     "essentialDescription": "Erforderlich für grundlegende Funktionen wie Seitennavigation, Sicherheitsfunktionen und das Speichern Ihrer Cookie-Wahl.",
     "analyticsTitle": "Analytics (Google Analytics 4)",
-    "analyticsDescription": "Erlaubt eine anonyme Messung der Website-Nutzung mit IP-Anonymisierung. Es werden keine personenbezogenen Daten gespeichert oder mit anderen Google-Diensten kombiniert.",
+    "analyticsDescription": "Ermöglicht eine datenschutzfreundliche Messung mit IP-Anonymisierung. Es werden keine personenbezogenen Daten gespeichert oder mit anderen Google-Diensten kombiniert.",
+    "marketingTitle": "Marketing (Meta Pixel)",
+    "marketingDescription": "Hilft, die Performance von Werbekampagnen auf Meta-Plattformen zu messen. Tracking-Skripte werden nur nach Ihrer Zustimmung geladen.",
+    "alwaysOn": "Immer aktiv",
     "save": "Einstellungen speichern",
     "cancel": "Abbrechen"
   },

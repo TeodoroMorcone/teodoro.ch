@@ -29,11 +29,12 @@ App serves at `http://localhost:3000`. Locale detection redirects `/` to `/de` u
 Create `.env.local` (never commit):
 
 ```ini
-NEXT_PUBLIC_ZOOM_CONSULTATION_DEEP_LINK=zoommtg://zoom.us/j/XXXXXXXXXXX?pwd=XXXXXXXX
-NEXT_PUBLIC_ZOOM_CONSULTATION_FALLBACK=https://zoom.us/j/XXXXXXXXXXX?pwd=XXXXXXXX
-NEXT_PUBLIC_ZOOM_LESSON_DEEP_LINK=zoommtg://zoom.us/j/YYYYYYYYYYY?pwd=YYYYYYYY
-NEXT_PUBLIC_ZOOM_LESSON_FALLBACK=https://zoom.us/j/YYYYYYYYYYY?pwd=YYYYYYYY
+NEXT_PUBLIC_ZOOM_CONSULTATION_DEEP_LINK=zoommtg://zoom.us/j/XXXXXXXXXXX?pwd=CONSULTATION
+NEXT_PUBLIC_ZOOM_CONSULTATION_FALLBACK=https://zoom.us/j/XXXXXXXXXXX?pwd=CONSULTATION
+NEXT_PUBLIC_ZOOM_LESSON_DEEP_LINK=zoommtg://zoom.us/j/YYYYYYYYYYY?pwd=LESSON
+NEXT_PUBLIC_ZOOM_LESSON_FALLBACK=https://zoom.us/j/YYYYYYYYYYY?pwd=LESSON
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_META_PIXEL_ID=000000000000000
 GOOGLE_PLACES_API_KEY=AIzaSyXXXXXX
 GOOGLE_PLACE_ID=ChIJxxxxxxxxxxxxxxxx
 CONTACT_FORM_WEBHOOK_URL=https://hooks.zapier.com/hooks/catch/XXXXXXX/XXXXXXXXX
@@ -42,7 +43,8 @@ CONTACT_FORM_WEBHOOK_SECRET=super-secure-token
 
 - **Zoom links** must point to waiting-room enabled meetings with passcodes (no raw PMI).
 - **Contact webhook** (optional) forwards submissions to your CRM/automation tool. If unset, submissions are accepted but only logged server-side.
-- GA ID is optional locally; analytics loads only after consent.
+- **GA measurement ID** (`NEXT_PUBLIC_GA_MEASUREMENT_ID`) gates Google Analytics; leave blank locally to disable. In production, provide the GA4 Measurement ID (format `G-XXXXXXXXXX`) or set a fallback in [`config/public-settings.json`](./config/public-settings.json).
+- **Meta Pixel ID** (`NEXT_PUBLIC_META_PIXEL_ID`) enables marketing consent flows. Leave blank to disable Meta Pixel entirely; when set, ensure you have a valid Pixel ID and updated privacy notices.
 
 ## 3. Available Scripts
 
@@ -79,11 +81,29 @@ Husky/lint-staged are prepared for future Git hooks (install via `npm run prepar
 
 ## 6. Consent & Analytics
 
-- Consent defaults to **denied** for all categories until the user accepts via the cookie banner.
+- Consent defaults to **denied** for analytics and marketing categories until the user accepts via the cookie banner.
 - Banner provides localized Accept / Reject / Manage actions with focus trap and keyboard support.
-- GA4 loads lazily only after acceptance; see `components/consent` and `lib/analytics/gtag.ts`.
+- Tracking libraries (GA4 + Meta Pixel) load lazily only after their respective consent categories are granted.
 - `generate_lead`, `select_content`, `view_item_list`, and `view_promotion` events dispatch only when consented.
-- Ensure `NEXT_PUBLIC_GA_MEASUREMENT_ID` is configured in production; `config/analytics.ts` will throw if GA is required but missing.
+
+### GA4 Measurement ID
+
+1. Set `NEXT_PUBLIC_GA_MEASUREMENT_ID` in your environment (or update [`config/public-settings.json`](./config/public-settings.json) for non-secret defaults). \
+   The helper in [`config/analytics.ts`](./config/analytics.ts) prefers the environment variable and throws in production when neither value is present.
+2. When the value is empty (development/staging), GA4 stays disabled, but consent UI remains functional for testing toggles.
+3. After granting analytics consent, `lib/analytics/gtag.ts` injects GA4 and requests Consent Mode `analytics_storage=granted`. Rejecting or revoking consent unloads GA4 and restores `analytics_storage=denied`.
+
+### Meta Pixel (Optional Marketing Tracking)
+
+- Provide `NEXT_PUBLIC_META_PIXEL_ID` to enable the Meta Pixel bridge in [`components/MetaPixel.tsx`](./components/MetaPixel.tsx).
+- Marketing consent is required; when disabled, the pixel never loads and Consent Mode invokes `fbq("consent","revoke")`.
+- Verify your privacy policy references Meta platforms before enabling.
+
+### Consent Storage & Reset
+
+- Decisions persist under `localStorage` key `consent.v1` and a minimal cookie `consent_state` (Path `/`, SameSite=Lax) that exposes only boolean flags for analytics (`a`) and marketing (`m`).
+- Clear both the localStorage entry and cookie to reset consent during testing (e.g., via DevTools Application tab).
+- Server-rendered pages treat absent consent as denied, so clearing storage reproduces the first-visit experience.
 
 ## 7. Zoom Quick Launch
 

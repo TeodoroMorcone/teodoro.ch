@@ -5,12 +5,13 @@ import {NextIntlClientProvider} from "next-intl";
 import {getTranslations, unstable_setRequestLocale} from "next-intl/server";
 import "@/app/globals.css";
 
+import {CookieBanner} from "@/components/consent/cookie-banner";
+import {ConsentPreferences} from "@/components/consent/consent-preferences";
 import {ActiveSectionProvider} from "@/components/navigation/active-section-provider";
 import {LanguageSwitcher} from "@/components/navigation/language-switcher";
 import {ThemeToggle} from "@/components/navigation/theme-toggle";
 import {MobileNav} from "@/components/layout/mobile-nav";
 import {Sidebar} from "@/components/layout/sidebar";
-import {AppProviders} from "@/components/providers/app-providers";
 import {NAV_EMOJIS, SECTION_LINKS} from "@/config/navigation";
 import {getMessages} from "@/lib/i18n/get-messages";
 import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
@@ -112,51 +113,51 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
 
   return (
     <NextIntlClientProvider locale={locale} messages={messages}>
-      <AppProviders>
-        <a
-          href="#main-content"
-          className="sr-only absolute left-6 top-4 z-50 inline-flex -translate-y-full items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-surface outline-none transition-transform duration-200 focus-visible:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-        >
-          {skipToContent}
-        </a>
-        <ActiveSectionProvider sectionIds={sectionIds} topOffset={144}>
-          <div className="relative flex min-h-screen min-h-dvh flex-col bg-surface text-primary dark:bg-primary dark:text-surface lg:flex-row">
-            <Sidebar
+      <a
+        href="#main-content"
+        className="sr-only absolute left-6 top-4 z-50 inline-flex -translate-y-full items-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-surface outline-none transition-transform duration-200 focus-visible:translate-y-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      >
+        {skipToContent}
+      </a>
+      <ActiveSectionProvider sectionIds={sectionIds} topOffset={144}>
+        <div className="relative flex min-h-screen min-h-dvh flex-col bg-surface text-primary dark:bg-primary dark:text-surface lg:flex-row">
+          <Sidebar
+            locale={locale}
+            navItems={navItems}
+            ctas={ctas}
+            labels={sidebarLabels}
+            activeLocaleName={activeLocaleName}
+            themeSystemLabel={themeSystemLabel}
+            languageSwitcher={sidebarLanguageSwitcher}
+            themeToggle={sidebarThemeToggle}
+          />
+          <div className="flex min-h-screen flex-1 flex-col">
+            <MobileNav
               locale={locale}
               navItems={navItems}
               ctas={ctas}
-              labels={sidebarLabels}
+              labels={mobileLabels}
               activeLocaleName={activeLocaleName}
               themeSystemLabel={themeSystemLabel}
-              languageSwitcher={sidebarLanguageSwitcher}
-              themeToggle={sidebarThemeToggle}
+              languageSwitcher={mobileLanguageSwitcher}
+              themeToggle={mobileThemeToggle}
             />
-            <div className="flex min-h-screen flex-1 flex-col">
-              <MobileNav
-                locale={locale}
-                navItems={navItems}
-                ctas={ctas}
-                labels={mobileLabels}
-                activeLocaleName={activeLocaleName}
-                themeSystemLabel={themeSystemLabel}
-                languageSwitcher={mobileLanguageSwitcher}
-                themeToggle={mobileThemeToggle}
-              />
-              <div className="flex-1">{children}</div>
-            </div>
+            <div className="flex-1">{children}</div>
           </div>
-        </ActiveSectionProvider>
-        <a
-          href={whatsappContact.href}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={whatsappContact.ariaLabel}
-          className="fixed bottom-6 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sidebar transition-transform duration-200 ease-soft-sine hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:bottom-8 sm:right-8 sm:h-16 sm:w-16"
-        >
-          <MessageCircle aria-hidden="true" className="h-7 w-7" />
-          <span className="sr-only">{whatsappContact.label}</span>
-        </a>
-      </AppProviders>
+        </div>
+      </ActiveSectionProvider>
+      <a
+        href={whatsappContact.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label={whatsappContact.ariaLabel}
+        className="fixed bottom-6 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-sidebar transition-transform duration-200 ease-soft-sine hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:bottom-8 sm:right-8 sm:h-16 sm:w-16"
+      >
+        <MessageCircle aria-hidden="true" className="h-7 w-7" />
+        <span className="sr-only">{whatsappContact.label}</span>
+      </a>
+      <CookieBanner />
+      <ConsentPreferences />
     </NextIntlClientProvider>
   );
 }

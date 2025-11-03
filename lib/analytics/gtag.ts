@@ -1,6 +1,6 @@
 "use client";
 
-import {assertMeasurementId} from "@/config/analytics";
+import {DEFAULT_CONSENT, GRANTED_CONSENT, assertMeasurementId, getMeasurementId} from "@/config/analytics";
 
 declare global {
   interface Window {
@@ -16,7 +16,12 @@ type EventQueueItem = {
 
 let gaReady = false;
 let scriptLoaded = false;
+let scriptElement: HTMLScriptElement | null = null;
 const eventQueue: EventQueueItem[] = [];
+
+function clearEventQueue() {
+  eventQueue.length = 0;
+}
 
 function ensureDataLayer() {
   if (typeof window === "undefined") {
@@ -34,6 +39,18 @@ function ensureDataLayer() {
   }
 }
 
+type ConsentUpdate = typeof DEFAULT_CONSENT;
+
+function setAnalyticsDisabledFlag(measurementId: string, disabled: boolean) {
+  const flagKey = `ga-disable-${measurementId}`;
+  (window as typeof window & Record<string, boolean>)[flagKey] = disabled;
+}
+
+function updateGaConsent(consent: ConsentUpdate) {
+  ensureDataLayer();
+  window.gtag("consent", "update", consent);
+}
+
 export function loadGaScript() {
   if (typeof window === "undefined") {
     return;
@@ -49,12 +66,16 @@ export function loadGaScript() {
   const script = document.createElement("script");
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+  scriptElement = script;
   script.onload = () => {
     gaReady = true;
     flushQueue();
   };
   script.onerror = () => {
     console.warn("[analytics] Failed to load GA4 script");
+    scriptLoaded = false;
+    scriptElement = null;
+    setGaReady(false);
   };
 
   document.head.appendChild(script);
@@ -72,6 +93,24 @@ export function isGaReady() {
   return gaReady;
 }
 
+export function unloadGaScript() {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  if (!scriptLoaded) {
+    return;
+  }
+
+  if (scriptElement?.parentNode) {
+    scriptElement.parentNode.removeChild(scriptElement);
+  }
+
+  scriptElement = null;
+  scriptLoaded = false;
+  gaReady = false;
+}
+
 export function setGaReady(value: boolean) {
   gaReady = value;
   if (gaReady) {
@@ -87,6 +126,45 @@ function flushQueue() {
     }
     window.gtag("event", item.name, item.params ?? {});
   }
+}
+
+export function enableAnalyticsTracking(): boolean {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  const measurementId = getMeasurementId();
+  if (!measurementId) {
+    return false;
+  }
+
+  setAnalyticsDisabledFlag(measurementId, false);
+  updateGaConsent(GRANTED_CONSENT);
+  loadGaScript();
+
+  return true;
+}
+
+export function disableAnalyticsTracking(): boolean {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  const measurementId = getMeasurementId();
+  if (!measurementId) {
+    return false;
+  }
+
+  updateGaConsent(DEFAULT_CONSENT);
+  setAnalyticsDisabledFlag(measurementId, true);
+  clearEventQueue();
+  unloadGaScript();
+
+  return true;
+}
+
+export function applyAnalyticsConsent(consented: boolean): boolean {
+  return consented ? enableAnalyticsTracking() : disableAnalyticsTracking();
 }
 
 export function trackEvent(name: string, params?: Record<string, unknown>) {

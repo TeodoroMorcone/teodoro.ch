@@ -1,166 +1,175 @@
 "use client";
 
-import {createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode} from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type ReactNode,
+} from "react";
 
-import {DEFAULT_CONSENT, GRANTED_CONSENT, getMeasurementId} from "@/config/analytics";
-import {isGaReady, loadGaScript, setGaReady} from "@/lib/analytics/gtag";
+import {
+  createDefaultConsent,
+  getConsent,
+  migrateLegacyConsent,
+  onConsentChange,
+  setConsent,
+  type Consent,
+} from "@/lib/consent";
+import type {ConsentState} from "@/types/consent";
 
-type ConsentState = {
-  analytics: boolean;
-  updatedAt: number | null;
-};
+type UpdatableCategory = "analytics" | "marketing";
 
 type ConsentContextValue = {
-  state: ConsentState;
+  consent: ConsentState;
   isReady: boolean;
-  isBannerVisible: boolean;
+  isBannerOpen: boolean;
   isPreferencesOpen: boolean;
   announcement: string | null;
+  updateCategory: (category: UpdatableCategory, value: boolean) => void;
   acceptAll: () => void;
   rejectAll: () => void;
+  savePreferences: () => void;
   openBanner: () => void;
   openPreferences: () => void;
   closePreferences: () => void;
-  updatePreferences: (next: ConsentState) => void;
   announce: (message: string | null) => void;
-};
-
-const ConsentContext = createContext<ConsentContextValue | undefined>(undefined);
-
-const CONSENT_STORAGE_KEY = "theodors.consents.v1";
-
-const defaultState: ConsentState = {
-  analytics: false,
-  updatedAt: null,
 };
 
 type ConsentProviderProps = {
   children: ReactNode;
 };
 
-function pushConsentUpdate(consent: Record<string, "granted" | "denied">) {
-  if (typeof window === "undefined") {
-    return;
-  }
+type NormalizableConsent =
+  | Consent
+  | ConsentState
+  | ReturnType<typeof createDefaultConsent>
+  | null
+  | undefined;
 
-  if (typeof window.gtag === "function") {
-    window.gtag("consent", "update", consent);
-  }
-}
+const ConsentContext = createContext<ConsentContextValue | undefined>(undefined);
+
+const normalizeConsent = (consent: NormalizableConsent): ConsentState => ({
+  essential: true,
+  analytics: Boolean(consent?.analytics),
+  marketing: Boolean(consent?.marketing),
+});
+
+const createInitialConsentState = () => normalizeConsent(createDefaultConsent());
+
+const isBrowser = () => typeof window !== "undefined";
 
 export function ConsentProvider({children}: ConsentProviderProps) {
-  const [state, setState] = useState<ConsentState>(defaultState);
+  const [consent, setConsentState] = useState<ConsentState>(createInitialConsentState);
   const [isReady, setIsReady] = useState(false);
-  const [isBannerVisible, setIsBannerVisible] = useState(true);
+  const [isBannerOpen, setIsBannerOpen] = useState(true);
   const [isPreferencesOpen, setIsPreferencesOpen] = useState(false);
   const [announcement, setAnnouncement] = useState<string | null>(null);
-  const hasMeasurementId = Boolean(getMeasurementId());
-  const hasSyncedInitialConsent = useRef(false);
+  const isLocalUpdate = useRef(false);
 
-  const syncAnalyticsConsent = useCallback(
-    (analyticsEnabled: boolean) => {
-      if (!hasMeasurementId) {
+  useEffect(() => {
+    if (!isBrowser()) {
+      return;
+    }
+
+    migrateLegacyConsent();
+
+    const stored = getConsent();
+    if (stored) {
+      setConsentState(normalizeConsent(stored));
+      setIsBannerOpen(false);
+    } else {
+      setIsBannerOpen(true);
+    }
+
+    const unsubscribe = onConsentChange((next) => {
+      if (isLocalUpdate.current) {
+        return;
+      }
+      setConsentState(normalizeConsent(next));
+    });
+
+    setIsReady(true);
+
+    return unsubscribe;
+  }, []);
+
+  const persistConsent = useCallback((next: ConsentState) => {
+    setConsentState(next);
+
+    if (!isBrowser()) {
+      return;
+    }
+
+    isLocalUpdate.current = true;
+    try {
+      setConsent({
+        essential: true,
+        analytics: next.analytics,
+        marketing: next.marketing,
+      });
+    } finally {
+      isLocalUpdate.current = false;
+    }
+  }, []);
+
+  const updateCategory = useCallback(
+    (category: UpdatableCategory, value: boolean) => {
+      if (consent[category] === value) {
         return;
       }
 
-      if (analyticsEnabled) {
-        try {
-          loadGaScript();
-          pushConsentUpdate(GRANTED_CONSENT);
-        } catch (error) {
-          console.warn("[ConsentProvider] Unable to load GA script", error);
-        }
-      } else {
-        if (isGaReady()) {
-          setGaReady(false);
-        }
-        pushConsentUpdate(DEFAULT_CONSENT);
-      }
+      const next: ConsentState =
+        category === "analytics"
+          ? {
+              ...consent,
+              analytics: value,
+            }
+          : {
+              ...consent,
+              marketing: value,
+            };
+
+      persistConsent(next);
     },
-    [hasMeasurementId],
+    [consent, persistConsent],
   );
-
-  useEffect(() => {
-    if (typeof window === "undefined") {
-      return;
-    }
-
-    try {
-      const stored = window.localStorage.getItem(CONSENT_STORAGE_KEY);
-      if (stored) {
-        const parsed = JSON.parse(stored) as Partial<ConsentState>;
-        const restored: ConsentState = {
-          analytics: Boolean(parsed.analytics),
-          updatedAt: typeof parsed.updatedAt === "number" ? parsed.updatedAt : null,
-        };
-        setState(restored);
-        setIsBannerVisible(false);
-      } else {
-        setState(defaultState);
-        setIsBannerVisible(true);
-      }
-    } catch (error) {
-      console.warn("[ConsentProvider] Failed to parse stored consent state", error);
-      setState(defaultState);
-      setIsBannerVisible(true);
-    } finally {
-      setIsReady(true);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!isReady || typeof window === "undefined") {
-      return;
-    }
-
-    try {
-      window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(state));
-    } catch (error) {
-      console.warn("[ConsentProvider] Failed to persist consent state", error);
-    }
-  }, [isReady, state]);
-
-  useEffect(() => {
-    if (!isReady) {
-      return;
-    }
-
-    if (hasSyncedInitialConsent.current) {
-      return;
-    }
-
-    hasSyncedInitialConsent.current = true;
-
-    if (state.analytics) {
-      syncAnalyticsConsent(true);
-    } else if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      pushConsentUpdate(DEFAULT_CONSENT);
-    }
-  }, [isReady, state.analytics, syncAnalyticsConsent]);
-
-  const openBanner = useCallback(() => {
-    setIsBannerVisible(true);
-  }, []);
 
   const acceptAll = useCallback(() => {
     const next: ConsentState = {
+      essential: true,
       analytics: true,
-      updatedAt: Date.now(),
+      marketing: true,
     };
-    setState(next);
-    setIsBannerVisible(false);
-    syncAnalyticsConsent(true);
-  }, [syncAnalyticsConsent]);
+
+    persistConsent(next);
+    setIsBannerOpen(false);
+    setIsPreferencesOpen(false);
+  }, [persistConsent]);
 
   const rejectAll = useCallback(() => {
     const next: ConsentState = {
+      essential: true,
       analytics: false,
-      updatedAt: Date.now(),
+      marketing: false,
     };
-    setState(next);
-    setIsBannerVisible(false);
-    syncAnalyticsConsent(false);
-  }, [syncAnalyticsConsent]);
+
+    persistConsent(next);
+    setIsBannerOpen(false);
+    setIsPreferencesOpen(false);
+  }, [persistConsent]);
+
+  const savePreferences = useCallback(() => {
+    setIsBannerOpen(false);
+    setIsPreferencesOpen(false);
+  }, []);
+
+  const openBanner = useCallback(() => {
+    setIsBannerOpen(true);
+  }, []);
 
   const openPreferences = useCallback(() => {
     setIsPreferencesOpen(true);
@@ -171,47 +180,39 @@ export function ConsentProvider({children}: ConsentProviderProps) {
     setIsPreferencesOpen(false);
   }, []);
 
-  const updatePreferences = useCallback((next: ConsentState) => {
-    setState({
-      analytics: next.analytics,
-      updatedAt: Date.now(),
-    });
-    setIsBannerVisible(false);
-    setIsPreferencesOpen(false);
-    syncAnalyticsConsent(next.analytics);
-  }, [syncAnalyticsConsent]);
-
   const announce = useCallback((message: string | null) => {
     setAnnouncement(message);
   }, []);
 
   const value = useMemo<ConsentContextValue>(
     () => ({
-      state,
+      consent,
       isReady,
-      isBannerVisible,
+      isBannerOpen,
       isPreferencesOpen,
       announcement,
+      updateCategory,
       acceptAll,
       rejectAll,
+      savePreferences,
       openBanner,
       openPreferences,
       closePreferences,
-      updatePreferences,
       announce,
     }),
     [
-      state,
+      consent,
       isReady,
-      isBannerVisible,
+      isBannerOpen,
       isPreferencesOpen,
       announcement,
+      updateCategory,
       acceptAll,
       rejectAll,
+      savePreferences,
       openBanner,
       openPreferences,
       closePreferences,
-      updatePreferences,
       announce,
     ],
   );

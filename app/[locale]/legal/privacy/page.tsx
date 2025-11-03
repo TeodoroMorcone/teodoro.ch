@@ -3,6 +3,8 @@ import {notFound} from "next/navigation";
 import {getTranslations} from "next-intl/server";
 
 import {CookieSettingsButton} from "@/components/legal/cookie-settings-button";
+import {CookieTable, type CookieTableStrings} from "@/components/legal/cookie-table";
+import {COOKIE_TECHNOLOGIES} from "@/config/cookies";
 import {buildPageMetadata} from "@/lib/seo/meta";
 import {LOCALES, type Locale, isLocale} from "@/lib/i18n/locales";
 
@@ -48,6 +50,7 @@ export default async function PrivacyPage({params}: LegalPageProps) {
     | {id: string; heading: string; body: string[]}
     | {id: string; heading: string; list: string[]}
   >;
+  const cookieTableStrings = tPrivacy.raw("cookieTable") as CookieTableStrings;
   const cancellation = tLegal.raw("cancellation") as {title: string; body: string[]};
   const minors = tLegal.raw("minors") as {title: string; body: string[]};
 
@@ -78,6 +81,7 @@ export default async function PrivacyPage({params}: LegalPageProps) {
             )}
           </section>
         ))}
+        <CookieTable strings={cookieTableStrings} data={COOKIE_TECHNOLOGIES} />
       </div>
 
       <aside className="mt-12 rounded-2xl border border-secondary/20 px-6 py-6 shadow-sm">
