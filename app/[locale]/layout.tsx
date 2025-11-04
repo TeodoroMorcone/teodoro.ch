@@ -157,11 +157,11 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
           target="_blank"
           rel="noopener noreferrer"
           aria-label={whatsappContact.ariaLabel}
-          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition duration-200 ease-soft-sine hover:scale-105 focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 md:h-[112px] md:w-[112px]"
+          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full bg-transparent text-[#25D366] shadow-lg transition duration-200 ease-soft-sine hover:scale-105 hover:bg-transparent focus:bg-transparent focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 md:h-[112px] md:w-[112px]"
         >
           <span className="sr-only">Whatsapp Teodoro</span>
           <svg
-            className="absolute inset-0 h-full w-full pointer-events-none text-white/70"
+            className="absolute inset-0 h-full w-full pointer-events-none text-[#25D366]/70"
             viewBox="0 0 120 120"
             aria-hidden="true"
           >
@@ -174,11 +174,11 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
             <text
               className="text-[12px] uppercase tracking-[0.22em] md:text-[13px] animate-counter-spin"
               fill="none"
-              stroke="currentColor"
+              stroke="#fff"
               strokeWidth="0.6"
             >
               <textPath href="#whatsapp-teodoro-arc" startOffset="0%">
-                 Whatsapp your tutor Teodoro •
+                 Whatsapp your tutor Teodoro • • 
               </textPath>
             </text>
           </svg>
@@ -188,19 +188,44 @@ export default async function LocaleLayout({children, params}: LocaleLayoutProps
           >
             <svg
               aria-hidden="true"
-              fill="#ffffff"
               viewBox="0 0 32 32"
-              version="1.1"
               xmlns="http://www.w3.org/2000/svg"
-              stroke="#ffffff"
               className="h-full w-full"
+              fill="none"
             >
-              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-              <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
-              <g id="SVGRepo_iconCarrier">
-                <title>whatsapp</title>
-                <path d="M26.576 5.363c-2.69-2.69-6.406-4.354-10.511-4.354-8.209 0-14.865 6.655-14.865 14.865 0 2.732 0.737 5.291 2.022 7.491l-0.038-0.070-2.109 7.702 7.879-2.067c2.051 1.139 4.498 1.809 7.102 1.809h0.006c8.209-0.003 14.862-6.659 14.862-14.868 0-4.103-1.662-7.817-4.349-10.507l0 0zM16.062 28.228h-0.005c-0 0-0.001 0-0.001 0-2.319 0-4.489-0.64-6.342-1.753l0.056 0.031-0.451-0.267-4.675 1.227 1.247-4.559-0.294-0.467c-1.185-1.862-1.889-4.131-1.889-6.565 0-6.822 5.531-12.353 12.353-12.353s12.353 5.531 12.353 12.353c0 6.822-5.53 12.353-12.353 12.353h-0zM22.838 18.977c-0.371-0.186-2.197-1.083-2.537-1.208-0.341-0.124-0.589-0.185-0.837 0.187-0.246 0.371-0.958 1.207-1.175 1.455-0.216 0.249-0.434 0.279-0.805 0.094-1.15-0.466-2.138-1.087-2.997-1.852l0.010 0.009c-0.799-0.74-1.484-1.587-2.037-2.521l-0.028-0.052c-0.216-0.371-0.023-0.572 0.162-0.757 0.167-0.166 0.372-0.434 0.557-0.65 0.146-0.179 0.271-0.384 0.366-0.604l0.006-0.017c0.043-0.087 0.068-0.188 0.068-0.296 0-0.131-0.037-0.253-0.101-0.357l0.002 0.003c-0.094-0.186-0.836-2.014-1.145-2.758-0.302-0.724-0.609-0.625-0.836-0.637-0.216-0.010-0.464-0.012-0.712-0.012-0.395 0.010-0.746 0.188-0.988 0.463l-0.001 0.002c-0.802 0.761-1.3 1.834-1.3 3.023 0 0.026 0 0.053 0.001 0.079l-0-0.004c0.131 1.467 0.681 2.784 1.527 3.857l-0.012-0.015c1.604 2.379 3.742 4.282 6.251 5.564l0.094 0.043c0.548 0.248 1.25 0.513 1.968 0.74l0.149 0.041c0.442 0.14 0.951 0.221 1.479 0.221 0.303 0 0.601-0.027 0.889-0.078l-0.031 0.004c1.069-0.223 1.956-0.868 2.497-1.749l0.009-0.017c0.165-0.366 0.261-0.793 0.261-1.242 0-0.185-0.016-0.366-0.047-0.542l0.003 0.019c-0.092-0.155-0.34-0.247-0.712-0.434z"></path>
-              </g>
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16 31C23.732 31 30 24.732 30 17C30 9.26801 23.732 3 16 3C8.26801 3 2 9.26801 2 17C2 19.5109 2.661 21.8674 3.81847 23.905L2 31L9.31486 29.3038C11.3014 30.3854 13.5789 31 16 31ZM16 28.8462C22.5425 28.8462 27.8462 23.5425 27.8462 17C27.8462 10.4576 22.5425 5.15385 16 5.15385C9.45755 5.15385 4.15385 10.4576 4.15385 17C4.15385 19.5261 4.9445 21.8675 6.29184 23.7902L5.23077 27.7692L9.27993 26.7569C11.1894 28.0746 13.5046 28.8462 16 28.8462Z"
+                fill="#BFC8D0"
+              />
+              <path
+                d="M28 16C28 22.6274 22.6274 28 16 28C13.4722 28 11.1269 27.2184 9.19266 25.8837L5.09091 26.9091L6.16576 22.8784C4.80092 20.9307 4.296 18.5589 4.296 16C4.296 9.37258 9.66858 4 16.296 4C22.9234 4 28 9.37258 28 16Z"
+                fill="url(#paint0_linear_87_7264)"
+              />
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M16 30C23.732 30 30 23.732 30 16C30 8.26801 23.732 2 16 2C8.26801 2 2 8.26801 2 16C2 18.5109 2.661 20.8674 3.81847 22.905L2 30L9.31486 28.3038C11.3014 29.3854 13.5789 30 16 30ZM16 27.8462C22.5425 27.8462 27.8462 22.5425 27.8462 16C27.8462 9.45755 22.5425 4.15385 16 4.15385C9.45755 4.15385 4.15385 9.45755 4.15385 16C4.15385 18.5261 4.9445 20.8675 6.29184 22.7902L5.23077 26.7692L9.27993 25.7569C11.1894 27.0746 13.5046 27.8462 16 27.8462Z"
+                fill="#FFFFFF"
+              />
+              <path
+                d="M12.5 9.49989C12.1672 8.83131 11.6565 8.8905 11.1407 8.8905C10.2188 8.8905 8.78125 9.99478 8.78125 12.05C8.78125 13.7343 9.52345 15.578 12.0244 18.3361C14.438 20.9979 17.6094 22.3748 20.2422 22.3279C22.875 22.2811 23.4167 20.0154 23.4167 19.2503C23.4167 18.9112 23.2062 18.742 23.0613 18.696C22.1641 18.2654 20.5093 17.4631 20.1328 17.3124C19.7563 17.1617 19.5597 17.3656 19.4375 17.4765C19.0961 17.8018 18.4193 18.7608 18.1875 18.9765C17.9558 19.1922 17.6103 19.083 17.4665 19.0015C16.9374 18.7892 15.5029 18.1511 14.3595 17.0426C12.9453 15.6718 12.8623 15.2001 12.5959 14.7803C12.3828 14.4444 12.5392 14.2384 12.6172 14.1483C12.9219 13.7968 13.3426 13.254 13.5313 12.9843C13.7199 12.7145 13.5702 12.305 13.4803 12.05C13.0938 10.953 12.7663 10.0347 12.5 9.49989Z"
+                fill="#FFFFFF"
+              />
+              <defs>
+                <linearGradient
+                  id="paint0_linear_87_7264"
+                  x1="26.5"
+                  y1="7"
+                  x2="4"
+                  y2="28"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#5BD066" />
+                  <stop offset="1" stopColor="#27B43E" />
+                </linearGradient>
+              </defs>
             </svg>
           </span>
         </Link>
