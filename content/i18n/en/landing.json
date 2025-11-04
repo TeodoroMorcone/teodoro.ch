@@ -8,11 +8,11 @@
     "bookingLoadingLabel": "Calendesk availability is loading…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
-    "avatarAlt": "Chalkboard background with math sketches representing Teodoro Morcone’s online tutoring",
+    "avatarAlt": "Portrait of Teodoro Morcone smiling during an online tutoring session",
     "illustration": {
-      "src": "/images/chalkbacsk.webp",
-      "alt": "Chalkboard background with hand-drawn math sketches illustrating Teodoro Morcone’s online tutoring",
-      "caption": "I look roughly like this."
+      "src": "/images/teodoro_happy.webp",
+      "alt": "Portrait of Teodoro Morcone smiling during an online tutoring session",
+      "caption": "This is me during a tutoring session."
     }
   },
   "tldr": {
@@ -155,7 +155,7 @@
     },
     "about": {
       "title": "About the tutor",
-      "body": "I’m Teodoro Morcone, a math tutor in Zurich and founder of Teodoro Morcone Nachhilfe. I specialise in building strong foundations, preparing students for Gymnasium, BMS, HMS, and FMS admissions, and providing continuous support in key secondary math topics. My approach blends step-by-step explanations, progressive practice sets, realistic mock exams, and weekly progress tracking. Lessons are available in German, Italian, and English, delivered exclusively online via Zoom."
+      "body": "I’m Teodoro Morcone, a math tutor in Zurich and founder of Teodoro Morcone Nachhilfe—a Business Economist (FH) and unabashed numbers person. Born in Zurich and raised in Ticino, I bridge the German- and Italian-speaking perspectives. I help students build solid foundations, train strategically for Gymnasium, BMS, HMS, and FMS admissions, and stay consistently engaged throughout the school year. My approach combines step-by-step explanations, tiered practice packets, realistic mock exams, and weekly progress tracking—planned, measurable, effective. Lessons are delivered in German, Italian, and English, exclusively online via Zoom. Off the clock I’m into strength training and programming—the same structured discipline flows directly into my tutoring."
     },
     "pricing": {
       "title": "Pricing",

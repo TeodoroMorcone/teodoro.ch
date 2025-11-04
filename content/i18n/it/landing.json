@@ -8,11 +8,11 @@
     "bookingLoadingLabel": "Calendesk sta caricando le disponibilità…",
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
-    "avatarAlt": "Sfondo a lavagna con schizzi matematici che rappresentano il tutoring online di Teodoro",
+    "avatarAlt": "Ritratto di Teodoro Morcone sorridente durante una lezione online di tutoring",
     "illustration": {
-      "src": "/images/chalkbacsk.webp",
-      "alt": "Sfondo a lavagna con disegni matematici fatti a mano che illustrano il tutoring online di Teodoro Morcone",
-      "caption": "Più o meno sembro così."
+      "src": "/images/teodoro_happy.webp",
+      "alt": "Ritratto di Teodoro Morcone sorridente durante una lezione online di tutoring",
+      "caption": "Ecco come appaio mentre insegno."
     }
   },
   "tldr": {
@@ -155,7 +155,7 @@
     },
     "about": {
       "title": "Chi sono",
-      "body": "Sono Teodoro Morcone, tutor di matematica a Zurigo e fondatore di Teodoro Morcone Nachhilfe. Aiuto gli studenti a costruire solide basi, prepararsi alle ammissioni per Gymnasium, BMS, HMS e FMS e mantenere risultati costanti nelle materie scientifiche. Il mio metodo combina spiegazioni passo dopo passo, set di esercizi graduati, simulazioni realistiche e monitoraggio settimanale. Lezioni disponibili in tedesco, italiano e inglese, esclusivamente online via Zoom."
+      "body": "Sono Teodoro Morcone, tutor di matematica a Zurigo e fondatore di Teodoro Morcone Nachhilfe – economista aziendale (FH) e vero appassionato di numeri. Nato a Zurigo e cresciuto in Ticino, unisco la prospettiva germanofona e italofona. Aiuto gli studenti a costruire basi solide, prepararsi in modo mirato alle ammissioni per Gymnasium, BMS, HMS e FMS e mantenere costanza durante tutto l’anno scolastico. Il mio metodo combina spiegazioni passo dopo passo, pacchetti di esercizi a difficoltà crescente, mock exam realistici e monitoraggio settimanale – pianificato, misurabile, efficace. Lezioni in tedesco, italiano e inglese, esclusivamente online via Zoom. Nel tempo libero pratico powerlifting e programmazione: la stessa disciplina sistematica scorre direttamente nel mio modo di insegnare."
     },
     "pricing": {
       "title": "Tariffe",

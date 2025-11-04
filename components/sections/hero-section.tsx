@@ -18,7 +18,7 @@ type HeroSectionProps = {
 export function HeroSection({hero, ctas}: HeroSectionProps) {
   const t = useTranslations("landing");
   const expertName = hero.expertName ?? "Teodoro Morcone";
-  const portraitSrc = hero.illustration?.src ?? "/images/chalkbacsk.webp";
+  const portraitSrc = hero.illustration?.src ?? "/images/teodoro_happy.webp";
   const portraitAlt = hero.illustration?.alt ?? t("hero.avatarAlt");
   const defaultPortraitCaption = "Ich sehe etwa so aus.";
   const rawPortraitCaption = hero.illustration?.caption?.trim() ?? "";
