@@ -5,7 +5,7 @@ import {useEffect, useRef} from "react";
 import type {Consent} from "@/lib/consent";
 import {getConsent, onConsentChange} from "@/lib/consent";
 
-const META_PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID?.trim() ?? "";
+const META_PIXEL_ID = "1199814365344218";
 
 type FbqFunction = {
   (...args: unknown[]): void;
