@@ -2,15 +2,24 @@
 
 import Image from "next/image";
 import {useTranslations} from "next-intl";
+import type {MouseEventHandler} from "react";
 
 import {CTAButton} from "@/components/ui/cta-button";
-import type {HeroContent} from "@/types/landing";
+import type {HeroContent, HeroCta} from "@/types/landing";
+
+type CalendeskWidget = {
+  openModal: (options: {url: string}) => void;
+};
+
+type CalendeskWindow = Window & {
+  Calendesk?: CalendeskWidget;
+};
 
 type HeroSectionProps = {
   hero: HeroContent;
   ctas: {
-    primary: {label: string; href: string};
-    secondary: {label: string; href: string};
+    primary: HeroCta;
+    secondary: HeroCta;
   };
 };
 
@@ -39,11 +48,62 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
           {hero.heading}
         </h1>
         <p className="mt-6 max-w-2xl text-lg text-secondary dark:text-surface/80">{hero.subheading}</p>
-        <div className="mt-10 flex flex-wrap items-center gap-4">
-          <CTAButton href={ctas.primary.href}>{ctas.primary.label}</CTAButton>
-          <CTAButton href={ctas.secondary.href} variant="secondary">
-            {ctas.secondary.label}
-          </CTAButton>
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+          {[ctas.primary, ctas.secondary].map((cta, index) => {
+            const trimmedHref = cta.href.trim();
+            const href = trimmedHref.length > 0 ? trimmedHref : "#";
+            const variant = cta.variant ?? (index === 0 ? "primary" : "secondary");
+
+            const handleClick: MouseEventHandler<HTMLAnchorElement> | undefined =
+              cta.mode === "calendeskModal"
+                ? (event) => {
+                    event.preventDefault();
+
+                    if (typeof window === "undefined") {
+                      return;
+                    }
+
+                    const calendesk = (window as CalendeskWindow).Calendesk;
+
+                    if (calendesk?.openModal) {
+                      calendesk.openModal({url: href});
+                    } else {
+                      window.open(href, "_blank", "noopener,noreferrer");
+                    }
+                  }
+                : undefined;
+
+            const buttonProps: {
+              target?: "_blank" | "_self";
+              rel?: string;
+              onClick?: MouseEventHandler<HTMLAnchorElement>;
+            } = {};
+
+            if (cta.target) {
+              buttonProps.target = cta.target;
+            }
+
+            if (cta.rel) {
+              buttonProps.rel = cta.rel;
+            }
+
+            if (handleClick) {
+              buttonProps.onClick = handleClick;
+            }
+
+            return (
+              <div key={`${cta.label}-${index}`} className="flex min-w-[15rem] flex-col items-center gap-2">
+                {cta.helper ? (
+                  <span className="text-sm font-semibold text-secondary dark:text-surface/80">
+                    {cta.helper}
+                  </span>
+                ) : null}
+                <CTAButton href={href} variant={variant} className="w-auto" {...buttonProps}>
+                  {cta.label}
+                </CTAButton>
+              </div>
+            );
+          })}
         </div>
       </div>
       <div className="relative flex flex-col gap-6 overflow-hidden rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10 sm:p-10 min-h-[22rem] sm:min-h-[26rem]">

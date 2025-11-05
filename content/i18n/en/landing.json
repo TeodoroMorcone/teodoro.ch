@@ -1,11 +1,24 @@
 {
   "hero": {
-    "heading": "Forge your mathematical strength",
-    "subheading": "Strengthen your mathematical knowledge with tailored coaching for short- and long-track Gymnasium entrance exams, HMS/BMS/FMS admissions, and the BM2 final exam – delivered online across Switzerland in German, Italian, and English from Zurich.",
+    "heading": "💪 Your child will master the Gymi exam – with real strength.",
+    "subheading": "I'm Teodoro Morcone, an experienced math tutor from Zurich.\nI guide students through Gymi, HMS, BMS & FMS entrance exams – 100% online with a personal learning structure.",
     "bookingFrameTitle": "Book a lesson online",
     "bookingAvailabilityNote": "Pick a convenient slot directly in the calendar widget.",
     "bookingActivationLabel": "Load the booking calendar",
     "bookingLoadingLabel": "Calendesk availability is loading…",
+    "primaryCta": {
+      "label": "WhatsApp",
+      "href": "https://wa.me/41762440259",
+      "variant": "whatsapp",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "secondaryCta": {
+      "label": "🗓️ Book a slot",
+      "href": "https://teodoro.calendesk.net/",
+      "mode": "calendeskModal",
+      "variant": "outlineLight"
+    },
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Portrait of Teodoro Morcone smiling during an online tutoring session",

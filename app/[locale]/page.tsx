@@ -18,7 +18,6 @@ import {PricingSection} from "@/components/sections/pricing-section";
 import {ResultsSection} from "@/components/sections/results-section";
 import {ServicesSection} from "@/components/sections/services-section";
 import {TLDRSection} from "@/components/sections/tldr-section";
-import {CalendeskEmbed, DEFAULT_CALENDESK_EMBED_URL} from "@/components/ui/calendesk-embed";
 import {getGoogleReviews} from "@/lib/reviews/google";
 import {buildLandingJsonLd} from "@/lib/seo/jsonld";
 import {buildPageMetadata} from "@/lib/seo/meta";
@@ -110,30 +109,24 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
   const googleReviews = await getGoogleReviews(18);
 
 
+  const heroPrimaryCta =
+    hero?.primaryCta ?? {
+      label: tCommon("cta.primary"),
+      href: "#contact",
+      variant: "primary",
+    };
+  const heroSecondaryCta =
+    hero?.secondaryCta ?? {
+      label: tCommon("cta.secondary"),
+      href: "#services",
+      variant: "secondary",
+    };
+
   const heroCtas = {
-    primary: {label: tCommon("cta.primary"), href: "#contact"},
-    secondary: {label: tCommon("cta.secondary"), href: "#services"},
+    primary: heroPrimaryCta,
+    secondary: heroSecondaryCta,
   };
 
-  const bookingFrameTitle =
-    hero?.bookingFrameTitle ??
-    contact?.bookingFrameTitle ??
-    tLanding("contact.bookingFrameTitle", {defaultMessage: "Book a lesson online"});
-  const bookingAvailabilityNote =
-    hero?.bookingAvailabilityNote ??
-    contact?.bookingAvailabilityNote ??
-    tLanding("contact.bookingAvailabilityNote", {
-      defaultMessage: "Pick a convenient slot directly in the calendar widget.",
-    });
-  const bookingActivationLabel =
-    hero?.bookingActivationLabel ??
-    contact?.bookingActivationLabel ??
-    tLanding("contact.bookingActivationLabel", {defaultMessage: "Load the booking calendar"});
-  const bookingLoadingLabel =
-    hero?.bookingLoadingLabel ??
-    contact?.bookingLoadingLabel ??
-    tLanding("contact.bookingLoadingLabel", {defaultMessage: "Calendesk availability is loading…"});
-  const bookingEmbedUrl = contact?.bookingEmbedUrl ?? DEFAULT_CALENDESK_EMBED_URL;
 
   const landingContent: LandingContent = {
     hero,
@@ -166,18 +159,6 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
           <HeroSection hero={hero} ctas={heroCtas} />
 
           <ResultsSection results={results} reviews={googleReviews} />
-
-          <div className="flex flex-col gap-4">
-            <CalendeskEmbed
-              title={bookingFrameTitle}
-              activationLabel={bookingActivationLabel}
-              loadingLabel={bookingLoadingLabel}
-              src={bookingEmbedUrl}
-              className="w-full"
-              iframeClassName="rounded-3xl"
-            />
-            <p className="text-sm text-secondary dark:text-surface/70">{bookingAvailabilityNote}</p>
-          </div>
 
           <TLDRSection tldr={tldr} intentClusters={intentClusters} />
 

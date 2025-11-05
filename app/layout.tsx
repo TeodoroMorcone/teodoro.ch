@@ -35,6 +35,14 @@ export default function RootLayout({children}: RootLayoutProps) {
 
   return (
     <html lang="de" suppressHydrationWarning>
+      <head>
+        <link href="https://media.calendesk.com/external/widget/v3/widget.css" rel="stylesheet" />
+        <Script
+          id="calendesk-widget"
+          src="https://media.calendesk.com/external/widget/v3/widget.js"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className="min-h-screen bg-surface text-primary antialiased transition-colors duration-200 ease-soft-sine dark:bg-primary dark:text-surface">
         <Script
           id="ga-consent-init"

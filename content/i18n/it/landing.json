@@ -1,11 +1,24 @@
 {
   "hero": {
-    "heading": "Allena la tua padronanza matematica",
-    "subheading": "Rinforza le tue conoscenze matematiche con coaching personalizzato per le prove di ammissione al Kurz- und Langgymnasium, i percorsi HMS/BMS/FMS e l’esame finale BM2 – erogato online in tutta la Svizzera in tedesco, italiano e inglese da Zurigo.",
+    "heading": "💪 Tuo figlio supera la Gymiprüfung – con molta forza.",
+    "subheading": "Sono Teodoro Morcone, tutor di matematica esperto di Zurigo.\nAccompagno gli studenti in modo mirato verso gli esami di ammissione a Gymi, HMS, BMS e FMS – 100% online con una struttura di apprendimento personalizzata.",
     "bookingFrameTitle": "Prenota una lezione online",
     "bookingAvailabilityNote": "Scegli l’orario che preferisci direttamente dal calendario.",
     "bookingActivationLabel": "Carica il calendario delle prenotazioni",
     "bookingLoadingLabel": "Calendesk sta caricando le disponibilità…",
+    "primaryCta": {
+      "label": "WhatsApp",
+      "href": "https://wa.me/41762440259",
+      "variant": "whatsapp",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "secondaryCta": {
+      "label": "🗓️ Prenota un appuntamento",
+      "href": "https://teodoro.calendesk.net/",
+      "mode": "calendeskModal",
+      "variant": "outlineLight"
+    },
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Ritratto di Teodoro Morcone sorridente durante una lezione online di tutoring",

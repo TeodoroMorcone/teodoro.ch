@@ -2,7 +2,6 @@
 
 import {useTranslations} from "next-intl";
 
-import {CalendeskEmbed, DEFAULT_CALENDESK_EMBED_URL} from "@/components/ui/calendesk-embed";
 import {SectionHeading} from "@/components/ui/section-heading";
 import type {ContactContent, ContactDetail} from "@/types/landing";
 
@@ -36,21 +35,6 @@ export function ContactSection({contact}: ContactSectionProps) {
     }
   }
 
-  const bookingFrameTitle =
-    contact.bookingFrameTitle ??
-    t("contact.bookingFrameTitle", {defaultMessage: "Book a lesson online"});
-  const bookingAvailabilityNote =
-    contact.bookingAvailabilityNote ??
-    t("contact.bookingAvailabilityNote", {
-      defaultMessage: "Pick a convenient slot directly in the calendar widget.",
-    });
-  const bookingActivationLabel =
-    contact.bookingActivationLabel ??
-    t("contact.bookingActivationLabel", {defaultMessage: "Load the booking calendar"});
-  const bookingLoadingLabel =
-    contact.bookingLoadingLabel ??
-    t("contact.bookingLoadingLabel", {defaultMessage: "Calendesk availability is loading…"});
-  const bookingEmbedUrl = contact.bookingEmbedUrl ?? DEFAULT_CALENDESK_EMBED_URL;
 
   return (
     <section id="contact" aria-labelledby="contact-heading" className="scroll-mt-28">
@@ -132,18 +116,6 @@ export function ContactSection({contact}: ContactSectionProps) {
             ) : null}
           </div>
         </div>
-      </div>
-
-      <div className="mt-10 space-y-4">
-        <CalendeskEmbed
-          title={bookingFrameTitle}
-          activationLabel={bookingActivationLabel}
-          loadingLabel={bookingLoadingLabel}
-          src={bookingEmbedUrl}
-          className="w-full"
-          iframeClassName="rounded-3xl"
-        />
-        <p className="text-sm text-secondary dark:text-surface/70">{bookingAvailabilityNote}</p>
       </div>
     </section>
   );

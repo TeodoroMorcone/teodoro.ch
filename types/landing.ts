@@ -6,6 +6,16 @@ export type HeroIllustration = {
   caption?: string;
 };
 
+export type HeroCta = {
+  label: string;
+  href: string;
+  helper?: string;
+  variant?: "primary" | "secondary" | "whatsapp" | "outlineLight";
+  mode?: "link" | "calendeskModal";
+  target?: "_blank" | "_self";
+  rel?: string;
+};
+
 export type HeroContent = {
   heading: string;
   subheading: string;
@@ -18,6 +28,8 @@ export type HeroContent = {
   bookingActivationLabel?: string;
   bookingLoadingLabel?: string;
   illustration?: HeroIllustration;
+  primaryCta?: HeroCta;
+  secondaryCta?: HeroCta;
 };
 
 export type TLDRItem = {

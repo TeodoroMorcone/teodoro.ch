@@ -1,11 +1,23 @@
 {
   "hero": {
-    "heading": "Stärke deine mathematische Kraft",
-    "subheading": "Stärke dein mathematisches Wissen mit individueller Begleitung für Kurz- und Langgymnasium-Aufnahmeprüfungen, HMS/BMS/FMS-Verfahren sowie die BM2-Abschlussprüfung – schweizweit online in Deutsch, Italienisch und Englisch aus Zürich.",
+    "heading": "💪 Dein Kind schafft die Gymiprüfung – mit viel Kraft.",
+    "subheading": "Ich bin Teodoro Morcone, erfahrener Mathematik-Tutor aus Zürich.\nIch begleite Schüler:innen gezielt auf Gymi-, HMS-, BMS- & FMS-Aufnahmeprüfungen – 100 % online und mit persönlicher Lernstruktur.",
     "bookingFrameTitle": "Online-Lektion buchen",
-    "bookingAvailabilityNote": "Wähle den passenden Termin direkt im Kalender.",
     "bookingActivationLabel": "Buchungskalender laden",
     "bookingLoadingLabel": "Calendesk-Verfügbarkeit wird geladen…",
+    "primaryCta": {
+      "label": "Whatsapp",
+      "href": "https://wa.me/41762440259",
+      "variant": "whatsapp",
+      "target": "_blank",
+      "rel": "noopener noreferrer"
+    },
+    "secondaryCta": {
+      "label": "🗓️ Termin buchen",
+      "href": "https://teodoro.calendesk.net/",
+      "mode": "calendeskModal",
+      "variant": "outlineLight"
+    },
     "badge": "100% online (Zoom)",
     "expertName": "Teodoro Morcone",
     "avatarAlt": "Porträt von Teodoro Morcone mit einem Lächeln während einer Online-Nachhilfestunde",
@@ -561,7 +573,6 @@
     "title": "Kontakt & Buchung",
     "description": "Schreibe mir eine kurze WhatsApp-Nachricht mit Zielsetzung, Schulstufe und Zeitraum – das erste Kennenlernen findet dort statt. Alle weiteren Zoom-Lektionen plane ich gemeinsam mit dir via Calendesk.",
     "bookingFrameTitle": "Online-Lektion buchen",
-    "bookingAvailabilityNote": "Wähle den passenden Termin direkt im Kalender.",
     "bookingActivationLabel": "Buchungskalender laden",
     "bookingLoadingLabel": "Calendesk-Verfügbarkeit wird geladen…",
     "bookingEmbedUrl": "https://lhctbmf6wa.calendesk.net/",
