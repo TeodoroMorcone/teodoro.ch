@@ -38,6 +38,7 @@ export function CTAButton({href, children, variant = "primary", className, ...re
           role="img"
           aria-hidden="true"
           className="h-9 w-9 sm:h-10 sm:w-10"
+          style={{transform: "scale(2)", transformOrigin: "center"}}
         >
           <g transform="translate(60 60)">
             <g transform="translate(-16 -16)">
