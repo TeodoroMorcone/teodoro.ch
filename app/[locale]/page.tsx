@@ -123,7 +123,7 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
     hero?.bookingAvailabilityNote ??
     contact?.bookingAvailabilityNote ??
     tLanding("contact.bookingAvailabilityNote", {
-      defaultMessage: "Availability updates in real time. Pick the slot that fits you best.",
+      defaultMessage: "Pick a convenient slot directly in the calendar widget.",
     });
   const bookingActivationLabel =
     hero?.bookingActivationLabel ??

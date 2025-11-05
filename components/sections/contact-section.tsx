@@ -42,7 +42,7 @@ export function ContactSection({contact}: ContactSectionProps) {
   const bookingAvailabilityNote =
     contact.bookingAvailabilityNote ??
     t("contact.bookingAvailabilityNote", {
-      defaultMessage: "Availability updates in real time. Pick the slot that fits you best.",
+      defaultMessage: "Pick a convenient slot directly in the calendar widget.",
     });
   const bookingActivationLabel =
     contact.bookingActivationLabel ??
