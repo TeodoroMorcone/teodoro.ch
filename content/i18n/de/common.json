@@ -25,7 +25,9 @@
     "secondary": "Leistungen entdecken",
     "tertiary": "Zoom-Beratung starten",
     "whatsapp": "Whatsapp me",
-    "whatsappAria": "WhatsApp-Chat mit Teodoro Morcone öffnen"
+    "whatsappAria": "WhatsApp-Chat mit Teodoro Morcone öffnen",
+    "calendesk": "Calendesk-Termin buchen",
+    "calendeskAria": "Calendesk-Terminplanung in neuem Tab öffnen"
   },
   "accessibility": {
     "skipToContent": "Zum Inhalt springen",

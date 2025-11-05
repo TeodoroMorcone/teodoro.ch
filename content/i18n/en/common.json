@@ -25,7 +25,9 @@
     "secondary": "Explore services",
     "tertiary": "Launch Zoom consultation",
     "whatsapp": "Whatsapp me",
-    "whatsappAria": "Open WhatsApp chat with Teodoro Morcone"
+    "whatsappAria": "Open WhatsApp chat with Teodoro Morcone",
+    "calendesk": "Book a Calendesk slot",
+    "calendeskAria": "Open Calendesk booking in a new tab"
   },
   "accessibility": {
     "skipToContent": "Skip to content",

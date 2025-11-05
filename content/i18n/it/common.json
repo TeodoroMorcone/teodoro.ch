@@ -25,7 +25,9 @@
     "secondary": "Scopri i servizi",
     "tertiary": "Avvia consulenza Zoom",
     "whatsapp": "Whatsapp me",
-    "whatsappAria": "Apri chat WhatsApp con Teodoro Morcone"
+    "whatsappAria": "Apri chat WhatsApp con Teodoro Morcone",
+    "calendesk": "Prenota uno slot Calendesk",
+    "calendeskAria": "Apri la pianificazione Calendesk in una nuova scheda"
   },
   "accessibility": {
     "skipToContent": "Passa al contenuto",
