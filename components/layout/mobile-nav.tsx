@@ -202,14 +202,14 @@ export function MobileNav({
     );
 
   return (
-    <header className="sticky top-0 z-40 border-b border-secondary/30 bg-surface/95 text-primary backdrop-blur-md dark:border-surface/20 dark:bg-primary/95 dark:text-surface lg:hidden">
+    <header className="sticky top-0 z-40 border-b border-secondary/35 bg-secondary/35 text-accent-foreground backdrop-blur-md dark:border-primary/40 dark:bg-primary/80 dark:text-accent-foreground lg:hidden">
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between">
         <Link
           href={`/${locale}`}
           className="flex items-center gap-3 pr-14 text-left sm:pr-0"
           aria-label={labels.home}
         >
-          <span className="inline-flex items-center justify-center rounded-full bg-primary px-3 py-1 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-primary">
+          <span className="inline-flex items-center justify-center rounded-full bg-primary/90 px-3 py-1 text-accent-foreground shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-primary">
             <Image
               src="/images/white_160x48.webp"
               alt="Teodoro Morcone"
@@ -227,7 +227,7 @@ export function MobileNav({
 
         <div className="flex w-full flex-col items-stretch gap-2 sm:w-auto sm:flex-row sm:items-center sm:justify-end sm:gap-3">
           <a
-            className="inline-flex w-full items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary sm:w-auto"
+            className="inline-flex w-full items-center justify-center rounded-full bg-accent px-4 py-2 text-sm font-semibold text-accent-foreground shadow-sidebar transition-all duration-300 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:-translate-y-1 hover:bg-accent/90 sm:w-auto"
             href={ctas.primary.href}
           >
             {ctas.primary.label}
@@ -235,7 +235,7 @@ export function MobileNav({
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger
-              className="absolute right-6 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/40 text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/30 dark:text-surface sm:static sm:flex-shrink-0 sm:self-auto sm:justify-center"
+              className="absolute right-6 top-4 z-10 inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/50 text-accent-foreground transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent-foreground dark:border-primary/40 dark:text-accent-foreground sm:static sm:flex-shrink-0 sm:self-auto sm:justify-center"
               aria-label={open ? labels.close : labels.open}
             >
               <Menu aria-hidden="true" className="h-5 w-5" />
@@ -246,15 +246,15 @@ export function MobileNav({
               description={labels.navigation}
             >
               <div
-                className="flex items-center justify-between border-b border-secondary/20 px-5 py-4 dark:border-surface/20"
+                className="flex items-center justify-between border-b border-secondary/30 bg-secondary/20 px-5 py-4 text-accent-foreground dark:border-primary/40 dark:bg-primary/50"
               >
-                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-secondary dark:text-surface/80">
+                <span className="text-sm font-semibold uppercase tracking-[0.2em] text-accent-foreground dark:text-accent-foreground">
                   {labels.navigation}
                 </span>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
-                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/40 text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/30 dark:text-surface"
+                  className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/50 text-accent-foreground transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent-foreground dark:border-primary/40 dark:text-accent-foreground"
                   aria-label={labels.close}
                 >
                   <X aria-hidden="true" className="h-5 w-5" />
@@ -302,14 +302,14 @@ export function MobileNav({
 
                   <div className="flex flex-col items-center gap-4">
                     <a
-                      className="inline-flex w-full items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-3 text-[0.79rem] font-semibold text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
+                      className="inline-flex w-full items-center justify-center rounded-3xl border border-accent/50 bg-accent px-4 py-3 text-[0.79rem] font-semibold text-accent-foreground shadow-sidebar transition-all duration-300 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:-translate-y-1 hover:bg-accent/90 dark:border-primary/50 dark:bg-primary/85"
                       href={ctas.primary.href}
                       onClick={handleNavigate}
                     >
                       {ctas.primary.label}
                     </a>
                     <a
-                      className="inline-flex w-full items-center justify-center rounded-full border border-secondary/30 px-4 py-3 text-sm font-semibold text-primary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/30 dark:text-surface"
+                      className="inline-flex w-full items-center justify-center rounded-full border border-secondary/40 bg-surface/85 px-4 py-3 text-sm font-semibold text-primary transition-all duration-300 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:-translate-y-1 hover:border-accent hover:text-accent dark:border-primary/40 dark:bg-primary/70 dark:text-accent-foreground"
                       href={ctas.secondary.href}
                       onClick={handleNavigate}
                     >
@@ -318,14 +318,14 @@ export function MobileNav({
                     {ctas.tertiary ? (
                       <div className="flex w-full flex-col items-center space-y-2">
                         <a
-                          className="inline-flex w-full items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
+                          className="inline-flex w-full items-center justify-center rounded-3xl border border-secondary/40 bg-surface/85 px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sidebar transition-all duration-300 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:-translate-y-1 hover:border-accent hover:text-accent dark:border-primary/40 dark:bg-primary/70 dark:text-accent-foreground"
                           href={ctas.tertiary.href}
                           onClick={handleNavigate}
                         >
                           {ctas.tertiary.label}
                         </a>
                         {ctas.tertiary.helper ? (
-                          <p className="text-center text-xs text-secondary dark:text-surface/70">{ctas.tertiary.helper}</p>
+                          <p className="text-center text-xs text-secondary/90 dark:text-accent-foreground/80">{ctas.tertiary.helper}</p>
                         ) : null}
                       </div>
                     ) : null}
@@ -336,7 +336,7 @@ export function MobileNav({
                   {themeControl}
                   <button
                     type="button"
-                    className="inline-flex w-full items-center justify-center rounded-full border border-secondary/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-secondary transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:border-accent hover:text-accent dark:border-surface/20 dark:text-surface/80 dark:hover:border-accent dark:hover:text-accent"
+                    className="inline-flex w-full items-center justify-center rounded-full border border-secondary/40 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-secondary/90 transition-all duration-300 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:-translate-y-1 hover:border-accent hover:text-accent dark:border-primary/40 dark:text-accent-foreground/80"
                     onClick={() => {
                       consent.openPreferences();
                       setOpen(false);

@@ -79,7 +79,7 @@ export function CalendeskEmbed({
           />
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-4 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-primary"
+            className="inline-flex items-center justify-center rounded-full bg-primary px-7 py-4 text-sm font-semibold text-surface transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-accent hover:text-accent-foreground"
             onClick={() => {
               if (isActivated) {
                 return;

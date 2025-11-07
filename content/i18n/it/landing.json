@@ -1,6 +1,7 @@
 {
   "hero": {
-    "heading": "💪 Tuo figlio supera la Gymiprüfung – con molta forza.",
+    "heading": "💪 Massimizzo le probabilità per la Gymiprüfung",
+    "disclaimer": "Nessuna promessa di successo; i risultati dipendono dalla situazione di partenza.",
     "subheading": "Sono Teodoro Morcone, tutor di matematica esperto di Zurigo.\nAccompagno gli studenti in modo mirato verso gli esami di ammissione a Gymi, HMS, BMS e FMS – 100% online con una struttura di apprendimento personalizzata.",
     "bookingFrameTitle": "Prenota una lezione online",
     "bookingAvailabilityNote": "Scegli l’orario che preferisci direttamente dal calendario.",
@@ -45,7 +46,7 @@
       },
       {
         "label": "Fascia prezzi",
-        "description": "Lezione singola CHF 70, pacchetto 5 CHF 300, pacchetto 10 CHF 550 (circa 2 lezioni a settimana), pacchetto 13 CHF 650 (circa 3 lezioni a settimana) – include follow-up, report e risposta entro 24 ore."
+        "description": "Lezione singola CHF 70, pacchetto 5 CHF 300, pacchetto 10 CHF 550 (circa 2 lezioni a settimana), pacchetto 13 CHF 650 (circa 3 lezioni a settimana) – include follow-up, report e normalmente risposta entro 24 ore nei giorni lavorativi. Prezzi finali in CHF; attività non soggetta a IVA. Nessuna commissione di pagamento aggiuntiva."
       },
       {
         "label": "Come iniziare?",
@@ -82,7 +83,7 @@
     {
       "id": "response",
       "title": "Prenotazione & risposta",
-      "body": "Richieste gestite in modo flessibile online; rispondo entro 24 ore con proposte di data e informazioni preliminari."
+      "body": "Richieste gestite in modo flessibile online; di norma rispondo entro 24 ore nei giorni lavorativi con proposte di data e informazioni preliminari."
     }
   ],
   "sections": {
@@ -158,12 +159,14 @@
       "title": "Risultati & Social Proof",
       "description": "Leggi il feedback autentico di famiglie che collaborano con Teodoro Morcone Nachhilfe.",
       "reviewSummary": {
-        "badge": "★ Valutazione 5.0",
+        "badge": "Ottime recensioni su Google & Tutor24",
+        "stand": "Dato: novembre 2025",
         "headline": "Progresso costante e fiducia ritrovata",
         "body": [
           "I genitori raccontano percorsi pluriennali che hanno rafforzato abitudini di studio, sicurezza e risultati scolastici.",
           "Gli studenti apprezzano l’approccio paziente e multilingue che rende la matematica chiara e coinvolgente."
-        ]
+        ],
+        "note": "Tutte le recensioni provengono da clienti reali; le fonti sono collegate oppure documentate presso il fornitore (stato: novembre 2025)."
       }
     },
     "about": {
@@ -184,11 +187,11 @@
           "id": "single",
           "name": "Lezione singola",
           "price": "CHF 70",
-          "unit": "per 60 minuti",
+          "unit": "per 60 minuti – prezzo finale in CHF; attività non soggetta a IVA. Nessuna commissione di pagamento aggiuntiva.",
           "features": [
             "Lezione individuale con materiale dedicato",
             "Homework & follow-up",
-            "Feedback entro 24 ore"
+            "Feedback di norma entro 24 ore (lun–ven)"
           ],
           "cta": "Prenota una prova"
         },
@@ -196,20 +199,20 @@
           "id": "five-pack",
           "name": "Pacchetto 5 lezioni",
           "price": "CHF 300",
-          "unit": "5 × 60 minuti (CHF 60 a lezione)",
+          "unit": "5 × 60 minuti (CHF 60 a lezione) – prezzo finale in CHF; attività non soggetta a IVA. Nessuna commissione di pagamento aggiuntiva.",
           "features": [
             "Piano di lavoro strutturato",
             "Feedback e monitoraggio settimanale",
             "Mock test opzionale"
           ],
           "cta": "Riserva il pacchetto",
-          "badge": "Più richiesto"
+          "badge": "Consigliato"
         },
         {
           "id": "ten-pack",
           "name": "Pacchetto 10 lezioni",
           "price": "CHF 550",
-          "unit": "10 × 60 minuti (CHF 55 a lezione, circa 2 lezioni a settimana)",
+          "unit": "10 × 60 minuti (CHF 55 a lezione, circa 2 lezioni a settimana) – prezzo finale in CHF; attività non soggetta a IVA. Nessuna commissione di pagamento aggiuntiva.",
           "features": [
             "Preparazione completa all’esame",
             "Report settimanali dettagliati",
@@ -221,7 +224,7 @@
           "id": "thirteen-pack",
           "name": "Pacchetto 13 lezioni",
           "price": "CHF 650",
-          "unit": "13 × 60 minuti (CHF 50 a lezione, circa 3 lezioni a settimana)",
+          "unit": "13 × 60 minuti (CHF 50 a lezione, circa 3 lezioni a settimana) – prezzo finale in CHF; attività non soggetta a IVA. Nessuna commissione di pagamento aggiuntiva.",
           "features": [
             "Curriculum di lungo periodo",
             "Revisione strategica mensile e aggiornamenti per i genitori",
@@ -252,12 +255,12 @@
         {
           "id": "faq-response",
           "question": "Quanto tempo impieghi a rispondere alle richieste?",
-          "answer": "Entro 24 ore ricevi proposte di orario, una mini analisi degli obiettivi e, se utile, un foglio preparatorio da completare prima del colloquio diagnostico."
+          "answer": "Di norma entro 24 ore nei giorni lavorativi ricevi proposte di orario, una mini analisi degli obiettivi e, se utile, un foglio preparatorio da completare prima del colloquio diagnostico."
         },
         {
           "id": "faq-payment",
-          "question": "Quali sono le modalità di pagamento?",
-          "answer": "Pagamento con fattura o Stripe (carta, Twint). Pacchetti e lezioni singole si saldano prima della prima sessione confermata."
+          "question": "Come funziona il pagamento?",
+          "answer": "Tutte le lezioni e i pacchetti vengono saldati in anticipo tramite link di pagamento Stripe (es. carta, Twint). La prenotazione è confermata non appena il pagamento è registrato; ricevi automaticamente la ricevuta via e-mail."
         },
         {
           "id": "faq-privacy",
@@ -427,8 +430,8 @@
           "heading": "4. Prezzi e pagamento tramite Stripe",
           "body": [
             "Si applicano i prezzi pubblicati sul sito web.",
-            "Il pagamento avviene in modo cashless tramite Stripe (ad es. carta di credito) e sono validi i relativi termini d’uso.",
-            "Ricevute o fatture vengono fornite in formato elettronico."
+            "Tutte le lezioni e i pacchetti si pagano in anticipo tramite link Stripe (es. carta di credito, Twint); si applicano inoltre i termini di Stripe.",
+            "Ricevute e fatture vengono inviate automaticamente via e-mail subito dopo il pagamento."
           ]
         },
         {
@@ -477,8 +480,8 @@
           "id": "jurisdiction",
           "heading": "10. Foro competente e legge applicabile",
           "body": [
-            "Si applica il diritto materiale svizzero.",
-            "Il foro competente è Zurigo, Svizzera."
+            "I fori giurisdizionali obbligatori restano riservati. Per le azioni intentate da consumatrici e consumatori è competente il tribunale del domicilio della consumatrice/del consumatore oppure la sede del fornitore; per il resto è competente Zurigo.",
+            "Si applica il diritto materiale svizzero."
           ]
         },
         {
@@ -595,14 +598,14 @@
         "href": "https://www.instagram.com/Teo6oro/"
       }
     ],
-    "responseTime": "Risposta entro 24h (lun–ven)",
+    "responseTime": "Risposta di norma entro 24h (lun–ven)",
     "officeHours": "Orari di lezione: lun–sab su appuntamento",
     "policy": {
       "cancellationTitle": "Politica di cancellazione",
       "cancellationItems": [
         "Le lezioni possono essere annullate o spostate gratuitamente fino a 24 ore prima.",
         "Cancellazioni tardive o assenze non giustificate vengono addebitate come lezione completa.",
-        "Pagamento tramite fattura o bonifico entro 10 giorni."
+        "Il pagamento avviene prima dell’inizio tramite link di pagamento Stripe (carta, Twint); le ricevute vengono inviate in formato elettronico."
       ],
       "minorsTitle": "Studenti minorenni",
       "minorsItems": [

@@ -69,8 +69,8 @@
       }
     ],
     "notes": [
-      "Tutoring contracts are subject to Swiss law.",
-      "In case of dispute, the competent venue is Zurich, Switzerland."
+      "Tutoring contracts are governed by Swiss law.",
+      "Mandatory venues remain reserved. For consumer claims, the competent court is at the consumer’s domicile or at the provider’s registered office; otherwise, Zurich applies."
     ]
   },
   "privacy": {
@@ -145,7 +145,7 @@
     "body": [
       "Sessions may be cancelled or rescheduled free of charge up to 24 hours in advance.",
       "Late cancellations or no-shows are billed as one full lesson.",
-      "Payment via invoice or bank transfer within 10 days."
+      "Payment is collected upfront via Stripe payment link (card, Twint); receipts are emailed automatically."
     ]
   },
   "minors": {

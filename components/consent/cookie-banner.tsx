@@ -39,11 +39,11 @@ export function CookieBanner() {
   };
 
   const baseActionClass =
-    "inline-flex h-10 w-full shrink-0 items-center justify-center rounded-full px-4 text-sm font-semibold transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1c3f] sm:w-auto";
-  const primaryActionClass = `${baseActionClass} bg-[#1c1c3f] text-white hover:bg-[#13132d]`;
-  const secondaryActionClass = `${baseActionClass} border border-[#1c1c3f] text-[#1c1c3f] hover:bg-[#1c1c3f]/10`;
+    "inline-flex h-10 w-full shrink-0 items-center justify-center rounded-full px-4 text-sm font-semibold transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-auto";
+  const primaryActionClass = `${baseActionClass} bg-primary-strong text-white hover:bg-primary focus-visible:bg-primary`;
+  const secondaryActionClass = `${baseActionClass} border border-secondary/40 bg-white text-secondary-strong hover:border-primary hover:text-primary focus-visible:border-primary`;
   const tertiaryActionClass =
-    "inline-flex h-10 w-full items-center justify-center text-sm font-semibold text-[#1c1c3f] underline-offset-4 hover:text-[#13132d] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1c3f] sm:w-auto";
+    "inline-flex h-10 w-full items-center justify-center text-sm font-semibold text-secondary-strong underline-offset-4 transition-colors.duration-200 ease-soft-sine hover:text-primary hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary sm:w-auto dark:text-surface/80 dark:hover:text-white";
 
   const barStyle: CSSProperties = {
     paddingTop: "0.75rem",
@@ -61,7 +61,7 @@ export function CookieBanner() {
           aria-modal="true"
           aria-labelledby="cookie-banner-heading"
           aria-describedby="cookie-banner-description"
-          className="fixed inset-x-0 bottom-0 z-[60] min-h-[56px] border-t border-[#1c1c3f]/20 bg-white text-[#1c1c3f] shadow-[0_-12px_32px_rgba(15,23,42,0.16)] backdrop-blur transition-colors duration-200 ease-soft-sine dark:border-[#1c1c3f]/20 dark:bg-white dark:text-[#1c1c3f]"
+          className="fixed inset-x-0 bottom-0 z-[60] min-h-[56px] border-t border-secondary/30 bg-white text-secondary-strong shadow-[0_-18px_42px_rgba(15,91,75,0.2)] transition-colors duration-300 ease-soft-sine dark:border-surface/25 dark:bg-surface/15 dark:text-surface/85 dark:shadow-[0_-16px_38px_rgba(0,133,133,0.26)]"
           style={barStyle}
         >
           <FocusScope loop autoFocus trapped={!consent.isPreferencesOpen}>
@@ -74,12 +74,12 @@ export function CookieBanner() {
               </h2>
               <p
                 id="cookie-banner-description"
-                className="min-w-0 flex-1 text-sm text-[#1c1c3f] whitespace-normal sm:overflow-hidden sm:text-ellipsis sm:whitespace-nowrap"
+                className="min-w-0 flex-1 text-sm text-secondary/90 whitespace-normal sm:overflow-hidden sm:text-ellipsis sm:whitespace-nowrap dark:text-surface/85"
               >
                 <span className="pr-1">{strings.banner.body}</span>
                 <Link
                   href={privacyHref}
-                  className="inline-flex shrink-0 items-center font-medium text-[#1c1c3f] underline-offset-4 hover:text-[#13132d] hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1c1c3f]"
+                  className="inline-flex shrink-0 items-center font-medium text-primary underline-offset-4 transition-colors duration-200 ease-soft-sine hover:text-accent hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-accent-foreground/90 dark:hover:text-white"
                 >
                   {strings.links.privacy}
                 </Link>

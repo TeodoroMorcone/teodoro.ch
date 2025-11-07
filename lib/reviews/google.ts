@@ -5,14 +5,22 @@ import path from "node:path";
 
 import {publicSettings} from "@/config/public-settings";
 
+export type ReviewSource = {
+  label: string;
+  url: string | null;
+};
+
 export type GoogleReview = {
   authorName: string;
   rating: number;
   text: string;
   profilePhotoUrl?: string;
-  url?: string;
   socialIcon?: string;
   socialUrl?: string;
+  source: ReviewSource;
+  collectedAt?: string;
+  locale?: string;
+  contextNote?: string;
 };
 
 type GooglePlaceReview = {
@@ -33,12 +41,29 @@ type GooglePlaceDetailsResponse = {
   error_message?: string;
 };
 
-type StaticReviewsPayload =
-  | GoogleReview[]
-  | {
-      reviews?: GoogleReview[];
-      locales?: Record<string, GoogleReview[] | undefined>;
-    };
+type RawStaticReview = {
+  authorName: string;
+  rating: number;
+  text: string;
+  profilePhotoUrl?: string;
+  socialIcon?: string;
+  socialUrl?: string;
+  source?: {
+    label?: string;
+    url?: string | null;
+  };
+  collectedAt?: string;
+  locale?: string;
+  contextNote?: string;
+};
+
+type StaticReviewsDocument = {
+  updatedAt?: string;
+  reviews?: RawStaticReview[];
+  locales?: Record<string, RawStaticReview[] | undefined>;
+};
+
+type StaticReviewsPayload = GoogleReview[] | StaticReviewsDocument;
 
 const GOOGLE_PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY?.trim() ?? "";
 const GOOGLE_PLACE_ID = process.env.GOOGLE_PLACE_ID?.trim() ?? "";
@@ -61,6 +86,47 @@ function normalizeStaticPath(): string | null {
   return trimmed.startsWith("/") ? trimmed.slice(1) : trimmed;
 }
 
+function mapStaticReview(raw: RawStaticReview): GoogleReview {
+  const label = raw.source?.label?.trim() || "Quelle hinterlegt";
+  const url = raw.source?.url ?? null;
+
+  const review: GoogleReview = {
+    authorName: raw.authorName,
+    rating: raw.rating,
+    text: raw.text,
+    source: {
+      label,
+      url,
+    },
+  };
+
+  if (typeof raw.profilePhotoUrl === "string" && raw.profilePhotoUrl.trim()) {
+    review.profilePhotoUrl = raw.profilePhotoUrl;
+  }
+
+  if (typeof raw.socialIcon === "string" && raw.socialIcon.trim()) {
+    review.socialIcon = raw.socialIcon;
+  }
+
+  if (typeof raw.socialUrl === "string" && raw.socialUrl.trim()) {
+    review.socialUrl = raw.socialUrl;
+  }
+
+  if (typeof raw.collectedAt === "string" && raw.collectedAt.trim()) {
+    review.collectedAt = raw.collectedAt;
+  }
+
+  if (typeof raw.locale === "string" && raw.locale.trim()) {
+    review.locale = raw.locale;
+  }
+
+  if (typeof raw.contextNote === "string" && raw.contextNote.trim()) {
+    review.contextNote = raw.contextNote;
+  }
+
+  return review;
+}
+
 async function readStaticReviews(limit: number): Promise<GoogleReview[]> {
   const normalizedPath = normalizeStaticPath();
 
@@ -68,10 +134,28 @@ async function readStaticReviews(limit: number): Promise<GoogleReview[]> {
     return [];
   }
 
-  const absolutePath = path.join(process.cwd(), "public", normalizedPath);
+  const candidatePaths = [
+    path.join(process.cwd(), normalizedPath),
+    path.join(process.cwd(), "public", normalizedPath),
+  ];
+
+  let fileContent: string | null = null;
+
+  for (const candidate of candidatePaths) {
+    try {
+      fileContent = await readFile(candidate, "utf-8");
+      break;
+    } catch {
+      continue;
+    }
+  }
+
+  if (!fileContent) {
+    console.warn("[getGoogleReviews] Static reviews feed could not be located at", candidatePaths);
+    return [];
+  }
 
   try {
-    const fileContent = await readFile(absolutePath, "utf-8");
     const parsed = JSON.parse(fileContent) as StaticReviewsPayload;
 
     const extractReviews = (payload: StaticReviewsPayload): GoogleReview[] => {
@@ -80,19 +164,21 @@ async function readStaticReviews(limit: number): Promise<GoogleReview[]> {
       }
 
       if (payload && typeof payload === "object") {
-        if (Array.isArray(payload.reviews)) {
-          return payload.reviews;
+        const document = payload as StaticReviewsDocument;
+
+        if (Array.isArray(document.reviews)) {
+          return document.reviews.map(mapStaticReview);
         }
 
-        if (payload.locales && typeof payload.locales === "object") {
+        if (document.locales && typeof document.locales === "object") {
           const localized =
-            payload.locales[FALLBACK_LOCALE] ??
-            Object.values(payload.locales).find((value): value is GoogleReview[] =>
-              Array.isArray(value),
+            document.locales[FALLBACK_LOCALE] ??
+            Object.values(document.locales).find(
+              (value): value is RawStaticReview[] => Array.isArray(value),
             );
 
           if (Array.isArray(localized)) {
-            return localized;
+            return localized.map(mapStaticReview);
           }
         }
       }
@@ -168,19 +254,20 @@ async function fetchApiReviews(limit: number): Promise<GoogleReview[]> {
     const reviews = data.result?.reviews ?? [];
 
     return reviews.slice(0, limit).map((review) => {
+      const reviewUrl = review.author_url ?? data.result?.url ?? null;
+
       const mapped: GoogleReview = {
         authorName: review.author_name,
         rating: review.rating,
         text: review.text,
+        source: {
+          label: "Google Rezension",
+          url: reviewUrl,
+        },
       };
 
-      if (review.profile_photo_url) {
+      if (typeof review.profile_photo_url === "string" && review.profile_photo_url.trim()) {
         mapped.profilePhotoUrl = review.profile_photo_url;
-      }
-
-      const reviewUrl = review.author_url ?? data.result?.url;
-      if (reviewUrl) {
-        mapped.url = reviewUrl;
       }
 
       return mapped;

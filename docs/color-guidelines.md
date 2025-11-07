@@ -1,0 +1,56 @@
+# Color Application Guidelines
+
+This guide captures how the refreshed palette should be applied across the site so every surface, component, and interaction feels cohesive.
+
+## Palette Tokens
+
+| Token | Hex | Primary Usage |
+| --- | --- | --- |
+| `primary` | `#008585` | Brand-defining moments: headlines, key CTAs, primary navigation states |
+| `secondary` | `#0F5B4B` | Supporting copy, secondary navigation text, subtle dividers |
+| `accent` | `#C45335` | High-emphasis highlights: badges, chips, callouts, active icons |
+| `accent-foreground` | `#FBF2C4` | Text/icon color sitting on top of the accent background |
+| `accent-muted` | `#FFECCD` | Soft background washes for accent-driven sections and cards |
+| `surface` | `#FFF1D6` | Default page background, card surfaces, neutral containers |
+
+## Usage Rules
+
+1. **Background tiers**
+   - `surface` becomes the global page background (`body`, `main`, card shells).
+   - `secondary` is a deep accent background for hero bands or high-impact sections.
+   - `accent` is reserved for attention-grabbing stripes, floating action buttons, and highlights.
+
+2. **Text hierarchy**
+   - Headlines: `text-primary`.
+   - Body copy / secondary text: `text-secondary`.
+   - Elements on dark/secondary backgrounds switch to `text-accent-foreground` or `text-surface` for contrast.
+
+3. **Interactive elements**
+   - Primary CTA buttons: `bg-primary` with `text-accent-foreground`, hover to `bg-accent`.
+   - Secondary actions: Outline buttons with `border-secondary` and `text-secondary`, hover shift to `border-accent` / `text-accent`.
+   - Links in copy maintain `text-primary` and underline on focus/hover.
+
+4. **Navigation**
+   - Active states: `bg-primary` + `text-accent-foreground`.
+   - Inactive states: `text-secondary` with hover `bg-accent-muted`.
+   - Mobile drawer overlay: `bg-secondary/90` to deepen contrast.
+
+5. **Cards & surfaces**
+   - Default cards: `bg-surface` with `border-secondary/20`.
+   - Accent cards: `bg-accent-muted` for featured content, text in `text-primary`.
+   - Testimonial/review chips: `bg-primary/10`, `text-primary`.
+
+6. **Feedback states**
+   - Success / confirmation: `bg-primary/15`, `text-primary`.
+   - Alert / warning: `bg-accent/10`, `text-accent`.
+
+7. **Focus & hover**
+   - Focus outlines: `outline-accent` or `ring-accent`.
+   - Hover transitions dial toward accent shades (`accent` or `accent-muted`).
+
+8. **Dark mode**
+   - Global background shifts to `bg-primary`.
+   - Text defaults to `text-surface`.
+   - Surfaces flip: cards use `bg-secondary/30`, accents remain warm but lighten (`accent/70`).
+
+Apply these rules while updating components so every surface, control, and state ties back to a consistent palette structure.

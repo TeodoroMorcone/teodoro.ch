@@ -106,7 +106,29 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
     detailsKeys: contactDetails && !Array.isArray(contactDetails) && typeof contactDetails === "object" ? Object.keys(contactDetails as Record<string, unknown>) : undefined,
   });
 
-  const googleReviews = await getGoogleReviews(18);
+  const googleReviews = (await getGoogleReviews(18)).filter((review) => {
+    if (!review.locale) {
+      return true;
+    }
+
+    if (review.locale === locale) {
+      return true;
+    }
+
+    if (locale === "de") {
+      return ["de", "de-CH", "de-AT"].includes(review.locale);
+    }
+
+    if (locale === "en") {
+      return ["en", "en-GB", "en-US"].includes(review.locale);
+    }
+
+    if (locale === "it") {
+      return ["it", "it-CH", "it-IT"].includes(review.locale);
+    }
+
+    return false;
+  });
 
 
   const heroPrimaryCta =
@@ -154,7 +176,7 @@ export default async function LocaleLandingPage({params}: LocalePageProps) {
 
   return (
     <>
-      <main id="main-content" className="min-h-screen bg-surface text-primary dark:bg-primary dark:text-surface">
+      <main id="main-content" className="min-h-screen bg-transparent text-accent-foreground dark:bg-transparent dark:text-surface">
         <article className="mx-auto flex w-full max-w-6xl flex-col gap-24 px-6 py-16 lg:px-12">
           <HeroSection hero={hero} ctas={heroCtas} />
 

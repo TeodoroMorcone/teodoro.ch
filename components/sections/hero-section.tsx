@@ -40,15 +40,20 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
       aria-labelledby="hero-heading"
       className="grid gap-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)]"
     >
-      <div>
-        <span className="inline-flex items-center rounded-full bg-accent/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white dark:bg-accent/50 dark:text-white">
+      <div className="flex flex-col gap-6 rounded-3xl border border-secondary/20 bg-surface/85 p-8 shadow-sidebar backdrop-blur-sm dark:border-secondary/30 dark:bg-primary/60">
+        <span className="inline-flex w-fit items-center rounded-full bg-accent px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-accent-foreground shadow-sm shadow-accent/40 dark:bg-accent/90">
           {hero.badge}
         </span>
-        <h1 id="hero-heading" className="mt-6 text-4xl font-semibold leading-tight lg:text-5xl">
+        <h1 id="hero-heading" className="mt-6 text-4xl font-semibold leading-tight text-primary lg:text-5xl dark:text-accent-foreground">
           {hero.heading}
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-secondary dark:text-surface/80">{hero.subheading}</p>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-6">
+        {hero.disclaimer ? (
+          <p className="mt-2 text-sm text-secondary/85 dark:text-accent-foreground/80">
+            {hero.disclaimer}
+          </p>
+        ) : null}
+        <p className="mt-6 max-w-2xl text-lg text-secondary opacity-90 dark:text-accent-foreground dark:opacity-80">{hero.subheading}</p>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           {[ctas.primary, ctas.secondary].map((cta, index) => {
             const trimmedHref = cta.href.trim();
             const href = trimmedHref.length > 0 ? trimmedHref : "#";
@@ -94,7 +99,7 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
             return (
               <div key={`${cta.label}-${index}`} className="flex min-w-[15rem] flex-col items-center gap-2">
                 {cta.helper ? (
-                  <span className="text-sm font-semibold text-secondary dark:text-surface/80">
+                  <span className="text-sm font-semibold text-secondary opacity-80 dark:text-accent-foreground dark:opacity-75">
                     {cta.helper}
                   </span>
                 ) : null}
@@ -106,7 +111,7 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
           })}
         </div>
       </div>
-      <div className="relative flex flex-col gap-6 overflow-hidden rounded-3xl bg-primary/5 p-8 shadow-sidebar backdrop-blur-sm dark:bg-surface/10 sm:p-10 min-h-[22rem] sm:min-h-[26rem]">
+      <div className="relative flex flex-col gap-6 overflow-hidden rounded-3xl border border-secondary/30 bg-secondary/70 p-8 text-accent-foreground shadow-[0_32px_110px_-48px_rgba(15,91,75,0.65)] backdrop-blur-md dark:border-primary/40 dark:bg-primary/70 sm:p-10 min-h-[22rem] sm:min-h-[26rem]">
         <div className="absolute -inset-8 sm:-inset-10">
           <Image
             src={portraitSrc}
@@ -117,13 +122,14 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
             className="hero-portrait-object hero-portrait-scale h-full w-full object-cover"
           />
         </div>
-        <div className="relative z-10 mt-auto flex flex-col gap-3 text-white drop-shadow-[0_1px_6px_rgba(0,0,0,0.35)]">
-          <span className="inline-flex w-fit items-center rounded-full bg-black/40 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-white backdrop-blur-sm">
+        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-secondary/80 via-secondary/45 to-transparent" />
+        <div className="relative z-10 mt-auto flex flex-col gap-3 drop-shadow-[0_1px_6px_rgba(0,0,0,0.25)]">
+          <span className="inline-flex w-fit items-center rounded-full bg-accent/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-accent-foreground shadow-sm shadow-accent/40 backdrop-blur-sm">
             Portrait
           </span>
-          <div className="max-w-md space-y-2 rounded-2xl bg-black/25 p-6 backdrop-blur-md">
-            <p className="text-lg font-semibold tracking-wide text-white sm:text-xl">{expertName}</p>
-            <p className="text-sm leading-relaxed text-white/85 sm:text-base">{portraitCaption}</p>
+          <div className="max-w-md space-y-2 rounded-2xl bg-secondary/35 p-6 backdrop-blur-md shadow-inner shadow-secondary/40">
+            <p className="text-lg font-semibold tracking-wide text-accent-foreground sm:text-xl">{expertName}</p>
+            <p className="text-sm leading-relaxed text-accent-foreground opacity-90 sm:text-base">{portraitCaption}</p>
           </div>
         </div>
       </div>

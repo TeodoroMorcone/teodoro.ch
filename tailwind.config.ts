@@ -21,10 +21,15 @@ const config: Config = {
     },
     extend: {
       colors: {
-        primary: "#19183B",
-        secondary: "#4A5F6B",
-        accent: "#A1C2BD",
-        surface: "#E7F2EF",
+        primary: "#008585",
+        "primary-strong": "#006B6B",
+        secondary: "#0F5B4B",
+        "secondary-strong": "#0A3F35",
+        accent: "#C45335",
+        "accent-foreground": "#FFFFFF",
+        "accent-muted": "#FFECCD",
+        surface: "#FFF1D6",
+        "surface-contrast": "#F7E6C3",
       },
       borderRadius: {
         xl: "1.25rem",

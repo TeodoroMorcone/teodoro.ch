@@ -9,8 +9,11 @@ import {useCallback, useEffect, useMemo, useState} from "react";
 import {useConsent} from "@/components/consent/consent-context";
 import type {CookieBannerStrings} from "@/types/consent";
 
-const actionButtonClass =
-  "inline-flex w-full items-center justify-center rounded-full border border-secondary/40 bg-white px-4 py-2 text-sm font-semibold text-primary transition-colors duration-200 ease-soft-sine hover:border-accent hover:bg-accent/5 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/30 dark:bg-white dark:text-primary sm:flex-1";
+const baseActionClass =
+  "inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto sm:flex-1";
+const acceptButtonClass = `${baseActionClass} bg-primary text-accent-foreground hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent dark:bg-primary/90 dark:hover:bg-accent`;
+const rejectButtonClass = `${baseActionClass} border border-secondary/40 bg-surface text-primary hover:border-accent hover:text-accent focus-visible:border-accent dark:border-surface/35 dark:bg-surface/15 dark:text-surface/90 dark:hover:text-white`;
+const saveButtonClass = `${baseActionClass} border border-secondary/25 bg-accent/10 text-secondary hover:border-accent hover:bg-accent/20 hover:text-accent focus-visible:border-accent dark:border-surface/35 dark:bg-surface/18 dark:text-surface/85 dark:hover:text-white`;
 
 export function ConsentPreferences() {
   const consent = useConsent();
@@ -81,9 +84,9 @@ export function ConsentPreferences() {
   return (
     <Dialog.Root open={consent.isPreferencesOpen} onOpenChange={handleOpenChange}>
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 z-[70] bg-primary/40 backdrop-blur-sm data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:animate-in data-[state=open]:fade-in" />
+        <Dialog.Overlay className="fixed inset-0 z-[70] bg-secondary/35 backdrop-blur-md transition-opacity duration-300 ease-soft-sine data-[state=closed]:animate-out data-[state=closed]:fade-out data-[state=open]:animate-in data-[state=open]:fade-in dark:bg-surface/40" />
         <Dialog.Content
-          className="fixed inset-x-4 bottom-8 z-[80] mx-auto max-w-3xl rounded-3xl border border-secondary/30 bg-surface px-6 py-6 text-primary shadow-sidebar outline-none transition-[transform,opacity] duration-200 ease-soft-sine data-[state=closed]:translate-y-4 data-[state=closed]:opacity-0 data-[state=open]:translate-y-0 data-[state=open]:opacity-100 dark:border-surface/30 dark:bg-primary dark:text-surface sm:px-8 sm:py-7"
+          className="fixed inset-x-4 bottom-8 z-[80] mx-auto max-w-3xl rounded-3xl border border-secondary/25 bg-surface/95 px-6 py-7 text-secondary shadow-[0_28px_70px_-34px_rgba(0,84,84,0.28)] backdrop-blur-lg outline-none transition-[transform,opacity] duration-300 ease-soft-sine data-[state=closed]:translate-y-5 data-[state=closed]:opacity-0 data-[state=open]:translate-y-0 data-[state=open]:opacity-100 dark:border-surface/25 dark:bg-surface/15 dark:text-surface/85 dark:shadow-[0_24px_60px_-32px_rgba(0,133,133,0.34)] sm:px-8 sm:py-8"
           aria-describedby="consent-preferences-description"
         >
           <div className="flex items-start justify-between gap-4">
@@ -103,7 +106,7 @@ export function ConsentPreferences() {
               </Dialog.Description>
             </div>
             <Dialog.Close
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/40 text-primary transition-colors duration-200 ease-soft-sine hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/30 dark:text-surface"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/35 text-secondary transition-colors duration-200 ease-soft-sine hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/35 dark:text-surface/85 dark:hover:text-white"
               aria-label={strings.banner.manage}
             >
               <X aria-hidden="true" className="h-5 w-5" />
@@ -114,17 +117,17 @@ export function ConsentPreferences() {
             <fieldset className="space-y-4" aria-label={strings.preferences.title}>
               <legend className="sr-only">{strings.preferences.title}</legend>
 
-              <div className="flex items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/60 px-4 py-4 dark:border-surface/20 dark:bg-primary/60">
+              <div className="flex items-start justify-between gap-4 rounded-2xl border border-secondary/25 bg-surface/80 px-5 py-5 shadow-inner shadow-secondary/10 transition-colors duration-300 ease-soft-sine dark:border-surface/25 dark:bg-surface/18 dark:shadow-primary/15">
                 <div className="space-y-1">
                   <span
                     id="preferences-essential-label"
-                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
+                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary/75 dark:text-surface/75"
                   >
                     {strings.preferences.essentialTitle}
                   </span>
                   <p
                     id="preferences-essential-description"
-                    className="text-sm text-secondary dark:text-surface/80"
+                    className="text-sm text-secondary/85 dark:text-surface/80"
                   >
                     {strings.preferences.essentialDescription}
                   </p>
@@ -136,11 +139,11 @@ export function ConsentPreferences() {
                     checked
                     disabled
                     readOnly
-                    className="h-5 w-5 rounded border-secondary/40 text-primary opacity-60 dark:border-surface/40 dark:bg-primary"
+                    className="h-5 w-5 rounded border-secondary/40 text-primary opacity-60 dark:border-surface/45 dark:bg-surface/25"
                     aria-labelledby="preferences-essential-label"
                     aria-describedby="preferences-essential-description"
                   />
-                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70">
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary/70 dark:text-surface/70">
                     {strings.preferences.alwaysOn}
                   </span>
                 </div>
@@ -148,18 +151,18 @@ export function ConsentPreferences() {
 
               <label
                 htmlFor="preferences-analytics-toggle"
-                className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/50 px-4 py-4 transition-colors duration-200 hover:border-accent dark:border-surface/20 dark:bg-primary/50"
+                className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-secondary/25 bg-surface/70 px-5 py-5 shadow-sm shadow-secondary/10 transition-colors duration-300 ease-soft-sine hover:border-primary hover:shadow-secondary/20 dark:border-surface/25 dark:bg-surface/18 dark:shadow-primary/15"
               >
                 <span className="space-y-1">
                   <span
                     id="preferences-analytics-label"
-                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
+                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary/75 dark:text-surface/75"
                   >
                     {strings.preferences.analyticsTitle}
                   </span>
                   <p
                     id="preferences-analytics-description"
-                    className="text-sm text-secondary dark:text-surface/80"
+                    className="text-sm text-secondary/85 dark:text-surface/80"
                   >
                     {strings.preferences.analyticsDescription}
                   </p>
@@ -167,7 +170,7 @@ export function ConsentPreferences() {
                 <input
                   id="preferences-analytics-toggle"
                   type="checkbox"
-                  className="h-5 w-5 rounded border-secondary/40 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/40 dark:bg-primary dark:text-surface"
+                  className="h-5 w-5 rounded border-secondary/50 text-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/45 dark:bg-surface/25 dark:text-surface"
                   checked={analyticsEnabled}
                   onChange={(event) => setAnalyticsEnabled(event.target.checked)}
                   aria-labelledby="preferences-analytics-label"
@@ -177,18 +180,18 @@ export function ConsentPreferences() {
 
               <label
                 htmlFor="preferences-marketing-toggle"
-                className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-secondary/20 bg-surface/50 px-4 py-4 transition-colors duration-200 hover:border-accent dark:border-surface/20 dark:bg-primary/50"
+                className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl border border-secondary/25 bg-surface/70 px-5 py-5 shadow-sm shadow-secondary/10 transition-colors duration-300 ease-soft-sine hover:border-primary hover:shadow-secondary/20 dark:border-surface/25 dark:bg-surface/18 dark:shadow-primary/15"
               >
                 <span className="space-y-1">
                   <span
                     id="preferences-marketing-label"
-                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary dark:text-surface/70"
+                    className="text-sm font-semibold uppercase tracking-[0.18em] text-secondary/75 dark:text-surface/75"
                   >
                     {strings.preferences.marketingTitle}
                   </span>
                   <p
                     id="preferences-marketing-description"
-                    className="text-sm text-secondary dark:text-surface/80"
+                    className="text-sm text-secondary/85 dark:text-surface/80"
                   >
                     {strings.preferences.marketingDescription}
                   </p>
@@ -196,7 +199,7 @@ export function ConsentPreferences() {
                 <input
                   id="preferences-marketing-toggle"
                   type="checkbox"
-                  className="h-5 w-5 rounded border-secondary/40 text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/40 dark:bg-primary dark:text-surface"
+                  className="h-5 w-5 rounded border-secondary/50 text-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/45 dark:bg-surface/25 dark:text-surface"
                   checked={marketingEnabled}
                   onChange={(event) => setMarketingEnabled(event.target.checked)}
                   aria-labelledby="preferences-marketing-label"
@@ -206,10 +209,10 @@ export function ConsentPreferences() {
             </fieldset>
           </div>
 
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:justify-end">
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-end">
             <button
               type="button"
-              className={actionButtonClass}
+              className={acceptButtonClass}
               onClick={handleAcceptAll}
               aria-label={strings.banner.accept}
             >
@@ -217,7 +220,7 @@ export function ConsentPreferences() {
             </button>
             <button
               type="button"
-              className={actionButtonClass}
+              className={rejectButtonClass}
               onClick={handleRejectAll}
               aria-label={strings.banner.reject}
             >
@@ -225,7 +228,7 @@ export function ConsentPreferences() {
             </button>
             <button
               type="button"
-              className={actionButtonClass}
+              className={saveButtonClass}
               onClick={handleSave}
               aria-label={strings.preferences.save}
             >

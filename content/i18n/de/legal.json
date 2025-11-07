@@ -69,8 +69,8 @@
       }
     ],
     "notes": [
-      "Es gilt Schweizer Recht für alle Unterrichtsverträge.",
-      "Gerichtsstand ist Zürich, Schweiz."
+      "Gerichtsstand & anwendbares Recht: Zwingende Gerichtsstände bleiben vorbehalten. Für Klagen von Konsument:innen ist das Gericht am Wohnsitz der Konsumentin bzw. des Konsumenten oder am Sitz des Anbieters zuständig; im Übrigen gilt Zürich.",
+      "Es findet materielles Schweizer Recht Anwendung."
     ]
   },
   "privacy": {
@@ -145,7 +145,7 @@
     "body": [
       "Absagen bis 24 Stunden vor dem Termin sind kostenlos möglich.",
       "Bei kurzfristigen Absagen oder Nichterscheinen wird eine Lektion verrechnet.",
-      "Zahlung per Rechnung oder Überweisung innert 10 Tagen."
+      "Die Zahlung erfolgt vor Unterrichtsbeginn über einen Stripe-Zahlungslink (z. B. Kreditkarte, Twint); elektronische Quittungen erhältst du automatisch."
     ]
   },
   "minors": {

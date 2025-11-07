@@ -4,7 +4,7 @@
   },
   "reviews": {
     "mode": "static",
-    "staticFeedPath": "/data/google-reviews.json",
+    "staticFeedPath": "data/reviews.json",
     "fallbackLocale": "de"
   },
   "zoom": {

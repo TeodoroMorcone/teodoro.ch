@@ -2,6 +2,7 @@
 
 import {forwardRef, useCallback, useEffect, useMemo, useState} from "react";
 
+import {useLocale} from "next-intl";
 import type {ComponentProps} from "react";
 
 import type {GoogleReview} from "@/lib/reviews/google";
@@ -73,9 +74,49 @@ function getSocialIconComponent(name?: string | null): LucideIcon | null {
 }
 
 export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
+  const locale = useLocale();
   const [chunkSize, setChunkSize] = useState(DESKTOP_CHUNK_SIZE);
   const slides = useMemo(() => chunkReviews(reviews, chunkSize), [reviews, chunkSize]);
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const formatCollectedAt = useCallback(
+    (value?: string) => {
+      if (!value) {
+        return null;
+      }
+
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) {
+        return value;
+      }
+
+      try {
+        return date.toLocaleDateString(locale, {
+          month: "long",
+          year: "numeric",
+        });
+      } catch {
+        return date.toISOString().slice(0, 10);
+      }
+    },
+    [locale],
+  );
+
+  const formatRatingValue = useCallback(
+    (value?: number) => {
+      if (typeof value !== "number" || Number.isNaN(value)) {
+        return null;
+      }
+
+      const normalized = Math.max(0, Math.min(5, value));
+      const formatted = new Intl.NumberFormat(locale, {
+        maximumFractionDigits: 1,
+      }).format(normalized);
+
+      return `${formatted} / 5`;
+    },
+    [locale],
+  );
 
   useEffect(() => {
     if (typeof window === "undefined") {
@@ -147,48 +188,86 @@ export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
         <div className="grid gap-5 sm:grid-cols-2">
           {activeSlide.map((review) => {
             const IconComponent = getSocialIconComponent(review.socialIcon);
-            const socialLabel = review.socialIcon?.trim() || "social";
+            const socialLabel = review.socialIcon?.trim() || review.source.label || "social";
+            const formattedCollectedAt = formatCollectedAt(review.collectedAt);
+            const formattedRating = formatRatingValue(review.rating);
+            const normalizedRating =
+              typeof review.rating === "number" && Number.isFinite(review.rating)
+                ? Math.max(0, Math.min(5, Math.round(review.rating)))
+                : 0;
+            const sourceContent = review.source.url ? (
+              <a
+                href={review.source.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center font-semibold text-accent underline-offset-4 transition-colors duration-200 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-accent-foreground"
+              >
+                {review.source.label}
+              </a>
+            ) : (
+              <span className="font-semibold text-primary">{review.source.label}</span>
+            );
 
             return (
               <article
                 key={`${review.authorName}-${review.text.slice(0, 32)}`}
                 className="group flex h-full flex-col gap-3 rounded-3xl border border-secondary/20 bg-surface px-5 py-4 text-sm text-primary shadow-sm transition-transform transition-colors duration-200 ease-soft-sine hover:-translate-y-1 hover:bg-primary hover:text-surface hover:shadow-sidebar dark:border-surface/20 dark:bg-primary/30 dark:text-surface dark:hover:bg-surface dark:hover:text-primary"
               >
-                <header className="flex items-center gap-3">
-                  {review.profilePhotoUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={review.profilePhotoUrl}
-                      alt={`Avatar of ${review.authorName}`}
-                      className="h-9 w-9 rounded-full border border-secondary/30 object-cover transition-colors duration-200 group-hover:border-surface dark:group-hover:border-primary"
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/30 text-xs font-semibold uppercase text-primary transition-colors duration-200 group-hover:bg-surface group-hover:text-primary dark:text-surface dark:group-hover:bg-primary dark:group-hover:text-surface">
-                      {review.authorName.slice(0, 2)}
-                    </div>
-                  )}
+                <header className="flex flex-col gap-3">
+                  <div className="flex items-center gap-3">
+                    {review.profilePhotoUrl ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={review.profilePhotoUrl}
+                        alt={`Avatar of ${review.authorName}`}
+                        className="h-9 w-9 rounded-full border border-secondary/30 object-cover transition-colors duration-200 group-hover:border-surface dark:group-hover:border-primary"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="flex h-9 w-9 items-center justify-center rounded-full bg-accent/30 text-xs font-semibold uppercase text-primary transition-colors duration-200 group-hover:bg-surface group-hover:text-primary dark:text-surface dark:group-hover:bg-primary dark:group-hover:text-surface">
+                        {review.authorName.slice(0, 2)}
+                      </div>
+                    )}
 
-                  <div className="flex flex-1 items-center gap-2">
-                    <span className="font-semibold text-primary transition-colors duration-200 group-hover:text-surface dark:text-surface dark:group-hover:text-primary">
-                      {review.authorName}
-                    </span>
-                    {IconComponent && review.socialUrl ? (
-                      <a
-                        href={review.socialUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Open ${review.authorName}'s ${socialLabel} profile`}
-                        className="inline-flex h-7 w-7 items-center justify-center rounded-full text-secondary transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent group-hover:text-surface dark:text-surface/80 dark:group-hover:text-primary"
+                    <div className="flex flex-1 items-center gap-2">
+                      <span className="font-semibold text-primary transition-colors duration-200 group-hover:text-surface dark:text-surface dark:group-hover:text-primary">
+                        {review.authorName}
+                      </span>
+                      {IconComponent && review.socialUrl ? (
+                        <a
+                          href={review.socialUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Open ${review.authorName}'s ${socialLabel} profile`}
+                          className="inline-flex h-7 w-7 items-center justify-center rounded-full text-secondary transition-colors duration-200 hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent group-hover:text-surface dark:text-surface/80 dark:group-hover:text-primary"
+                        >
+                          <IconComponent className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
+                        </a>
+                      ) : null}
+                      <div
+                        className="ml-auto flex items-center gap-1 text-xs font-semibold text-[#f6c343] transition-colors duration-200 group-hover:text-[#ffd76f] dark:text-[#f6c343] dark:group-hover:text-[#ffd76f]"
+                        aria-hidden="true"
                       >
-                        <IconComponent className="h-4 w-4" strokeWidth={1.75} aria-hidden="true" />
-                      </a>
-                    ) : null}
-                    <div className="ml-auto flex items-center gap-1 text-xs font-semibold text-[#f6c343] transition-colors duration-200 group-hover:text-[#ffd76f] dark:text-[#f6c343] dark:group-hover:text-[#ffd76f]">
-                      {Array.from({length: 5}).map((_, index) => (
-                        <span key={index}>{index < Math.round(review.rating) ? "★" : "☆"}</span>
-                      ))}
+                        {Array.from({length: 5}).map((_, index) => (
+                          <span key={index}>{index < normalizedRating ? "★" : "☆"}</span>
+                        ))}
+                      </div>
+                      {formattedRating ? (
+                        <span className="sr-only">{formattedRating}</span>
+                      ) : null}
                     </div>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-secondary/80 transition-colors duration-200 group-hover:text-surface/90 dark:text-surface/70 dark:group-hover:text-primary/90">
+                    {sourceContent}
+                    {formattedCollectedAt ? (
+                      <>
+                        <span aria-hidden="true" className="text-secondary/40 dark:text-surface/40">
+                          •
+                        </span>
+                        <span>{formattedCollectedAt}</span>
+                      </>
+                    ) : null}
                   </div>
                 </header>
 
@@ -196,13 +275,10 @@ export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
                   {review.text}
                 </p>
 
-                {review.url ? (
-                  <a
-                    href={review.url}
-                    className="text-xs font-semibold uppercase tracking-[0.2em] text-accent transition-colors duration-200 hover:underline group-hover:text-surface dark:group-hover:text-primary"
-                  >
-                    View review source
-                  </a>
+                {review.contextNote ? (
+                  <p className="text-xs text-secondary/80 italic transition-colors duration-200 group-hover:text-surface/80 dark:text-surface/70 dark:group-hover:text-primary/70">
+                    {review.contextNote}
+                  </p>
                 ) : null}
               </article>
             );

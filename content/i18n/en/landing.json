@@ -1,6 +1,7 @@
 {
   "hero": {
-    "heading": "💪 Your child will master the Gymi exam – with real strength.",
+    "heading": "💪 I maximise the chances for the Gymi exam",
+    "disclaimer": "No guarantee of success; outcomes depend on each student’s starting point.",
     "subheading": "I'm Teodoro Morcone, an experienced math tutor from Zurich.\nI guide students through Gymi, HMS, BMS & FMS entrance exams – 100% online with a personal learning structure.",
     "bookingFrameTitle": "Book a lesson online",
     "bookingAvailabilityNote": "Pick a convenient slot directly in the calendar widget.",
@@ -45,7 +46,7 @@
       },
       {
         "label": "Pricing",
-        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 550 (approx. 2 lessons per week), 13-pack CHF 650 (approx. 3 lessons per week) – includes follow-up notes, progress tracking, and 24-hour response time."
+        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 550 (approx. 2 lessons per week), 13-pack CHF 650 (approx. 3 lessons per week) – includes follow-up notes, progress tracking, and typically a response within 24 hours on business days. Final prices in CHF; service not VAT-registered. No additional payment fees."
       },
       {
         "label": "How to start?",
@@ -82,7 +83,7 @@
     {
       "id": "response",
       "title": "Booking & response",
-      "body": "Flexible online booking with reliable follow-up – inquiries answered within 24 hours."
+      "body": "Flexible online booking with reliable follow-up – inquiries are typically answered within 24 hours on business days."
     }
   ],
   "sections": {
@@ -158,12 +159,14 @@
       "title": "Results & social proof",
       "description": "Hear directly from families who trust Teodoro Morcone Nachhilfe.",
       "reviewSummary": {
-        "badge": "★ 5.0 rating",
+        "badge": "Strong reviews on Google & Tutor24",
+        "stand": "As of November 2025",
         "headline": "Consistent progress and lasting confidence",
         "body": [
           "Parents highlight multi-year coaching that rebuilt confidence, sharpened study habits, and delivered sustained grade improvements.",
           "Students appreciate the patient, multilingual tutoring style that makes complex math approachable and even fun."
-        ]
+        ],
+        "note": "All reviews come from real clients; sources are linked or documented with the provider (status: November 2025)."
       }
     },
     "about": {
@@ -184,11 +187,11 @@
           "id": "single",
           "name": "Single session",
           "price": "CHF 70",
-          "unit": "per 60 minutes",
+          "unit": "per 60 minutes — final price in CHF; service not VAT-registered. No additional payment fees.",
           "features": [
             "Individual lesson with tailored material",
             "Homework follow-up",
-            "Feedback within 24 hours"
+            "Feedback typically within 24 hours (Mon–Fri)"
           ],
           "cta": "Book a trial"
         },
@@ -196,20 +199,20 @@
           "id": "five-pack",
           "name": "5-pack",
           "price": "CHF 300",
-          "unit": "5 × 60 minutes (CHF 60 per lesson)",
+          "unit": "5 × 60 minutes (CHF 60 per lesson) — final price in CHF; service not VAT-registered. No additional payment fees.",
           "features": [
             "Structured learning plan",
             "Weekly feedback & monitoring",
             "Optional mock test"
           ],
           "cta": "Reserve package",
-          "badge": "Popular"
+          "badge": "Recommended"
         },
         {
           "id": "ten-pack",
           "name": "10-pack",
           "price": "CHF 550",
-          "unit": "10 × 60 minutes (CHF 55 per lesson, approx 2 lessons per week)",
+          "unit": "10 × 60 minutes (CHF 55 per lesson, approx 2 lessons per week) — final price in CHF; service not VAT-registered. No additional payment fees.",
           "features": [
             "Full exam preparation programme",
             "Detailed weekly reports",
@@ -221,7 +224,7 @@
           "id": "thirteen-pack",
           "name": "13-pack",
           "price": "CHF 650",
-          "unit": "13 × 60 minutes (CHF 50 per lesson, approx 3 lessons per week)",
+          "unit": "13 × 60 minutes (CHF 50 per lesson, approx 3 lessons per week) — final price in CHF; service not VAT-registered. No additional payment fees.",
           "features": [
             "Long-term mastery curriculum",
             "Monthly strategy review & guardian updates",
@@ -252,12 +255,12 @@
         {
           "id": "faq-response",
           "question": "How quickly do you respond to inquiries?",
-          "answer": "Within 24 hours you receive proposed time slots, a mini goal analysis, and—if helpful—a prep sheet to complete before the diagnostic call."
+          "answer": "Typically within 24 hours on business days you receive proposed time slots, a mini goal analysis, and—if helpful—a prep sheet to complete before the diagnostic call."
         },
         {
           "id": "faq-payment",
-          "question": "What are the payment options?",
-          "answer": "Pay securely via invoice or Stripe (card, Twint). Packages and single lessons are prepaid before the first session is confirmed."
+          "question": "How do payments work?",
+          "answer": "All lessons and packages are prepaid via Stripe payment link (e.g., card, Twint). Sessions are confirmed once the Stripe payment clears, and receipts are emailed automatically."
         },
         {
           "id": "faq-privacy",
@@ -427,8 +430,8 @@
           "heading": "4. Pricing & payment via Stripe",
           "body": [
             "Current prices are published on the website.",
-            "Payments are processed cashlessly via Stripe (e.g., card payments). Stripe’s terms apply in addition.",
-            "Invoices or receipts are provided electronically."
+            "All lessons and packages are prepaid via Stripe payment link (e.g., card, Twint); Stripe’s terms apply in addition.",
+            "Invoices and receipts are emailed automatically immediately after payment."
           ]
         },
         {
@@ -477,8 +480,8 @@
           "id": "jurisdiction",
           "heading": "10. Governing law & jurisdiction",
           "body": [
-            "Swiss substantive law applies.",
-            "Jurisdiction is Zurich, Switzerland."
+            "Mandatory venues remain reserved. For claims brought by consumers, the competent court is either at the consumer’s domicile or at the provider’s registered office; otherwise, Zurich applies.",
+            "Swiss substantive law governs."
           ]
         },
         {
@@ -595,14 +598,14 @@
         "href": "https://www.instagram.com/Teo6oro/"
       }
     ],
-    "responseTime": "Reply within 24h (Mon–Fri)",
+    "responseTime": "Reply typically within 24h (Mon–Fri)",
     "officeHours": "Session times: Mon–Sat by appointment",
     "policy": {
       "cancellationTitle": "Cancellation policy",
       "cancellationItems": [
         "Sessions can be cancelled or rescheduled free of charge up to 24 hours in advance.",
         "Late cancellations or no-shows are billed as a full lesson.",
-        "Payment via invoice or bank transfer within 10 days."
+        "Payment is collected upfront via Stripe payment link (card, Twint); receipts are issued electronically."
       ],
       "minorsTitle": "Working with minors",
       "minorsItems": [

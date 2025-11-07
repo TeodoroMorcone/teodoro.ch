@@ -1,6 +1,7 @@
 {
   "hero": {
-    "heading": "💪 Dein Kind schafft die Gymiprüfung – mit viel Kraft.",
+    "heading": "💪 Ich maximiere die Chancen für die Gymiprüfung",
+    "disclaimer": "Kein Erfolgsversprechen; Resultate variieren je nach Ausgangslage.",
     "subheading": "Ich bin Teodoro Morcone, erfahrener Mathematik-Tutor aus Zürich.\nIch begleite Schüler:innen gezielt auf Gymi-, HMS-, BMS- & FMS-Aufnahmeprüfungen – 100 % online und mit persönlicher Lernstruktur.",
     "bookingFrameTitle": "Online-Lektion buchen",
     "bookingActivationLabel": "Buchungskalender laden",
@@ -44,11 +45,11 @@
       },
       {
         "label": "Preisrahmen",
-        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 550 (ca. 2 Lektionen pro Woche), 13er-Paket CHF 650 (ca. 3 Lektionen pro Woche) – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden."
+        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 550 (ca. 2 Lektionen pro Woche), 13er-Paket CHF 650 (ca. 3 Lektionen pro Woche) – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden. Endpreise in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren."
       },
       {
         "label": "Wie starten?",
-        "description": "WhatsApp schreiben → kostenloses Erstgespräch innerhalb von 24 Stunden → Termine fixieren und Lernplan über Calendesk aktivieren."
+        "description": "WhatsApp schreiben → Erstgespräch in der Regel innerhalb von 24 Stunden (Mo–Fr) → Termine fixieren und Lernplan über Calendesk aktivieren."
       }
     ]
   },
@@ -81,7 +82,7 @@
     {
       "id": "response",
       "title": "Buchung & Response",
-      "body": "Termine flexibel online buchbar; Rückmeldungen zu Anfragen erfolgen verlässlich innerhalb von 24 Stunden."
+      "body": "Termine flexibel online buchbar; Rückmeldungen zu Anfragen erfolgen in der Regel innerhalb von 24 Stunden (Mo–Fr)."
     }
   ],
   "sections": {
@@ -157,12 +158,14 @@
       "title": "Ergebnisse & Social Proof",
       "description": "Direktes Feedback von Familien, die Teodoro Morcone Nachhilfe vertrauen.",
       "reviewSummary": {
-        "badge": "★ 5.0 Bewertung",
+        "badge": "Sehr gute Bewertungen auf Google & Tutor24",
+        "stand": "Stand: November 2025",
         "headline": "Nachhaltige Fortschritte & neue Lernmotivation",
         "body": [
           "Eltern berichten von mehrjähriger Begleitung, die Selbstvertrauen, Lerngewohnheiten und Noten Schritt für Schritt gestärkt hat.",
           "Schüler:innen schätzen den geduldigen, mehrsprachigen Unterrichtsstil, der komplexe Mathematik verständlich und sogar spannend macht."
-        ]
+        ],
+        "note": "Alle Rezensionen stammen von echten Kund:innen; Quellen sind verlinkt oder beim Anbieter dokumentiert (Stand: November 2025)."
       }
     },
     "about": {
@@ -183,11 +186,11 @@
           "id": "single",
           "name": "Einzellektion",
           "price": "CHF 70",
-          "unit": "pro 60 Minuten",
+          "unit": "pro 60 Minuten – Endpreis in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren.",
           "features": [
             "Individuelle Lektion inkl. Material",
             "Nachbereitung & Hausaufgaben",
-            "Feedback innerhalb von 24h"
+            "Feedback in der Regel innerhalb von 24 h (Mo–Fr)"
           ],
           "cta": "Schnuppertermin buchen"
         },
@@ -195,20 +198,20 @@
           "id": "five-pack",
           "name": "5er Paket",
           "price": "CHF 300",
-          "unit": "5 × 60 Minuten (CHF 60 pro Lektion)",
+          "unit": "5 × 60 Minuten (CHF 60 pro Lektion) – Endpreis in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren.",
           "features": [
             "Strukturierter Lernplan",
             "Zwischenfeedback & Monitoring",
             "Mock-Test (optional)"
           ],
           "cta": "Paket reservieren",
-          "badge": "Beliebt"
+          "badge": "Empfohlen"
         },
         {
           "id": "ten-pack",
           "name": "10er Paket",
           "price": "CHF 550",
-          "unit": "10 × 60 Minuten (CHF 55 pro Lektion, ca. 2 Lektionen pro Woche)",
+          "unit": "10 × 60 Minuten (CHF 55 pro Lektion, ca. 2 Lektionen pro Woche) – Endpreis in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren.",
           "features": [
             "Komplette Prüfungsvorbereitung",
             "Wöchentliche Fortschrittsberichte",
@@ -220,7 +223,7 @@
           "id": "thirteen-pack",
           "name": "13er Paket",
           "price": "CHF 650",
-          "unit": "13 × 60 Minuten (CHF 50 pro Lektion, ca. 3 Lektionen pro Woche)",
+          "unit": "13 × 60 Minuten (CHF 50 pro Lektion, ca. 3 Lektionen pro Woche) – Endpreis in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren.",
           "features": [
             "Langfristiges Mastery-Curriculum",
             "Monatliche Strategie-Reviews & Eltern-Updates",
@@ -251,12 +254,12 @@
         {
           "id": "faq-response",
           "question": "Wie schnell erhalte ich eine Rückmeldung auf meine Anfrage?",
-          "answer": "Innerhalb von 24 Stunden erhältst du konkrete Terminvorschläge, eine kurze Zielanalyse und – wenn nötig – ein Vorbereitungsblatt für den Diagnose-Call."
+          "answer": "In der Regel erhältst du innerhalb von 24 Stunden an Werktagen konkrete Terminvorschläge, eine kurze Zielanalyse und – falls sinnvoll – ein Vorbereitungsblatt für den Diagnose-Call."
         },
         {
           "id": "faq-payment",
           "question": "Wie erfolgt die Bezahlung?",
-          "answer": "Die Bezahlung erfolgt per Rechnung oder Stripe-Link (Kreditkarte, Twint). Pakete und Einzellektionen werden vor der ersten Session vorausbezahlt."
+          "answer": "Die Bezahlung erfolgt ausschliesslich via Stripe-Zahlungslink (z. B. Kreditkarte, Twint) im Voraus. Pakete und Einzellektionen werden vor der ersten Session vollständig beglichen; Zahlungsbelege erhältst du automatisch per E-Mail."
         },
         {
           "id": "faq-privacy",
@@ -423,11 +426,11 @@
         },
         {
           "id": "pricing",
-          "heading": "4. Preise & Zahlung über Stripe",
+          "heading": "4. Preise & Zahlung via Stripe",
           "body": [
             "Es gelten die auf der Website veröffentlichten Preise.",
-            "Die Zahlung erfolgt bargeldlos über Stripe (z. B. Kreditkarte). Es gelten ergänzend die Stripe-Bedingungen.",
-            "Rechnungen bzw. Belege werden elektronisch bereitgestellt."
+            "Alle Lektionen und Pakete werden vor Beginn per Stripe-Zahlungslink (z. B. Kreditkarte, Twint) bezahlt; ergänzend gelten die Stripe-Bedingungen.",
+            "Elektronische Quittungen werden unmittelbar nach Zahlungseingang bereitgestellt."
           ]
         },
         {
@@ -476,8 +479,8 @@
           "id": "jurisdiction",
           "heading": "10. Gerichtsstand & anwendbares Recht",
           "body": [
-            "Es gilt materielles Schweizer Recht.",
-            "Gerichtsstand ist Zürich."
+            "Zwingende Gerichtsstände bleiben vorbehalten. Für Klagen von Konsument:innen ist das Gericht am Wohnsitz der Konsumentin bzw. des Konsumenten oder am Sitz des Anbieters zuständig; im Übrigen gilt Zürich.",
+            "Es findet materielles Schweizer Recht Anwendung."
           ]
         },
         {
@@ -593,14 +596,14 @@
         "href": "https://www.instagram.com/Teo6oro/"
       }
     ],
-    "responseTime": "Antwort innerhalb von 24h (Mo–Fr)",
+    "responseTime": "Antwort in der Regel innerhalb von 24h (Mo–Fr)",
     "officeHours": "Unterrichtszeiten: Mo–Sa nach Vereinbarung",
     "policy": {
       "cancellationTitle": "Stornierungen & No-shows",
       "cancellationItems": [
         "Absagen bis 24 Stunden vor der Lektion sind kostenlos.",
         "Kurzfristige Absagen oder Nichterscheinen werden als volle Lektion verrechnet.",
-        "Bezahlung erfolgt per Rechnung oder Überweisung innerhalb von 10 Tagen."
+        "Bezahlung erfolgt vor Unterrichtsbeginn per Stripe-Zahlungslink (Kreditkarte, Twint); Quittungen werden elektronisch zugestellt."
       ],
       "minorsTitle": "Unterricht mit Minderjährigen",
       "minorsItems": [

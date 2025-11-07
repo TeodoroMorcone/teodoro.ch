@@ -15,12 +15,12 @@ export function ServicesSection({services}: ServicesSectionProps) {
         {services.items.map((service: ServiceItem) => (
           <article
             key={service.id}
-            className="group flex flex-col gap-3 rounded-3xl border border-secondary/20 bg-surface px-6 py-6 text-primary shadow-sm transition-transform transition-colors duration-200 ease-soft-sine hover:-translate-y-1 hover:bg-primary hover:text-surface hover:shadow-sidebar dark:border-surface/20 dark:bg-primary/40 dark:text-surface dark:hover:bg-surface dark:hover:text-primary"
+            className="group flex flex-col gap-3 rounded-3xl border border-secondary/25 bg-surface/90 px-6 py-6 text-primary shadow-[0_18px_45px_-35px_rgba(0,133,133,0.55)] backdrop-blur-sm transition-all duration-300 ease-soft-sine hover:-translate-y-2 hover:border-accent/40 hover:bg-accent-muted/90 hover:text-primary"
           >
-            <h3 className="text-xl font-semibold text-primary transition-colors duration-200 group-hover:text-surface dark:text-surface dark:group-hover:text-primary">
+            <h3 className="text-xl font-semibold text-primary transition-colors duration-300 group-hover:text-primary">
               {service.name}
             </h3>
-            <p className="text-secondary transition-colors duration-200 group-hover:text-surface/80 dark:text-surface/75 dark:group-hover:text-primary/80">
+            <p className="text-secondary opacity-90 transition-colors duration-300 group-hover:text-primary/85">
               {service.copy}
             </p>
           </article>

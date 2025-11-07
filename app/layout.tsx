@@ -43,7 +43,7 @@ export default function RootLayout({children}: RootLayoutProps) {
           strategy="beforeInteractive"
         />
       </head>
-      <body className="min-h-screen bg-surface text-primary antialiased transition-colors duration-200 ease-soft-sine dark:bg-primary dark:text-surface">
+      <body className="min-h-screen bg-secondary text-accent-foreground antialiased transition-colors duration-200 ease-soft-sine dark:bg-primary dark:text-surface">
         <Script
           id="ga-consent-init"
           strategy="afterInteractive"

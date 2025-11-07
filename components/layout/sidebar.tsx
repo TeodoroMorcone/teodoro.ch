@@ -175,7 +175,7 @@ export function Sidebar({
   return (
     <aside
       aria-label={labels.navigation}
-      className="hidden bg-surface text-primary dark:bg-primary dark:text-surface lg:sticky lg:top-0 lg:flex lg:h-dvh lg:w-80 lg:flex-col lg:border-r lg:border-secondary/20"
+      className="hidden bg-secondary/35 text-accent-foreground backdrop-blur-sm dark:bg-primary/80 dark:text-accent-foreground lg:sticky lg:top-0 lg:flex lg:h-dvh lg:w-80 lg:flex-col lg:border-r lg:border-secondary/30"
       ref={asideRef}
     >
       <div className="flex flex-1 flex-col overflow-hidden">
@@ -185,7 +185,7 @@ export function Sidebar({
             className="inline-flex items-center gap-3 text-left"
             aria-label={labels.home}
           >
-            <span className="inline-flex w-fit items-center justify-center rounded-full bg-primary px-4 py-2 shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-primary">
+            <span className="inline-flex w-fit items-center justify-center rounded-full bg-primary px-4 py-2 text-accent-foreground shadow-sidebar transition-colors duration-200 ease-soft-sine dark:bg-primary/90">
               <Image
                 src="/images/white_160x48.webp"
                 alt="Teodoro Morcone"
@@ -219,7 +219,7 @@ export function Sidebar({
             <a
               id="sidebar-primary-cta"
               ref={primaryCtaRef}
-              className="inline-flex w-full max-w-xs items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-3 text-[0.79rem] font-semibold text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
+              className="inline-flex w-full max-w-xs items-center justify-center rounded-3xl border border-accent/50 bg-accent px-4 py-3 text-[0.79rem] font-semibold text-accent-foreground shadow-sidebar transition-all duration-300 ease-soft-sine hover:-translate-y-1 hover:border-accent/60 hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-primary/60 dark:bg-primary/85"
               href={ctas.primary.href}
             >
               {ctas.primary.label}
@@ -227,13 +227,13 @@ export function Sidebar({
             {ctas.tertiary ? (
               <div className="flex w-full max-w-xs flex-col items-center space-y-2">
                 <a
-                  className="inline-flex w-full items-center justify-center rounded-3xl border border-accent/60 bg-surface px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sidebar transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent hover:bg-primary hover:text-surface dark:border-surface/40 dark:bg-surface dark:text-primary dark:hover:bg-accent/40 dark:hover:text-primary"
+                  className="inline-flex w-full items-center justify-center rounded-3xl border border-secondary/40 bg-surface/85 px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary shadow-sidebar transition-all duration-300 ease-soft-sine hover:-translate-y-1 hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-primary/40 dark:bg-primary/70 dark:text-accent-foreground"
                   href={ctas.tertiary.href}
                 >
                   {ctas.tertiary.label}
                 </a>
                 {ctas.tertiary.helper ? (
-                  <p className="text-center text-xs text-secondary dark:text-surface/70">{ctas.tertiary.helper}</p>
+                  <p className="text-center text-xs text-secondary/90 dark:text-accent-foreground/80">{ctas.tertiary.helper}</p>
                 ) : null}
               </div>
             ) : null}

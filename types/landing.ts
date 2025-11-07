@@ -20,6 +20,7 @@ export type HeroContent = {
   heading: string;
   subheading: string;
   badge: string;
+  disclaimer?: string;
   expertName?: string;
   avatarAlt?: string;
   mathSnippet?: string | null;
@@ -85,8 +86,10 @@ export type ResultsPlaceholder = {
 
 export type ResultsReviewSummary = {
   badge?: string;
+  stand?: string;
   headline: string;
   body: string[];
+  note?: string;
   ctaLabel?: string;
   ctaHref?: string;
 };
