@@ -55,63 +55,71 @@ export default async function PrivacyPage({params}: LegalPageProps) {
   const minors = tLegal.raw("minors") as {title: string; body: string[]};
 
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16">
+    <main className="mx-auto max-w-3xl px-6 py-16 text-[rgb(255_241_214_/_0.8)]">
       <header>
-        <p className="text-sm text-secondary">{tPrivacy("lastUpdated")}</p>
-        <h1 className="mt-2 text-3xl font-semibold text-primary">{tPrivacy("title")}</h1>
-        <p className="mt-4 text-secondary">{tPrivacy("intro")}</p>
+        <p className="text-sm !text-[rgb(255_241_214_/_0.8)]">{tPrivacy("lastUpdated")}</p>
+        <h1 className="mt-2 text-3xl font-semibold !text-[rgb(255_241_214_/_0.8)]">{tPrivacy("title")}</h1>
+        <p className="mt-4 !text-[rgb(255_241_214_/_0.8)]">{tPrivacy("intro")}</p>
       </header>
 
-      <div className="mt-10 space-y-8">
-        {sections.map((section) => (
-          <section key={section.heading}>
-            <h2 className="text-xl font-semibold text-primary">{section.heading}</h2>
-            {"body" in section ? (
-              <ul className="mt-3 space-y-2 text-secondary">
-                {section.body.map((line) => (
-                  <li key={line}>{line}</li>
-                ))}
-              </ul>
-            ) : (
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-secondary">
-                {section.list.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            )}
-          </section>
-        ))}
+      <div id="privacy-main-sections" className="mt-10 space-y-8">
+        {sections.map((section, sectionIndex) => {
+          const sectionIdentifier =
+            "id" in section && typeof section.id === "string" && section.id.length > 0
+              ? section.id
+              : `section-${sectionIndex}`;
+          const sectionId = `privacy-${sectionIdentifier}`;
+
+          return (
+            <section id={sectionId} key={sectionId}>
+              <h2 className="text-xl font-semibold !text-[rgb(255_241_214_/_0.8)]">{section.heading}</h2>
+              {"body" in section ? (
+                <ul className="mt-3 space-y-2 !text-[rgb(255_241_214_/_0.8)]">
+                  {section.body.map((line, lineIndex) => (
+                    <li key={`${sectionIdentifier}-body-${lineIndex}`}>{line}</li>
+                  ))}
+                </ul>
+              ) : (
+                <ul className="mt-3 list-disc space-y-2 pl-5 !text-[rgb(255_241_214_/_0.8)]">
+                  {section.list.map((item, itemIndex) => (
+                    <li key={`${sectionIdentifier}-list-${itemIndex}`}>{item}</li>
+                  ))}
+                </ul>
+              )}
+            </section>
+          );
+        })}
         <CookieTable strings={cookieTableStrings} data={COOKIE_TECHNOLOGIES} />
       </div>
 
-      <aside className="mt-12 rounded-2xl border border-secondary/20 px-6 py-6 shadow-sm">
-        <h2 className="text-lg font-semibold text-primary">{tPrivacy("rights.title")}</h2>
-        <p className="mt-2 text-secondary">
-          <a className="text-primary underline" href={`mailto:${tPrivacy("rights.email")}`}>
+      <aside id="privacy-rights" className="mt-12 rounded-2xl border border-secondary/20 px-6 py-6 shadow-sm">
+        <h2 className="text-lg font-semibold !text-[rgb(255_241_214_/_0.8)]">{tPrivacy("rights.title")}</h2>
+        <p className="mt-2 !text-[rgb(255_241_214_/_0.8)]">
+          <a className="!text-[rgb(255_241_214_/_0.8)] underline" href={`mailto:${tPrivacy("rights.email")}`}>
             {tPrivacy("rights.email")}
           </a>
         </p>
-        <p className="text-secondary">{tPrivacy("rights.reference")}</p>
-        <div className="mt-4">
+        <p className="!text-[rgb(255_241_214_/_0.8)]">{tPrivacy("rights.reference")}</p>
+        <div id="privacy-cookie-settings" className="mt-4">
           <CookieSettingsButton label={tPrivacy("cookieLink")} />
         </div>
       </aside>
 
-      <div className="mt-12 space-y-12">
-        <section>
-          <h2 className="text-lg font-semibold text-primary">{cancellation.title}</h2>
-          <ul className="mt-3 space-y-2 text-secondary">
-            {cancellation.body.map((line) => (
-              <li key={line}>{line}</li>
+      <div id="privacy-retention" className="mt-12 space-y-12">
+        <section id="privacy-retention-cancellation">
+          <h2 className="text-lg font-semibold !text-[rgb(255_241_214_/_0.8)]">{cancellation.title}</h2>
+          <ul className="mt-3 space-y-2 !text-[rgb(255_241_214_/_0.8)]">
+            {cancellation.body.map((line, index) => (
+              <li key={`cancellation-${index}`}>{line}</li>
             ))}
           </ul>
         </section>
 
-        <section>
-          <h2 className="text-lg font-semibold text-primary">{minors.title}</h2>
-          <ul className="mt-3 space-y-2 text-secondary">
-            {minors.body.map((line) => (
-              <li key={line}>{line}</li>
+        <section id="privacy-retention-minors">
+          <h2 className="text-lg font-semibold !text-[rgb(255_241_214_/_0.8)]">{minors.title}</h2>
+          <ul className="mt-3 space-y-2 !text-[rgb(255_241_214_/_0.8)]">
+            {minors.body.map((line, index) => (
+              <li key={`minors-${index}`}>{line}</li>
             ))}
           </ul>
         </section>

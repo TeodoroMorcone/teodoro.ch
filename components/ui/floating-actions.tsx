@@ -62,10 +62,12 @@ export function FloatingActions({calendeskContact, whatsappContact}: FloatingAct
   return (
     <>
       <div
+        id="floating-calendesk"
         className={`fixed bottom-6 left-5 z-50 sm:bottom-8 sm:left-8 lg:left-[calc(20rem+2rem)] transform-gpu transition-all duration-500 ease-soft-sine ${visibilityClass}`}
         style={{transitionDelay: isHeroVisible ? "0ms" : "120ms"}}
       >
         <Link
+          id="floating-calendesk-link"
           href={calendeskContact.href}
           target="_blank"
           rel="noopener noreferrer"
@@ -80,15 +82,17 @@ export function FloatingActions({calendeskContact, whatsappContact}: FloatingAct
       </div>
 
       <div
+        id="floating-whatsapp"
         className={`fixed bottom-6 right-5 z-50 sm:bottom-8 sm:right-8 transform-gpu transition-all duration-500 ease-soft-sine ${visibilityClass}`}
         style={{transitionDelay: isHeroVisible ? "0ms" : "220ms"}}
       >
         <Link
+          id="floating-whatsapp-link"
           href={whatsappContact.href}
           target="_blank"
           rel="noopener noreferrer"
           aria-label={whatsappContact.ariaLabel}
-          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full bg-transparent text-[#25D366] shadow-lg transition duration-200 ease-soft-sine hover:scale-105 hover:bg-transparent focus:bg-transparent focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 md:h-[112px] md:w-[112px]"
+          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full !bg-[rgb(196_83_53_/_1)] text-[#25D366] shadow-lg transition duration-200 ease-soft-sine hover:scale-105 hover:!bg-[rgb(196_83_53_/_1)] focus:!bg-[rgb(196_83_53_/_1)] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 md:h-[112px] md:w-[112px]"
         >
           <span className="sr-only">{whatsappContact.label}</span>
           <svg

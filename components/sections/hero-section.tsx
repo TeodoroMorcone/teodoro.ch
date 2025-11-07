@@ -47,12 +47,7 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
         <h1 id="hero-heading" className="mt-6 text-4xl font-semibold leading-tight text-primary lg:text-5xl dark:text-accent-foreground">
           {hero.heading}
         </h1>
-        {hero.disclaimer ? (
-          <p className="mt-2 text-sm text-secondary/85 dark:text-accent-foreground/80">
-            {hero.disclaimer}
-          </p>
-        ) : null}
-        <p className="mt-6 max-w-2xl text-lg text-secondary opacity-90 dark:text-accent-foreground dark:opacity-80">{hero.subheading}</p>
+        <p className="mt-6 max-w-2xl text-lg text-secondary opacity-90 !text-[rgb(255_241_214_/_0.8)] dark:text-accent-foreground dark:opacity-80">{hero.subheading}</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
           {[ctas.primary, ctas.secondary].map((cta, index) => {
             const trimmedHref = cta.href.trim();

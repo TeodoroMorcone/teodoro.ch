@@ -53,6 +53,37 @@ body::before {
 
 
 
+h1,
+h2,
+h4 {
+  color: rgb(255 241 214 / 0.8) !important;
+}
+
+#privacyPolicy {
+  color: rgb(255 241 214 / 0.8) !important;
+}
+
+#privacyPolicy * {
+  color: rgb(255 241 214 / 0.8) !important;
+}
+
+#cookie-consent-banner {
+  color: rgb(255 241 214 / 0.8) !important;
+  background-color: rgb(196 83 53 / 1) !important;
+}
+
+#pricing ul {
+  color: rgb(255 241 214 / 0.7) !important;
+}
+
+#pricing ul li {
+  color: rgb(255 255 255 / 0.85) !important;
+}
+
+#pricing ul li::marker {
+  color: rgb(196 83 53 / var(--tw-bg-opacity, 1)) !important;
+}
+
 @keyframes whatsapp-counter-spin {
   from {
     transform: rotate(0deg);

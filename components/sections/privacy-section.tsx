@@ -19,7 +19,10 @@ export function PrivacySection({privacy}: PrivacySectionProps) {
       />
 
       {hasSections ? (
-        <div className="mt-8 space-y-6 rounded-3xl border border-secondary/30 bg-surface p-8 text-primary shadow-[0_26px_70px_-38px_rgba(15,91,75,0.28)] transition-colors duration-300 ease-soft-sine dark:border-primary/25 dark:bg-primary/25 dark:text-accent-foreground/90 dark:shadow-[0_26px_70px_-38px_rgba(0,133,133,0.32)]">
+        <div
+          id="privacyPolicy"
+          className="mt-8 space-y-6 rounded-3xl border.border-secondary/30 bg-surface p-8 text-primary shadow-[0_26px_70px_-38px_rgba(15,91,75,0.28)] transition-colors.duration-300 ease-soft-sine dark:border-primary/25 dark:bg-primary/25 dark:text-accent-foreground/90 dark:shadow-[0_26px_70px_-38px_rgba(0,133,133,0.32)]"
+        >
           {privacy.sections.map((section: PrivacySectionItem) => (
             <article
               key={section.id}

@@ -57,6 +57,7 @@ export function CookieBanner() {
       </div>
       {consent.isReady && consent.isBannerOpen ? (
         <div
+          id="cookie-consent-banner"
           role="dialog"
           aria-modal="true"
           aria-labelledby="cookie-banner-heading"

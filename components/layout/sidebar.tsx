@@ -215,11 +215,11 @@ export function Sidebar({
             </ul>
           </nav>
 
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col.items-center gap-4">
             <a
               id="sidebar-primary-cta"
               ref={primaryCtaRef}
-              className="inline-flex w-full max-w-xs items-center justify-center rounded-3xl border border-accent/50 bg-accent px-4 py-3 text-[0.79rem] font-semibold text-accent-foreground shadow-sidebar transition-all duration-300 ease-soft-sine hover:-translate-y-1 hover:border-accent/60 hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-primary/60 dark:bg-primary/85"
+              className="inline-flex w-full max-w-xs items-center justify-center rounded-3xl border border-accent/50 !bg-[rgb(196_83_53_/_0.9)] px-4 py-3 text-[0.79rem] font-semibold text-accent-foreground shadow-sidebar transition-all duration-300 ease-soft-sine hover:-translate-y-1 hover:border-accent/60 hover:bg-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-primary/60 dark:bg-primary/85"
               href={ctas.primary.href}
             >
               {ctas.primary.label}
