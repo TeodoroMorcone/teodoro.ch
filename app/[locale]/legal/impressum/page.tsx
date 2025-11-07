@@ -90,7 +90,7 @@ export default async function ImpressumPage({params}: LegalPageProps) {
 
       <div className="mt-10 space-y-10">
         {sections.map((section) => (
-          <section key={section.heading} id={toSlug(section.heading)} className="rounded-xl border border-border/60 bg-card/60 p-6 shadow-sm">
+          <section key={section.heading} id={toSlug(section.heading)} className="rounded-xl border border-secondary/30 bg-surface p-6 shadow-sm">
             <h2 className="text-xl font-semibold text-primary">{section.heading}</h2>
             <dl className="mt-4 space-y-4 text-secondary">
               {section.entries.map((entry) => {
@@ -117,7 +117,7 @@ export default async function ImpressumPage({params}: LegalPageProps) {
       </div>
 
       {notes.length > 0 ? (
-        <aside className="mt-10 rounded-lg border border-primary/20 bg-primary/5 p-5 text-sm text-secondary">
+        <aside className="mt-10 rounded-lg border border-secondary/25 bg-accent-muted p-5 text-sm text-secondary">
           {notesTitle ? <h3 className="text-base font-semibold text-primary">{notesTitle}</h3> : null}
           <ul className="mt-3 list-disc space-y-2 pl-5">
             {notes.map((note, index) => (

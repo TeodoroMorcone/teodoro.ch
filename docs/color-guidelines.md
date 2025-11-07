@@ -54,3 +54,23 @@ This guide captures how the refreshed palette should be applied across the site 
    - Surfaces flip: cards use `bg-secondary/30`, accents remain warm but lighten (`accent/70`).
 
 Apply these rules while updating components so every surface, control, and state ties back to a consistent palette structure.
+
+## Legacy utility mapping
+
+Use this reference when migrating older utility classes to the refreshed palette tokens.
+
+| Legacy class | Palette-aligned replacement | Notes |
+| --- | --- | --- |
+| `bg-background` | `bg-surface` | Default light surfaces |
+| `bg-card` | `bg-surface` or `bg-accent-muted` | Choose `bg-accent-muted` for featured/spotlight cards |
+| `text-white` | `text-accent-foreground` | For content on secondary or accent backgrounds |
+| `text-black` | `text-primary` | For high-emphasis copy on surface backgrounds |
+| `bg-white` | `bg-surface` | Neutral surface background |
+| `border-border` | `border-secondary/30` | Standard border strength on light surfaces |
+| `border-border/40` | `border-secondary/20` | Lighter border on translucent cards |
+| `bg-emerald-500` callouts | `bg-primary` | Success/confirmation states |
+| `text-emerald-500` | `text-primary` | Success messaging |
+| `bg-slate-900` overlays | `bg-secondary/90` | High-contrast overlays/drawers |
+| `bg-slate-800` overlays | `bg-secondary/80` | Secondary overlays/drawers |
+| `border-white` | `border-accent-foreground/60` | Accent foreground outline |
+| `hover:bg-white/10` | `hover:bg-accent-foreground/10` | Subtle hover on dark backgrounds |

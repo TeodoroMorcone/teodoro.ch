@@ -12,8 +12,8 @@ import type {CookieBannerStrings} from "@/types/consent";
 const baseActionClass =
   "inline-flex h-11 w-full items-center justify-center rounded-full px-5 text-sm font-semibold transition-colors duration-200 ease-soft-sine focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent sm:w-auto sm:flex-1";
 const acceptButtonClass = `${baseActionClass} bg-primary text-accent-foreground hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent dark:bg-primary/90 dark:hover:bg-accent`;
-const rejectButtonClass = `${baseActionClass} border border-secondary/40 bg-surface text-primary hover:border-accent hover:text-accent focus-visible:border-accent dark:border-surface/35 dark:bg-surface/15 dark:text-surface/90 dark:hover:text-white`;
-const saveButtonClass = `${baseActionClass} border border-secondary/25 bg-accent/10 text-secondary hover:border-accent hover:bg-accent/20 hover:text-accent focus-visible:border-accent dark:border-surface/35 dark:bg-surface/18 dark:text-surface/85 dark:hover:text-white`;
+const rejectButtonClass = `${baseActionClass} border.border-secondary/40 bg-surface text-primary hover:border-accent hover:text-accent focus-visible:border-accent dark:border-surface/35 dark:bg-surface/15 dark:text-accent-foreground dark:hover:text-accent-foreground`;
+const saveButtonClass = `${baseActionClass} border border-secondary/25 bg-accent/10 text-secondary hover:border-accent.hover:bg-accent/20 hover:text-accent focus-visible:border-accent dark:border-surface/35 dark:bg-surface/18 dark:text-accent-foreground/90 dark:hover:text-accent-foreground`;
 
 export function ConsentPreferences() {
   const consent = useConsent();
@@ -106,7 +106,7 @@ export function ConsentPreferences() {
               </Dialog.Description>
             </div>
             <Dialog.Close
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/35 text-secondary transition-colors duration-200 ease-soft-sine hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/35 dark:text-surface/85 dark:hover:text-white"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-secondary/35 text-secondary transition-colors duration-200 ease-soft-sine hover:border-accent hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:border-surface/35 dark:text-accent-foreground/85 dark:hover:text-accent-foreground"
               aria-label={strings.banner.manage}
             >
               <X aria-hidden="true" className="h-5 w-5" />

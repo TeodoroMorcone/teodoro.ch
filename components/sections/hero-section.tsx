@@ -119,7 +119,7 @@ export function HeroSection({hero, ctas}: HeroSectionProps) {
             fill
             priority
             sizes="(min-width: 1024px) 32rem, 100vw"
-            className="hero-portrait-object hero-portrait-scale h-full w-full object-cover"
+            className="hero-portrait-object hero-portrait-scale h-full w-full object-cover z-[1]"
           />
         </div>
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-secondary/80 via-secondary/45 to-transparent" />

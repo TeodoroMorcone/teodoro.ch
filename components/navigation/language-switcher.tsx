@@ -44,7 +44,7 @@ export function LanguageSwitcher({currentLocale, label}: LanguageSwitcherProps) 
     <label className="flex items-center gap-3 text-sm font-medium text-secondary dark:text-surface/80">
       <span className="sr-only">{label}</span>
       <select
-        className="w-full rounded-full border border-secondary/30 bg-white/80 px-4 py-2 text-sm text-primary shadow-sm transition-colors duration-200 focus:border-primary focus:outline-none dark:border-surface/20 dark:bg-primary/40 dark:text-surface"
+        className="w-full rounded-full border border-secondary/30 bg-surface px-4 py-2 text-sm text-primary shadow-sm transition-colors duration-200 focus:border-accent focus:outline-none dark:border-primary/30 dark:bg-primary/40 dark:text-accent-foreground"
         value={currentLocale}
         onChange={(event) => onChange(event.target.value as Locale)}
         aria-label={label}

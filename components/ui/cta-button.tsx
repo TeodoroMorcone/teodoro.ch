@@ -21,12 +21,12 @@ export function CTAButton({href, children, variant = "primary", className, ...re
   );
 
   const paletteClasses = isOutline
-    ? "border border-white bg-transparent text-white hover:bg-white/10"
+    ? "border border-accent-foreground/65 bg-transparent text-accent-foreground hover:bg-accent-foreground/10"
     : variant === "primary"
       ? "bg-primary text-accent-foreground hover:bg-accent hover:text-accent-foreground focus-visible:bg-accent focus-visible:text-accent-foreground"
       : variant === "secondary"
-        ? "border border-secondary/40 bg-surface text-primary hover:border-accent hover:text-accent focus-visible:border-accent focus-visible:text-accent"
-        : "border border-secondary/50 text-primary hover:border-accent hover:text-accent focus-visible:border-accent focus-visible:text-accent";
+        ? "border border-secondary/35 bg-surface text-primary hover:border-accent hover:bg-accent-muted hover:text-primary focus-visible:border-accent focus-visible:bg-accent-muted focus-visible:text-primary"
+        : "border border-secondary/40 bg-surface/90 text-primary hover:border-accent hover:bg-accent-muted/80 hover:text-primary focus-visible:border-accent focus-visible:bg-accent-muted/80 focus-visible:text-primary";
 
   const outlineContent = (
       <span
