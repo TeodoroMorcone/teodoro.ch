@@ -4,7 +4,6 @@
     "disclaimer": "No guarantee of success; outcomes depend on each student’s starting point.",
     "subheading": "I'm Teodoro Morcone, an experienced math tutor from Zurich.\nI guide students through Gymi, HMS, BMS & FMS entrance exams – 100% online with a personal learning structure.",
     "bookingFrameTitle": "Book a lesson online",
-    "bookingAvailabilityNote": "Pick a convenient slot directly in the calendar widget.",
     "bookingActivationLabel": "Load the booking calendar",
     "bookingLoadingLabel": "Calendesk availability is loading…",
     "primaryCta": {
@@ -715,14 +714,22 @@
             "Not satisfied? You may contact the Federal Data Protection and Information Commissioner (FDPIC)."
           ]
         }
-      ]
+      ],
+      "contact": {
+        "heading": "Privacy contact",
+        "lines": [
+          "Teodoro Morcone Nachhilfe",
+          "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
+          "Email: info@teodoro.ch",
+          "Phone: +41 76 244 02 59"
+        ]
+      }
     }
   },
   "contact": {
     "title": "Contact & booking",
     "description": "Send a quick WhatsApp message with your goals, school level, and preferred timeframe – the initial chat happens there. Subsequent Zoom sessions are coordinated together through Calendesk.",
     "bookingFrameTitle": "Book a lesson online",
-    "bookingAvailabilityNote": "Pick a convenient slot directly in the calendar widget.",
     "bookingActivationLabel": "Load the booking calendar",
     "bookingLoadingLabel": "Calendesk availability is loading…",
     "bookingEmbedUrl": "https://lhctbmf6wa.calendesk.net/",
