@@ -21,6 +21,9 @@ export type GoogleReview = {
   collectedAt?: string;
   locale?: string;
   contextNote?: string;
+  sourceType?: string | null;
+  sourceUrl?: string | null;
+  sourceNote?: string | null;
 };
 
 type GooglePlaceReview = {
@@ -52,6 +55,9 @@ type RawStaticReview = {
     label?: string;
     url?: string | null;
   };
+  sourceType?: string | null;
+  sourceUrl?: string | null;
+  sourceNote?: string | null;
   collectedAt?: string;
   locale?: string;
   contextNote?: string;
@@ -98,6 +104,9 @@ function mapStaticReview(raw: RawStaticReview): GoogleReview {
       label,
       url,
     },
+    sourceType: raw.sourceType ?? null,
+    sourceUrl: raw.sourceUrl ?? null,
+    sourceNote: raw.sourceNote ?? null,
   };
 
   if (typeof raw.profilePhotoUrl === "string" && raw.profilePhotoUrl.trim()) {

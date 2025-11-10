@@ -41,11 +41,11 @@
       },
       {
         "label": "Wo?",
-        "description": "100 % online via Zoom mit gemeinsamem Whiteboard, optionalen Aufzeichnungen und Materialien in Deutsch, Italienisch und Englisch."
+        "description": "100 % online via Zoom mit gemeinsamem Whiteboard, optionalen Aufzeichnungen. Unterrichts- und Materialsprache: Deutsch, Italienisch und Englisch (dreisprachig)."
       },
       {
         "label": "Preisrahmen",
-        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 550 (ca. 2 Lektionen pro Woche), 13er-Paket CHF 650 (ca. 3 Lektionen pro Woche) – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden. Endpreise in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren."
+        "description": "Einzellektion CHF 70, 5er-Paket CHF 300, 10er-Paket CHF 550 (ca. 2 Lektionen pro Woche), 13er-Paket CHF 650 (ca. 3 Lektionen pro Woche) – inklusive Nachbereitung, Dokumentation und Rückmeldung innerhalb von 24 Stunden. Endpreise in CHF; nicht MWST-pflichtig (keine MWST erhoben). Keine zusätzlichen Zahlungsgebühren."
       },
       {
         "label": "Wie starten?",
@@ -170,7 +170,7 @@
     },
     "about": {
       "title": "Über den Tutor",
-      "body": "Ich bin Teodoro Morcone, Mathematik-Tutor in Zürich und Inhaber von Teodoro Morcone Nachhilfe – Betriebswirtschafter (FH) und ausgesprochener Zahlenmensch. In Zürich geboren, im Tessin aufgewachsen, verbinde ich die deutsch- und italienischsprachige Perspektive. Ich helfe Schüler:innen dabei, ein stabiles Grundlagenverständnis aufzubauen, gezielt für Gymnasium-, BMS-, HMS- und FMS-Aufnahmeprüfungen zu trainieren und im Schulalltag dauerhaft am Ball zu bleiben. Mein Ansatz kombiniert Schritt-für-Schritt-Erklärungen, abgestufte Übungspakete, realistische Mock-Exams und wöchentliches Fortschrittstracking – planbar, messbar, wirkungsvoll. Unterrichtssprachen: Deutsch, Italienisch und Englisch – ausschliesslich online via Zoom. Privat: Ich liebe Kraftsport und Programmierung – die gleiche Systematik und Disziplin fliessen in meinen Unterricht ein."
+      "body": "Ich bin Teodoro Morcone, Mathematik-Tutor in Zürich und Inhaber von Teodoro Morcone Nachhilfe – Betriebswirtschafter (FH) und ausgesprochener Zahlenmensch. In Zürich geboren, im Tessin aufgewachsen, verbinde ich die deutsch- und italienischsprachige Perspektive. Ich helfe Schüler:innen dabei, ein stabiles Grundlagenverständnis aufzubauen, gezielt für Gymnasium-, BMS-, HMS- und FMS-Aufnahmeprüfungen zu trainieren und im Schulalltag dauerhaft am Ball zu bleiben. Mein Ansatz kombiniert Schritt-für-Schritt-Erklärungen, abgestufte Übungspakete, realistische Mock-Exams und wöchentliches Fortschrittstracking – planbar, messbar, wirkungsvoll. Unterrichts- und Materialsprache: Deutsch, Italienisch und Englisch (dreisprachig) – ausschliesslich online via Zoom. Privat: Ich liebe Kraftsport und Programmierung – die gleiche Systematik und Disziplin fliessen in meinen Unterricht ein."
     },
     "pricing": {
       "title": "Preismodelle",
@@ -186,7 +186,7 @@
           "id": "single",
           "name": "Einzellektion",
           "price": "CHF 70",
-          "unit": "pro 60 Minuten – Endpreis in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren.",
+          "unit": "pro 60 Minuten – Endpreis in CHF; nicht MWST-pflichtig (keine MWST erhoben). Keine zusätzlichen Zahlungsgebühren.",
           "features": [
             "Individuelle Lektion inkl. Material",
             "Nachbereitung & Hausaufgaben",
@@ -198,7 +198,7 @@
           "id": "five-pack",
           "name": "5er Paket",
           "price": "CHF 300",
-          "unit": "5 × 60 Minuten (CHF 60 pro Lektion) – Endpreis in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren.",
+          "unit": "5 × 60 Minuten (CHF 60 pro Lektion) – Endpreis in CHF; nicht MWST-pflichtig (keine MWST erhoben). Keine zusätzlichen Zahlungsgebühren.",
           "features": [
             "Strukturierter Lernplan",
             "Zwischenfeedback & Monitoring",
@@ -211,7 +211,7 @@
           "id": "ten-pack",
           "name": "10er Paket",
           "price": "CHF 550",
-          "unit": "10 × 60 Minuten (CHF 55 pro Lektion, ca. 2 Lektionen pro Woche) – Endpreis in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren.",
+          "unit": "10 × 60 Minuten (CHF 55 pro Lektion, ca. 2 Lektionen pro Woche) – Endpreis in CHF; nicht MWST-pflichtig (keine MWST erhoben). Keine zusätzlichen Zahlungsgebühren.",
           "features": [
             "Komplette Prüfungsvorbereitung",
             "Wöchentliche Fortschrittsberichte",
@@ -223,7 +223,7 @@
           "id": "thirteen-pack",
           "name": "13er Paket",
           "price": "CHF 650",
-          "unit": "13 × 60 Minuten (CHF 50 pro Lektion, ca. 3 Lektionen pro Woche) – Endpreis in CHF; nicht MWST-pflichtig. Keine zusätzlichen Zahlungsgebühren.",
+          "unit": "13 × 60 Minuten (CHF 50 pro Lektion, ca. 3 Lektionen pro Woche) – Endpreis in CHF; nicht MWST-pflichtig (keine MWST erhoben). Keine zusätzlichen Zahlungsgebühren.",
           "features": [
             "Langfristiges Mastery-Curriculum",
             "Monatliche Strategie-Reviews & Eltern-Updates",
@@ -369,7 +369,7 @@
           }
         }
       ],
-      "footnote": "Alle Preise verstehen sich ohne MWST (nicht MWST-pflichtig). Monatliche Angaben und Gesamtpreise sind Näherungswerte bei regelmässiger Planung."
+      "footnote": "Alle Preise in CHF; nicht MWST-pflichtig (keine MWST erhoben). Monatliche Angaben und Gesamtpreise sind Näherungswerte bei regelmässiger Planung."
     },
     "glossary": {
       "title": "Glossar",
@@ -398,94 +398,138 @@
     },
     "terms": {
       "title": "Allgemeine Geschäftsbedingungen (AGB)",
-      "intro": "Stand: Oktober 2025",
+      "intro": "Stand: November 2025\n\nVerantwortlich / Anbieter\nTeodoro Morcone, Einzelfirma «Teodoro Morcone Nachhilfe»\nEichbühlstrasse 33, 8004 Zürich, Schweiz\nE-Mail: info@teodoro.ch · Tel.: +41 76 244 02 59\nUnterricht: ausschliesslich online via Zoom",
       "sections": [
         {
           "id": "scope",
           "heading": "1. Geltungsbereich",
           "body": [
-            "Diese AGB regeln das Vertragsverhältnis zwischen Teodoro Morcone, Einzelfirma «Teodoro Morcone Nachhilfe» (nachfolgend «Anbieter») und Kund:innen, die Mathematik-Nachhilfe buchen.",
-            "Abweichende Bedingungen gelten nur, wenn sie schriftlich vereinbart wurden."
+            "Diese AGB regeln das Vertragsverhältnis zwischen dem Anbieter und Kund:innen, die Mathematik-Nachhilfe oder Prüfungsvorbereitung buchen.",
+            "Abweichende Bedingungen gelten nur schriftlich."
           ]
         },
         {
           "id": "services",
           "heading": "2. Leistungen & Unterrichtsformat",
           "body": [
-            "Der Unterricht findet grundsätzlich online statt. Der konkrete Ort bzw. das eingesetzte Tool wird bei der Buchung festgelegt.",
-            "Inhalt, Umfang und Lernziele werden im Vorgespräch bzw. bei der Terminbuchung definiert."
+            "Der Unterricht findet ausschliesslich online via Zoom statt.",
+            "Inhalte, Umfang und Lernziele werden im Vorgespräch bzw. bei der Terminbuchung festgelegt."
           ]
         },
         {
           "id": "booking",
-          "heading": "3. Buchung über Calendesk / Vertragsschluss",
+          "heading": "3. Vertragsschluss & Buchung (Calendesk)",
           "body": [
-            "Termine werden über Calendesk gebucht. Mit der Bestätigung durch Calendesk kommt der Vertrag zustande; es gelten zusätzlich die Nutzungsbedingungen von Calendesk.",
-            "Der Kalender zeigt verfügbare Zeiten. Der Anbieter kann Anfragen ablehnen oder alternative Vorschläge unterbreiten."
+            "Termine werden über Calendesk angefragt oder gebucht.",
+            "Der Unterrichtsvertrag kommt zwischen Kund:in und Anbieter zustande.",
+            "Calendesk stellt ausschliesslich die technische Buchungs- und Terminplattform bereit; für deren Nutzung gelten zusätzlich die Bedingungen von Calendesk, ohne das Unterrichtsverhältnis zu ändern.",
+            "Bei jeder Buchung bestätigen Kund:innen durch ein aktiv gesetztes Kontrollkästchen in Calendesk die verlinkte Fassung von AGB und Datenschutzerklärung; Version, Datum/Uhrzeit, IP-Adresse und Buchungs-ID dokumentiere ich als Nachweis."
           ]
         },
         {
           "id": "pricing",
-          "heading": "4. Preise & Zahlung via Stripe",
+          "heading": "4. Preise, Steuern & Zahlung",
           "body": [
-            "Es gelten die auf der Website veröffentlichten Preise.",
-            "Alle Lektionen und Pakete werden vor Beginn per Stripe-Zahlungslink (z. B. Kreditkarte, Twint) bezahlt; ergänzend gelten die Stripe-Bedingungen.",
-            "Elektronische Quittungen werden unmittelbar nach Zahlungseingang bereitgestellt."
+            "Es gelten die auf der Website veröffentlichten Preise in CHF.",
+            "Steuern: Unterrichtsleistungen sind in der Schweiz grundsätzlich von der Mehrwertsteuer ausgenommen.",
+            "Der Anbieter ist aktuell nicht MWST-pflichtig (Gesamtumsatz < CHF 100’000/Jahr) und erhebt daher keine MWST.",
+            "Zahlung: Vor Unterrichtsbeginn per Stripe-Zahlungslink (z. B. Kreditkarte, Twint).",
+            "Elektronische Quittungen werden bereitgestellt. Es fallen keine zusätzlichen Zahlungsgebühren an.",
+            "Preisstand: Änderungen gelten nur für künftige Buchungen; bereits bestätigte Termine bleiben unverändert."
           ]
         },
         {
           "id": "cancellations",
           "heading": "5. Stornierung, Umbuchung & Nichterscheinen",
           "bullets": [
-            "Stornierung oder Umbuchung ist bis 24 Stunden vor Terminbeginn kostenlos möglich.",
-            "Bei späterer Stornierung, Umbuchung (< 24 h) oder Nichterscheinen wird die Lektion zu 100 % verrechnet.",
-            "Bei Verspätung der Kundin / des Kunden endet die Lektion zum vereinbarten Zeitpunkt; es besteht kein Anspruch auf Nachholen.",
-            "Fällt der Unterricht wegen Krankheit oder Verhinderung des Anbieters aus, werden bereits bezahlte Beträge gutgeschrieben oder Ersatztermine angeboten."
+            "Kostenlose Stornierung oder Umbuchung bis 24 Stunden vor der gebuchten Startzeit (Zeitzone: Europe/Zurich).",
+            "Storno- oder Umbuchungsanfragen erfolgen ausschliesslich über (a) den Calendesk-Link in der Terminerinnerung oder (b) eine E-Mail an info@teodoro.ch. Massgebend ist der Eingang auf meinen Systemen (Zeitzone Europe/Zurich).",
+            "Bei Stornierungen oder Umbuchungen < 24 Stunden sowie bei Nichterscheinen wird die Lektion zu 100 % verrechnet.",
+            "Kulanz: Einmal pro Kalenderjahr kann bei unverschuldeter Verhinderung (z. B. akute Krankheit) eine Kulanzgutschrift gewährt werden; ein geeigneter Nachweis (z. B. ärztliches Attest oder behördliche Weisung) ist erforderlich.",
+            "Verspätung: Bei Verspätung der Kundin oder des Kunden endet die Lektion zur vereinbarten Zeit; kein Anspruch auf Nachholen.",
+            "Ausfall durch den Anbieter: Es entstehen keine Kosten; bereits bezahlte Beträge werden gutgeschrieben oder es wird ein Ersatztermin angeboten."
+          ]
+        },
+        {
+          "id": "packages",
+          "heading": "6. Pakete (Gültigkeit & Rückerstattung)",
+          "body": [
+            "Paketguthaben sind 12 Monate ab Kaufdatum gültig.",
+            "Bei vorzeitiger Beendigung werden bereits genutzte Lektionen zum jeweils gültigen Einzelpreis abgerechnet; der verbleibende Restbetrag wird ohne gewährten Paket-Rabatt rückerstattet.",
+            "Auf Antrag verlängere ich ungenutzte Paketguthaben einmalig um bis zu 3 Monate (z. B. Krankheit, Schulwechsel)."
           ]
         },
         {
           "id": "client-duties",
-          "heading": "6. Pflichten der Kund:innen",
+          "heading": "7. Pflichten der Kund:innen",
           "body": [
-            "Kund:innen sorgen für Pünktlichkeit sowie eine geeignete Lernumgebung (online insbesondere stabile Internetverbindung sowie funktionierende Kamera und Mikrofon).",
-            "Für minderjährige Lernende ist die Buchung bzw. Einwilligung durch eine erziehungsberechtigte Person erforderlich."
+            "Kund:innen sorgen für Pünktlichkeit, eine geeignete Lernumgebung und funktionsfähige Technik (stabile Internetverbindung, Kamera, Mikrofon)."
+          ]
+        },
+        {
+          "id": "minors",
+          "heading": "8. Unterricht mit Minderjährigen",
+          "body": [
+            "Für Lernende unter 16 Jahren ist die schriftliche Einwilligung einer erziehungsberechtigten Person erforderlich.",
+            "Kommunikation erfolgt vorzugsweise gemeinsam mit den Erziehungsberechtigten.",
+            "In Zoom werden ohne Zustimmung keine vollständigen Klarnamen Minderjähriger verwendet."
           ]
         },
         {
           "id": "materials",
-          "heading": "7. Unterrichtsmaterial & Urheberrecht",
+          "heading": "9. Materialien, Urheberrecht & Aufzeichnungen",
           "body": [
-            "Vom Anbieter bereitgestellte Materialien sind urheberrechtlich geschützt und ausschliesslich für den Eigengebrauch bestimmt.",
-            "Eine Weitergabe oder Veröffentlichung ohne Zustimmung ist untersagt."
+            "Vom Anbieter bereitgestellte Materialien sind urheberrechtlich geschützt und ausschliesslich zum Eigengebrauch bestimmt.",
+            "Unbefugte Audio- oder Video-Aufzeichnungen des Unterrichts sind verboten.",
+            "Aufzeichnungen erfolgen nur nach vorheriger schriftlicher Zustimmung aller Beteiligten; bereitgestellte Mitschnitte sind zeitlich begrenzt verfügbar."
+          ]
+        },
+        {
+          "id": "online",
+          "heading": "10. Online-Unterricht & Technik",
+          "body": [
+            "Beide Parteien sorgen für eine stabile Verbindung und funktionsfähige Technik.",
+            "Bei technischen Störungen wird die Lektion zeitanteilig verlängert oder kostenfrei neu terminiert; weitergehende Ansprüche sind ausgeschlossen."
           ]
         },
         {
           "id": "liability",
-          "heading": "8. Haftung",
+          "heading": "11. Haftung",
           "body": [
-            "Die Nachhilfe dient der Lernunterstützung; für Prüfungsergebnisse oder Noten wird keine Garantie übernommen.",
-            "Die gesetzliche Haftung für vorsätzliches oder grob fahrlässiges Handeln bleibt vorbehalten."
+            "Die Haftung für vorsätzliches oder grob fahrlässiges Verhalten bleibt vorbehalten.",
+            "Für leichte Fahrlässigkeit wird die Haftung – ausgenommen Personenschäden – im gesetzlich zulässigen Umfang ausgeschlossen.",
+            "Es wird keine Garantie für Prüfungsergebnisse oder Noten übernommen.",
+            "Zwingendes Recht bleibt vorbehalten."
           ]
         },
         {
-          "id": "refunds",
-          "heading": "9. Widerruf / Rückerstattung",
+          "id": "withdrawal",
+          "heading": "12. Widerruf / Rückerstattung",
           "body": [
-            "Es besteht kein gesetzlicher allgemeiner Widerruf für bereits erbrachte Unterrichtsleistungen.",
-            "Rückerstattungen erfolgen gemäss Ziffer 5 oder bei Ausfall durch den Anbieter (Ziffer 5.4)."
+            "Kein gesetzlicher allgemeiner Widerruf für bereits erbrachte Unterrichtsleistungen.",
+            "Rückerstattungen gemäss Ziffer 5 und Ziffer 6 oder bei Ausfall durch den Anbieter."
+          ]
+        },
+        {
+          "id": "privacy",
+          "heading": "13. Datenschutz",
+          "body": [
+            "Es gilt die auf der Website veröffentlichte Datenschutzerklärung."
           ]
         },
         {
           "id": "jurisdiction",
-          "heading": "10. Gerichtsstand & anwendbares Recht",
+          "heading": "14. Gerichtsstand & anwendbares Recht",
           "body": [
-            "Zwingende Gerichtsstände bleiben vorbehalten. Für Klagen von Konsument:innen ist das Gericht am Wohnsitz der Konsumentin bzw. des Konsumenten oder am Sitz des Anbieters zuständig; im Übrigen gilt Zürich.",
-            "Es findet materielles Schweizer Recht Anwendung."
+            "Zwingende Konsumentengerichtsstände bleiben vorbehalten.",
+            "Für Verbraucher:innen gilt der Gerichtsstand am Wohnsitz der Konsumentin oder des Konsumenten.",
+            "Für alle übrigen Streitigkeiten ist Zürich ausschliesslicher Gerichtsstand.",
+            "Es gilt materielles Schweizer Recht."
           ]
         },
         {
           "id": "changes",
-          "heading": "11. Änderungen der AGB",
+          "heading": "15. Änderungen der AGB",
           "body": [
             "Der Anbieter kann diese AGB jederzeit anpassen.",
             "Es gilt die zum Zeitpunkt der Buchung veröffentlichte Fassung."
@@ -503,70 +547,180 @@
       }
     },
     "privacy": {
-      "title": "Datenschutz (Kurzinfo)",
-      "intro": "Kurzer Überblick, wie Teodoro Morcone Nachhilfe Personendaten nach Schweizer Recht bearbeitet. Für alle Details siehe die vollständige Datenschutzerklärung.",
+      "title": "Datenschutzerklärung (Kurzfassung mit Pflichtangaben)",
+      "intro": "Stand: November 2025",
       "sections": [
         {
-          "id": "dataCollection",
-          "heading": "Datenerhebung & Quellen",
+          "id": "controller",
+          "heading": "1) Verantwortlicher",
           "body": [
-            "Ich arbeite ausschliesslich in der Schweiz gemäss revidiertem Datenschutzgesetz (revDSG) und erhebe Daten, wenn du eine Anfrage stellst, über Calendesk buchst, an einer Zoom-Lektion teilnimmst oder mich per E-Mail/Chat kontaktierst.",
-            "Mein privat betriebener Schweizer Server speichert gekürzte IP-Adressen, User-Agent-Daten und Sicherheitslogs zum Schutz des Dienstes. Einwilligungen werden protokolliert, und optionale Google-Analytics-4-Ereignisse laufen erst nach deiner aktiven Zustimmung."
+            "Teodoro Morcone, Einzelfirma «Teodoro Morcone Nachhilfe», ist Verantwortlicher nach revDSG/DSGVO."
           ],
           "bullets": [
-            "Kontaktangaben, Lernziele, bevorzugte Verfügbarkeiten, Zahlungsreferenzen und handschriftliche Vorbereitungsnotizen",
-            "Sicherheits-Telemetrie (gekürzte IP, Geräteinformationen) ausschliesslich auf Schweizer Infrastruktur",
-            "Keine automatisierten Entscheide oder Profiling – jede Buchung und jeder Lernplan wird persönlich erstellt"
+            "Adresse: Eichbühlstrasse 33, 8004 Zürich, Schweiz",
+            "E-Mail: info@teodoro.ch",
+            "Telefon: +41 76 244 02 59"
+          ]
+        },
+        {
+          "id": "scope",
+          "heading": "2) Geltungsbereich",
+          "body": [
+            "Diese Erklärung beschreibt, wie personenbezogene Daten beim Besuch von teodoro.ch, bei Kontaktaufnahmen, Buchungen, der Teilnahme an Online-Unterricht sowie der Zahlungsabwicklung bearbeitet werden.",
+            "Bei Anfragen aus der EU/EWR berücksichtige ich zusätzlich die Anforderungen der DSGVO."
+          ]
+        },
+        {
+          "id": "dataCategories",
+          "heading": "3) Kategorien von Personendaten",
+          "body": [
+            "Ich verarbeite – je nach Situation – folgende Datenkategorien.",
+            "Besondere Kategorien (z. B. Gesundheitsdaten) erhebe ich nicht gezielt; bitte sende mir keine sensiblen Inhalte über ungesicherte Kanäle."
+          ],
+          "bullets": [
+            "Stammdaten: Name, Kontaktangaben, bevorzugte Sprache, ggf. Geburtsjahr/-datum bei Minderjährigen, Erziehungsberechtigte.",
+            "Kommunikationsdaten: Inhalte von E-Mails, Chat-/WhatsApp-Nachrichten (inkl. Metadaten).",
+            "Unterrichtsdaten: Zielsetzungen, Lernstand, Notizen, Aufgaben, Mock-Exam-Ergebnisse, Whiteboard-Einträge.",
+            "Vertrags- & Zahlungsdaten: Buchungen, Termine, Pakete, Rechnungs- und Zahlungsreferenzen (keine vollständigen Kartendaten).",
+            "Technische Daten & Sicherheit: gekürzte IP-Adressen, Geräte-/Browser-Infos, Logfiles, Sicherheitsereignisse.",
+            "Consent-Daten: Protokolle zu Einwilligungen (Zeitstempel, Auswahl) für optionale Analysen/Marketing/Aufzeichnungen."
+          ]
+        },
+        {
+          "id": "purposes",
+          "heading": "4) Zwecke & Rechtsgrundlagen",
+          "body": [
+            "Ich nutze Daten zu folgenden Zwecken und stütze mich auf diese Rechtsgrundlagen:"
+          ],
+          "bullets": [
+            "Vertragserfüllung und vorvertragliche Abklärungen (Unterricht, Terminplanung, Kommunikation, Nachbereitung).",
+            "Gesetzliche Pflichten (z. B. buchhalterische Aufbewahrung).",
+            "Berechtigte Interessen (Betriebssicherheit, Missbrauchsabwehr, Qualitätssicherung).",
+            "Einwilligung – z. B. für optionale Analytics/Marketing oder Unterrichtsaufzeichnungen; jederzeit widerrufbar ohne Wirkung für vergangene Bearbeitungen."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "5) Quellen",
+          "body": [
+            "Personendaten erhalte ich in der Regel direkt von dir bzw. von Erziehungsberechtigten.",
+            "Zusätzlich fallen technische Protokolle in den von mir genutzten Systemen an."
+          ]
+        },
+        {
+          "id": "processors",
+          "heading": "6) Empfänger & Auftragsbearbeiter",
+          "body": [
+            "Ich arbeite mit sorgfältig ausgewählten Dienstleistern auf Basis schriftlicher Auftragsbearbeitungsverträge. Bei Übermittlungen in Drittländer nutze ich Standardvertragsklauseln (SCC) oder gleichwertige Garantien."
+          ],
+          "bullets": [
+            "Schweizer Privat-Hosting (Schweiz): Server/Backups, Sicherheits- und Zugriffslogs.",
+            "Calendesk (EU): Terminplanung, Erinnerungen, Zahlungsstatus (EU-Rechenzentren).",
+            "Zoom (EU-Datenhaltung aktiviert, HQ USA): Videounterricht mit Warteraum/Passcodes; Aufzeichnungen nur mit Einwilligung, Löschung innert 30 Tagen.",
+            "Stripe (EU/USA): Zahlungsabwicklung; Kartendaten bleiben bei Stripe.",
+            "Google Workspace & Gmail (EU/USA): E-Mail, Dokumente; basierend auf SCC und – sofern verfügbar – Swiss-U.S. DPF.",
+            "Google Analytics 4 (optional, EU/USA): Statistiken mit IP-Kürzung; nur nach Opt-in.",
+            "Meta Pixel (optional, USA): Kampagnenmessung; nur nach Opt-in."
+          ]
+        },
+        {
+          "id": "cookies",
+          "heading": "7) Cookies, Analyse & Marketing",
+          "body": [
+            "Optionale Analyse- oder Marketing-Pixel werden erst nach aktiver Einwilligung geladen.",
+            "Consent-Logs (Zeitstempel, Auswahl, pseudonyme ID) werden revisionssicher gespeichert.",
+            "Einwilligungen lassen sich jederzeit über den Footer-Link ändern oder widerrufen, ohne essentielle Dienste zu beeinträchtigen."
+          ],
+          "bullets": [
+            "Essentiell: Betrieb, Sicherheit, Consent-Speicherung.",
+            "Analytics (optional, z. B. GA4): Reichweitenmessung mit IP-Kürzung; nur nach Opt-in.",
+            "Marketing (optional, z. B. Meta Pixel): Kampagnenmessung; nur nach Opt-in."
+          ]
+        },
+        {
+          "id": "communication",
+          "heading": "8) Kommunikation & Kanäle",
+          "body": [
+            "Standardkanäle sind E-Mail und Telefon.",
+            "WhatsApp nutze ich für Terminabstimmungen; sende dort bitte keine sensiblen Lern-/Gesundheitsdaten.",
+            "Zoom setzt Warteraum und Passcodes ein; Aufzeichnungen erfolgen nur nach vorheriger Zustimmung und werden innert 30 Tagen gelöscht."
           ]
         },
         {
           "id": "retention",
-          "heading": "Aufbewahrung & Löschung",
+          "heading": "9) Aufbewahrung & Löschung",
           "body": [
-            "Aufbewahrungsfristen richten sich nach schweizerischen Handels- und Datenschutzpflichten. Löschgesuche sendest du an privacy@teodoro.ch; sie werden umgesetzt, sobald keine gesetzlichen Pflichten mehr entgegenstehen."
+            "Ich lösche oder anonymisiere Personendaten, sobald der Zweck erreicht ist oder keine gesetzlichen Pflichten entgegenstehen."
           ],
           "bullets": [
-            "Anfragen ohne Lektion: Löschung nach spätestens 12 Monaten",
-            "Aktive Lernakten, Unterrichtsnotizen, Materialien: bis zu 3 Jahre nach der letzten Lektion, sofern keine längere Pflicht besteht",
-            "Buchhaltungsunterlagen & Zahlungsbelege: 10 Jahre",
-            "Einwilligungs- und Cookie-Protokolle: 5 Jahre zur Dokumentation der Compliance",
-            "Sicherheitslogs: Rotation nach 12 Monaten; Google-Analytics-4-Daten verfallen automatisch nach 14 Monaten"
+            "Anfragen ohne Lektion: Löschung spätestens nach 12 Monaten.",
+            "Aktive Lernakten/Notizen/Materialien: bis zu 3 Jahre nach der letzten Lektion.",
+            "Buchhaltung & Zahlungsbelege: 10 Jahre.",
+            "Consent-/Cookie-Protokolle: 5 Jahre.",
+            "Sicherheitslogs: Rotation nach 12 Monaten.",
+            "Backups: Überschreibung im nächsten planmässigen Wartungsfenster."
           ]
         },
         {
-          "id": "thirdParties",
-          "heading": "Drittanbieter & Übermittlungen",
+          "id": "security",
+          "heading": "10) Datensicherheit",
           "body": [
-            "Nur ein klar definierter Kreis von Auftragsbearbeitern unterstützt den Unterrichtsbetrieb. Übermittlungen stützen sich auf vom EDÖB anerkannte Angemessenheitsbeschlüsse oder Standardvertragsklauseln (SCC)."
-          ],
-          "bullets": [
-            "**Schweizer Privat-Hosting:** Infrastruktur in der Schweiz unter meiner alleinigen Kontrolle",
-            "**Calendesk (Polen/EU):** Terminplanung, Erinnerungen und Zahlungsstatus in EU-Rechenzentren",
-            "**Zoom (EU-Datenhaltung, Hauptsitz USA):** Lektionen mit Warteraum, Passcode und Verschlüsselung; Aufzeichnungen nur mit schriftlicher Zustimmung und Löschung binnen 30 Tagen",
-            "**Google Workspace & Google Analytics (EU/USA):** E-Mail, Dokumente und optionale Analytics mit SCCs, IP-Kürzung und deaktivierten Werbefunktionen",
-            "**Meta Pixel (Meta Platforms, USA):** Optionales Marketing-Tracking, das erst nach ausdrücklicher Einwilligung lädt und über SCCs sowie IP-Kürzung abgesichert ist"
+            "Ich setze technische und organisatorische Massnahmen ein, u. a. TLS-Verschlüsselung, IP-Kürzung, Rollen- und Rechtekonzepte, Zugriffskontrollen, Protokollierung sicherheitsrelevanter Ereignisse sowie Backup-/Restore-Prozesse.",
+            "Bei Sicherheitsvorfällen mit voraussichtlich hohem Risiko informiere ich unverzüglich den EDÖB und – falls erforderlich – die betroffenen Personen."
           ]
         },
         {
           "id": "rights",
-          "heading": "So nutzt du deine Rechte",
+          "heading": "11) Rechte der betroffenen Personen",
           "body": [
-            "Für Auskunft, Berichtigung, Datenportabilität, Löschung oder Widerruf von Einwilligungen schreibe an info@teodoro.ch oder an Teodoro Morcone Nachhilfe, Eichbühlstrasse 33, 8004 Zürich.",
-            "Identität prüfe ich verhältnismässig; Antworten erfolgen innert 30 Tagen (bei komplexen Fällen Verlängerung um maximal 30 Tage). Cookie-Präferenzen kannst du jederzeit über den Footer-Link anpassen."
+            "Je nach Rechtslage stehen dir folgende Rechte zu. Sende Anfragen an info@teodoro.ch; ich prüfe deine Identität verhältnismässig und antworte in der Regel innert 30 Tagen (bei komplexen Fällen Verlängerung um maximal 30 Tage)."
           ],
           "bullets": [
-            "Analyse-Einwilligungen aktualisieren oder widerrufen, ohne essentielle Dienste zu beeinträchtigen",
-            "Löschung anfordern, sobald Aufbewahrungspflichten enden; Sicherungskopien werden im nächsten Wartungsfenster bereinigt",
-            "Unzufrieden? Wende dich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB)"
+            "Auskunft über die verarbeiteten Daten.",
+            "Berichtigung unrichtiger Daten.",
+            "Löschung (Recht auf Vergessenwerden).",
+            "Einschränkung der Bearbeitung.",
+            "Datenportabilität.",
+            "Widerspruch gegen Bearbeitungen aufgrund berechtigter Interessen.",
+            "Widerruf erteilter Einwilligungen (mit Wirkung für die Zukunft)."
+          ]
+        },
+        {
+          "id": "automatedDecisions",
+          "heading": "12) Automatisierte Entscheidungen",
+          "body": [
+            "Ich treffe keine automatisierten Einzelentscheidungen und betreibe kein Profiling."
+          ]
+        },
+        {
+          "id": "minors",
+          "heading": "13) Minderjährige",
+          "body": [
+            "Für Lernende unter 16 Jahren benötige ich die schriftliche Einwilligung der Erziehungsberechtigten.",
+            "In Zoom verwende ich vollständige Klarnamen Minderjähriger nur mit ausdrücklicher Zustimmung."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "14) Änderungen dieser Erklärung",
+          "body": [
+            "Ich kann diese Datenschutzerklärung jederzeit anpassen. Es gilt die zum Besuch bzw. Buchungszeitpunkt veröffentlichte Fassung (Stand siehe oben)."
+          ]
+        },
+        {
+          "id": "supervision",
+          "heading": "15) Aufsicht",
+          "body": [
+            "Unzufrieden? Du kannst dich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) wenden."
           ]
         }
       ],
       "contact": {
-        "heading": "Datenschutz-Kontakt",
+        "heading": "Kontakt Datenschutz",
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zürich, Schweiz",
-          "E-Mail: privacy@teodoro.ch",
+          "E-Mail: info@teodoro.ch",
           "Tel.: +41 76 244 02 59"
         ]
       }

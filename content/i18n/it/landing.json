@@ -42,7 +42,7 @@
       },
       {
         "label": "Dove?",
-        "description": "100% online via Zoom con lavagna condivisa, eventuali registrazioni e materiali bilingue (tedesco, italiano, inglese)."
+        "description": "100% online via Zoom con lavagna condivisa, eventuali registrazioni. Lingua delle lezioni e dei materiali: tedesco, italiano e inglese (trilingue)."
       },
       {
         "label": "Fascia prezzi",
@@ -171,7 +171,7 @@
     },
     "about": {
       "title": "Chi sono",
-      "body": "Sono Teodoro Morcone, tutor di matematica a Zurigo e fondatore di Teodoro Morcone Nachhilfe – economista aziendale (FH) e vero appassionato di numeri. Nato a Zurigo e cresciuto in Ticino, unisco la prospettiva germanofona e italofona. Aiuto gli studenti a costruire basi solide, prepararsi in modo mirato alle ammissioni per Gymnasium, BMS, HMS e FMS e mantenere costanza durante tutto l’anno scolastico. Il mio metodo combina spiegazioni passo dopo passo, pacchetti di esercizi a difficoltà crescente, mock exam realistici e monitoraggio settimanale – pianificato, misurabile, efficace. Lezioni in tedesco, italiano e inglese, esclusivamente online via Zoom. Nel tempo libero pratico powerlifting e programmazione: la stessa disciplina sistematica scorre direttamente nel mio modo di insegnare."
+      "body": "Sono Teodoro Morcone, tutor di matematica a Zurigo e fondatore di Teodoro Morcone Nachhilfe – economista aziendale (FH) e vero appassionato di numeri. Nato a Zurigo e cresciuto in Ticino, unisco la prospettiva germanofona e italofona. Aiuto gli studenti a costruire basi solide, prepararsi in modo mirato alle ammissioni per Gymnasium, BMS, HMS e FMS e mantenere costanza durante tutto l’anno scolastico. Il mio metodo combina spiegazioni passo dopo passo, pacchetti di esercizi a difficoltà crescente, mock exam realistici e monitoraggio settimanale – pianificato, misurabile, efficace. Lingua delle lezioni e dei materiali: tedesco, italiano e inglese (trilingue), esclusivamente online via Zoom. Nel tempo libero pratico powerlifting e programmazione: la stessa disciplina sistematica scorre direttamente nel mio modo di insegnare."
     },
     "pricing": {
       "title": "Tariffe",
@@ -399,96 +399,140 @@
     },
     "terms": {
       "title": "Termini e Condizioni",
-      "intro": "Aggiornato: ottobre 2025",
+      "intro": "Aggiornato: novembre 2025\n\nResponsabile / Fornitore\nTeodoro Morcone, ditta individuale «Teodoro Morcone Nachhilfe»\nEichbühlstrasse 33, 8004 Zurigo, Svizzera\nE-mail: info@teodoro.ch · Tel.: +41 76 244 02 59\nLezioni: esclusivamente online via Zoom",
       "sections": [
         {
           "id": "scope",
           "heading": "1. Ambito di applicazione",
           "body": [
-            "I presenti termini regolano il rapporto contrattuale tra Teodoro Morcone, ditta individuale «Teodoro Morcone Nachhilfe» (di seguito «Fornitore»), e i clienti che prenotano lezioni di matematica.",
-            "Condizioni differenti sono valide solo previa conferma scritta."
+            "Questi termini disciplinano il rapporto contrattuale tra il Fornitore e i clienti che prenotano ripetizioni di matematica o percorsi di preparazione agli esami.",
+            "Deroghe hanno validità solo se confermate per iscritto."
           ]
         },
         {
           "id": "services",
           "heading": "2. Servizi e formato delle lezioni",
           "body": [
-            "Le lezioni si svolgono generalmente online. Lo strumento o luogo specifico viene concordato al momento della prenotazione.",
-            "Contenuti, durata e obiettivi vengono definiti durante la consulenza o la fase di prenotazione."
+            "Le lezioni si svolgono al 100% online via Zoom.",
+            "Contenuti, durata e obiettivi vengono concordati durante il colloquio introduttivo o al momento della prenotazione."
           ]
         },
         {
           "id": "booking",
-          "heading": "3. Prenotazioni tramite Calendesk / conclusione del contratto",
+          "heading": "3. Conclusione del contratto & prenotazione (Calendesk)",
           "body": [
-            "Gli appuntamenti si fissano tramite Calendesk. Con la conferma di Calendesk il contratto si considera concluso; si applicano inoltre i termini d’uso di Calendesk.",
-            "Le disponibilità nel calendario possono variare; il Fornitore può rifiutare richieste o proporre alternative."
+            "Gli appuntamenti vengono richiesti o prenotati tramite Calendesk.",
+            "Il contratto di lezione si conclude direttamente tra cliente e Fornitore.",
+            "Calendesk mette a disposizione soltanto la piattaforma tecnica di prenotazione e programmazione; per il suo utilizzo valgono anche le condizioni di Calendesk, senza modificare il rapporto didattico.",
+            "Per ogni prenotazione la clientela seleziona attivamente in Calendesk la versione collegata di AGB e informativa privacy; registro versione, data/ora, indirizzo IP e ID della prenotazione come prova."
           ]
         },
         {
           "id": "pricing",
-          "heading": "4. Prezzi e pagamento tramite Stripe",
+          "heading": "4. Prezzi, imposte & pagamento",
           "body": [
-            "Si applicano i prezzi pubblicati sul sito web.",
-            "Tutte le lezioni e i pacchetti si pagano in anticipo tramite link Stripe (es. carta di credito, Twint); si applicano inoltre i termini di Stripe.",
-            "Ricevute e fatture vengono inviate automaticamente via e-mail subito dopo il pagamento."
+            "Si applicano i prezzi pubblicati sul sito web in CHF.",
+            "Imposte: le prestazioni didattiche sono in Svizzera generalmente esenti da IVA.",
+            "Il Fornitore attualmente non è soggetto all’IVA (fatturato annuo < CHF 100’000) e pertanto non addebita IVA.",
+            "Pagamento: prima dell’inizio della lezione tramite link di pagamento Stripe (es. carta, Twint).",
+            "Le ricevute elettroniche vengono fornite; non sono previste commissioni di pagamento aggiuntive.",
+            "Prezzi vigenti: eventuali adeguamenti si applicano solo alle prenotazioni future; gli appuntamenti già confermati restano invariati."
           ]
         },
         {
           "id": "cancellations",
           "heading": "5. Cancellazioni, spostamenti e assenze",
           "bullets": [
-            "Le sessioni possono essere annullate o spostate gratuitamente fino a 24 ore prima dell’orario concordato.",
-            "Cancellazioni tardive, spostamenti (< 24h) o assenze senza preavviso vengono fatturati al 100% del costo della lezione.",
-            "In caso di ritardo da parte del cliente, la lezione termina comunque all’orario stabilito; non è previsto recupero.",
-            "Se il Fornitore annulla per malattia o impedimento, gli importi già pagati vengono accreditati oppure è proposto un nuovo appuntamento."
+            "Annullamento o spostamento gratuiti fino a 24 ore prima dell’orario concordato (fuso orario: Europe/Zurich).",
+            "Richieste di annullamento/ri-programmazione devono avvenire esclusivamente (a) tramite il link Calendesk presente nel promemoria o (b) via e-mail a info@teodoro.ch. Fa stato l’ora di ricezione sui miei sistemi (fuso Europe/Zurich).",
+            "Annullamenti o spostamenti a meno di 24 ore e assenze non annunciate vengono fatturati al 100% del prezzo della lezione.",
+            "Una nota di credito di cortesia può essere concessa una volta per anno civile in caso di impedimento non imputabile (ad es. malattia improvvisa), previa presentazione di un adeguato giustificativo (p. es. certificato medico o ordine ufficiale).",
+            "In caso di ritardo del cliente, la lezione termina comunque all’orario previsto; non è previsto recupero.",
+            "Se il Fornitore annulla, non vengono addebitati costi; gli importi già pagati vengono accreditati oppure è proposto un nuovo appuntamento."
+          ]
+        },
+        {
+          "id": "packages",
+          "heading": "6. Pacchetti (validità & rimborsi)",
+          "body": [
+            "I crediti dei pacchetti restano validi per 12 mesi dalla data di acquisto.",
+            "In caso di interruzione anticipata, le lezioni già svolte vengono ricalcolate al prezzo della singola lezione in vigore; il saldo residuo viene rimborsato senza lo sconto pacchetto applicato.",
+            "Su richiesta posso prorogare una sola volta i crediti inutilizzati fino a 3 mesi (es. malattia, cambio di scuola)."
           ]
         },
         {
           "id": "client-duties",
-          "heading": "6. Obblighi delle/gli clienti",
+          "heading": "7. Obblighi della clientela",
           "body": [
-            "Le/gli clienti garantiscono puntualità e un ambiente adatto allo studio (per l’online: connessione stabile e dispositivi funzionanti).",
-            "Per studenti minorenni è richiesta la prenotazione o autorizzazione da parte di un tutore o genitore."
+            "La clientela garantisce puntualità, un ambiente idoneo allo studio e la disponibilità di una tecnologia funzionante (connessione stabile, videocamera, microfono)."
+          ]
+        },
+        {
+          "id": "minors",
+          "heading": "8. Lezioni con minorenni",
+          "body": [
+            "Per partecipanti sotto i 16 anni è necessario il consenso scritto di un genitore o tutore legale.",
+            "La comunicazione avviene preferibilmente con il coinvolgimento dei tutori.",
+            "Su Zoom non vengono utilizzati nomi completi dei minorenni senza consenso."
           ]
         },
         {
           "id": "materials",
-          "heading": "7. Materiali didattici e diritto d’autore",
+          "heading": "9. Materiali, copyright & registrazioni",
           "body": [
-            "I materiali forniti dal Fornitore sono protetti da copyright e destinati esclusivamente all’uso personale.",
-            "È vietata la condivisione o pubblicazione senza autorizzazione."
+            "I materiali forniti dal Fornitore sono protetti da diritto d’autore e destinati esclusivamente all’uso personale.",
+            "Registrazioni audio o video non autorizzate delle lezioni sono vietate.",
+            "Eventuali registrazioni avvengono solo previa autorizzazione scritta di tutte le persone coinvolte; le eventuali copie messe a disposizione restano accessibili per un periodo limitato."
+          ]
+        },
+        {
+          "id": "online",
+          "heading": "10. Lezioni online & tecnologia",
+          "body": [
+            "Entrambe le parti garantiscono una connessione stabile e dispositivi funzionanti.",
+            "In caso di problemi tecnici, la lezione viene prolungata in proporzione oppure riprogrammata gratuitamente; sono escluse ulteriori pretese."
           ]
         },
         {
           "id": "liability",
-          "heading": "8. Responsabilità",
+          "heading": "11. Responsabilità",
           "body": [
-            "Le ripetizioni supportano l’apprendimento; non viene garantito alcun risultato specifico in termini di voti o esami.",
-            "Rimane ferma la responsabilità per dolo o colpa grave nei limiti di legge."
+            "La responsabilità per dolo o colpa grave rimane riservata.",
+            "Nei limiti di legge, la responsabilità per colpa lieve – fatta eccezione per i danni alla persona – è esclusa.",
+            "Non viene fornita alcuna garanzia sui risultati degli esami o sui voti.",
+            "Il diritto cogente rimane riservato."
           ]
         },
         {
-          "id": "refunds",
-          "heading": "9. Recesso / rimborsi",
+          "id": "withdrawal",
+          "heading": "12. Recesso / rimborsi",
           "body": [
-            "Non sussiste un diritto di recesso generale per lezioni già erogate.",
-            "I rimborsi avvengono secondo quanto previsto al punto 5 o in caso di annullamento da parte del Fornitore (punto 5.4)."
+            "Non esiste un diritto di recesso legale generale per le lezioni già erogate.",
+            "I rimborsi seguono i punti 5 e 6 oppure si applicano in caso di annullamento da parte del Fornitore."
+          ]
+        },
+        {
+          "id": "privacy",
+          "heading": "13. Protezione dei dati",
+          "body": [
+            "Si applica la versione vigente dell’informativa privacy pubblicata sul sito web."
           ]
         },
         {
           "id": "jurisdiction",
-          "heading": "10. Foro competente e legge applicabile",
+          "heading": "14. Foro competente & legge applicabile",
           "body": [
-            "I fori giurisdizionali obbligatori restano riservati. Per le azioni intentate da consumatrici e consumatori è competente il tribunale del domicilio della consumatrice/del consumatore oppure la sede del fornitore; per il resto è competente Zurigo.",
+            "Restano riservati i fori obbligatori previsti per i consumatori.",
+            "Le persone consumatrici possono adire il tribunale del proprio domicilio.",
+            "Per tutte le altre controversie è competente in via esclusiva Zurigo.",
             "Si applica il diritto materiale svizzero."
           ]
         },
         {
           "id": "changes",
-          "heading": "11. Modifiche ai termini",
+          "heading": "15. Modifiche delle condizioni",
           "body": [
-            "Il Fornitore può modificare i presenti termini in qualsiasi momento.",
+            "Il Fornitore può modificare le presenti condizioni in qualsiasi momento.",
             "Fa fede la versione pubblicata al momento della prenotazione."
           ]
         }
@@ -504,61 +548,171 @@
       }
     },
     "privacy": {
-      "title": "Privacy (sintesi)",
-      "intro": "Panoramica su come Teodoro Morcone Nachhilfe gestisce i dati personali in conformità alla legge svizzera. Consulta l’informativa completa per tutti i dettagli.",
+      "title": "Informativa privacy (versione breve con dati obbligatori)",
+      "intro": "Aggiornata al: novembre 2025",
       "sections": [
         {
-          "id": "dataCollection",
-          "heading": "Raccolta dei dati & fonti",
+          "id": "controller",
+          "heading": "1) Titolare del trattamento",
           "body": [
-            "Opero esclusivamente in Svizzera nel rispetto della Legge federale sulla protezione dei dati (LPD) e raccolgo informazioni quando invii una richiesta, prenoti tramite Calendesk, partecipi a una lezione Zoom o comunichi via e-mail/chat.",
-            "Il mio server privato in Svizzera registra indirizzi IP troncati, dati del browser e log di sicurezza per proteggere il servizio. Le scelte di consenso sono documentate e Google Analytics 4 viene eseguito solo dopo il tuo esplicito consenso."
+            "Teodoro Morcone, ditta individuale «Teodoro Morcone Nachhilfe», è il titolare ai sensi della LPD/GDPR."
           ],
           "bullets": [
-            "Dati di contatto, obiettivi di studio, disponibilità preferite, riferimenti di pagamento, appunti di preparazione",
-            "Telemetria di sicurezza (IP troncato, dati dispositivo) conservata su infrastruttura svizzera",
-            "Nessuna decisione automatizzata o profilazione: ogni prenotazione e piano lezione è gestito personalmente"
+            "Indirizzo: Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
+            "E-mail: info@teodoro.ch",
+            "Tel.: +41 76 244 02 59"
+          ]
+        },
+        {
+          "id": "scope",
+          "heading": "2) Ambito di applicazione",
+          "body": [
+            "Questa informativa spiega come tratto i dati personali quando visiti teodoro.ch, mi contatti, prenoti lezioni, partecipi alle sessioni su Zoom o completi un pagamento.",
+            "Per clienti o richieste provenienti da UE/SEE applico in aggiunta le prescrizioni del GDPR."
+          ]
+        },
+        {
+          "id": "dataCategories",
+          "heading": "3) Quali dati tratto?",
+          "body": [
+            "A seconda del contesto tratto le seguenti categorie di dati.",
+            "Non raccolgo intenzionalmente categorie particolari (es. dati sanitari); evita di inviarmi informazioni sensibili tramite canali non protetti."
+          ],
+          "bullets": [
+            "3.1 Dati anagrafici: nome, recapiti, lingua preferita, data o anno di nascita dei minorenni, dati dei tutori.",
+            "3.2 Dati di comunicazione: contenuti e metadati di e-mail, chat e messaggi WhatsApp, informazioni su richieste e prenotazioni.",
+            "3.3 Dati didattici: obiettivi, livello di apprendimento, note, compiti, risultati di mock exam, annotazioni sulla lavagna condivisa, materiali, feedback.",
+            "3.4 Dati contrattuali/pagamenti: prenotazioni, fasce orarie, pacchetti, riferimenti di fatturazione e pagamento (non memorizzo i dati completi della carta).",
+            "3.5 Dati tecnici e di sicurezza: indirizzi IP troncati, informazioni su dispositivo/browser (user agent), data/ora, pagine visitate, referrer, eventi di sicurezza (log di server/applicazioni).",
+            "3.6 Dati di consenso: registri delle tue scelte (timestamp, selezione) per analytics/marketing/registrazioni facoltative."
+          ]
+        },
+        {
+          "id": "purposes",
+          "heading": "4) Finalità e basi giuridiche",
+          "body": [
+            "Uso i dati per le seguenti finalità e mi baso sulle relative basi giuridiche:"
+          ],
+          "bullets": [
+            "Esecuzione del contratto o misure precontrattuali (lezioni, pianificazione, comunicazione, follow-up).",
+            "Obblighi legali (es. conservazione contabile).",
+            "Interessi legittimi (sicurezza del servizio, prevenzione abusi, garanzia di qualità).",
+            "Consenso per trattamenti facoltativi come analytics/marketing/registrazioni; puoi revocarlo in qualsiasi momento con effetto futuro."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "5) Origine dei dati",
+          "body": [
+            "Ricevo i dati principalmente da te o, per i minorenni, dai tutori legali.",
+            "Altri log tecnici e dati di sicurezza provengono dai sistemi che gestisco o dai fornitori incaricati."
+          ]
+        },
+        {
+          "id": "processors",
+          "heading": "6) Destinatari e fornitori di servizi",
+          "body": [
+            "Collaboro con fornitori selezionati tramite accordi scritti; per trasferimenti verso Paesi terzi utilizzo Standard Contractual Clauses (SCC) o garanzie equivalenti."
+          ],
+          "bullets": [
+            "Hosting privato svizzero (Svizzera): server, backup, log di sicurezza.",
+            "Calendesk (UE): prenotazioni, promemoria, stato pagamenti (data center UE).",
+            "Zoom (data center UE attivati, sede USA): videolezioni con sala d’attesa/passcode; registrazioni solo con consenso e cancellate entro 30 giorni.",
+            "Stripe (UE/USA): elaborazione pagamenti; i dati delle carte restano presso Stripe.",
+            "Google Workspace & Gmail (UE/USA): e-mail, documenti; SCC e, ove disponibile, Swiss-U.S. Data Privacy Framework.",
+            "Google Analytics 4 (opzionale, UE/USA): statistiche con IP troncato; attivo solo dopo opt-in.",
+            "Meta Pixel (opzionale, USA): misurazione campagne; attivo solo dopo opt-in."
+          ]
+        },
+        {
+          "id": "cookies",
+          "heading": "7) Cookie, analisi & marketing",
+          "body": [
+            "Carico cookie/local storage e strumenti di analisi o marketing solo dopo la tua esplicita autorizzazione (opt-in).",
+            "Registro in modo verificabile timestamp, scelta e ID pseudonimo per ogni consenso.",
+            "Puoi modificare o revocare le preferenze in qualsiasi momento tramite il link «Impostazioni cookie» nel footer senza compromettere i servizi essenziali."
+          ],
+          "bullets": [
+            "Essenziali: funzionamento del sito, sicurezza, memorizzazione del consenso.",
+            "Analytics (opzionali, es. GA4): analisi del traffico con IP troncati; attivi solo dopo opt-in.",
+            "Marketing (opzionali, es. Meta Pixel): misurazione campagne; attivi solo dopo opt-in."
+          ]
+        },
+        {
+          "id": "communication",
+          "heading": "8) Comunicazione & canali",
+          "body": [
+            "I canali standard sono e-mail e telefono.",
+            "WhatsApp viene utilizzato per accordare appuntamenti; evita di inviare dati sensibili su apprendimento o salute.",
+            "Zoom impiega sala d’attesa e passcode; eventuali registrazioni avvengono solo previa autorizzazione e vengono eliminate entro 30 giorni."
           ]
         },
         {
           "id": "retention",
-          "heading": "Conservazione & cancellazione",
+          "heading": "9) Conservazione & cancellazione",
           "body": [
-            "Le tempistiche rispettano gli obblighi commerciali svizzeri e gli impegni descritti nell’informativa privacy. Le richieste di cancellazione vanno inviate a privacy@teodoro.ch e vengono evase non appena cessano gli obblighi legali."
+            "Cancello o anonimizzo i dati personali non appena lo scopo è raggiunto o non sussistono più obblighi legali contrari."
           ],
           "bullets": [
-            "Richieste senza lezioni successive: cancellazione dopo 12 mesi",
-            "Profili attivi, appunti e materiali: conservazione fino a 3 anni dall’ultima sessione salvo obblighi maggiori",
-            "Documentazione contabile e ricevute: archiviazione per 10 anni",
-            "Log di consenso e cookie: conservati per 5 anni a fini di conformità",
-            "Log di sicurezza: eliminati dopo 12 mesi; dati GA4 opzionali impostati su scadenza automatica a 14 mesi"
+            "Richieste senza lezione: cancellazione entro 12 mesi.",
+            "Dossier attivi, appunti e materiali: fino a 3 anni dall’ultima lezione (salvo obblighi più lunghi).",
+            "Documenti contabili e ricevute: 10 anni.",
+            "Registri di consenso/cookie: 5 anni.",
+            "Log di sicurezza: rotazione dopo 12 mesi.",
+            "Backup: sovrascritti al successivo ciclo di manutenzione programmata."
           ]
         },
         {
-          "id": "thirdParties",
-          "heading": "Servizi terzi & trasferimenti",
+          "id": "security",
+          "heading": "10) Sicurezza dei dati",
           "body": [
-            "Solo un gruppo ristretto di responsabili esterni supporta il servizio. I trasferimenti internazionali si basano su decisioni di adeguatezza riconosciute dall’IFPDT o su Clausole contrattuali standard (SCC)."
-          ],
-          "bullets": [
-            "**Hosting privato svizzero:** infrastruttura situata in Svizzera sotto il mio controllo esclusivo",
-            "**Calendesk (Polonia/UE):** pianificazione, promemoria e stato pagamenti in data center europei",
-            "**Zoom (residenza dati UE, sede USA):** lezioni con sala d’attesa, passcode e crittografia; eventuali registrazioni richiedono consenso scritto e vengono eliminate entro 30 giorni",
-            "**Google Workspace & Google Analytics (UE/USA):** e-mail, documenti e analytics opzionali con SCC, anonimizzazione IP e funzioni pubblicitarie disattivate",
-            "**Meta Pixel (Meta Platforms, USA):** misurazione marketing opzionale che si attiva solo dopo consenso esplicito, tutelata da SCC e offuscamento IP"
+            "Adotto misure tecniche e organizzative quali crittografia TLS, IP troncati, gestione di ruoli e diritti, controlli di accesso, logging degli eventi di sicurezza e procedure di backup/restore.",
+            "In caso di violazioni con rischio elevato informo senza indugio l’IFPDT/EDÖB e, se necessario, le persone interessate."
           ]
         },
         {
           "id": "rights",
-          "heading": "Come esercitare i diritti",
+          "heading": "11) Diritti delle persone interessate",
           "body": [
-            "Per accesso, rettifica, portabilità, cancellazione o revoca del consenso, scrivi a info@teodoro.ch o a Teodoro Morcone Nachhilfe, Eichbühlstrasse 33, 8004 Zurigo.",
-            "L’identità viene verificata con misure proporzionate e le richieste ricevono risposta entro 30 giorni (estendibili di altri 30 giorni per casi complessi). Puoi modificare le preferenze cookie in qualsiasi momento tramite il link nel footer."
+            "A seconda della normativa applicabile hai i seguenti diritti. Invia le richieste a info@teodoro.ch; verifico l’identità in modo proporzionato e di norma rispondo entro 30 giorni (prorogabili di massimo 30 giorni per casi complessi)."
           ],
           "bullets": [
-            "Aggiorna o revoca il consenso analytics senza influire sui servizi essenziali",
-            "Richiedi la cancellazione quando finiscono gli obblighi di conservazione; i backup vengono rimossi nel ciclo di manutenzione successivo",
-            "Se non sei soddisfatto della risposta, puoi rivolgerti all’Incaricato federale della protezione dei dati e della trasparenza (IFPDT)"
+            "Accesso ai dati trattati.",
+            "Rettifica dei dati inesatti.",
+            "Cancellazione (diritto all’oblio).",
+            "Limitazione del trattamento.",
+            "Portabilità dei dati.",
+            "Opposizione a trattamenti basati su interessi legittimi.",
+            "Revoca del consenso con effetto futuro."
+          ]
+        },
+        {
+          "id": "automatedDecisions",
+          "heading": "12) Decisioni automatizzate",
+          "body": [
+            "Non effettuo decisioni automatizzate né profilazione."
+          ]
+        },
+        {
+          "id": "minors",
+          "heading": "13) Minorenni",
+          "body": [
+            "Per studenti sotto i 16 anni è necessario il consenso scritto dei tutori.",
+            "Su Zoom utilizzo nomi completi dei minorenni solo con autorizzazione esplicita."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "14) Modifiche di questa informativa",
+          "body": [
+            "Posso aggiornare questa informativa in qualsiasi momento. Vale la versione pubblicata al momento della visita o della prenotazione (vedi data sopra)."
+          ]
+        },
+        {
+          "id": "supervision",
+          "heading": "15) Autorità di controllo",
+          "body": [
+            "Se non sei soddisfatto puoi rivolgerti all’Incaricato federale della protezione dei dati e della trasparenza (IFPDT/EDÖB)."
           ]
         }
       ],
@@ -567,7 +721,7 @@
         "lines": [
           "Teodoro Morcone Nachhilfe",
           "Eichbühlstrasse 33, 8004 Zurigo, Svizzera",
-          "E-mail: privacy@teodoro.ch",
+          "E-mail: info@teodoro.ch",
           "Tel.: +41 76 244 02 59"
         ]
       }

@@ -42,11 +42,11 @@
       },
       {
         "label": "Where?",
-        "description": "100% online via Zoom with shared whiteboard, optional recordings, and bilingual materials in German, Italian, and English."
+        "description": "100% online via Zoom with shared whiteboard, optional recordings, and materials available in German, Italian, and English (trilingual)."
       },
       {
         "label": "Pricing",
-        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 550 (approx. 2 lessons per week), 13-pack CHF 650 (approx. 3 lessons per week) – includes follow-up notes, progress tracking, and typically a response within 24 hours on business days. Final prices in CHF; service not VAT-registered. No additional payment fees."
+        "description": "Single session CHF 70, 5-pack CHF 300, 10-pack CHF 550 (approx. 2 lessons per week), 13-pack CHF 650 (approx. 3 lessons per week) – includes follow-up notes, progress tracking, and typically a response within 24 hours on business days. Final prices in CHF; not VAT-registered (no VAT charged). No additional payment fees."
       },
       {
         "label": "How to start?",
@@ -187,7 +187,7 @@
           "id": "single",
           "name": "Single session",
           "price": "CHF 70",
-          "unit": "per 60 minutes — final price in CHF; service not VAT-registered. No additional payment fees.",
+          "unit": "per 60 minutes — final price in CHF; not VAT-registered (no VAT charged). No additional payment fees.",
           "features": [
             "Individual lesson with tailored material",
             "Homework follow-up",
@@ -199,7 +199,7 @@
           "id": "five-pack",
           "name": "5-pack",
           "price": "CHF 300",
-          "unit": "5 × 60 minutes (CHF 60 per lesson) — final price in CHF; service not VAT-registered. No additional payment fees.",
+          "unit": "5 × 60 minutes (CHF 60 per lesson) — final price in CHF; not VAT-registered (no VAT charged). No additional payment fees.",
           "features": [
             "Structured learning plan",
             "Weekly feedback & monitoring",
@@ -212,7 +212,7 @@
           "id": "ten-pack",
           "name": "10-pack",
           "price": "CHF 550",
-          "unit": "10 × 60 minutes (CHF 55 per lesson, approx 2 lessons per week) — final price in CHF; service not VAT-registered. No additional payment fees.",
+          "unit": "10 × 60 minutes (CHF 55 per lesson, approx 2 lessons per week) — final price in CHF; not VAT-registered (no VAT charged). No additional payment fees.",
           "features": [
             "Full exam preparation programme",
             "Detailed weekly reports",
@@ -224,7 +224,7 @@
           "id": "thirteen-pack",
           "name": "13-pack",
           "price": "CHF 650",
-          "unit": "13 × 60 minutes (CHF 50 per lesson, approx 3 lessons per week) — final price in CHF; service not VAT-registered. No additional payment fees.",
+          "unit": "13 × 60 minutes (CHF 50 per lesson, approx 3 lessons per week) — final price in CHF; not VAT-registered (no VAT charged). No additional payment fees.",
           "features": [
             "Long-term mastery curriculum",
             "Monthly strategy review & guardian updates",
@@ -370,7 +370,7 @@
           }
         }
       ],
-      "footnote": "All prices exclude VAT (service not VAT-registered). Approximate monthly counts and totals assume consistent scheduling."
+      "footnote": "All prices in CHF; not VAT-registered (no VAT charged). Approximate monthly counts and totals assume consistent scheduling."
     },
     "glossary": {
       "title": "Glossary",
@@ -399,94 +399,138 @@
     },
     "terms": {
       "title": "Terms & Conditions",
-      "intro": "Last updated: October 2025",
+      "intro": "Last updated: November 2025\n\nResponsible / Provider\nTeodoro Morcone, sole proprietorship «Teodoro Morcone Nachhilfe»\nEichbühlstrasse 33, 8004 Zurich, Switzerland\nEmail: info@teodoro.ch · Tel.: +41 76 244 02 59\nLessons: exclusively online via Zoom",
       "sections": [
         {
           "id": "scope",
           "heading": "1. Scope",
           "body": [
-            "These terms and conditions govern the agreement between Teodoro Morcone, sole proprietorship “Teodoro Morcone Nachhilfe” (the “Provider”), and clients booking mathematics tutoring services.",
-            "Different provisions apply only if confirmed in writing."
+            "These terms govern the contractual relationship between the Provider and clients who book mathematics tutoring or exam preparation.",
+            "Deviations apply only if confirmed in writing."
           ]
         },
         {
           "id": "services",
           "heading": "2. Services & lesson format",
           "body": [
-            "Lessons are generally delivered online. The exact medium or location is agreed upon during booking.",
-            "Lesson content, scope, and objectives are defined during the consultation or booking process."
+            "Lessons take place exclusively online via Zoom.",
+            "Lesson content, scope, and learning objectives are agreed during the consultation or booking process."
           ]
         },
         {
           "id": "booking",
-          "heading": "3. Booking via Calendesk / contract formation",
+          "heading": "3. Contract formation & booking (Calendesk)",
           "body": [
-            "Appointments are scheduled through Calendesk. Once Calendesk confirms the booking, the contract is formed; Calendesk’s terms of use also apply.",
-            "Availability shown in the calendar may change. The Provider may decline a request or suggest alternatives."
+            "Appointments are requested and scheduled through Calendesk.",
+            "The lesson agreement is concluded directly between the client and the Provider.",
+            "Calendesk solely provides the technical booking and scheduling platform; Calendesk’s own terms apply without changing the tutoring relationship.",
+            "During each booking the client actively ticks a checkbox in Calendesk to confirm the linked version of these Terms & Conditions and the Privacy Notice; I log the version, date/time, IP address, and booking ID as proof."
           ]
         },
         {
           "id": "pricing",
-          "heading": "4. Pricing & payment via Stripe",
+          "heading": "4. Prices, taxes & payment",
           "body": [
-            "Current prices are published on the website.",
-            "All lessons and packages are prepaid via Stripe payment link (e.g., card, Twint); Stripe’s terms apply in addition.",
-            "Invoices and receipts are emailed automatically immediately after payment."
+            "The prices published on the website in CHF apply.",
+            "Taxes: tutoring services are generally exempt from Swiss VAT.",
+            "The Provider is currently not VAT-registered (annual revenue < CHF 100,000) and therefore does not charge VAT.",
+            "Payment: before the lesson via Stripe payment link (e.g., card, Twint).",
+            "Electronic receipts are provided; no additional payment fees apply.",
+            "Price basis: adjustments apply only to future bookings; confirmed appointments remain unchanged."
           ]
         },
         {
           "id": "cancellations",
           "heading": "5. Cancellation, rescheduling & no-shows",
           "bullets": [
-            "Sessions can be cancelled or rescheduled free of charge up to 24 hours before the start time.",
-            "Late cancellations, reschedules (< 24h), or no-shows are billed at 100% of the lesson price.",
-            "Should the client arrive late, the session still ends at the scheduled time; no additional time is owed.",
-            "If the Provider must cancel due to illness or unforeseen circumstances, prepaid fees are credited or an alternative appointment is offered."
+            "Free cancellation or rescheduling up to 24 hours before the booked start time (time zone: Europe/Zurich).",
+            "Cancellation or reschedule requests must be submitted either (a) via the Calendesk link in the reminder email or (b) by email to info@teodoro.ch. The timestamp on my systems (time zone Europe/Zurich) is decisive.",
+            "Cancellations or reschedules within 24 hours as well as no-shows are billed at 100% of the lesson fee.",
+            "Goodwill: once per calendar year a goodwill credit may be granted for justified circumstances beyond the client’s control (e.g., acute illness); suitable evidence such as a medical certificate or official order is required.",
+            "Late arrival: if the client arrives late, the lesson still ends at the scheduled time; no make-up time is owed.",
+            "Provider cancellation: no costs arise; prepaid amounts are credited or an alternative appointment is offered."
+          ]
+        },
+        {
+          "id": "packages",
+          "heading": "6. Packages (validity & refunds)",
+          "body": [
+            "Package credits remain valid for 12 months from the purchase date.",
+            "If a package is terminated early, completed lessons are recalculated at the current single-lesson rate and the remaining balance is refunded without the package discount.",
+            "On request I extend unused package credits once by up to 3 months (e.g., illness, change of school)."
           ]
         },
         {
           "id": "client-duties",
-          "heading": "6. Client responsibilities",
+          "heading": "7. Client responsibilities",
           "body": [
-            "Clients ensure punctuality and an appropriate learning environment (for online lessons: stable internet connection plus functioning camera/microphone).",
-            "For minor learners, booking and consent must be provided by a parent or legal guardian."
+            "Clients ensure punctuality, an appropriate learning environment, and functioning equipment (stable internet connection, camera, microphone)."
+          ]
+        },
+        {
+          "id": "minors",
+          "heading": "8. Lessons with minors",
+          "body": [
+            "Learners under 16 require written consent from a parent or legal guardian.",
+            "Communication is preferably coordinated together with the guardians.",
+            "Full legal names of minors are not used in Zoom without consent."
           ]
         },
         {
           "id": "materials",
-          "heading": "7. Lesson materials & copyright",
+          "heading": "9. Materials, copyright & recordings",
           "body": [
             "Materials supplied by the Provider are protected by copyright and may be used only for personal learning.",
-            "Sharing or publishing the materials without permission is prohibited."
+            "Unauthorised audio or video recordings of lessons are prohibited.",
+            "Recordings take place only with prior written consent from all participants; any shared recordings remain available for a limited time."
+          ]
+        },
+        {
+          "id": "online",
+          "heading": "10. Online lessons & technology",
+          "body": [
+            "Both parties ensure a stable connection and working equipment.",
+            "In the event of technical issues, the lesson is extended proportionally or rescheduled free of charge; further claims are excluded."
           ]
         },
         {
           "id": "liability",
-          "heading": "8. Liability",
+          "heading": "11. Liability",
           "body": [
-            "Tutoring provides learning support; no guarantee is given for specific grades or exam results.",
-            "Statutory liability for wilful misconduct or gross negligence remains unaffected."
+            "Liability for wilful misconduct or gross negligence remains reserved.",
+            "To the extent permitted by law, liability for slight negligence—except for personal injury—is excluded.",
+            "No guarantee is given for exam results or grades.",
+            "Mandatory statutory rights remain reserved."
           ]
         },
         {
-          "id": "refunds",
-          "heading": "9. Withdrawal / refunds",
+          "id": "withdrawal",
+          "heading": "12. Withdrawal / refunds",
           "body": [
-            "There is no statutory right of withdrawal for tutoring services already delivered.",
-            "Refunds follow clause 5 or apply if the Provider cancels (see clause 5.4)."
+            "No statutory general right of withdrawal applies to lessons already delivered.",
+            "Refunds follow sections 5 and 6 or apply if the Provider cancels."
+          ]
+        },
+        {
+          "id": "privacy",
+          "heading": "13. Privacy",
+          "body": [
+            "The privacy notice published on the website applies in its current version."
           ]
         },
         {
           "id": "jurisdiction",
-          "heading": "10. Governing law & jurisdiction",
+          "heading": "14. Governing law & jurisdiction",
           "body": [
-            "Mandatory venues remain reserved. For claims brought by consumers, the competent court is either at the consumer’s domicile or at the provider’s registered office; otherwise, Zurich applies.",
-            "Swiss substantive law governs."
+            "Mandatory consumer venues remain reserved.",
+            "Consumers may bring claims at their domicile.",
+            "For all other disputes, Zurich is the exclusive venue.",
+            "Swiss substantive law applies."
           ]
         },
         {
           "id": "changes",
-          "heading": "11. Changes to these terms",
+          "heading": "15. Changes to these terms",
           "body": [
             "The Provider may amend these terms at any time.",
             "The version published at the time of booking applies."
@@ -504,73 +548,174 @@
       }
     },
     "privacy": {
-      "title": "Privacy (summary)",
-      "intro": "Snapshot of how Teodoro Morcone Nachhilfe handles personal data under Swiss law. Read the full privacy policy for complete details.",
+      "title": "Privacy Notice (Short Version with Mandatory Disclosures)",
+      "intro": "Last updated: November 2025",
       "sections": [
         {
-          "id": "dataCollection",
-          "heading": "Data collection & sources",
+          "id": "controller",
+          "heading": "1) Controller",
           "body": [
-            "I operate exclusively in Switzerland under the Federal Act on Data Protection (FADP) and gather information when you send a request, schedule via Calendesk, join a Zoom lesson, or message me by email/chat.",
-            "My privately managed Swiss server stores truncated IP addresses, user-agent data, and security logs to protect the service. Consent decisions are documented, and optional Google Analytics 4 events run only after you opt in."
+            "Teodoro Morcone, sole proprietorship «Teodoro Morcone Nachhilfe», is the controller under revFADP/GDPR."
           ],
           "bullets": [
-            "Contact details, learning goals, preferred availability, payment references, handwritten preparation notes",
-            "Security telemetry (truncated IP, device diagnostics) retained on Swiss infrastructure",
-            "No automated decision-making or profiling—every booking and lesson plan is handled manually"
+            "Address: Eichbühlstrasse 33, 8004 Zurich, Switzerland",
+            "Email: info@teodoro.ch",
+            "Phone: +41 76 244 02 59"
+          ]
+        },
+        {
+          "id": "scope",
+          "heading": "2) Scope",
+          "body": [
+            "This notice explains how I process personal data when you visit teodoro.ch, contact me, book lessons, take part in online tutoring, or complete payments.",
+            "For clients from the EU/EEA I additionally comply with the GDPR."
+          ]
+        },
+        {
+          "id": "data-categories",
+          "heading": "3) Categories of personal data",
+          "body": [
+            "Depending on the situation I process the following categories of personal data.",
+            "I do not intentionally collect special-category data (e.g., health data); please avoid sending sensitive information through unsecured channels."
+          ],
+          "bullets": [
+            "Master data: name, contact details, preferred language, date/year of birth for minors, guardian details.",
+            "Communication data: contents of emails, chat/WhatsApp messages (incl. metadata).",
+            "Tutoring data: objectives, learning status, notes, assignments, mock exam results, shared whiteboard content.",
+            "Contract & payment data: bookings, timeslots, packages, invoicing and payment references (no storage of full card details).",
+            "Technical & security data: truncated IP addresses, device/browser information, log files, security events.",
+            "Consent data: records of your choices (timestamp, selection) for optional analytics/marketing/recordings."
+          ]
+        },
+        {
+          "id": "purposes",
+          "heading": "4) Purposes & legal bases",
+          "body": [
+            "I use personal data for these purposes and rely on the following legal bases:"
+          ],
+          "bullets": [
+            "Contract performance and pre-contractual steps (lesson delivery, scheduling, communication, follow-up).",
+            "Legal obligations (e.g., bookkeeping retention duties).",
+            "Legitimate interests (service security, abuse prevention, quality assurance).",
+            "Consent—for optional analytics/marketing or lesson recordings; you may withdraw consent at any time with future effect."
+          ]
+        },
+        {
+          "id": "sources",
+          "heading": "5) Sources",
+          "body": [
+            "I usually receive personal data directly from you or, for minors, from their guardians.",
+            "Additional technical logs are generated by the systems I operate."
+          ]
+        },
+        {
+          "id": "processors",
+          "heading": "6) Recipients & processors",
+          "body": [
+            "I cooperate with carefully selected service providers under written data processing agreements. For third-country transfers I use Standard Contractual Clauses (SCCs) or comparable safeguards."
+          ],
+          "bullets": [
+            "Swiss private hosting (Switzerland): servers/backups, security and access logs.",
+            "Calendesk (EU): scheduling, reminders, payment status (EU data centres).",
+            "Zoom (EU data residency enabled, HQ USA): video lessons with waiting rooms/passcodes; recordings only with consent, deleted within 30 days.",
+            "Stripe (EU/USA): payment processing; card details remain with Stripe.",
+            "Google Workspace & Gmail (EU/USA): email, documents; SCCs and, where available, Swiss-U.S. DPF.",
+            "Google Analytics 4 (optional, EU/USA): statistics with IP truncation; runs only after opt-in.",
+            "Meta Pixel (optional, USA): campaign measurement; runs only after opt-in."
+          ]
+        },
+        {
+          "id": "cookies",
+          "heading": "7) Cookies, analytics & marketing",
+          "body": [
+            "Optional analytics or marketing pixels load only after explicit consent.",
+            "Consent logs (timestamp, choice, pseudonymous ID) are stored in a tamper-resistant manner.",
+            "You can change or withdraw consents at any time via the footer link without affecting essential services."
+          ],
+          "bullets": [
+            "Essential: operation, security, consent storage.",
+            "Analytics (optional, e.g., GA4): reach and diagnostics with IP truncation; opt-in required.",
+            "Marketing (optional, e.g., Meta Pixel): campaign measurement; opt-in required."
+          ]
+        },
+        {
+          "id": "communication",
+          "heading": "8) Communication channels",
+          "body": [
+            "Standard channels are email and phone.",
+            "WhatsApp is used for scheduling; please avoid sending sensitive learning/health information.",
+            "Zoom uses waiting rooms and passcodes; recordings happen only with prior approval and are deleted within 30 days."
           ]
         },
         {
           "id": "retention",
-          "heading": "Retention & deletion",
+          "heading": "9) Retention & deletion",
           "body": [
-            "Retention follows Swiss commercial obligations and documented privacy promises. Deletion requests go to privacy@teodoro.ch and are fulfilled once legal duties end."
+            "I delete or anonymise personal data once the purpose is fulfilled or no legal obligation prevents it."
           ],
           "bullets": [
-            "Inquiry emails or chats without lessons: deleted after 12 months",
-            "Active learner profiles, lesson notes, materials: kept up to 3 years after the last session unless earlier deletion is allowed",
-            "Accounting records and payment receipts: stored for 10 years",
-            "Consent & cookie logs: retained for 5 years to evidence compliance",
-            "Security logs: rotated after 12 months; Google Analytics 4 data auto-expires after 14 months"
+            "Enquiries without lessons: deleted within 12 months.",
+            "Active learner files/notes/materials: up to 3 years after the final lesson.",
+            "Accounting & payment records: 10 years.",
+            "Consent/cookie logs: 5 years.",
+            "Security logs: rotated after 12 months.",
+            "Backups: overwritten during the next scheduled maintenance cycle."
           ]
         },
         {
-          "id": "thirdParties",
-          "heading": "Third-party services & transfers",
+          "id": "security",
+          "heading": "10) Data security",
           "body": [
-            "Only a small, clearly defined set of processors support tutoring operations. Cross-border safeguards rely on FDPIC-recognised adequacy decisions or Standard Contractual Clauses."
-          ],
-          "bullets": [
-            "**Swiss private hosting:** infrastructure located in Switzerland under my sole control",
-            "**Calendesk (Poland/EU):** scheduling, reminders, payment status within EU data centres",
-            "**Zoom (EU data residency, HQ USA):** lessons secured with waiting room, passcode, encryption; recordings require written consent and are deleted within 30 days",
-            "**Google Workspace & Google Analytics (EU/USA):** email, documents, optional analytics with SCCs, IP truncation, and no advertising features",
-            "**Meta Pixel (Meta Platforms, USA):** optional marketing measurement that loads only after explicit consent, governed by SCCs and IP obfuscation"
+            "I implement technical and organisational measures such as TLS encryption, IP truncation, role/rights management, access controls, logging of security events, and backup/restore processes.",
+            "If a breach poses a likely high risk, I notify the FDPIC without delay and inform affected individuals where required."
           ]
         },
         {
           "id": "rights",
-          "heading": "How to exercise your rights",
+          "heading": "11) Your rights",
           "body": [
-            "Email info@teodoro.ch or write to Teodoro Morcone Nachhilfe, Eichbühlstrasse 33, 8004 Zürich to request access, correction, portability, deletion, or consent withdrawal.",
-            "Identity is verified with proportionate steps and requests are handled within 30 days (extendable by another 30 days for complex cases). Cookie preferences can be adjusted anytime via the footer link."
+            "Depending on the applicable law you may exercise these rights. Send requests to info@teodoro.ch; I verify your identity proportionately and usually respond within 30 days (extendable by up to 30 days for complex matters)."
           ],
           "bullets": [
-            "Update or withdraw analytics consent without affecting essential services",
-            "Request erasure once statutory retention duties end; backups are purged during the next maintenance cycle",
-            "Escalate unresolved concerns to the Federal Data Protection and Information Commissioner (FDPIC)"
+            "Access.",
+            "Rectification.",
+            "Erasure (right to be forgotten).",
+            "Restriction of processing.",
+            "Data portability.",
+            "Objection to processing based on legitimate interests.",
+            "Withdrawal of consent with future effect."
+          ]
+        },
+        {
+          "id": "automated-decisions",
+          "heading": "12) Automated decisions",
+          "body": [
+            "I do not carry out automated individual decisions or profiling."
+          ]
+        },
+        {
+          "id": "minors",
+          "heading": "13) Minors",
+          "body": [
+            "Learners under 16 need written guardian consent.",
+            "Full legal names of minors are used in Zoom only with explicit approval."
+          ]
+        },
+        {
+          "id": "changes",
+          "heading": "14) Changes to this notice",
+          "body": [
+            "I may update this privacy notice at any time. The version published at the time of your visit or booking (see date above) applies."
+          ]
+        },
+        {
+          "id": "supervision",
+          "heading": "15) Supervision",
+          "body": [
+            "Not satisfied? You may contact the Federal Data Protection and Information Commissioner (FDPIC)."
           ]
         }
-      ],
-      "contact": {
-        "heading": "Privacy contact",
-        "lines": [
-          "Teodoro Morcone Nachhilfe",
-          "Eichbühlstrasse 33, 8004 Zurich, Switzerland",
-          "Email: info@teodoro.ch",
-          "Phone: +41 76 244 02 59"
-        ]
-      }
+      ]
     }
   },
   "contact": {

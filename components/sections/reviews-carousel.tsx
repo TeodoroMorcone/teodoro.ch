@@ -102,6 +102,19 @@ export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
     [locale],
   );
 
+  const formatCollectedYearMonth = useCallback((value?: string) => {
+    if (!value) {
+      return null;
+    }
+
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) {
+      return value;
+    }
+
+    return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+  }, []);
+
   const formatRatingValue = useCallback(
     (value?: number) => {
       if (typeof value !== "number" || Number.isNaN(value)) {
@@ -190,22 +203,45 @@ export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
             const IconComponent = getSocialIconComponent(review.socialIcon);
             const socialLabel = review.socialIcon?.trim() || review.source.label || "social";
             const formattedCollectedAt = formatCollectedAt(review.collectedAt);
+            const formattedYearMonth = formatCollectedYearMonth(review.collectedAt);
             const formattedRating = formatRatingValue(review.rating);
             const normalizedRating =
               typeof review.rating === "number" && Number.isFinite(review.rating)
                 ? Math.max(0, Math.min(5, Math.round(review.rating)))
                 : 0;
-            const sourceContent = review.source.url ? (
-              <a
-                href={review.source.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center font-semibold text-accent underline-offset-4 transition-colors duration-200 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-accent-foreground"
-              >
-                {review.source.label}
-              </a>
+
+            const resolvedSourceUrl = review.sourceUrl ?? review.source.url ?? null;
+            const resolvedSourceType = review.sourceType?.toLowerCase() ?? null;
+            const resolvedSourceLabel =
+              resolvedSourceType === "instagram" ? "Instagram" : review.source.label || "Source";
+
+            const fallbackSourceNote =
+              review.sourceNote ??
+              (formattedYearMonth ? `Source on file with provider — ${formattedYearMonth}` : "Source on file with provider");
+
+            const sourceContent = resolvedSourceUrl ? (
+              <span className="inline-flex flex-wrap items-center gap-2">
+                <span className="font-semibold text-primary transition-colors duration-200 group-hover:text-surface dark:text-surface dark:group-hover:text-primary">
+                  Source:
+                </span>
+                <a
+                  href={resolvedSourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center font-semibold text-accent underline-offset-4 transition-colors duration-200 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-accent-foreground"
+                >
+                  {resolvedSourceLabel}
+                </a>
+                {formattedYearMonth ? (
+                  <span className="text-xs font-semibold uppercase tracking-[0.18em] text-secondary/70 transition-colors duration-200 group-hover:text-surface/80 dark:text-surface/60 dark:group-hover:text-primary/75">
+                    {formattedYearMonth}
+                  </span>
+                ) : null}
+              </span>
             ) : (
-              <span className="font-semibold text-primary">{review.source.label}</span>
+              <span className="font-semibold text-primary transition-colors.duration-200 group-hover:text-surface dark:text-surface dark:group-hover:text-primary">
+                {fallbackSourceNote}
+              </span>
             );
 
             return (
@@ -258,7 +294,7 @@ export function ReviewsCarousel({reviews}: ReviewsCarouselProps) {
                     </div>
                   </div>
 
-                  <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-secondary/80 transition-colors duration-200 group-hover:text-surface/90 dark:text-surface/70 dark:group-hover:text-primary/90">
+                  <div className="flex flex-wrap items-center gap-3 text-xs font-semibold text-secondary/80 transition-colors.duration-200 group-hover:text-surface/90 dark:text-surface/70 dark:group-hover:text-primary/90">
                     {sourceContent}
                     {formattedCollectedAt ? (
                       <>

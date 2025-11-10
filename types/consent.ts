@@ -1,10 +1,14 @@
-export type ConsentCategory = "essential" | "analytics" | "marketing";
+export type ConsentCategory = "necessary" | "analytics" | "marketing";
 
 export type ConsentState = {
-  essential: true;
+  necessary: true;
   analytics: boolean;
   marketing: boolean;
+  timestamp: string;
+  version: string;
 };
+
+export type ConsentInput = Omit<ConsentState, "timestamp" | "version">;
 
 export type CookieBannerStrings = {
   banner: {

@@ -62,6 +62,7 @@
       "contextNote": "Historische Erfahrung vor Einführung des rein digitalen Unterrichts (heute 100 % online)."
     },
     {
+      "id": "yasmin-2024-01",
       "authorName": "Yasmine S.",
       "rating": 5,
       "text": "Teodoro is a great teacher, he’s very reliable and prepares well for his classes. He also speaks many languages, which is very helpful too!",
@@ -69,8 +70,12 @@
         "label": "Tutor24 Rezension",
         "url": "https://tutor24.ch/en/providers/1580036#reviews"
       },
+      "sourceType": "instagram",
+      "sourceUrl": "https://www.instagram.com/interstitialbeirut",
+      "sourceNote": "Source on file with provider — 2024-01",
       "collectedAt": "2024-01-08",
       "locale": "en",
+      "language": "en",
       "socialIcon": "instagram",
       "socialUrl": "https://www.instagram.com/interstitialbeirut"
     },
