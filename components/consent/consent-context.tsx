@@ -52,11 +52,13 @@ type NormalizableConsent =
 
 const ConsentContext = createContext<ConsentContextValue | undefined>(undefined);
 
-const normalizeConsent = (consent: NormalizableConsent): ConsentState => ({
-  essential: true,
-  analytics: Boolean(consent?.analytics),
-  marketing: Boolean(consent?.marketing),
-});
+const normalizeConsent = (consent: NormalizableConsent): ConsentState => {
+  return {
+    essential: true,
+    analytics: Boolean(consent?.analytics),
+    marketing: Boolean(consent?.marketing),
+  };
+};
 
 const createInitialConsentState = () => normalizeConsent(createDefaultConsent());
 
@@ -144,7 +146,7 @@ export function ConsentProvider({children}: ConsentProviderProps) {
       analytics: true,
       marketing: true,
     };
-
+  
     persistConsent(next);
     setIsBannerOpen(false);
     setIsPreferencesOpen(false);
@@ -156,7 +158,7 @@ export function ConsentProvider({children}: ConsentProviderProps) {
       analytics: false,
       marketing: false,
     };
-
+  
     persistConsent(next);
     setIsBannerOpen(false);
     setIsPreferencesOpen(false);
