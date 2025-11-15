@@ -19,7 +19,7 @@ export type GoogleReview = {
   socialUrl?: string;
   source: ReviewSource;
   collectedAt?: string;
-  locale?: string;
+  locale: string | null;
   contextNote?: string;
   sourceType?: string | null;
   sourceUrl?: string | null;
@@ -95,6 +95,8 @@ function normalizeStaticPath(): string | null {
 function mapStaticReview(raw: RawStaticReview): GoogleReview {
   const label = raw.source?.label?.trim() || "Quelle hinterlegt";
   const url = raw.source?.url ?? null;
+  const normalizedLocale =
+    typeof raw.locale === "string" && raw.locale.trim() ? raw.locale.trim() : null;
 
   const review: GoogleReview = {
     authorName: raw.authorName,
@@ -107,6 +109,7 @@ function mapStaticReview(raw: RawStaticReview): GoogleReview {
     sourceType: raw.sourceType ?? null,
     sourceUrl: raw.sourceUrl ?? null,
     sourceNote: raw.sourceNote ?? null,
+    locale: normalizedLocale,
   };
 
   if (typeof raw.profilePhotoUrl === "string" && raw.profilePhotoUrl.trim()) {
@@ -123,10 +126,6 @@ function mapStaticReview(raw: RawStaticReview): GoogleReview {
 
   if (typeof raw.collectedAt === "string" && raw.collectedAt.trim()) {
     review.collectedAt = raw.collectedAt;
-  }
-
-  if (typeof raw.locale === "string" && raw.locale.trim()) {
-    review.locale = raw.locale;
   }
 
   if (typeof raw.contextNote === "string" && raw.contextNote.trim()) {
@@ -197,6 +196,17 @@ async function readStaticReviews(limit: number): Promise<GoogleReview[]> {
 
     const reviews = extractReviews(parsed);
 
+    if (process.env.NODE_ENV !== "production") {
+      console.log(
+        "[debug][readStaticReviews] sample review locales",
+        reviews.slice(0, 3).map((review) => ({
+          hasLocale: typeof review.locale === "string" && review.locale.trim().length > 0,
+          locale: review.locale ?? null,
+          keys: Object.keys(review),
+        })),
+      );
+    }
+
     if (!reviews.length) {
       console.warn(
         "[getGoogleReviews] Static reviews feed parsed successfully but contained no reviews.",
@@ -262,7 +272,7 @@ async function fetchApiReviews(limit: number): Promise<GoogleReview[]> {
 
     const reviews = data.result?.reviews ?? [];
 
-    return reviews.slice(0, limit).map((review) => {
+    const normalized = reviews.slice(0, limit).map((review) => {
       const reviewUrl = review.author_url ?? data.result?.url ?? null;
 
       const mapped: GoogleReview = {
@@ -273,6 +283,7 @@ async function fetchApiReviews(limit: number): Promise<GoogleReview[]> {
           label: "Google Rezension",
           url: reviewUrl,
         },
+        locale: null,
       };
 
       if (typeof review.profile_photo_url === "string" && review.profile_photo_url.trim()) {
@@ -281,6 +292,19 @@ async function fetchApiReviews(limit: number): Promise<GoogleReview[]> {
 
       return mapped;
     });
+
+    if (process.env.NODE_ENV !== "production") {
+      console.log(
+        "[debug][fetchApiReviews] sample review locales",
+        normalized.slice(0, 3).map((review) => ({
+          hasLocale: typeof review.locale === "string" && review.locale.trim().length > 0,
+          locale: review.locale ?? null,
+          keys: Object.keys(review),
+        })),
+      );
+    }
+
+    return normalized;
   } catch (error) {
     console.error("[getGoogleReviews] Unexpected error fetching reviews", error);
     return [];
