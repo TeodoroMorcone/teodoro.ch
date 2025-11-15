@@ -92,7 +92,7 @@ export function FloatingActions({calendeskContact, whatsappContact}: FloatingAct
           target="_blank"
           rel="noopener noreferrer"
           aria-label={whatsappContact.ariaLabel}
-          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full !bg-[rgb(196_83_53_/_1)] text-[#25D366] shadow-lg transition duration-200 ease-soft-sine hover:scale-105 hover:!bg-[rgb(196_83_53_/_1)] focus:!bg-[rgb(196_83_53_/_1)] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 md:h-[112px] md:w-[112px]"
+          className="relative flex h-[104px] w-[104px] items-center justify-center rounded-full !bg-[#FFF1D6] text-[#25D366] shadow-lg transition duration-200 ease-soft-sine hover:scale-105 hover:!bg-[#FFF1D6] focus:!bg-[#FFF1D6] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2 md:h-[112px] md:w-[112px]"
         >
           <span className="sr-only">{whatsappContact.label}</span>
           <svg
@@ -105,11 +105,11 @@ export function FloatingActions({calendeskContact, whatsappContact}: FloatingAct
             </defs>
             <text
               className="text-[12px] uppercase tracking-[0.22em] md:text-[13px] animate-counter-spin"
-              fill="none"
-              stroke="#fff"
+              fill="#000000"
+              stroke="#000000"
               strokeWidth="0.6"
             >
-              <textPath href="#whatsapp-teodoro-arc" startOffset="0%">
+              <textPath id="innerTextWhatsapp" href="#whatsapp-teodoro-arc" startOffset="0%">
                 Whatsapp your tutor Teodoro • •
               </textPath>
             </text>
